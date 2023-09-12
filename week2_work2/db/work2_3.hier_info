@@ -1,0 +1,29 @@
+|work2_3
+b_3 <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+Eight => inst.IN0
+Ten => inst.IN1
+Ten => inst2.IN4
+Eleven => inst.IN2
+Eleven => inst2.IN5
+Eleven => inst3.IN5
+Nine => inst.IN3
+Nine => inst3.IN4
+Zero => inst5.IN0
+Zero => inst4.IN1
+b_2 <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+Four => inst1.IN0
+Six => inst1.IN1
+Six => inst2.IN1
+Seven => inst1.IN2
+Seven => inst2.IN3
+Seven => inst3.IN3
+Five => inst1.IN3
+Five => inst3.IN1
+b_1 <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+Two => inst2.IN0
+Three => inst2.IN2
+Three => inst3.IN2
+b_0 <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+One => inst3.IN0
+
+
