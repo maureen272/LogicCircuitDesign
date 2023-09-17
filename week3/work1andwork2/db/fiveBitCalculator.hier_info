@@ -1,0 +1,212 @@
+|fiveBitCalculator
+Carry <= fourbit_rippleCarryAdder:inst.Cout
+Cin => fourbit_rippleCarryAdder:inst.pin_name1
+A0 => deToBin:inst2.Zero
+A1 => deToBin:inst2.One
+A2 => deToBin:inst2.Two
+A3 => deToBin:inst2.Three
+A4 => deToBin:inst2.Four
+A5 => deToBin:inst2.Five
+A6 => deToBin:inst2.Six
+A7 => deToBin:inst2.Seven
+A8 => deToBin:inst2.Eight
+A9 => deToBin:inst2.Nine
+A10 => deToBin:inst2.Ten
+A11 => deToBin:inst2.Eleven
+B0 => deToBin:inst3.Zero
+B1 => deToBin:inst3.One
+B2 => deToBin:inst3.Two
+B3 => deToBin:inst3.Three
+B4 => deToBin:inst3.Four
+B5 => deToBin:inst3.Five
+B6 => deToBin:inst3.Six
+B7 => deToBin:inst3.Seven
+B8 => deToBin:inst3.Eight
+B9 => deToBin:inst3.Nine
+B10 => deToBin:inst3.Ten
+B11 => deToBin:inst3.Eleven
+Sum3 <= fourbit_rippleCarryAdder:inst.S3
+Sum2 <= fourbit_rippleCarryAdder:inst.S2
+Sum1 <= fourbit_rippleCarryAdder:inst.S1
+Sum0 <= fourbit_rippleCarryAdder:inst.S0
+
+
+|fiveBitCalculator|fourbit_rippleCarryAdder:inst
+S0 <= full_adder:inst.S
+X0 => full_adder:inst.X
+Y0 => full_adder:inst.Y
+pin_name1 => full_adder:inst.Z
+S1 <= full_adder:inst1.S
+X1 => full_adder:inst1.X
+Y1 => full_adder:inst1.Y
+S2 <= full_adder:inst2.S
+X2 => full_adder:inst2.X
+Y2 => full_adder:inst2.Y
+S3 <= full_adder:inst3.S
+X3 => full_adder:inst3.X
+Y3 => full_adder:inst3.Y
+Cout <= full_adder:inst3.Carry
+
+
+|fiveBitCalculator|fourbit_rippleCarryAdder:inst|full_adder:inst
+S <= half_adder:inst1.Sum
+X => half_adder:inst.A
+Y => half_adder:inst.B
+Z => half_adder:inst1.B
+Carry <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|fiveBitCalculator|fourbit_rippleCarryAdder:inst|full_adder:inst|half_adder:inst1
+Sum <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+A => inst2.IN0
+A => inst.IN0
+B => inst2.IN1
+B => inst.IN1
+Carry <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|fiveBitCalculator|fourbit_rippleCarryAdder:inst|full_adder:inst|half_adder:inst
+Sum <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+A => inst2.IN0
+A => inst.IN0
+B => inst2.IN1
+B => inst.IN1
+Carry <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|fiveBitCalculator|fourbit_rippleCarryAdder:inst|full_adder:inst1
+S <= half_adder:inst1.Sum
+X => half_adder:inst.A
+Y => half_adder:inst.B
+Z => half_adder:inst1.B
+Carry <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|fiveBitCalculator|fourbit_rippleCarryAdder:inst|full_adder:inst1|half_adder:inst1
+Sum <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+A => inst2.IN0
+A => inst.IN0
+B => inst2.IN1
+B => inst.IN1
+Carry <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|fiveBitCalculator|fourbit_rippleCarryAdder:inst|full_adder:inst1|half_adder:inst
+Sum <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+A => inst2.IN0
+A => inst.IN0
+B => inst2.IN1
+B => inst.IN1
+Carry <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|fiveBitCalculator|fourbit_rippleCarryAdder:inst|full_adder:inst2
+S <= half_adder:inst1.Sum
+X => half_adder:inst.A
+Y => half_adder:inst.B
+Z => half_adder:inst1.B
+Carry <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|fiveBitCalculator|fourbit_rippleCarryAdder:inst|full_adder:inst2|half_adder:inst1
+Sum <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+A => inst2.IN0
+A => inst.IN0
+B => inst2.IN1
+B => inst.IN1
+Carry <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|fiveBitCalculator|fourbit_rippleCarryAdder:inst|full_adder:inst2|half_adder:inst
+Sum <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+A => inst2.IN0
+A => inst.IN0
+B => inst2.IN1
+B => inst.IN1
+Carry <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|fiveBitCalculator|fourbit_rippleCarryAdder:inst|full_adder:inst3
+S <= half_adder:inst1.Sum
+X => half_adder:inst.A
+Y => half_adder:inst.B
+Z => half_adder:inst1.B
+Carry <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|fiveBitCalculator|fourbit_rippleCarryAdder:inst|full_adder:inst3|half_adder:inst1
+Sum <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+A => inst2.IN0
+A => inst.IN0
+B => inst2.IN1
+B => inst.IN1
+Carry <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|fiveBitCalculator|fourbit_rippleCarryAdder:inst|full_adder:inst3|half_adder:inst
+Sum <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+A => inst2.IN0
+A => inst.IN0
+B => inst2.IN1
+B => inst.IN1
+Carry <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|fiveBitCalculator|deToBin:inst2
+b0 <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+Zero => inst11.IN0
+Zero => inst5.IN0
+One => inst3.IN0
+Five => inst3.IN1
+Five => inst1.IN3
+Three => inst3.IN2
+Three => inst2.IN2
+Seven => inst3.IN3
+Seven => inst2.IN3
+Seven => inst1.IN2
+Nine => inst3.IN4
+Nine => inst.IN3
+Eleven => inst3.IN5
+Eleven => inst2.IN5
+Eleven => inst.IN2
+b1 <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+Two => inst2.IN0
+Six => inst2.IN1
+Six => inst1.IN1
+Ten => inst2.IN4
+Ten => inst.IN1
+b2 <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+Four => inst1.IN0
+b3 <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+Eight => inst.IN0
+
+
+|fiveBitCalculator|deToBin:inst3
+b0 <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+Zero => inst11.IN0
+Zero => inst5.IN0
+One => inst3.IN0
+Five => inst3.IN1
+Five => inst1.IN3
+Three => inst3.IN2
+Three => inst2.IN2
+Seven => inst3.IN3
+Seven => inst2.IN3
+Seven => inst1.IN2
+Nine => inst3.IN4
+Nine => inst.IN3
+Eleven => inst3.IN5
+Eleven => inst2.IN5
+Eleven => inst.IN2
+b1 <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+Two => inst2.IN0
+Six => inst2.IN1
+Six => inst1.IN1
+Ten => inst2.IN4
+Ten => inst.IN1
+b2 <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+Four => inst1.IN0
+b3 <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+Eight => inst.IN0
+
+
