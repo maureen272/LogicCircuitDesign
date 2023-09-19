@@ -1,0 +1,121 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "Carry",
+					"strict" : false
+				},
+				{
+					"name" : "Sum3",
+					"strict" : false
+				},
+				{
+					"name" : "Sum2",
+					"strict" : false
+				},
+				{
+					"name" : "Sum1",
+					"strict" : false
+				},
+				{
+					"name" : "Sum0",
+					"strict" : false
+				},
+				{
+					"name" : "Cin",
+					"strict" : false
+				},
+				{
+					"name" : "A1",
+					"strict" : false
+				},
+				{
+					"name" : "A5",
+					"strict" : false
+				},
+				{
+					"name" : "A9",
+					"strict" : false
+				},
+				{
+					"name" : "A3",
+					"strict" : false
+				},
+				{
+					"name" : "A7",
+					"strict" : false
+				},
+				{
+					"name" : "A11",
+					"strict" : false
+				},
+				{
+					"name" : "B1",
+					"strict" : false
+				},
+				{
+					"name" : "B5",
+					"strict" : false
+				},
+				{
+					"name" : "B9",
+					"strict" : false
+				},
+				{
+					"name" : "B3",
+					"strict" : false
+				},
+				{
+					"name" : "B7",
+					"strict" : false
+				},
+				{
+					"name" : "B11",
+					"strict" : false
+				},
+				{
+					"name" : "A2",
+					"strict" : false
+				},
+				{
+					"name" : "A6",
+					"strict" : false
+				},
+				{
+					"name" : "A10",
+					"strict" : false
+				},
+				{
+					"name" : "B2",
+					"strict" : false
+				},
+				{
+					"name" : "B6",
+					"strict" : false
+				},
+				{
+					"name" : "B10",
+					"strict" : false
+				},
+				{
+					"name" : "A4",
+					"strict" : false
+				},
+				{
+					"name" : "B4",
+					"strict" : false
+				},
+				{
+					"name" : "A8",
+					"strict" : false
+				},
+				{
+					"name" : "B8",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
