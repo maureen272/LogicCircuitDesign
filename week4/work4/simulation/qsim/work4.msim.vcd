@@ -1,0 +1,315 @@
+$comment
+	File created using the following command:
+		vcd file work4.msim.vcd -direction
+$end
+$date
+	Tue Sep 26 19:48:24 2023
+$end
+$version
+	ModelSim Version 2020.1
+$end
+$timescale
+	1ps
+$end
+
+$scope module work5_vlg_vec_tst $end
+$var reg 1 ! ce $end
+$var reg 1 " CLK $end
+$var reg 1 # d1 $end
+$var reg 1 $ d2 $end
+$var reg 1 % d3 $end
+$var reg 1 & d4 $end
+$var reg 1 ' RST $end
+$var wire 1 ( A1 $end
+$var wire 1 ) A2 $end
+$var wire 1 * A3 $end
+$var wire 1 + A4 $end
+$var wire 1 , B1 $end
+$var wire 1 - B2 $end
+$var wire 1 . B3 $end
+$var wire 1 / B4 $end
+
+$scope module i1 $end
+$var wire 1 0 gnd $end
+$var wire 1 1 vcc $end
+$var wire 1 2 unknown $end
+$var tri1 1 3 devclrn $end
+$var tri1 1 4 devpor $end
+$var tri1 1 5 devoe $end
+$var wire 1 6 ~QUARTUS_CREATED_GND~I_combout $end
+$var wire 1 7 CLK~input_o $end
+$var wire 1 8 CLK~inputCLKENA0_outclk $end
+$var wire 1 9 d1~input_o $end
+$var wire 1 : RST~input_o $end
+$var wire 1 ; ce~input_o $end
+$var wire 1 < inst|inst123~q $end
+$var wire 1 = d2~input_o $end
+$var wire 1 > inst|inst4~q $end
+$var wire 1 ? d3~input_o $end
+$var wire 1 @ inst|inst5~feeder_combout $end
+$var wire 1 A inst|inst5~q $end
+$var wire 1 B d4~input_o $end
+$var wire 1 C inst|inst6~feeder_combout $end
+$var wire 1 D inst|inst6~q $end
+$var wire 1 E inst8|inst123~feeder_combout $end
+$var wire 1 F inst8|inst123~q $end
+$var wire 1 G inst8|inst4~feeder_combout $end
+$var wire 1 H inst8|inst4~q $end
+$var wire 1 I inst8|inst5~feeder_combout $end
+$var wire 1 J inst8|inst5~q $end
+$var wire 1 K inst8|inst6~feeder_combout $end
+$var wire 1 L inst8|inst6~q $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+1"
+0#
+0$
+0%
+0&
+1'
+0(
+0)
+0*
+0+
+0,
+0-
+0.
+0/
+00
+11
+x2
+13
+14
+15
+06
+17
+18
+09
+1:
+0;
+0<
+0=
+0>
+0?
+0@
+0A
+0B
+0C
+0D
+0E
+0F
+0G
+0H
+0I
+0J
+0K
+0L
+$end
+#20000
+0"
+07
+08
+#40000
+1"
+17
+18
+#60000
+0"
+07
+08
+#80000
+1!
+1#
+1$
+1"
+1;
+19
+1=
+17
+18
+1>
+1<
+1(
+1)
+1E
+1G
+#100000
+0"
+07
+08
+#120000
+0!
+0#
+0$
+0;
+09
+0=
+#180000
+1!
+1;
+#200000
+1%
+1&
+1"
+1?
+1B
+17
+18
+1C
+1@
+1H
+1F
+0>
+0<
+0(
+0)
+1,
+1-
+0E
+0G
+#220000
+0!
+0"
+0;
+07
+08
+#240000
+0%
+0&
+0?
+0B
+0C
+0@
+#360000
+1"
+17
+18
+#380000
+0"
+07
+08
+#400000
+1"
+17
+18
+#420000
+0"
+07
+08
+#440000
+1"
+17
+18
+#460000
+0"
+07
+08
+#480000
+1"
+17
+18
+#500000
+0"
+07
+08
+#520000
+1"
+17
+18
+#540000
+0"
+07
+08
+#560000
+1"
+17
+18
+#580000
+0"
+07
+08
+#600000
+1"
+17
+18
+#620000
+0"
+07
+08
+#640000
+1"
+17
+18
+#660000
+0"
+07
+08
+#680000
+1"
+17
+18
+#700000
+0"
+07
+08
+#720000
+1"
+17
+18
+#740000
+0"
+07
+08
+#760000
+1"
+17
+18
+#780000
+0"
+07
+08
+#800000
+1"
+17
+18
+#820000
+0"
+07
+08
+#840000
+1"
+17
+18
+#860000
+0"
+07
+08
+#880000
+1"
+17
+18
+#900000
+0"
+07
+08
+#920000
+1"
+17
+18
+#940000
+0"
+07
+08
+#960000
+1"
+17
+18
+#980000
+0"
+07
+08
+#1000000

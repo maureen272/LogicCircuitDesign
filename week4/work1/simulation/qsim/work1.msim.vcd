@@ -1,0 +1,168 @@
+$comment
+	File created using the following command:
+		vcd file work1.msim.vcd -direction
+$end
+$date
+	Tue Sep 26 19:09:09 2023
+$end
+$version
+	ModelSim Version 2020.1
+$end
+$timescale
+	1ps
+$end
+
+$scope module Block1_2_vlg_vec_tst $end
+$var reg 1 ! CLK $end
+$var reg 1 " D $end
+$var reg 1 # Reset $end
+$var wire 1 $ Q $end
+
+$scope module i1 $end
+$var wire 1 % gnd $end
+$var wire 1 & vcc $end
+$var wire 1 ' unknown $end
+$var tri1 1 ( devclrn $end
+$var tri1 1 ) devpor $end
+$var tri1 1 * devoe $end
+$var wire 1 + ~QUARTUS_CREATED_GND~I_combout $end
+$var wire 1 , CLK~input_o $end
+$var wire 1 - Reset~input_o $end
+$var wire 1 . D~input_o $end
+$var wire 1 / inst~combout $end
+$var wire 1 0 inst6~q $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+1"
+1#
+0$
+0%
+1&
+x'
+1(
+1)
+1*
+0+
+0,
+1-
+1.
+1/
+00
+$end
+#40000
+1!
+1,
+10
+1$
+#80000
+0#
+0!
+0-
+0,
+0/
+#120000
+1!
+1,
+00
+0$
+#160000
+0"
+0!
+0.
+0,
+#200000
+1!
+1,
+#240000
+1#
+1"
+0!
+1-
+1.
+0,
+1/
+#280000
+1!
+1,
+10
+1$
+#320000
+0"
+0!
+0.
+0,
+0/
+#340000
+0#
+0-
+#360000
+1!
+1,
+00
+0$
+#400000
+0!
+0,
+#440000
+1"
+1!
+1.
+1,
+#480000
+0"
+0!
+0.
+0,
+#520000
+1"
+1!
+1.
+1,
+#550000
+1#
+1-
+1/
+#560000
+0!
+0,
+#580000
+0"
+0.
+0/
+#600000
+1!
+1,
+#640000
+0!
+0,
+#680000
+1!
+1,
+#720000
+0#
+0!
+0-
+0,
+#760000
+1!
+1,
+#800000
+0!
+0,
+#840000
+1!
+1,
+#880000
+0!
+0,
+#920000
+1!
+1,
+#960000
+0!
+0,
+#1000000

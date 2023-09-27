@@ -1,0 +1,7 @@
+|Block1_2
+Q <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+CLK => inst6.CLK
+Reset => inst.IN0
+D => inst.IN1
+
+

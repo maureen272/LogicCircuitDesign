@@ -1,0 +1,103 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/intelFPGA_lite/20.1/week4/work4/simulation/qsim
+vwork4
+Z1 !s110 1695724419
+!i10b 1
+!s100 5j;h4U[i>9mVzGaG=U]VT1
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IWM1MGkd4UTJG5ELM?dIN:0
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z4 w1695724418
+Z5 8work4.vo
+Z6 Fwork4.vo
+!i122 24
+L0 32 394
+Z7 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z8 !s108 1695724419.000000
+Z9 !s107 work4.vo|
+Z10 !s90 -work|work|work4.vo|
+!i113 1
+Z11 o-work work
+Z12 tCvgOpt 0
+vwork4_vlg_vec_tst
+R1
+!i10b 1
+!s100 S6BAJN4TCUWRAe0;a8^b@3
+R2
+IaWUDY`;E_1PaPG5kdZQaj2
+R3
+R0
+R4
+8Waveform5.vwf.vt
+FWaveform5.vwf.vt
+!i122 25
+L0 30 92
+R7
+r1
+!s85 0
+31
+R8
+!s107 Waveform5.vwf.vt|
+!s90 -work|work|Waveform5.vwf.vt|
+!i113 1
+R11
+R12
+vwork5
+Z13 !s110 1695725304
+!i10b 1
+!s100 `L0]GVmnX[=Y76c`837JZ0
+R2
+I?8k;7o?ld[clmI0ZA<zj=3
+R3
+R0
+w1695725303
+R5
+R6
+!i122 32
+L0 32 625
+R7
+r1
+!s85 0
+31
+Z14 !s108 1695725304.000000
+R9
+R10
+!i113 1
+R11
+R12
+vwork5_vlg_vec_tst
+R13
+!i10b 1
+!s100 zYC[R=Jm=;HCdLdGa?Da@2
+R2
+INOz??T@UP_kk6YzEJ1=G70
+R3
+R0
+w1695725302
+8Waveform8.vwf.vt
+FWaveform8.vwf.vt
+!i122 33
+L0 30 117
+R7
+r1
+!s85 0
+31
+R14
+!s107 Waveform8.vwf.vt|
+!s90 -work|work|Waveform8.vwf.vt|
+!i113 1
+R11
+R12
