@@ -1,0 +1,983 @@
+|keypad_SRAM4
+Dout[0] <= SRAM4x4:inst5.DataOut[0]
+Dout[1] <= SRAM4x4:inst5.DataOut[1]
+Dout[2] <= SRAM4x4:inst5.DataOut[2]
+Dout[3] <= SRAM4x4:inst5.DataOut[3]
+clk => SRAM4x4:inst5.clk
+clk => control_unit:inst.clock
+clk => four_bit_counter:inst3.clk
+reset => SRAM4x4:inst5.rst_n
+reset => control_unit:inst.reset
+reset => four_bit_counter:inst3.rst_n
+keypad[0] => Decimal_to_binary:inst2.Keypad[0]
+keypad[1] => Decimal_to_binary:inst2.Keypad[1]
+keypad[2] => Decimal_to_binary:inst2.Keypad[2]
+keypad[3] => Decimal_to_binary:inst2.Keypad[3]
+keypad[4] => Decimal_to_binary:inst2.Keypad[4]
+keypad[5] => Decimal_to_binary:inst2.Keypad[5]
+keypad[6] => Decimal_to_binary:inst2.Keypad[6]
+keypad[7] => Decimal_to_binary:inst2.Keypad[7]
+keypad[8] => Decimal_to_binary:inst2.Keypad[8]
+keypad[9] => Decimal_to_binary:inst2.Keypad[9]
+keypad[10] => Decimal_to_binary:inst2.Keypad[10]
+keypad[11] => Decimal_to_binary:inst2.Keypad[11]
+
+
+|keypad_SRAM4|SRAM4x4:inst5
+DataOut[0] <= LPM_MUX:inst8.result[0]
+DataOut[1] <= LPM_MUX:inst8.result[1]
+DataOut[2] <= LPM_MUX:inst8.result[2]
+DataOut[3] <= LPM_MUX:inst8.result[3]
+RW => inst14.IN0
+RW => LPM_DECODE:inst.enable
+RW => inst13.IN0
+RW => inst12.IN0
+RW => inst11.IN0
+RW => BUSMUX:inst9.sel
+RW => inst15.IN0
+Address[0] => LPM_DECODE:inst.data[0]
+Address[0] => BUSMUX:inst9.dataa[0]
+Address[0] => Register2:inst7.Din[0]
+Address[1] => LPM_DECODE:inst.data[1]
+Address[1] => BUSMUX:inst9.dataa[1]
+Address[1] => Register2:inst7.Din[1]
+clk => Register4:inst2.clk
+clk => Register4:inst3.clk
+clk => Register4:inst4.clk
+clk => Register4:inst5.clk
+clk => Register2:inst7.clk
+rst_n => Register4:inst2.rst_n
+rst_n => Register4:inst3.rst_n
+rst_n => Register4:inst4.rst_n
+rst_n => Register4:inst5.rst_n
+rst_n => Register2:inst7.rst_n
+DataIn[0] => Register4:inst2.Din[0]
+DataIn[0] => Register4:inst3.Din[0]
+DataIn[0] => Register4:inst4.Din[0]
+DataIn[0] => Register4:inst5.Din[0]
+DataIn[1] => Register4:inst2.Din[1]
+DataIn[1] => Register4:inst3.Din[1]
+DataIn[1] => Register4:inst4.Din[1]
+DataIn[1] => Register4:inst5.Din[1]
+DataIn[2] => Register4:inst2.Din[2]
+DataIn[2] => Register4:inst3.Din[2]
+DataIn[2] => Register4:inst4.Din[2]
+DataIn[2] => Register4:inst5.Din[2]
+DataIn[3] => Register4:inst2.Din[3]
+DataIn[3] => Register4:inst3.Din[3]
+DataIn[3] => Register4:inst4.Din[3]
+DataIn[3] => Register4:inst5.Din[3]
+
+
+|keypad_SRAM4|SRAM4x4:inst5|LPM_MUX:inst8
+data[0][0] => mux_a0e:auto_generated.data[0]
+data[0][1] => mux_a0e:auto_generated.data[1]
+data[0][2] => mux_a0e:auto_generated.data[2]
+data[0][3] => mux_a0e:auto_generated.data[3]
+data[1][0] => mux_a0e:auto_generated.data[4]
+data[1][1] => mux_a0e:auto_generated.data[5]
+data[1][2] => mux_a0e:auto_generated.data[6]
+data[1][3] => mux_a0e:auto_generated.data[7]
+data[2][0] => mux_a0e:auto_generated.data[8]
+data[2][1] => mux_a0e:auto_generated.data[9]
+data[2][2] => mux_a0e:auto_generated.data[10]
+data[2][3] => mux_a0e:auto_generated.data[11]
+data[3][0] => mux_a0e:auto_generated.data[12]
+data[3][1] => mux_a0e:auto_generated.data[13]
+data[3][2] => mux_a0e:auto_generated.data[14]
+data[3][3] => mux_a0e:auto_generated.data[15]
+sel[0] => mux_a0e:auto_generated.sel[0]
+sel[1] => mux_a0e:auto_generated.sel[1]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_a0e:auto_generated.result[0]
+result[1] <= mux_a0e:auto_generated.result[1]
+result[2] <= mux_a0e:auto_generated.result[2]
+result[3] <= mux_a0e:auto_generated.result[3]
+
+
+|keypad_SRAM4|SRAM4x4:inst5|LPM_MUX:inst8|mux_a0e:auto_generated
+data[0] => l1_w0_n0_mux_dataout.IN1
+data[1] => l1_w1_n0_mux_dataout.IN1
+data[2] => l1_w2_n0_mux_dataout.IN1
+data[3] => l1_w3_n0_mux_dataout.IN1
+data[4] => l1_w0_n0_mux_dataout.IN1
+data[5] => l1_w1_n0_mux_dataout.IN1
+data[6] => l1_w2_n0_mux_dataout.IN1
+data[7] => l1_w3_n0_mux_dataout.IN1
+data[8] => l1_w0_n1_mux_dataout.IN1
+data[9] => l1_w1_n1_mux_dataout.IN1
+data[10] => l1_w2_n1_mux_dataout.IN1
+data[11] => l1_w3_n1_mux_dataout.IN1
+data[12] => l1_w0_n1_mux_dataout.IN1
+data[13] => l1_w1_n1_mux_dataout.IN1
+data[14] => l1_w2_n1_mux_dataout.IN1
+data[15] => l1_w3_n1_mux_dataout.IN1
+result[0] <= l2_w0_n0_mux_dataout.DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= l2_w1_n0_mux_dataout.DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= l2_w2_n0_mux_dataout.DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= l2_w3_n0_mux_dataout.DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => l1_w0_n0_mux_dataout.IN0
+sel[0] => _.IN0
+sel[0] => l1_w0_n1_mux_dataout.IN0
+sel[0] => _.IN0
+sel[0] => l1_w1_n0_mux_dataout.IN0
+sel[0] => _.IN0
+sel[0] => l1_w1_n1_mux_dataout.IN0
+sel[0] => _.IN0
+sel[0] => l1_w2_n0_mux_dataout.IN0
+sel[0] => _.IN0
+sel[0] => l1_w2_n1_mux_dataout.IN0
+sel[0] => _.IN0
+sel[0] => l1_w3_n0_mux_dataout.IN0
+sel[0] => _.IN0
+sel[0] => l1_w3_n1_mux_dataout.IN0
+sel[0] => _.IN0
+sel[1] => l2_w0_n0_mux_dataout.IN0
+sel[1] => _.IN0
+sel[1] => l2_w1_n0_mux_dataout.IN0
+sel[1] => _.IN0
+sel[1] => l2_w2_n0_mux_dataout.IN0
+sel[1] => _.IN0
+sel[1] => l2_w3_n0_mux_dataout.IN0
+sel[1] => _.IN0
+
+
+|keypad_SRAM4|SRAM4x4:inst5|Register4:inst2
+Dout[0] <= bf_Dout[0].DB_MAX_OUTPUT_PORT_TYPE
+Dout[1] <= bf_Dout[1].DB_MAX_OUTPUT_PORT_TYPE
+Dout[2] <= bf_Dout[2].DB_MAX_OUTPUT_PORT_TYPE
+Dout[3] <= bf_Dout[3].DB_MAX_OUTPUT_PORT_TYPE
+Din[0] => Register1:inst.Din
+Din[1] => Register1:inst1.Din
+Din[2] => Register1:inst2.Din
+Din[3] => Register1:inst3.Din
+Ce => Register1:inst.Ce
+Ce => Register1:inst1.Ce
+Ce => Register1:inst2.Ce
+Ce => Register1:inst3.Ce
+clk => Register1:inst.clk
+clk => Register1:inst1.clk
+clk => Register1:inst2.clk
+clk => Register1:inst3.clk
+rst_n => Register1:inst.rst_n
+rst_n => Register1:inst1.rst_n
+rst_n => Register1:inst2.rst_n
+rst_n => Register1:inst3.rst_n
+
+
+|keypad_SRAM4|SRAM4x4:inst5|Register4:inst2|Register1:inst
+Dout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+rst_n => inst2.ACLR
+clk => inst2.CLK
+Ce => BUSMUX:inst.sel
+Din => BUSMUX:inst.datab[0]
+
+
+|keypad_SRAM4|SRAM4x4:inst5|Register4:inst2|Register1:inst|BUSMUX:inst
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|keypad_SRAM4|SRAM4x4:inst5|Register4:inst2|Register1:inst|BUSMUX:inst|LPM_MUX:$00000
+data[0][0] => mux_pjc:auto_generated.data[0]
+data[1][0] => mux_pjc:auto_generated.data[1]
+sel[0] => mux_pjc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_pjc:auto_generated.result[0]
+
+
+|keypad_SRAM4|SRAM4x4:inst5|Register4:inst2|Register1:inst|BUSMUX:inst|LPM_MUX:$00000|mux_pjc:auto_generated
+data[0] => l1_w0_n0_mux_dataout.IN1
+data[1] => l1_w0_n0_mux_dataout.IN1
+result[0] <= l1_w0_n0_mux_dataout.DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => l1_w0_n0_mux_dataout.IN0
+sel[0] => _.IN0
+
+
+|keypad_SRAM4|SRAM4x4:inst5|Register4:inst2|Register1:inst1
+Dout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+rst_n => inst2.ACLR
+clk => inst2.CLK
+Ce => BUSMUX:inst.sel
+Din => BUSMUX:inst.datab[0]
+
+
+|keypad_SRAM4|SRAM4x4:inst5|Register4:inst2|Register1:inst1|BUSMUX:inst
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|keypad_SRAM4|SRAM4x4:inst5|Register4:inst2|Register1:inst1|BUSMUX:inst|LPM_MUX:$00000
+data[0][0] => mux_pjc:auto_generated.data[0]
+data[1][0] => mux_pjc:auto_generated.data[1]
+sel[0] => mux_pjc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_pjc:auto_generated.result[0]
+
+
+|keypad_SRAM4|SRAM4x4:inst5|Register4:inst2|Register1:inst1|BUSMUX:inst|LPM_MUX:$00000|mux_pjc:auto_generated
+data[0] => l1_w0_n0_mux_dataout.IN1
+data[1] => l1_w0_n0_mux_dataout.IN1
+result[0] <= l1_w0_n0_mux_dataout.DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => l1_w0_n0_mux_dataout.IN0
+sel[0] => _.IN0
+
+
+|keypad_SRAM4|SRAM4x4:inst5|Register4:inst2|Register1:inst2
+Dout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+rst_n => inst2.ACLR
+clk => inst2.CLK
+Ce => BUSMUX:inst.sel
+Din => BUSMUX:inst.datab[0]
+
+
+|keypad_SRAM4|SRAM4x4:inst5|Register4:inst2|Register1:inst2|BUSMUX:inst
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|keypad_SRAM4|SRAM4x4:inst5|Register4:inst2|Register1:inst2|BUSMUX:inst|LPM_MUX:$00000
+data[0][0] => mux_pjc:auto_generated.data[0]
+data[1][0] => mux_pjc:auto_generated.data[1]
+sel[0] => mux_pjc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_pjc:auto_generated.result[0]
+
+
+|keypad_SRAM4|SRAM4x4:inst5|Register4:inst2|Register1:inst2|BUSMUX:inst|LPM_MUX:$00000|mux_pjc:auto_generated
+data[0] => l1_w0_n0_mux_dataout.IN1
+data[1] => l1_w0_n0_mux_dataout.IN1
+result[0] <= l1_w0_n0_mux_dataout.DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => l1_w0_n0_mux_dataout.IN0
+sel[0] => _.IN0
+
+
+|keypad_SRAM4|SRAM4x4:inst5|Register4:inst2|Register1:inst3
+Dout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+rst_n => inst2.ACLR
+clk => inst2.CLK
+Ce => BUSMUX:inst.sel
+Din => BUSMUX:inst.datab[0]
+
+
+|keypad_SRAM4|SRAM4x4:inst5|Register4:inst2|Register1:inst3|BUSMUX:inst
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|keypad_SRAM4|SRAM4x4:inst5|Register4:inst2|Register1:inst3|BUSMUX:inst|LPM_MUX:$00000
+data[0][0] => mux_pjc:auto_generated.data[0]
+data[1][0] => mux_pjc:auto_generated.data[1]
+sel[0] => mux_pjc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_pjc:auto_generated.result[0]
+
+
+|keypad_SRAM4|SRAM4x4:inst5|Register4:inst2|Register1:inst3|BUSMUX:inst|LPM_MUX:$00000|mux_pjc:auto_generated
+data[0] => l1_w0_n0_mux_dataout.IN1
+data[1] => l1_w0_n0_mux_dataout.IN1
+result[0] <= l1_w0_n0_mux_dataout.DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => l1_w0_n0_mux_dataout.IN0
+sel[0] => _.IN0
+
+
+|keypad_SRAM4|SRAM4x4:inst5|LPM_DECODE:inst
+data[0] => decode_2of:auto_generated.data[0]
+data[1] => decode_2of:auto_generated.data[1]
+enable => decode_2of:auto_generated.enable
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+eq[0] <= decode_2of:auto_generated.eq[0]
+eq[1] <= decode_2of:auto_generated.eq[1]
+eq[2] <= decode_2of:auto_generated.eq[2]
+eq[3] <= decode_2of:auto_generated.eq[3]
+
+
+|keypad_SRAM4|SRAM4x4:inst5|LPM_DECODE:inst|decode_2of:auto_generated
+data[0] => w_anode14w[1].IN1
+data[0] => w_anode1w[1].IN0
+data[0] => w_anode22w[1].IN0
+data[0] => w_anode30w[1].IN1
+data[1] => w_anode14w[2].IN0
+data[1] => w_anode1w[2].IN0
+data[1] => w_anode22w[2].IN1
+data[1] => w_anode30w[2].IN1
+enable => w_anode14w[1].IN0
+enable => w_anode1w[1].IN0
+enable => w_anode22w[1].IN0
+enable => w_anode30w[1].IN0
+eq[0] <= w_anode1w[2].DB_MAX_OUTPUT_PORT_TYPE
+eq[1] <= w_anode14w[2].DB_MAX_OUTPUT_PORT_TYPE
+eq[2] <= w_anode22w[2].DB_MAX_OUTPUT_PORT_TYPE
+eq[3] <= w_anode30w[2].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|keypad_SRAM4|SRAM4x4:inst5|Register4:inst3
+Dout[0] <= bf_Dout[0].DB_MAX_OUTPUT_PORT_TYPE
+Dout[1] <= bf_Dout[1].DB_MAX_OUTPUT_PORT_TYPE
+Dout[2] <= bf_Dout[2].DB_MAX_OUTPUT_PORT_TYPE
+Dout[3] <= bf_Dout[3].DB_MAX_OUTPUT_PORT_TYPE
+Din[0] => Register1:inst.Din
+Din[1] => Register1:inst1.Din
+Din[2] => Register1:inst2.Din
+Din[3] => Register1:inst3.Din
+Ce => Register1:inst.Ce
+Ce => Register1:inst1.Ce
+Ce => Register1:inst2.Ce
+Ce => Register1:inst3.Ce
+clk => Register1:inst.clk
+clk => Register1:inst1.clk
+clk => Register1:inst2.clk
+clk => Register1:inst3.clk
+rst_n => Register1:inst.rst_n
+rst_n => Register1:inst1.rst_n
+rst_n => Register1:inst2.rst_n
+rst_n => Register1:inst3.rst_n
+
+
+|keypad_SRAM4|SRAM4x4:inst5|Register4:inst3|Register1:inst
+Dout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+rst_n => inst2.ACLR
+clk => inst2.CLK
+Ce => BUSMUX:inst.sel
+Din => BUSMUX:inst.datab[0]
+
+
+|keypad_SRAM4|SRAM4x4:inst5|Register4:inst3|Register1:inst|BUSMUX:inst
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|keypad_SRAM4|SRAM4x4:inst5|Register4:inst3|Register1:inst|BUSMUX:inst|LPM_MUX:$00000
+data[0][0] => mux_pjc:auto_generated.data[0]
+data[1][0] => mux_pjc:auto_generated.data[1]
+sel[0] => mux_pjc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_pjc:auto_generated.result[0]
+
+
+|keypad_SRAM4|SRAM4x4:inst5|Register4:inst3|Register1:inst|BUSMUX:inst|LPM_MUX:$00000|mux_pjc:auto_generated
+data[0] => l1_w0_n0_mux_dataout.IN1
+data[1] => l1_w0_n0_mux_dataout.IN1
+result[0] <= l1_w0_n0_mux_dataout.DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => l1_w0_n0_mux_dataout.IN0
+sel[0] => _.IN0
+
+
+|keypad_SRAM4|SRAM4x4:inst5|Register4:inst3|Register1:inst1
+Dout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+rst_n => inst2.ACLR
+clk => inst2.CLK
+Ce => BUSMUX:inst.sel
+Din => BUSMUX:inst.datab[0]
+
+
+|keypad_SRAM4|SRAM4x4:inst5|Register4:inst3|Register1:inst1|BUSMUX:inst
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|keypad_SRAM4|SRAM4x4:inst5|Register4:inst3|Register1:inst1|BUSMUX:inst|LPM_MUX:$00000
+data[0][0] => mux_pjc:auto_generated.data[0]
+data[1][0] => mux_pjc:auto_generated.data[1]
+sel[0] => mux_pjc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_pjc:auto_generated.result[0]
+
+
+|keypad_SRAM4|SRAM4x4:inst5|Register4:inst3|Register1:inst1|BUSMUX:inst|LPM_MUX:$00000|mux_pjc:auto_generated
+data[0] => l1_w0_n0_mux_dataout.IN1
+data[1] => l1_w0_n0_mux_dataout.IN1
+result[0] <= l1_w0_n0_mux_dataout.DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => l1_w0_n0_mux_dataout.IN0
+sel[0] => _.IN0
+
+
+|keypad_SRAM4|SRAM4x4:inst5|Register4:inst3|Register1:inst2
+Dout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+rst_n => inst2.ACLR
+clk => inst2.CLK
+Ce => BUSMUX:inst.sel
+Din => BUSMUX:inst.datab[0]
+
+
+|keypad_SRAM4|SRAM4x4:inst5|Register4:inst3|Register1:inst2|BUSMUX:inst
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|keypad_SRAM4|SRAM4x4:inst5|Register4:inst3|Register1:inst2|BUSMUX:inst|LPM_MUX:$00000
+data[0][0] => mux_pjc:auto_generated.data[0]
+data[1][0] => mux_pjc:auto_generated.data[1]
+sel[0] => mux_pjc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_pjc:auto_generated.result[0]
+
+
+|keypad_SRAM4|SRAM4x4:inst5|Register4:inst3|Register1:inst2|BUSMUX:inst|LPM_MUX:$00000|mux_pjc:auto_generated
+data[0] => l1_w0_n0_mux_dataout.IN1
+data[1] => l1_w0_n0_mux_dataout.IN1
+result[0] <= l1_w0_n0_mux_dataout.DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => l1_w0_n0_mux_dataout.IN0
+sel[0] => _.IN0
+
+
+|keypad_SRAM4|SRAM4x4:inst5|Register4:inst3|Register1:inst3
+Dout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+rst_n => inst2.ACLR
+clk => inst2.CLK
+Ce => BUSMUX:inst.sel
+Din => BUSMUX:inst.datab[0]
+
+
+|keypad_SRAM4|SRAM4x4:inst5|Register4:inst3|Register1:inst3|BUSMUX:inst
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|keypad_SRAM4|SRAM4x4:inst5|Register4:inst3|Register1:inst3|BUSMUX:inst|LPM_MUX:$00000
+data[0][0] => mux_pjc:auto_generated.data[0]
+data[1][0] => mux_pjc:auto_generated.data[1]
+sel[0] => mux_pjc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_pjc:auto_generated.result[0]
+
+
+|keypad_SRAM4|SRAM4x4:inst5|Register4:inst3|Register1:inst3|BUSMUX:inst|LPM_MUX:$00000|mux_pjc:auto_generated
+data[0] => l1_w0_n0_mux_dataout.IN1
+data[1] => l1_w0_n0_mux_dataout.IN1
+result[0] <= l1_w0_n0_mux_dataout.DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => l1_w0_n0_mux_dataout.IN0
+sel[0] => _.IN0
+
+
+|keypad_SRAM4|SRAM4x4:inst5|Register4:inst4
+Dout[0] <= bf_Dout[0].DB_MAX_OUTPUT_PORT_TYPE
+Dout[1] <= bf_Dout[1].DB_MAX_OUTPUT_PORT_TYPE
+Dout[2] <= bf_Dout[2].DB_MAX_OUTPUT_PORT_TYPE
+Dout[3] <= bf_Dout[3].DB_MAX_OUTPUT_PORT_TYPE
+Din[0] => Register1:inst.Din
+Din[1] => Register1:inst1.Din
+Din[2] => Register1:inst2.Din
+Din[3] => Register1:inst3.Din
+Ce => Register1:inst.Ce
+Ce => Register1:inst1.Ce
+Ce => Register1:inst2.Ce
+Ce => Register1:inst3.Ce
+clk => Register1:inst.clk
+clk => Register1:inst1.clk
+clk => Register1:inst2.clk
+clk => Register1:inst3.clk
+rst_n => Register1:inst.rst_n
+rst_n => Register1:inst1.rst_n
+rst_n => Register1:inst2.rst_n
+rst_n => Register1:inst3.rst_n
+
+
+|keypad_SRAM4|SRAM4x4:inst5|Register4:inst4|Register1:inst
+Dout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+rst_n => inst2.ACLR
+clk => inst2.CLK
+Ce => BUSMUX:inst.sel
+Din => BUSMUX:inst.datab[0]
+
+
+|keypad_SRAM4|SRAM4x4:inst5|Register4:inst4|Register1:inst|BUSMUX:inst
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|keypad_SRAM4|SRAM4x4:inst5|Register4:inst4|Register1:inst|BUSMUX:inst|LPM_MUX:$00000
+data[0][0] => mux_pjc:auto_generated.data[0]
+data[1][0] => mux_pjc:auto_generated.data[1]
+sel[0] => mux_pjc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_pjc:auto_generated.result[0]
+
+
+|keypad_SRAM4|SRAM4x4:inst5|Register4:inst4|Register1:inst|BUSMUX:inst|LPM_MUX:$00000|mux_pjc:auto_generated
+data[0] => l1_w0_n0_mux_dataout.IN1
+data[1] => l1_w0_n0_mux_dataout.IN1
+result[0] <= l1_w0_n0_mux_dataout.DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => l1_w0_n0_mux_dataout.IN0
+sel[0] => _.IN0
+
+
+|keypad_SRAM4|SRAM4x4:inst5|Register4:inst4|Register1:inst1
+Dout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+rst_n => inst2.ACLR
+clk => inst2.CLK
+Ce => BUSMUX:inst.sel
+Din => BUSMUX:inst.datab[0]
+
+
+|keypad_SRAM4|SRAM4x4:inst5|Register4:inst4|Register1:inst1|BUSMUX:inst
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|keypad_SRAM4|SRAM4x4:inst5|Register4:inst4|Register1:inst1|BUSMUX:inst|LPM_MUX:$00000
+data[0][0] => mux_pjc:auto_generated.data[0]
+data[1][0] => mux_pjc:auto_generated.data[1]
+sel[0] => mux_pjc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_pjc:auto_generated.result[0]
+
+
+|keypad_SRAM4|SRAM4x4:inst5|Register4:inst4|Register1:inst1|BUSMUX:inst|LPM_MUX:$00000|mux_pjc:auto_generated
+data[0] => l1_w0_n0_mux_dataout.IN1
+data[1] => l1_w0_n0_mux_dataout.IN1
+result[0] <= l1_w0_n0_mux_dataout.DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => l1_w0_n0_mux_dataout.IN0
+sel[0] => _.IN0
+
+
+|keypad_SRAM4|SRAM4x4:inst5|Register4:inst4|Register1:inst2
+Dout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+rst_n => inst2.ACLR
+clk => inst2.CLK
+Ce => BUSMUX:inst.sel
+Din => BUSMUX:inst.datab[0]
+
+
+|keypad_SRAM4|SRAM4x4:inst5|Register4:inst4|Register1:inst2|BUSMUX:inst
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|keypad_SRAM4|SRAM4x4:inst5|Register4:inst4|Register1:inst2|BUSMUX:inst|LPM_MUX:$00000
+data[0][0] => mux_pjc:auto_generated.data[0]
+data[1][0] => mux_pjc:auto_generated.data[1]
+sel[0] => mux_pjc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_pjc:auto_generated.result[0]
+
+
+|keypad_SRAM4|SRAM4x4:inst5|Register4:inst4|Register1:inst2|BUSMUX:inst|LPM_MUX:$00000|mux_pjc:auto_generated
+data[0] => l1_w0_n0_mux_dataout.IN1
+data[1] => l1_w0_n0_mux_dataout.IN1
+result[0] <= l1_w0_n0_mux_dataout.DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => l1_w0_n0_mux_dataout.IN0
+sel[0] => _.IN0
+
+
+|keypad_SRAM4|SRAM4x4:inst5|Register4:inst4|Register1:inst3
+Dout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+rst_n => inst2.ACLR
+clk => inst2.CLK
+Ce => BUSMUX:inst.sel
+Din => BUSMUX:inst.datab[0]
+
+
+|keypad_SRAM4|SRAM4x4:inst5|Register4:inst4|Register1:inst3|BUSMUX:inst
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|keypad_SRAM4|SRAM4x4:inst5|Register4:inst4|Register1:inst3|BUSMUX:inst|LPM_MUX:$00000
+data[0][0] => mux_pjc:auto_generated.data[0]
+data[1][0] => mux_pjc:auto_generated.data[1]
+sel[0] => mux_pjc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_pjc:auto_generated.result[0]
+
+
+|keypad_SRAM4|SRAM4x4:inst5|Register4:inst4|Register1:inst3|BUSMUX:inst|LPM_MUX:$00000|mux_pjc:auto_generated
+data[0] => l1_w0_n0_mux_dataout.IN1
+data[1] => l1_w0_n0_mux_dataout.IN1
+result[0] <= l1_w0_n0_mux_dataout.DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => l1_w0_n0_mux_dataout.IN0
+sel[0] => _.IN0
+
+
+|keypad_SRAM4|SRAM4x4:inst5|Register4:inst5
+Dout[0] <= bf_Dout[0].DB_MAX_OUTPUT_PORT_TYPE
+Dout[1] <= bf_Dout[1].DB_MAX_OUTPUT_PORT_TYPE
+Dout[2] <= bf_Dout[2].DB_MAX_OUTPUT_PORT_TYPE
+Dout[3] <= bf_Dout[3].DB_MAX_OUTPUT_PORT_TYPE
+Din[0] => Register1:inst.Din
+Din[1] => Register1:inst1.Din
+Din[2] => Register1:inst2.Din
+Din[3] => Register1:inst3.Din
+Ce => Register1:inst.Ce
+Ce => Register1:inst1.Ce
+Ce => Register1:inst2.Ce
+Ce => Register1:inst3.Ce
+clk => Register1:inst.clk
+clk => Register1:inst1.clk
+clk => Register1:inst2.clk
+clk => Register1:inst3.clk
+rst_n => Register1:inst.rst_n
+rst_n => Register1:inst1.rst_n
+rst_n => Register1:inst2.rst_n
+rst_n => Register1:inst3.rst_n
+
+
+|keypad_SRAM4|SRAM4x4:inst5|Register4:inst5|Register1:inst
+Dout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+rst_n => inst2.ACLR
+clk => inst2.CLK
+Ce => BUSMUX:inst.sel
+Din => BUSMUX:inst.datab[0]
+
+
+|keypad_SRAM4|SRAM4x4:inst5|Register4:inst5|Register1:inst|BUSMUX:inst
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|keypad_SRAM4|SRAM4x4:inst5|Register4:inst5|Register1:inst|BUSMUX:inst|LPM_MUX:$00000
+data[0][0] => mux_pjc:auto_generated.data[0]
+data[1][0] => mux_pjc:auto_generated.data[1]
+sel[0] => mux_pjc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_pjc:auto_generated.result[0]
+
+
+|keypad_SRAM4|SRAM4x4:inst5|Register4:inst5|Register1:inst|BUSMUX:inst|LPM_MUX:$00000|mux_pjc:auto_generated
+data[0] => l1_w0_n0_mux_dataout.IN1
+data[1] => l1_w0_n0_mux_dataout.IN1
+result[0] <= l1_w0_n0_mux_dataout.DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => l1_w0_n0_mux_dataout.IN0
+sel[0] => _.IN0
+
+
+|keypad_SRAM4|SRAM4x4:inst5|Register4:inst5|Register1:inst1
+Dout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+rst_n => inst2.ACLR
+clk => inst2.CLK
+Ce => BUSMUX:inst.sel
+Din => BUSMUX:inst.datab[0]
+
+
+|keypad_SRAM4|SRAM4x4:inst5|Register4:inst5|Register1:inst1|BUSMUX:inst
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|keypad_SRAM4|SRAM4x4:inst5|Register4:inst5|Register1:inst1|BUSMUX:inst|LPM_MUX:$00000
+data[0][0] => mux_pjc:auto_generated.data[0]
+data[1][0] => mux_pjc:auto_generated.data[1]
+sel[0] => mux_pjc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_pjc:auto_generated.result[0]
+
+
+|keypad_SRAM4|SRAM4x4:inst5|Register4:inst5|Register1:inst1|BUSMUX:inst|LPM_MUX:$00000|mux_pjc:auto_generated
+data[0] => l1_w0_n0_mux_dataout.IN1
+data[1] => l1_w0_n0_mux_dataout.IN1
+result[0] <= l1_w0_n0_mux_dataout.DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => l1_w0_n0_mux_dataout.IN0
+sel[0] => _.IN0
+
+
+|keypad_SRAM4|SRAM4x4:inst5|Register4:inst5|Register1:inst2
+Dout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+rst_n => inst2.ACLR
+clk => inst2.CLK
+Ce => BUSMUX:inst.sel
+Din => BUSMUX:inst.datab[0]
+
+
+|keypad_SRAM4|SRAM4x4:inst5|Register4:inst5|Register1:inst2|BUSMUX:inst
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|keypad_SRAM4|SRAM4x4:inst5|Register4:inst5|Register1:inst2|BUSMUX:inst|LPM_MUX:$00000
+data[0][0] => mux_pjc:auto_generated.data[0]
+data[1][0] => mux_pjc:auto_generated.data[1]
+sel[0] => mux_pjc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_pjc:auto_generated.result[0]
+
+
+|keypad_SRAM4|SRAM4x4:inst5|Register4:inst5|Register1:inst2|BUSMUX:inst|LPM_MUX:$00000|mux_pjc:auto_generated
+data[0] => l1_w0_n0_mux_dataout.IN1
+data[1] => l1_w0_n0_mux_dataout.IN1
+result[0] <= l1_w0_n0_mux_dataout.DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => l1_w0_n0_mux_dataout.IN0
+sel[0] => _.IN0
+
+
+|keypad_SRAM4|SRAM4x4:inst5|Register4:inst5|Register1:inst3
+Dout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+rst_n => inst2.ACLR
+clk => inst2.CLK
+Ce => BUSMUX:inst.sel
+Din => BUSMUX:inst.datab[0]
+
+
+|keypad_SRAM4|SRAM4x4:inst5|Register4:inst5|Register1:inst3|BUSMUX:inst
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|keypad_SRAM4|SRAM4x4:inst5|Register4:inst5|Register1:inst3|BUSMUX:inst|LPM_MUX:$00000
+data[0][0] => mux_pjc:auto_generated.data[0]
+data[1][0] => mux_pjc:auto_generated.data[1]
+sel[0] => mux_pjc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_pjc:auto_generated.result[0]
+
+
+|keypad_SRAM4|SRAM4x4:inst5|Register4:inst5|Register1:inst3|BUSMUX:inst|LPM_MUX:$00000|mux_pjc:auto_generated
+data[0] => l1_w0_n0_mux_dataout.IN1
+data[1] => l1_w0_n0_mux_dataout.IN1
+result[0] <= l1_w0_n0_mux_dataout.DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => l1_w0_n0_mux_dataout.IN0
+sel[0] => _.IN0
+
+
+|keypad_SRAM4|SRAM4x4:inst5|BUSMUX:inst9
+dataa[0] => lpm_mux:$00000.data[0][0]
+dataa[1] => lpm_mux:$00000.data[0][1]
+datab[0] => lpm_mux:$00000.data[1][0]
+datab[1] => lpm_mux:$00000.data[1][1]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+result[1] <= lpm_mux:$00000.result[1]
+
+
+|keypad_SRAM4|SRAM4x4:inst5|BUSMUX:inst9|LPM_MUX:$00000
+data[0][0] => mux_qjc:auto_generated.data[0]
+data[0][1] => mux_qjc:auto_generated.data[1]
+data[1][0] => mux_qjc:auto_generated.data[2]
+data[1][1] => mux_qjc:auto_generated.data[3]
+sel[0] => mux_qjc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_qjc:auto_generated.result[0]
+result[1] <= mux_qjc:auto_generated.result[1]
+
+
+|keypad_SRAM4|SRAM4x4:inst5|BUSMUX:inst9|LPM_MUX:$00000|mux_qjc:auto_generated
+data[0] => l1_w0_n0_mux_dataout.IN1
+data[1] => l1_w1_n0_mux_dataout.IN1
+data[2] => l1_w0_n0_mux_dataout.IN1
+data[3] => l1_w1_n0_mux_dataout.IN1
+result[0] <= l1_w0_n0_mux_dataout.DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= l1_w1_n0_mux_dataout.DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => l1_w0_n0_mux_dataout.IN0
+sel[0] => _.IN0
+sel[0] => l1_w1_n0_mux_dataout.IN0
+sel[0] => _.IN0
+
+
+|keypad_SRAM4|SRAM4x4:inst5|Register2:inst7
+Dout[0] <= bf_Dout[0].DB_MAX_OUTPUT_PORT_TYPE
+Dout[1] <= bf_Dout[1].DB_MAX_OUTPUT_PORT_TYPE
+Din[0] => Register1:inst.Din
+Din[1] => Register1:inst1.Din
+Ce => Register1:inst.Ce
+Ce => Register1:inst1.Ce
+clk => Register1:inst.clk
+clk => Register1:inst1.clk
+rst_n => Register1:inst.rst_n
+rst_n => Register1:inst1.rst_n
+
+
+|keypad_SRAM4|SRAM4x4:inst5|Register2:inst7|Register1:inst
+Dout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+rst_n => inst2.ACLR
+clk => inst2.CLK
+Ce => BUSMUX:inst.sel
+Din => BUSMUX:inst.datab[0]
+
+
+|keypad_SRAM4|SRAM4x4:inst5|Register2:inst7|Register1:inst|BUSMUX:inst
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|keypad_SRAM4|SRAM4x4:inst5|Register2:inst7|Register1:inst|BUSMUX:inst|LPM_MUX:$00000
+data[0][0] => mux_pjc:auto_generated.data[0]
+data[1][0] => mux_pjc:auto_generated.data[1]
+sel[0] => mux_pjc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_pjc:auto_generated.result[0]
+
+
+|keypad_SRAM4|SRAM4x4:inst5|Register2:inst7|Register1:inst|BUSMUX:inst|LPM_MUX:$00000|mux_pjc:auto_generated
+data[0] => l1_w0_n0_mux_dataout.IN1
+data[1] => l1_w0_n0_mux_dataout.IN1
+result[0] <= l1_w0_n0_mux_dataout.DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => l1_w0_n0_mux_dataout.IN0
+sel[0] => _.IN0
+
+
+|keypad_SRAM4|SRAM4x4:inst5|Register2:inst7|Register1:inst1
+Dout <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+rst_n => inst2.ACLR
+clk => inst2.CLK
+Ce => BUSMUX:inst.sel
+Din => BUSMUX:inst.datab[0]
+
+
+|keypad_SRAM4|SRAM4x4:inst5|Register2:inst7|Register1:inst1|BUSMUX:inst
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|keypad_SRAM4|SRAM4x4:inst5|Register2:inst7|Register1:inst1|BUSMUX:inst|LPM_MUX:$00000
+data[0][0] => mux_pjc:auto_generated.data[0]
+data[1][0] => mux_pjc:auto_generated.data[1]
+sel[0] => mux_pjc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_pjc:auto_generated.result[0]
+
+
+|keypad_SRAM4|SRAM4x4:inst5|Register2:inst7|Register1:inst1|BUSMUX:inst|LPM_MUX:$00000|mux_pjc:auto_generated
+data[0] => l1_w0_n0_mux_dataout.IN1
+data[1] => l1_w0_n0_mux_dataout.IN1
+result[0] <= l1_w0_n0_mux_dataout.DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => l1_w0_n0_mux_dataout.IN0
+sel[0] => _.IN0
+
+
+|keypad_SRAM4|control_unit:inst
+reset => reg_fstate.state1.OUTPUTSELECT
+reset => reg_fstate.state2.OUTPUTSELECT
+reset => reg_fstate.state3.OUTPUTSELECT
+reset => reg_fstate.state4.OUTPUTSELECT
+reset => reg_fstate.state5.OUTPUTSELECT
+reset => ce.OUTPUTSELECT
+reset => rw.OUTPUTSELECT
+clock => fstate~1.DATAIN
+star => Selector0.IN1
+star => Selector1.IN1
+chk => Selector1.IN2
+chk => Selector2.IN0
+sharp => Selector3.IN1
+sharp => Selector4.IN1
+count[0] => Equal0.IN1
+count[1] => Equal0.IN0
+ce <= ce.DB_MAX_OUTPUT_PORT_TYPE
+rw <= rw.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|keypad_SRAM4|Decimal_to_binary:inst2
+chk <= inst12121.DB_MAX_OUTPUT_PORT_TYPE
+Keypad[0] => inst111.IN0
+Keypad[0] => inst3.IN0
+Keypad[1] => inst111.IN2
+Keypad[1] => inst12.IN0
+Keypad[2] => inst111.IN1
+Keypad[2] => inst10.IN0
+Keypad[3] => inst111.IN3
+Keypad[3] => inst10.IN3
+Keypad[3] => inst12.IN3
+Keypad[4] => inst111.IN5
+Keypad[4] => inst1.IN0
+Keypad[5] => inst111.IN4
+Keypad[5] => inst1.IN3
+Keypad[5] => inst12.IN1
+Keypad[6] => inst111.IN6
+Keypad[6] => inst10.IN1
+Keypad[6] => inst1.IN1
+Keypad[7] => inst111.IN7
+Keypad[7] => inst10.IN2
+Keypad[7] => inst1.IN2
+Keypad[7] => inst12.IN2
+Keypad[8] => inst13.IN1
+Keypad[8] => inst22.IN1
+Keypad[9] => inst13.IN0
+Keypad[9] => inst22.IN0
+Keypad[9] => inst9.IN0
+Keypad[10] => star.DATAIN
+Keypad[11] => sharp.DATAIN
+star <= Keypad[10].DB_MAX_OUTPUT_PORT_TYPE
+sharp <= Keypad[11].DB_MAX_OUTPUT_PORT_TYPE
+bin[0] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+bin[1] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+bin[2] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+bin[3] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|keypad_SRAM4|four_bit_counter:inst3
+Q0[0] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+Q0[1] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+rst_n => inst8.ACLR
+rst_n => inst7.ACLR
+clk => inst7.CLK
+clk => inst8.CLK
+ce => inst7.ENA
+ce => inst8.ENA
+
+

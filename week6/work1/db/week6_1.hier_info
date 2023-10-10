@@ -1,0 +1,12 @@
+|week6_1
+reset => reg_fstate.state1.OUTPUTSELECT
+reset => reg_fstate.state3.OUTPUTSELECT
+reset => reg_fstate.state2.OUTPUTSELECT
+reset => Dout.OUTPUTSELECT
+clock => fstate~1.DATAIN
+Din => Selector0.IN1
+Din => Selector1.IN0
+Din => reg_fstate.state2.DATAA
+Dout << Dout.DB_MAX_OUTPUT_PORT_TYPE
+
+

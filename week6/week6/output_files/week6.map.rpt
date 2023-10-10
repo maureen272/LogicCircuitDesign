@@ -1,0 +1,706 @@
+Analysis & Synthesis report for week6
+Sat Oct 07 12:17:33 2023
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |keypad_SRAM4|control_unit:inst|fstate
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: SRAM4x4:inst5|LPM_MUX:inst8
+ 13. Parameter Settings for User Entity Instance: SRAM4x4:inst5|Register4:inst2|Register1:inst|BUSMUX:inst
+ 14. Parameter Settings for User Entity Instance: SRAM4x4:inst5|Register4:inst2|Register1:inst1|BUSMUX:inst
+ 15. Parameter Settings for User Entity Instance: SRAM4x4:inst5|Register4:inst2|Register1:inst2|BUSMUX:inst
+ 16. Parameter Settings for User Entity Instance: SRAM4x4:inst5|Register4:inst2|Register1:inst3|BUSMUX:inst
+ 17. Parameter Settings for User Entity Instance: SRAM4x4:inst5|LPM_DECODE:inst
+ 18. Parameter Settings for User Entity Instance: SRAM4x4:inst5|Register4:inst3|Register1:inst|BUSMUX:inst
+ 19. Parameter Settings for User Entity Instance: SRAM4x4:inst5|Register4:inst3|Register1:inst1|BUSMUX:inst
+ 20. Parameter Settings for User Entity Instance: SRAM4x4:inst5|Register4:inst3|Register1:inst2|BUSMUX:inst
+ 21. Parameter Settings for User Entity Instance: SRAM4x4:inst5|Register4:inst3|Register1:inst3|BUSMUX:inst
+ 22. Parameter Settings for User Entity Instance: SRAM4x4:inst5|Register4:inst4|Register1:inst|BUSMUX:inst
+ 23. Parameter Settings for User Entity Instance: SRAM4x4:inst5|Register4:inst4|Register1:inst1|BUSMUX:inst
+ 24. Parameter Settings for User Entity Instance: SRAM4x4:inst5|Register4:inst4|Register1:inst2|BUSMUX:inst
+ 25. Parameter Settings for User Entity Instance: SRAM4x4:inst5|Register4:inst4|Register1:inst3|BUSMUX:inst
+ 26. Parameter Settings for User Entity Instance: SRAM4x4:inst5|Register4:inst5|Register1:inst|BUSMUX:inst
+ 27. Parameter Settings for User Entity Instance: SRAM4x4:inst5|Register4:inst5|Register1:inst1|BUSMUX:inst
+ 28. Parameter Settings for User Entity Instance: SRAM4x4:inst5|Register4:inst5|Register1:inst2|BUSMUX:inst
+ 29. Parameter Settings for User Entity Instance: SRAM4x4:inst5|Register4:inst5|Register1:inst3|BUSMUX:inst
+ 30. Parameter Settings for User Entity Instance: SRAM4x4:inst5|BUSMUX:inst9
+ 31. Parameter Settings for User Entity Instance: SRAM4x4:inst5|Register2:inst7|Register1:inst|BUSMUX:inst
+ 32. Parameter Settings for User Entity Instance: SRAM4x4:inst5|Register2:inst7|Register1:inst1|BUSMUX:inst
+ 33. Parameter Settings for User Entity Instance: control_unit:inst
+ 34. Post-Synthesis Netlist Statistics for Top Partition
+ 35. Elapsed Time Per Partition
+ 36. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Sat Oct 07 12:17:33 2023       ;
+; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                   ; week6                                       ;
+; Top-level Entity Name           ; keypad_SRAM4                                ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 25                                          ;
+; Total pins                      ; 18                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CGXFC7C7F23C8     ;                    ;
+; Top-level entity name                                                           ; keypad_SRAM4       ; week6              ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 6           ;
+; Maximum allowed            ; 6           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 6           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-6         ;   0.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                             ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                   ; Library ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------------+---------+
+; four_bit_counter.bdf             ; yes             ; User Block Diagram/Schematic File  ; C:/Users/chiyeong/Documents/GitHub/LogicCircuitDesignAndExperiment/week6/four_bit_counter.bdf  ;         ;
+; Decimal_to_binary.bdf            ; yes             ; User Block Diagram/Schematic File  ; C:/Users/chiyeong/Documents/GitHub/LogicCircuitDesignAndExperiment/week6/Decimal_to_binary.bdf ;         ;
+; keypad_SRAM4.bdf                 ; yes             ; User Block Diagram/Schematic File  ; C:/Users/chiyeong/Documents/GitHub/LogicCircuitDesignAndExperiment/week6/keypad_SRAM4.bdf      ;         ;
+; SRAM4x4.bdf                      ; yes             ; User Block Diagram/Schematic File  ; C:/Users/chiyeong/Documents/GitHub/LogicCircuitDesignAndExperiment/week6/SRAM4x4.bdf           ;         ;
+; Register2.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/Users/chiyeong/Documents/GitHub/LogicCircuitDesignAndExperiment/week6/Register2.bdf         ;         ;
+; Register4.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/Users/chiyeong/Documents/GitHub/LogicCircuitDesignAndExperiment/week6/Register4.bdf         ;         ;
+; Register1.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/Users/chiyeong/Documents/GitHub/LogicCircuitDesignAndExperiment/week6/Register1.bdf         ;         ;
+; lpm_mux.tdf                      ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mux.tdf                             ;         ;
+; aglobal201.inc                   ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc                          ;         ;
+; muxlut.inc                       ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/muxlut.inc                              ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/bypassff.inc                            ;         ;
+; altshift.inc                     ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altshift.inc                            ;         ;
+; db/mux_a0e.tdf                   ; yes             ; Auto-Generated Megafunction        ; C:/Users/chiyeong/Documents/GitHub/LogicCircuitDesignAndExperiment/week6/db/mux_a0e.tdf        ;         ;
+; busmux.tdf                       ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/busmux.tdf                              ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mux.inc                             ;         ;
+; db/mux_pjc.tdf                   ; yes             ; Auto-Generated Megafunction        ; C:/Users/chiyeong/Documents/GitHub/LogicCircuitDesignAndExperiment/week6/db/mux_pjc.tdf        ;         ;
+; lpm_decode.tdf                   ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_decode.tdf                          ;         ;
+; declut.inc                       ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/declut.inc                              ;         ;
+; lpm_compare.inc                  ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_compare.inc                         ;         ;
+; lpm_constant.inc                 ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_constant.inc                        ;         ;
+; db/decode_2of.tdf                ; yes             ; Auto-Generated Megafunction        ; C:/Users/chiyeong/Documents/GitHub/LogicCircuitDesignAndExperiment/week6/db/decode_2of.tdf     ;         ;
+; db/mux_qjc.tdf                   ; yes             ; Auto-Generated Megafunction        ; C:/Users/chiyeong/Documents/GitHub/LogicCircuitDesignAndExperiment/week6/db/mux_qjc.tdf        ;         ;
+; control_unit.v                   ; yes             ; Auto-Found Verilog HDL File        ; C:/Users/chiyeong/Documents/GitHub/LogicCircuitDesignAndExperiment/week6/control_unit.v        ;         ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimate of Logic utilization (ALMs needed) ; 17          ;
+;                                             ;             ;
+; Combinational ALUT usage for logic          ; 25          ;
+;     -- 7 input functions                    ; 0           ;
+;     -- 6 input functions                    ; 6           ;
+;     -- 5 input functions                    ; 7           ;
+;     -- 4 input functions                    ; 8           ;
+;     -- <=3 input functions                  ; 4           ;
+;                                             ;             ;
+; Dedicated logic registers                   ; 25          ;
+;                                             ;             ;
+; I/O pins                                    ; 18          ;
+;                                             ;             ;
+; Total DSP Blocks                            ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; reset~input ;
+; Maximum fan-out                             ; 32          ;
+; Total fan-out                               ; 225         ;
+; Average fan-out                             ; 2.62        ;
++---------------------------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                               ;
++--------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------+-------------------+--------------+
+; Compilation Hierarchy Node           ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                            ; Entity Name       ; Library Name ;
++--------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------+-------------------+--------------+
+; |keypad_SRAM4                        ; 25 (0)              ; 25 (0)                    ; 0                 ; 0          ; 18   ; 0            ; |keypad_SRAM4                                                                  ; keypad_SRAM4      ; work         ;
+;    |Decimal_to_binary:inst2|         ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |keypad_SRAM4|Decimal_to_binary:inst2                                          ; Decimal_to_binary ; work         ;
+;    |SRAM4x4:inst5|                   ; 10 (4)              ; 18 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |keypad_SRAM4|SRAM4x4:inst5                                                    ; SRAM4x4           ; work         ;
+;       |Register2:inst7|              ; 0 (0)               ; 2 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |keypad_SRAM4|SRAM4x4:inst5|Register2:inst7                                    ; Register2         ; work         ;
+;          |Register1:inst1|           ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |keypad_SRAM4|SRAM4x4:inst5|Register2:inst7|Register1:inst1                    ; Register1         ; work         ;
+;          |Register1:inst|            ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |keypad_SRAM4|SRAM4x4:inst5|Register2:inst7|Register1:inst                     ; Register1         ; work         ;
+;       |Register4:inst2|              ; 0 (0)               ; 4 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |keypad_SRAM4|SRAM4x4:inst5|Register4:inst2                                    ; Register4         ; work         ;
+;          |Register1:inst1|           ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |keypad_SRAM4|SRAM4x4:inst5|Register4:inst2|Register1:inst1                    ; Register1         ; work         ;
+;          |Register1:inst2|           ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |keypad_SRAM4|SRAM4x4:inst5|Register4:inst2|Register1:inst2                    ; Register1         ; work         ;
+;          |Register1:inst3|           ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |keypad_SRAM4|SRAM4x4:inst5|Register4:inst2|Register1:inst3                    ; Register1         ; work         ;
+;          |Register1:inst|            ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |keypad_SRAM4|SRAM4x4:inst5|Register4:inst2|Register1:inst                     ; Register1         ; work         ;
+;       |Register4:inst3|              ; 0 (0)               ; 4 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |keypad_SRAM4|SRAM4x4:inst5|Register4:inst3                                    ; Register4         ; work         ;
+;          |Register1:inst1|           ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |keypad_SRAM4|SRAM4x4:inst5|Register4:inst3|Register1:inst1                    ; Register1         ; work         ;
+;          |Register1:inst2|           ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |keypad_SRAM4|SRAM4x4:inst5|Register4:inst3|Register1:inst2                    ; Register1         ; work         ;
+;          |Register1:inst3|           ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |keypad_SRAM4|SRAM4x4:inst5|Register4:inst3|Register1:inst3                    ; Register1         ; work         ;
+;          |Register1:inst|            ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |keypad_SRAM4|SRAM4x4:inst5|Register4:inst3|Register1:inst                     ; Register1         ; work         ;
+;       |Register4:inst4|              ; 0 (0)               ; 4 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |keypad_SRAM4|SRAM4x4:inst5|Register4:inst4                                    ; Register4         ; work         ;
+;          |Register1:inst1|           ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |keypad_SRAM4|SRAM4x4:inst5|Register4:inst4|Register1:inst1                    ; Register1         ; work         ;
+;          |Register1:inst2|           ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |keypad_SRAM4|SRAM4x4:inst5|Register4:inst4|Register1:inst2                    ; Register1         ; work         ;
+;          |Register1:inst3|           ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |keypad_SRAM4|SRAM4x4:inst5|Register4:inst4|Register1:inst3                    ; Register1         ; work         ;
+;          |Register1:inst|            ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |keypad_SRAM4|SRAM4x4:inst5|Register4:inst4|Register1:inst                     ; Register1         ; work         ;
+;       |Register4:inst5|              ; 0 (0)               ; 4 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |keypad_SRAM4|SRAM4x4:inst5|Register4:inst5                                    ; Register4         ; work         ;
+;          |Register1:inst1|           ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |keypad_SRAM4|SRAM4x4:inst5|Register4:inst5|Register1:inst1                    ; Register1         ; work         ;
+;          |Register1:inst2|           ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |keypad_SRAM4|SRAM4x4:inst5|Register4:inst5|Register1:inst2                    ; Register1         ; work         ;
+;          |Register1:inst3|           ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |keypad_SRAM4|SRAM4x4:inst5|Register4:inst5|Register1:inst3                    ; Register1         ; work         ;
+;          |Register1:inst|            ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |keypad_SRAM4|SRAM4x4:inst5|Register4:inst5|Register1:inst                     ; Register1         ; work         ;
+;       |busmux:inst9|                 ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |keypad_SRAM4|SRAM4x4:inst5|busmux:inst9                                       ; busmux            ; work         ;
+;          |lpm_mux:$00000|            ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |keypad_SRAM4|SRAM4x4:inst5|busmux:inst9|lpm_mux:$00000                        ; lpm_mux           ; work         ;
+;             |mux_qjc:auto_generated| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |keypad_SRAM4|SRAM4x4:inst5|busmux:inst9|lpm_mux:$00000|mux_qjc:auto_generated ; mux_qjc           ; work         ;
+;       |lpm_mux:inst8|                ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |keypad_SRAM4|SRAM4x4:inst5|lpm_mux:inst8                                      ; lpm_mux           ; work         ;
+;          |mux_a0e:auto_generated|    ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |keypad_SRAM4|SRAM4x4:inst5|lpm_mux:inst8|mux_a0e:auto_generated               ; mux_a0e           ; work         ;
+;    |control_unit:inst|               ; 7 (7)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |keypad_SRAM4|control_unit:inst                                                ; control_unit      ; work         ;
+;    |four_bit_counter:inst3|          ; 2 (2)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |keypad_SRAM4|four_bit_counter:inst3                                           ; four_bit_counter  ; work         ;
++--------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------+-------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------+
+; State Machine - |keypad_SRAM4|control_unit:inst|fstate                                        ;
++---------------+---------------+---------------+---------------+---------------+---------------+
+; Name          ; fstate.state4 ; fstate.state3 ; fstate.state2 ; fstate.state1 ; fstate.state5 ;
++---------------+---------------+---------------+---------------+---------------+---------------+
+; fstate.state1 ; 0             ; 0             ; 0             ; 0             ; 0             ;
+; fstate.state2 ; 0             ; 0             ; 1             ; 1             ; 0             ;
+; fstate.state3 ; 0             ; 1             ; 0             ; 1             ; 0             ;
+; fstate.state4 ; 1             ; 0             ; 0             ; 1             ; 0             ;
+; fstate.state5 ; 0             ; 0             ; 0             ; 1             ; 1             ;
++---------------+---------------+---------------+---------------+---------------+---------------+
+
+
++------------------------------------------------------------+
+; Registers Removed During Synthesis                         ;
++---------------------------------------+--------------------+
+; Register name                         ; Reason for Removal ;
++---------------------------------------+--------------------+
+; control_unit:inst|fstate~2            ; Lost fanout        ;
+; control_unit:inst|fstate~3            ; Lost fanout        ;
+; control_unit:inst|fstate~5            ; Lost fanout        ;
+; control_unit:inst|fstate~6            ; Lost fanout        ;
+; Total Number of Removed Registers = 4 ;                    ;
++---------------------------------------+--------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 25    ;
+; Number of registers using Synchronous Clear  ; 3     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 20    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 18    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------+
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |keypad_SRAM4|SRAM4x4:inst5|lpm_mux:inst8|mux_a0e:auto_generated|l2_w3_n0_mux_dataout ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SRAM4x4:inst5|LPM_MUX:inst8 ;
++------------------------+-----------+-------------------------------------+
+; Parameter Name         ; Value     ; Type                                ;
++------------------------+-----------+-------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON        ; AUTO_CARRY                          ;
+; IGNORE_CARRY_BUFFERS   ; OFF       ; IGNORE_CARRY                        ;
+; AUTO_CASCADE_CHAINS    ; ON        ; AUTO_CASCADE                        ;
+; IGNORE_CASCADE_BUFFERS ; OFF       ; IGNORE_CASCADE                      ;
+; LPM_WIDTH              ; 4         ; Untyped                             ;
+; LPM_SIZE               ; 4         ; Untyped                             ;
+; LPM_WIDTHS             ; 2         ; Untyped                             ;
+; LPM_PIPELINE           ; 0         ; Untyped                             ;
+; CBXI_PARAMETER         ; mux_a0e   ; Untyped                             ;
+; DEVICE_FAMILY          ; Cyclone V ; Untyped                             ;
++------------------------+-----------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SRAM4x4:inst5|Register4:inst2|Register1:inst|BUSMUX:inst ;
++----------------+-------+------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                         ;
++----------------+-------+------------------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                                      ;
++----------------+-------+------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SRAM4x4:inst5|Register4:inst2|Register1:inst1|BUSMUX:inst ;
++----------------+-------+-------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                          ;
++----------------+-------+-------------------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                                       ;
++----------------+-------+-------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SRAM4x4:inst5|Register4:inst2|Register1:inst2|BUSMUX:inst ;
++----------------+-------+-------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                          ;
++----------------+-------+-------------------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                                       ;
++----------------+-------+-------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SRAM4x4:inst5|Register4:inst2|Register1:inst3|BUSMUX:inst ;
++----------------+-------+-------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                          ;
++----------------+-------+-------------------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                                       ;
++----------------+-------+-------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SRAM4x4:inst5|LPM_DECODE:inst ;
++------------------------+------------+--------------------------------------+
+; Parameter Name         ; Value      ; Type                                 ;
++------------------------+------------+--------------------------------------+
+; LPM_WIDTH              ; 2          ; Untyped                              ;
+; LPM_DECODES            ; 4          ; Untyped                              ;
+; LPM_PIPELINE           ; 0          ; Untyped                              ;
+; CASCADE_CHAIN          ; MANUAL     ; Untyped                              ;
+; DEVICE_FAMILY          ; Cyclone V  ; Untyped                              ;
+; CBXI_PARAMETER         ; decode_2of ; Untyped                              ;
+; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                           ;
+; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                         ;
+; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                         ;
+; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                       ;
++------------------------+------------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SRAM4x4:inst5|Register4:inst3|Register1:inst|BUSMUX:inst ;
++----------------+-------+------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                         ;
++----------------+-------+------------------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                                      ;
++----------------+-------+------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SRAM4x4:inst5|Register4:inst3|Register1:inst1|BUSMUX:inst ;
++----------------+-------+-------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                          ;
++----------------+-------+-------------------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                                       ;
++----------------+-------+-------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SRAM4x4:inst5|Register4:inst3|Register1:inst2|BUSMUX:inst ;
++----------------+-------+-------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                          ;
++----------------+-------+-------------------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                                       ;
++----------------+-------+-------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SRAM4x4:inst5|Register4:inst3|Register1:inst3|BUSMUX:inst ;
++----------------+-------+-------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                          ;
++----------------+-------+-------------------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                                       ;
++----------------+-------+-------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SRAM4x4:inst5|Register4:inst4|Register1:inst|BUSMUX:inst ;
++----------------+-------+------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                         ;
++----------------+-------+------------------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                                      ;
++----------------+-------+------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SRAM4x4:inst5|Register4:inst4|Register1:inst1|BUSMUX:inst ;
++----------------+-------+-------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                          ;
++----------------+-------+-------------------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                                       ;
++----------------+-------+-------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SRAM4x4:inst5|Register4:inst4|Register1:inst2|BUSMUX:inst ;
++----------------+-------+-------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                          ;
++----------------+-------+-------------------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                                       ;
++----------------+-------+-------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SRAM4x4:inst5|Register4:inst4|Register1:inst3|BUSMUX:inst ;
++----------------+-------+-------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                          ;
++----------------+-------+-------------------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                                       ;
++----------------+-------+-------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SRAM4x4:inst5|Register4:inst5|Register1:inst|BUSMUX:inst ;
++----------------+-------+------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                         ;
++----------------+-------+------------------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                                      ;
++----------------+-------+------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SRAM4x4:inst5|Register4:inst5|Register1:inst1|BUSMUX:inst ;
++----------------+-------+-------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                          ;
++----------------+-------+-------------------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                                       ;
++----------------+-------+-------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SRAM4x4:inst5|Register4:inst5|Register1:inst2|BUSMUX:inst ;
++----------------+-------+-------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                          ;
++----------------+-------+-------------------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                                       ;
++----------------+-------+-------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SRAM4x4:inst5|Register4:inst5|Register1:inst3|BUSMUX:inst ;
++----------------+-------+-------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                          ;
++----------------+-------+-------------------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                                       ;
++----------------+-------+-------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SRAM4x4:inst5|BUSMUX:inst9 ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; WIDTH          ; 2     ; Untyped                                        ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SRAM4x4:inst5|Register2:inst7|Register1:inst|BUSMUX:inst ;
++----------------+-------+------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                         ;
++----------------+-------+------------------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                                      ;
++----------------+-------+------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SRAM4x4:inst5|Register2:inst7|Register1:inst1|BUSMUX:inst ;
++----------------+-------+-------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                          ;
++----------------+-------+-------------------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                                       ;
++----------------+-------+-------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: control_unit:inst ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; state1         ; 0     ; Signed Integer                        ;
+; state2         ; 1     ; Signed Integer                        ;
+; state3         ; 2     ; Signed Integer                        ;
+; state4         ; 3     ; Signed Integer                        ;
+; state5         ; 4     ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 25                          ;
+;     CLR               ; 2                           ;
+;     ENA CLR           ; 18                          ;
+;     SCLR              ; 3                           ;
+;     plain             ; 2                           ;
+; arriav_lcell_comb     ; 25                          ;
+;     normal            ; 25                          ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 1                           ;
+;         3 data inputs ; 2                           ;
+;         4 data inputs ; 8                           ;
+;         5 data inputs ; 7                           ;
+;         6 data inputs ; 6                           ;
+; boundary_port         ; 18                          ;
+;                       ;                             ;
+; Max LUT depth         ; 2.00                        ;
+; Average LUT depth     ; 1.44                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Sat Oct 07 12:17:26 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off week6 -c week6
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file four_bit_counter.bdf
+    Info (12023): Found entity 1: four_bit_counter
+Info (12021): Found 1 design units, including 1 entities, in source file decimal_to_binary.bdf
+    Info (12023): Found entity 1: Decimal_to_binary
+Info (12021): Found 1 design units, including 1 entities, in source file keypad_sram4.bdf
+    Info (12023): Found entity 1: keypad_SRAM4
+Info (12021): Found 1 design units, including 1 entities, in source file sram4x4.bdf
+    Info (12023): Found entity 1: SRAM4x4
+Info (12021): Found 1 design units, including 1 entities, in source file register2.bdf
+    Info (12023): Found entity 1: Register2
+Info (12021): Found 1 design units, including 1 entities, in source file register4.bdf
+    Info (12023): Found entity 1: Register4
+Info (12021): Found 1 design units, including 1 entities, in source file register1.bdf
+    Info (12023): Found entity 1: Register1
+Info (12127): Elaborating entity "keypad_SRAM4" for the top level hierarchy
+Info (12128): Elaborating entity "SRAM4x4" for hierarchy "SRAM4x4:inst5"
+Info (12128): Elaborating entity "LPM_MUX" for hierarchy "SRAM4x4:inst5|LPM_MUX:inst8"
+Info (12130): Elaborated megafunction instantiation "SRAM4x4:inst5|LPM_MUX:inst8"
+Info (12133): Instantiated megafunction "SRAM4x4:inst5|LPM_MUX:inst8" with the following parameter:
+    Info (12134): Parameter "LPM_PIPELINE" = "0"
+    Info (12134): Parameter "LPM_SIZE" = "4"
+    Info (12134): Parameter "LPM_WIDTH" = "4"
+    Info (12134): Parameter "LPM_WIDTHS" = "2"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_a0e.tdf
+    Info (12023): Found entity 1: mux_a0e File: C:/Users/chiyeong/Documents/GitHub/LogicCircuitDesignAndExperiment/week6/db/mux_a0e.tdf Line: 23
+Info (12128): Elaborating entity "mux_a0e" for hierarchy "SRAM4x4:inst5|LPM_MUX:inst8|mux_a0e:auto_generated" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mux.tdf Line: 87
+Info (12128): Elaborating entity "Register4" for hierarchy "SRAM4x4:inst5|Register4:inst2"
+Info (12128): Elaborating entity "Register1" for hierarchy "SRAM4x4:inst5|Register4:inst2|Register1:inst"
+Info (12128): Elaborating entity "BUSMUX" for hierarchy "SRAM4x4:inst5|Register4:inst2|Register1:inst|BUSMUX:inst"
+Info (12130): Elaborated megafunction instantiation "SRAM4x4:inst5|Register4:inst2|Register1:inst|BUSMUX:inst"
+Info (12133): Instantiated megafunction "SRAM4x4:inst5|Register4:inst2|Register1:inst|BUSMUX:inst" with the following parameter:
+    Info (12134): Parameter "WIDTH" = "1"
+Info (12128): Elaborating entity "LPM_MUX" for hierarchy "SRAM4x4:inst5|Register4:inst2|Register1:inst|BUSMUX:inst|LPM_MUX:$00000" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/busmux.tdf Line: 44
+Info (12131): Elaborated megafunction instantiation "SRAM4x4:inst5|Register4:inst2|Register1:inst|BUSMUX:inst|LPM_MUX:$00000", which is child of megafunction instantiation "SRAM4x4:inst5|Register4:inst2|Register1:inst|BUSMUX:inst" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/busmux.tdf Line: 44
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_pjc.tdf
+    Info (12023): Found entity 1: mux_pjc File: C:/Users/chiyeong/Documents/GitHub/LogicCircuitDesignAndExperiment/week6/db/mux_pjc.tdf Line: 23
+Info (12128): Elaborating entity "mux_pjc" for hierarchy "SRAM4x4:inst5|Register4:inst2|Register1:inst|BUSMUX:inst|LPM_MUX:$00000|mux_pjc:auto_generated" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mux.tdf Line: 87
+Info (12128): Elaborating entity "LPM_DECODE" for hierarchy "SRAM4x4:inst5|LPM_DECODE:inst"
+Info (12130): Elaborated megafunction instantiation "SRAM4x4:inst5|LPM_DECODE:inst"
+Info (12133): Instantiated megafunction "SRAM4x4:inst5|LPM_DECODE:inst" with the following parameter:
+    Info (12134): Parameter "LPM_DECODES" = "4"
+    Info (12134): Parameter "LPM_WIDTH" = "2"
+Info (12021): Found 1 design units, including 1 entities, in source file db/decode_2of.tdf
+    Info (12023): Found entity 1: decode_2of File: C:/Users/chiyeong/Documents/GitHub/LogicCircuitDesignAndExperiment/week6/db/decode_2of.tdf Line: 23
+Info (12128): Elaborating entity "decode_2of" for hierarchy "SRAM4x4:inst5|LPM_DECODE:inst|decode_2of:auto_generated" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_decode.tdf Line: 77
+Info (12128): Elaborating entity "BUSMUX" for hierarchy "SRAM4x4:inst5|BUSMUX:inst9"
+Info (12130): Elaborated megafunction instantiation "SRAM4x4:inst5|BUSMUX:inst9"
+Info (12133): Instantiated megafunction "SRAM4x4:inst5|BUSMUX:inst9" with the following parameter:
+    Info (12134): Parameter "WIDTH" = "2"
+Info (12128): Elaborating entity "LPM_MUX" for hierarchy "SRAM4x4:inst5|BUSMUX:inst9|LPM_MUX:$00000" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/busmux.tdf Line: 44
+Info (12131): Elaborated megafunction instantiation "SRAM4x4:inst5|BUSMUX:inst9|LPM_MUX:$00000", which is child of megafunction instantiation "SRAM4x4:inst5|BUSMUX:inst9" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/busmux.tdf Line: 44
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_qjc.tdf
+    Info (12023): Found entity 1: mux_qjc File: C:/Users/chiyeong/Documents/GitHub/LogicCircuitDesignAndExperiment/week6/db/mux_qjc.tdf Line: 23
+Info (12128): Elaborating entity "mux_qjc" for hierarchy "SRAM4x4:inst5|BUSMUX:inst9|LPM_MUX:$00000|mux_qjc:auto_generated" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mux.tdf Line: 87
+Info (12128): Elaborating entity "Register2" for hierarchy "SRAM4x4:inst5|Register2:inst7"
+Warning (12125): Using design file control_unit.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: control_unit File: C:/Users/chiyeong/Documents/GitHub/LogicCircuitDesignAndExperiment/week6/control_unit.v Line: 23
+Info (12128): Elaborating entity "control_unit" for hierarchy "control_unit:inst"
+Info (12128): Elaborating entity "Decimal_to_binary" for hierarchy "Decimal_to_binary:inst2"
+Info (12128): Elaborating entity "four_bit_counter" for hierarchy "four_bit_counter:inst3"
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 4 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 61 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 14 input pins
+    Info (21059): Implemented 4 output pins
+    Info (21061): Implemented 43 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4847 megabytes
+    Info: Processing ended: Sat Oct 07 12:17:33 2023
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:13
+
+

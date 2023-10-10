@@ -1,0 +1,81 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "Dout[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Dout[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Dout[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Dout[0]",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "keypad[0]",
+					"strict" : false
+				},
+				{
+					"name" : "keypad[9]",
+					"strict" : false
+				},
+				{
+					"name" : "keypad[8]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "keypad[3]",
+					"strict" : false
+				},
+				{
+					"name" : "keypad[1]",
+					"strict" : false
+				},
+				{
+					"name" : "keypad[7]",
+					"strict" : false
+				},
+				{
+					"name" : "keypad[5]",
+					"strict" : false
+				},
+				{
+					"name" : "keypad[2]",
+					"strict" : false
+				},
+				{
+					"name" : "keypad[6]",
+					"strict" : false
+				},
+				{
+					"name" : "keypad[4]",
+					"strict" : false
+				},
+				{
+					"name" : "keypad[10]",
+					"strict" : false
+				},
+				{
+					"name" : "keypad[11]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
