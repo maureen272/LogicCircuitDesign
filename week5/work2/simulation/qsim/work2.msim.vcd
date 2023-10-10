@@ -1,0 +1,654 @@
+$comment
+	File created using the following command:
+		vcd file work2.msim.vcd -direction
+$end
+$date
+	Tue Oct 10 15:29:07 2023
+$end
+$version
+	ModelSim Version 2020.1
+$end
+$timescale
+	1ps
+$end
+
+$scope module work2_vlg_vec_tst $end
+$var reg 2 ! Address [1:0] $end
+$var reg 1 " clk $end
+$var reg 4 # DataIn [3:0] $end
+$var reg 1 $ rst_n $end
+$var reg 1 % RW $end
+$var wire 1 & Dout [3] $end
+$var wire 1 ' Dout [2] $end
+$var wire 1 ( Dout [1] $end
+$var wire 1 ) Dout [0] $end
+
+$scope module i1 $end
+$var wire 1 * gnd $end
+$var wire 1 + vcc $end
+$var wire 1 , unknown $end
+$var tri1 1 - devclrn $end
+$var tri1 1 . devpor $end
+$var tri1 1 / devoe $end
+$var wire 1 0 ~QUARTUS_CREATED_GND~I_combout $end
+$var wire 1 1 Address[0]~input_o $end
+$var wire 1 2 RW~input_o $end
+$var wire 1 3 inst32~combout $end
+$var wire 1 4 clk~input_o $end
+$var wire 1 5 clk~inputCLKENA0_outclk $end
+$var wire 1 6 DataIn[3]~input_o $end
+$var wire 1 7 inst|inst3~feeder_combout $end
+$var wire 1 8 rst_n~input_o $end
+$var wire 1 9 Address[1]~input_o $end
+$var wire 1 : inst25~combout $end
+$var wire 1 ; inst|inst3~q $end
+$var wire 1 < inst26~combout $end
+$var wire 1 = inst1|inst3~q $end
+$var wire 1 > inst2|inst3~feeder_combout $end
+$var wire 1 ? inst27~combout $end
+$var wire 1 @ inst2|inst3~q $end
+$var wire 1 A inst28~combout $end
+$var wire 1 B inst3|inst3~q $end
+$var wire 1 C inst33~combout $end
+$var wire 1 D inst20|$00000|auto_generated|l1_w3_n0_mux_dataout~0_combout $end
+$var wire 1 E DataIn[2]~input_o $end
+$var wire 1 F inst1|inst2~feeder_combout $end
+$var wire 1 G inst1|inst2~q $end
+$var wire 1 H inst|inst2~feeder_combout $end
+$var wire 1 I inst|inst2~q $end
+$var wire 1 J inst3|inst2~q $end
+$var wire 1 K inst2|inst2~feeder_combout $end
+$var wire 1 L inst2|inst2~q $end
+$var wire 1 M inst20|$00000|auto_generated|l1_w2_n0_mux_dataout~0_combout $end
+$var wire 1 N DataIn[1]~input_o $end
+$var wire 1 O inst1|inst1~feeder_combout $end
+$var wire 1 P inst1|inst1~q $end
+$var wire 1 Q inst2|inst1~feeder_combout $end
+$var wire 1 R inst2|inst1~q $end
+$var wire 1 S inst|inst1~q $end
+$var wire 1 T inst3|inst1~q $end
+$var wire 1 U inst20|$00000|auto_generated|l1_w1_n0_mux_dataout~0_combout $end
+$var wire 1 V DataIn[0]~input_o $end
+$var wire 1 W inst1|inst~q $end
+$var wire 1 X inst2|inst~feeder_combout $end
+$var wire 1 Y inst2|inst~q $end
+$var wire 1 Z inst|inst~q $end
+$var wire 1 [ inst3|inst~q $end
+$var wire 1 \ inst20|$00000|auto_generated|l1_w0_n0_mux_dataout~0_combout $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 !
+0"
+b0 #
+1$
+0%
+0)
+0(
+0'
+0&
+0*
+1+
+x,
+1-
+1.
+1/
+00
+01
+02
+03
+04
+05
+06
+07
+18
+09
+0:
+0;
+0<
+0=
+0>
+0?
+0@
+0A
+0B
+0C
+0D
+0E
+0F
+0G
+0H
+0I
+0J
+0K
+0L
+0M
+0N
+0O
+0P
+0Q
+0R
+0S
+0T
+0U
+0V
+0W
+0X
+0Y
+0Z
+0[
+0\
+$end
+#10000
+1"
+14
+15
+#20000
+0"
+04
+05
+#30000
+1"
+14
+15
+#40000
+1%
+b10 !
+b11 !
+b1000 #
+b1001 #
+0"
+12
+1V
+16
+11
+19
+04
+05
+1A
+1>
+17
+1X
+#50000
+1"
+14
+15
+1[
+1B
+#60000
+0%
+b1 !
+b0 !
+b1 #
+b0 #
+0"
+02
+0V
+06
+01
+09
+04
+05
+0A
+0>
+07
+0X
+#70000
+1"
+14
+15
+#80000
+0"
+04
+05
+#90000
+b10 !
+b11 !
+1"
+11
+19
+14
+15
+1C
+13
+1\
+1D
+1&
+1)
+#100000
+0"
+04
+05
+#110000
+b1 !
+b0 !
+1"
+01
+09
+14
+15
+0C
+03
+0\
+0D
+0&
+0)
+#120000
+b100 #
+b110 #
+1%
+b1 !
+0"
+12
+11
+1N
+1E
+04
+05
+1<
+1K
+1H
+1F
+1Q
+1O
+#130000
+1"
+14
+15
+1P
+1G
+#140000
+b10 #
+b0 #
+0%
+b0 !
+0"
+02
+01
+0N
+0E
+04
+05
+0<
+0K
+0H
+0F
+0Q
+0O
+#150000
+1"
+14
+15
+#160000
+0"
+04
+05
+#170000
+b10 !
+b11 !
+1"
+11
+19
+14
+15
+1C
+13
+1\
+1D
+1&
+1)
+#180000
+0"
+04
+05
+#190000
+1"
+14
+15
+#200000
+0"
+04
+05
+#210000
+1"
+14
+15
+#220000
+b1 !
+b0 !
+0"
+01
+09
+04
+05
+0C
+03
+0\
+0D
+0&
+0)
+#230000
+1"
+14
+15
+#240000
+0"
+04
+05
+#250000
+b1 !
+1"
+11
+14
+15
+13
+1U
+1M
+1'
+1(
+#260000
+0"
+04
+05
+#270000
+1"
+14
+15
+#280000
+0"
+04
+05
+#290000
+1"
+14
+15
+#300000
+b0 !
+0"
+01
+04
+05
+03
+0U
+0M
+0'
+0(
+#310000
+1"
+14
+15
+#320000
+0"
+04
+05
+#330000
+1"
+14
+15
+#340000
+0"
+04
+05
+#350000
+1"
+14
+15
+#360000
+0"
+04
+05
+#370000
+1"
+14
+15
+#380000
+0"
+04
+05
+#390000
+1"
+14
+15
+#400000
+0"
+04
+05
+#410000
+1"
+14
+15
+#420000
+0"
+04
+05
+#430000
+1"
+14
+15
+#440000
+0"
+04
+05
+#450000
+1"
+14
+15
+#460000
+0"
+04
+05
+#470000
+1"
+14
+15
+#480000
+0"
+04
+05
+#490000
+1"
+14
+15
+#500000
+0"
+04
+05
+#510000
+1"
+14
+15
+#520000
+0"
+04
+05
+#530000
+1"
+14
+15
+#540000
+0"
+04
+05
+#550000
+1"
+14
+15
+#560000
+0"
+04
+05
+#570000
+1"
+14
+15
+#580000
+0"
+04
+05
+#590000
+1"
+14
+15
+#600000
+0"
+04
+05
+#610000
+1"
+14
+15
+#620000
+0"
+04
+05
+#630000
+1"
+14
+15
+#640000
+0"
+04
+05
+#650000
+1"
+14
+15
+#660000
+0"
+04
+05
+#670000
+1"
+14
+15
+#680000
+0"
+04
+05
+#690000
+1"
+14
+15
+#700000
+0"
+04
+05
+#710000
+1"
+14
+15
+#720000
+0"
+04
+05
+#730000
+1"
+14
+15
+#740000
+0"
+04
+05
+#750000
+1"
+14
+15
+#760000
+0"
+04
+05
+#770000
+1"
+14
+15
+#780000
+0"
+04
+05
+#790000
+1"
+14
+15
+#800000
+0"
+04
+05
+#810000
+1"
+14
+15
+#820000
+0"
+04
+05
+#830000
+1"
+14
+15
+#840000
+0"
+04
+05
+#850000
+1"
+14
+15
+#860000
+0"
+04
+05
+#870000
+1"
+14
+15
+#880000
+0"
+04
+05
+#890000
+1"
+14
+15
+#900000
+0"
+04
+05
+#910000
+1"
+14
+15
+#920000
+0"
+04
+05
+#930000
+1"
+14
+15
+#940000
+0"
+04
+05
+#950000
+1"
+14
+15
+#960000
+0"
+04
+05
+#970000
+1"
+14
+15
+#980000
+0"
+04
+05
+#990000
+1"
+14
+15
+#1000000

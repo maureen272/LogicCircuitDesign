@@ -1,0 +1,45 @@
+|work1
+CNT100[0] <= bf_CNT10[0].DB_MAX_OUTPUT_PORT_TYPE
+CNT100[1] <= bf_CNT10[1].DB_MAX_OUTPUT_PORT_TYPE
+CNT100[2] <= bf_CNT10[2].DB_MAX_OUTPUT_PORT_TYPE
+CNT100[3] <= bf_CNT10[3].DB_MAX_OUTPUT_PORT_TYPE
+CNT100[4] <= decimal_counter:inst1.CNT10[0]
+CNT100[5] <= decimal_counter:inst1.CNT10[1]
+CNT100[6] <= decimal_counter:inst1.CNT10[2]
+CNT100[7] <= decimal_counter:inst1.CNT10[3]
+clk => inst6.CLK
+clk => decimal_counter:inst.clk
+rst_n => decimal_counter:inst.rst_n
+rst_n => decimal_counter:inst1.rst_n
+
+
+|work1|decimal_counter:inst1
+CNT10[0] <= D_b.DB_MAX_OUTPUT_PORT_TYPE
+CNT10[1] <= C_b.DB_MAX_OUTPUT_PORT_TYPE
+CNT10[2] <= B_b.DB_MAX_OUTPUT_PORT_TYPE
+CNT10[3] <= A_b.DB_MAX_OUTPUT_PORT_TYPE
+rst_n => B_b.ACLR
+rst_n => C_b.ACLR
+rst_n => A_b.ACLR
+rst_n => D_b.ACLR
+clk => B_b.CLK
+clk => C_b.CLK
+clk => A_b.CLK
+clk => D_b.CLK
+
+
+|work1|decimal_counter:inst
+CNT10[0] <= D_b.DB_MAX_OUTPUT_PORT_TYPE
+CNT10[1] <= C_b.DB_MAX_OUTPUT_PORT_TYPE
+CNT10[2] <= B_b.DB_MAX_OUTPUT_PORT_TYPE
+CNT10[3] <= A_b.DB_MAX_OUTPUT_PORT_TYPE
+rst_n => B_b.ACLR
+rst_n => C_b.ACLR
+rst_n => A_b.ACLR
+rst_n => D_b.ACLR
+clk => B_b.CLK
+clk => C_b.CLK
+clk => A_b.CLK
+clk => D_b.CLK
+
+

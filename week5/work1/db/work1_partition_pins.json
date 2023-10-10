@@ -1,0 +1,49 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "CNT100[7]",
+					"strict" : false
+				},
+				{
+					"name" : "CNT100[6]",
+					"strict" : false
+				},
+				{
+					"name" : "CNT100[5]",
+					"strict" : false
+				},
+				{
+					"name" : "CNT100[4]",
+					"strict" : false
+				},
+				{
+					"name" : "CNT100[3]",
+					"strict" : false
+				},
+				{
+					"name" : "CNT100[2]",
+					"strict" : false
+				},
+				{
+					"name" : "CNT100[1]",
+					"strict" : false
+				},
+				{
+					"name" : "CNT100[0]",
+					"strict" : false
+				},
+				{
+					"name" : "rst_n",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
