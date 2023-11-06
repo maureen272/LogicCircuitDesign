@@ -1,0 +1,175 @@
+|work2
+Output1[0] <= four_bit_register:inst.Dout[0]
+Output1[1] <= four_bit_register:inst.Dout[1]
+Output1[2] <= four_bit_register:inst.Dout[2]
+Output1[3] <= four_bit_register:inst.Dout[3]
+six => inst10.IN0
+six => decimal_to_binary:inst4.d6
+eight => inst10.IN1
+eight => decimal_to_binary:inst4.d8
+nine => inst10.IN2
+nine => decimal_to_binary:inst4.d9
+seven => inst10.IN3
+seven => decimal_to_binary:inst4.d7
+zero => inst9.IN0
+zero => decimal_to_binary:inst4.d0
+two => inst9.IN1
+two => decimal_to_binary:inst4.d2
+one => inst9.IN2
+one => decimal_to_binary:inst4.d1
+three => inst9.IN3
+three => decimal_to_binary:inst4.d3
+four => inst9.IN4
+four => decimal_to_binary:inst4.d4
+five => inst9.IN5
+five => decimal_to_binary:inst4.d5
+clk => trigger:inst6.CLK
+rst => inst1.IN0
+Output2[0] <= four_bit_register:inst5.Dout[0]
+Output2[1] <= four_bit_register:inst5.Dout[1]
+Output2[2] <= four_bit_register:inst5.Dout[2]
+Output2[3] <= four_bit_register:inst5.Dout[3]
+
+
+|work2|four_bit_register:inst
+Dout[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+Dout[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Dout[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Dout[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+RST_N => inst.ACLR
+RST_N => inst1.ACLR
+RST_N => inst2.ACLR
+RST_N => inst3.ACLR
+CLK => inst.CLK
+CLK => inst1.CLK
+CLK => inst2.CLK
+CLK => inst3.CLK
+Ce => 21mux:inst4.S
+Ce => 21mux:inst5.S
+Ce => 21mux:inst6.S
+Ce => 21mux:inst7.S
+Din[0] => 21mux:inst4.B
+Din[1] => 21mux:inst5.B
+Din[2] => 21mux:inst6.B
+Din[3] => 21mux:inst7.B
+
+
+|work2|four_bit_register:inst|21mux:inst4
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|work2|four_bit_register:inst|21mux:inst5
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|work2|four_bit_register:inst|21mux:inst6
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|work2|four_bit_register:inst|21mux:inst7
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|work2|trigger:inst6
+Dout <= inst.DB_MAX_OUTPUT_PORT_TYPE
+RST => inst2.ACLR
+RST => inst3.ACLR
+CLK => inst2.CLK
+CLK => inst3.CLK
+Din => inst2.DATAIN
+
+
+|work2|decimal_to_binary:inst4
+b0 <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+d0 => inst16.IN0
+d1 => inst10.IN0
+d5 => inst10.IN1
+d5 => inst3.IN3
+d3 => inst10.IN2
+d3 => inst9.IN3
+d7 => inst10.IN3
+d7 => inst9.IN2
+d7 => inst3.IN2
+d9 => inst10.IN4
+d9 => inst.IN0
+b1 <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+d2 => inst9.IN0
+d6 => inst9.IN1
+d6 => inst3.IN1
+b2 <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+d4 => inst3.IN0
+b3 <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+d8 => inst.IN1
+
+
+|work2|four_bit_register:inst5
+Dout[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+Dout[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Dout[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Dout[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+RST_N => inst.ACLR
+RST_N => inst1.ACLR
+RST_N => inst2.ACLR
+RST_N => inst3.ACLR
+CLK => inst.CLK
+CLK => inst1.CLK
+CLK => inst2.CLK
+CLK => inst3.CLK
+Ce => 21mux:inst4.S
+Ce => 21mux:inst5.S
+Ce => 21mux:inst6.S
+Ce => 21mux:inst7.S
+Din[0] => 21mux:inst4.B
+Din[1] => 21mux:inst5.B
+Din[2] => 21mux:inst6.B
+Din[3] => 21mux:inst7.B
+
+
+|work2|four_bit_register:inst5|21mux:inst4
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|work2|four_bit_register:inst5|21mux:inst5
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|work2|four_bit_register:inst5|21mux:inst6
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|work2|four_bit_register:inst5|21mux:inst7
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
