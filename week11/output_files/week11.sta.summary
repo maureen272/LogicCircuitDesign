@@ -1,0 +1,29 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Setup 'clk'
+Slack : -10.176
+TNS   : -2177.123
+
+Type  : Setup 'PNU_CLK_DIV:inst1|buff'
+Slack : -1.608
+TNS   : -3.209
+
+Type  : Hold 'clk'
+Slack : 1.729
+TNS   : 0.000
+
+Type  : Hold 'PNU_CLK_DIV:inst1|buff'
+Slack : 2.045
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'clk'
+Slack : -2.289
+TNS   : -2.289
+
+Type  : Minimum Pulse Width 'PNU_CLK_DIV:inst1|buff'
+Slack : 0.247
+TNS   : 0.000
+
+------------------------------------------------------------

@@ -1,0 +1,57 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA_lite/20.1/week11/simulation/qsim
+vweek11
+Z0 !s110 1699351536
+!i10b 1
+!s100 [1I2NHOaWWS3QiH_gEO@B2
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+In?QV;Q<bAkgoA]d9_KVmk0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dC:/intelFPGA_lite/20.1/week10/simulation/qsim
+w1699351535
+8week11.vo
+Fweek11.vo
+!i122 16
+L0 32 15936
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1699351536.000000
+!s107 week11.vo|
+!s90 -work|work|week11.vo|
+!i113 1
+Z6 o-work work
+Z7 tCvgOpt 0
+vweek11_vlg_vec_tst
+R0
+!i10b 1
+!s100 adZ19QoTfjcb5mJ[m=S7U0
+R1
+IWFnO_mI8d<eHbUagMbWD71
+R2
+R3
+w1699351534
+8Waveform1.vwf.vt
+FWaveform1.vwf.vt
+!i122 17
+L0 30 176
+R4
+r1
+!s85 0
+31
+R5
+!s107 Waveform1.vwf.vt|
+!s90 -work|work|Waveform1.vwf.vt|
+!i113 1
+R6
+R7

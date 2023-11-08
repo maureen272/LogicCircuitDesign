@@ -1,0 +1,1225 @@
+|week11
+a <= b2seg_bus:inst17.a
+clk => count_4:inst12.clk
+clk => trigger:inst4.CLK
+clk => four_bit_reg_ce:inst7.clk
+clk => four_bit_reg_ce:inst8.clk
+clk => four_bit_reg_ce:inst10.clk
+clk => four_bit_reg_ce:inst11.clk
+clk => Piezo_module:inst5.clk
+clk => PNU_CLK_DIV:inst1.clk
+rst => inst22.IN0
+keypad_9 => inst20.IN0
+keypad_9 => d2b:inst.d9
+keypad_9 => Piezo_module:inst5.Keypad9
+keypad_8 => inst20.IN1
+keypad_8 => d2b:inst.d8
+keypad_8 => Piezo_module:inst5.Keypad8
+keypad_0 => inst19.IN0
+keypad_0 => d2b:inst.d0
+keypad_0 => Piezo_module:inst5.Keypad0
+keypad_2 => inst19.IN1
+keypad_2 => d2b:inst.d2
+keypad_2 => Piezo_module:inst5.Keypad2
+keypad_1 => inst19.IN2
+keypad_1 => d2b:inst.d1
+keypad_1 => Piezo_module:inst5.Keypad1
+keypad_3 => inst19.IN3
+keypad_3 => d2b:inst.d3
+keypad_3 => Piezo_module:inst5.Keypad3
+keypad_5 => inst19.IN4
+keypad_5 => d2b:inst.d5
+keypad_5 => Piezo_module:inst5.Keypad5
+keypad_4 => inst19.IN5
+keypad_4 => d2b:inst.d4
+keypad_4 => Piezo_module:inst5.Keypad4
+keypad_6 => inst19.IN6
+keypad_6 => d2b:inst.d6
+keypad_6 => Piezo_module:inst5.Keypad6
+keypad_7 => inst19.IN7
+keypad_7 => d2b:inst.d7
+keypad_7 => Piezo_module:inst5.Keypad7
+b <= b2seg_bus:inst17.b
+c <= b2seg_bus:inst17.c
+d <= b2seg_bus:inst17.d
+e <= b2seg_bus:inst17.e
+f <= b2seg_bus:inst17.f
+g <= b2seg_bus:inst17.g
+com8 <= inst36.DB_MAX_OUTPUT_PORT_TYPE
+com6 <= inst38.DB_MAX_OUTPUT_PORT_TYPE
+com5 <= inst39.DB_MAX_OUTPUT_PORT_TYPE
+com4 <= <VCC>
+com3 <= <VCC>
+com2 <= <VCC>
+com1 <= <VCC>
+piezo <= Piezo_module:inst5.Piezo
+green_1 <= LED:inst2.Green1
+green_2 <= LED:inst2.Green2
+green_3 <= LED:inst2.Green3
+green_4 <= LED:inst2.Green4
+red_1 <= LED:inst2.Red1
+red_2 <= LED:inst2.Red2
+red_3 <= LED:inst2.Red3
+red_4 <= LED:inst2.Red4
+Motor_A <= inst45.DB_MAX_OUTPUT_PORT_TYPE
+Motor_B <= inst46.DB_MAX_OUTPUT_PORT_TYPE
+Motor_ANOT <= inst47.DB_MAX_OUTPUT_PORT_TYPE
+Motor_BNOT <= inst48.DB_MAX_OUTPUT_PORT_TYPE
+com7 <= inst37.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|week11|b2seg_bus:inst17
+a <= inst21.DB_MAX_OUTPUT_PORT_TYPE
+b_in[0] => inst5.IN1
+b_in[0] => inst3.IN0
+b_in[0] => inst7.IN1
+b_in[0] => inst25.IN0
+b_in[0] => inst10.IN0
+b_in[1] => inst20.IN0
+b_in[1] => inst7.IN0
+b_in[1] => inst2.IN0
+b_in[1] => inst9.IN1
+b_in[1] => inst8.IN0
+b_in[2] => inst5.IN0
+b_in[2] => inst1.IN0
+b_in[2] => inst24.IN0
+b_in[2] => inst11.IN0
+b_in[2] => inst12.IN0
+b_in[3] => inst20.IN1
+b_in[3] => inst26.IN1
+b_in[3] => inst30.IN0
+b_in[3] => inst33.IN1
+b <= inst23.DB_MAX_OUTPUT_PORT_TYPE
+c <= inst25.DB_MAX_OUTPUT_PORT_TYPE
+d <= inst28.DB_MAX_OUTPUT_PORT_TYPE
+e <= inst29.DB_MAX_OUTPUT_PORT_TYPE
+f <= inst32.DB_MAX_OUTPUT_PORT_TYPE
+g <= inst35.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|week11|mx_4bit_2x1:inst16
+m_out[0] <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+m_out[1] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+m_out[2] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+m_out[3] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+ce => inst8.IN0
+ce => inst.IN1
+ce => inst1.IN1
+ce => inst2.IN1
+ce => inst3.IN1
+s0[0] => inst4.IN1
+s0[1] => inst5.IN1
+s0[2] => inst6.IN1
+s0[3] => inst7.IN1
+s1[0] => inst.IN0
+s1[1] => inst1.IN0
+s1[2] => inst2.IN0
+s1[3] => inst3.IN0
+
+
+|week11|count_4:inst12
+Q0 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+rst_n => inst1.ACLR
+rst_n => inst.ACLR
+clk => inst1.CLK
+clk => inst.CLK
+Q1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|week11|mx_4bit_2x1:inst14
+m_out[0] <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+m_out[1] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+m_out[2] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+m_out[3] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+ce => inst8.IN0
+ce => inst.IN1
+ce => inst1.IN1
+ce => inst2.IN1
+ce => inst3.IN1
+s0[0] => inst4.IN1
+s0[1] => inst5.IN1
+s0[2] => inst6.IN1
+s0[3] => inst7.IN1
+s1[0] => inst.IN0
+s1[1] => inst1.IN0
+s1[2] => inst2.IN0
+s1[3] => inst3.IN0
+
+
+|week11|four_bit_reg_ce:inst7
+out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+rst_n => inst.ACLR
+rst_n => inst1.ACLR
+rst_n => inst2.ACLR
+rst_n => inst3.ACLR
+clk => inst.CLK
+clk => inst1.CLK
+clk => inst2.CLK
+clk => inst3.CLK
+din[0] => mx_2x1:inst10.s_1
+din[1] => mx_2x1:inst6.s_1
+din[2] => mx_2x1:inst7.s_1
+din[3] => mx_2x1:inst8.s_1
+ce => mx_2x1:inst10.sel
+ce => mx_2x1:inst6.sel
+ce => mx_2x1:inst7.sel
+ce => mx_2x1:inst8.sel
+
+
+|week11|four_bit_reg_ce:inst7|mx_2x1:inst10
+m_out <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+s_0 => inst1.IN0
+sel => inst3.IN0
+sel => inst.IN1
+s_1 => inst.IN0
+
+
+|week11|four_bit_reg_ce:inst7|mx_2x1:inst6
+m_out <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+s_0 => inst1.IN0
+sel => inst3.IN0
+sel => inst.IN1
+s_1 => inst.IN0
+
+
+|week11|four_bit_reg_ce:inst7|mx_2x1:inst7
+m_out <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+s_0 => inst1.IN0
+sel => inst3.IN0
+sel => inst.IN1
+s_1 => inst.IN0
+
+
+|week11|four_bit_reg_ce:inst7|mx_2x1:inst8
+m_out <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+s_0 => inst1.IN0
+sel => inst3.IN0
+sel => inst.IN1
+s_1 => inst.IN0
+
+
+|week11|trigger:inst4
+Dout <= inst.DB_MAX_OUTPUT_PORT_TYPE
+rst_n => inst2.ACLR
+rst_n => inst3.ACLR
+CLK => inst2.CLK
+CLK => inst3.CLK
+Din => inst2.DATAIN
+
+
+|week11|d2b:inst
+b0 <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+d0 => inst20.IN0
+d9 => inst21.IN0
+d9 => inst23.IN0
+d7 => inst55.IN0
+d7 => inst15.IN0
+d7 => inst17.IN0
+d5 => inst55.IN1
+d5 => inst16.IN0
+d3 => inst.IN0
+d3 => inst155.IN0
+d1 => inst.IN1
+b1 <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+d6 => inst15.IN1
+d6 => inst17.IN1
+d2 => inst155.IN1
+b2 <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+d4 => inst16.IN1
+b3 <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+d8 => inst23.IN1
+
+
+|week11|four_bit_reg_ce:inst8
+out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+rst_n => inst.ACLR
+rst_n => inst1.ACLR
+rst_n => inst2.ACLR
+rst_n => inst3.ACLR
+clk => inst.CLK
+clk => inst1.CLK
+clk => inst2.CLK
+clk => inst3.CLK
+din[0] => mx_2x1:inst10.s_1
+din[1] => mx_2x1:inst6.s_1
+din[2] => mx_2x1:inst7.s_1
+din[3] => mx_2x1:inst8.s_1
+ce => mx_2x1:inst10.sel
+ce => mx_2x1:inst6.sel
+ce => mx_2x1:inst7.sel
+ce => mx_2x1:inst8.sel
+
+
+|week11|four_bit_reg_ce:inst8|mx_2x1:inst10
+m_out <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+s_0 => inst1.IN0
+sel => inst3.IN0
+sel => inst.IN1
+s_1 => inst.IN0
+
+
+|week11|four_bit_reg_ce:inst8|mx_2x1:inst6
+m_out <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+s_0 => inst1.IN0
+sel => inst3.IN0
+sel => inst.IN1
+s_1 => inst.IN0
+
+
+|week11|four_bit_reg_ce:inst8|mx_2x1:inst7
+m_out <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+s_0 => inst1.IN0
+sel => inst3.IN0
+sel => inst.IN1
+s_1 => inst.IN0
+
+
+|week11|four_bit_reg_ce:inst8|mx_2x1:inst8
+m_out <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+s_0 => inst1.IN0
+sel => inst3.IN0
+sel => inst.IN1
+s_1 => inst.IN0
+
+
+|week11|mx_4bit_2x1:inst15
+m_out[0] <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+m_out[1] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+m_out[2] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+m_out[3] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+ce => inst8.IN0
+ce => inst.IN1
+ce => inst1.IN1
+ce => inst2.IN1
+ce => inst3.IN1
+s0[0] => inst4.IN1
+s0[1] => inst5.IN1
+s0[2] => inst6.IN1
+s0[3] => inst7.IN1
+s1[0] => inst.IN0
+s1[1] => inst1.IN0
+s1[2] => inst2.IN0
+s1[3] => inst3.IN0
+
+
+|week11|four_bit_reg_ce:inst10
+out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+rst_n => inst.ACLR
+rst_n => inst1.ACLR
+rst_n => inst2.ACLR
+rst_n => inst3.ACLR
+clk => inst.CLK
+clk => inst1.CLK
+clk => inst2.CLK
+clk => inst3.CLK
+din[0] => mx_2x1:inst10.s_1
+din[1] => mx_2x1:inst6.s_1
+din[2] => mx_2x1:inst7.s_1
+din[3] => mx_2x1:inst8.s_1
+ce => mx_2x1:inst10.sel
+ce => mx_2x1:inst6.sel
+ce => mx_2x1:inst7.sel
+ce => mx_2x1:inst8.sel
+
+
+|week11|four_bit_reg_ce:inst10|mx_2x1:inst10
+m_out <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+s_0 => inst1.IN0
+sel => inst3.IN0
+sel => inst.IN1
+s_1 => inst.IN0
+
+
+|week11|four_bit_reg_ce:inst10|mx_2x1:inst6
+m_out <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+s_0 => inst1.IN0
+sel => inst3.IN0
+sel => inst.IN1
+s_1 => inst.IN0
+
+
+|week11|four_bit_reg_ce:inst10|mx_2x1:inst7
+m_out <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+s_0 => inst1.IN0
+sel => inst3.IN0
+sel => inst.IN1
+s_1 => inst.IN0
+
+
+|week11|four_bit_reg_ce:inst10|mx_2x1:inst8
+m_out <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+s_0 => inst1.IN0
+sel => inst3.IN0
+sel => inst.IN1
+s_1 => inst.IN0
+
+
+|week11|four_bit_reg_ce:inst11
+out[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+rst_n => inst.ACLR
+rst_n => inst1.ACLR
+rst_n => inst2.ACLR
+rst_n => inst3.ACLR
+clk => inst.CLK
+clk => inst1.CLK
+clk => inst2.CLK
+clk => inst3.CLK
+din[0] => mx_2x1:inst10.s_1
+din[1] => mx_2x1:inst6.s_1
+din[2] => mx_2x1:inst7.s_1
+din[3] => mx_2x1:inst8.s_1
+ce => mx_2x1:inst10.sel
+ce => mx_2x1:inst6.sel
+ce => mx_2x1:inst7.sel
+ce => mx_2x1:inst8.sel
+
+
+|week11|four_bit_reg_ce:inst11|mx_2x1:inst10
+m_out <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+s_0 => inst1.IN0
+sel => inst3.IN0
+sel => inst.IN1
+s_1 => inst.IN0
+
+
+|week11|four_bit_reg_ce:inst11|mx_2x1:inst6
+m_out <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+s_0 => inst1.IN0
+sel => inst3.IN0
+sel => inst.IN1
+s_1 => inst.IN0
+
+
+|week11|four_bit_reg_ce:inst11|mx_2x1:inst7
+m_out <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+s_0 => inst1.IN0
+sel => inst3.IN0
+sel => inst.IN1
+s_1 => inst.IN0
+
+
+|week11|four_bit_reg_ce:inst11|mx_2x1:inst8
+m_out <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+s_0 => inst1.IN0
+sel => inst3.IN0
+sel => inst.IN1
+s_1 => inst.IN0
+
+
+|week11|Piezo_module:inst5
+Piezo <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+clk => PNU_CLK_DIV:inst6.clk
+clk => PNU_CLK_DIV:inst7.clk
+clk => PNU_CLK_DIV:inst5.clk
+clk => PNU_CLK_DIV:inst9.clk
+clk => PNU_CLK_DIV:inst10.clk
+clk => PNU_CLK_DIV:inst8.clk
+clk => PNU_CLK_DIV:inst.clk
+clk => PNU_CLK_DIV:inst3.clk
+clk => PNU_CLK_DIV:inst4.clk
+clk => PNU_CLK_DIV:inst2.clk
+rst => PNU_CLK_DIV:inst6.rst_n
+rst => PNU_CLK_DIV:inst7.rst_n
+rst => PNU_CLK_DIV:inst5.rst_n
+rst => PNU_CLK_DIV:inst9.rst_n
+rst => PNU_CLK_DIV:inst10.rst_n
+rst => PNU_CLK_DIV:inst8.rst_n
+rst => PNU_CLK_DIV:inst.rst_n
+rst => PNU_CLK_DIV:inst3.rst_n
+rst => PNU_CLK_DIV:inst4.rst_n
+rst => PNU_CLK_DIV:inst2.rst_n
+Keypad5 => PNU_CLK_DIV:inst6.en
+Keypad6 => PNU_CLK_DIV:inst7.en
+Keypad4 => PNU_CLK_DIV:inst5.en
+Keypad8 => PNU_CLK_DIV:inst9.en
+Keypad9 => PNU_CLK_DIV:inst10.en
+Keypad7 => PNU_CLK_DIV:inst8.en
+Keypad0 => PNU_CLK_DIV:inst.en
+Keypad2 => PNU_CLK_DIV:inst3.en
+Keypad3 => PNU_CLK_DIV:inst4.en
+Keypad1 => PNU_CLK_DIV:inst2.en
+
+
+|week11|Piezo_module:inst5|PNU_CLK_DIV:inst6
+clk => buff.CLK
+clk => cnt[0].CLK
+clk => cnt[1].CLK
+clk => cnt[2].CLK
+clk => cnt[3].CLK
+clk => cnt[4].CLK
+clk => cnt[5].CLK
+clk => cnt[6].CLK
+clk => cnt[7].CLK
+clk => cnt[8].CLK
+clk => cnt[9].CLK
+clk => cnt[10].CLK
+clk => cnt[11].CLK
+clk => cnt[12].CLK
+clk => cnt[13].CLK
+clk => cnt[14].CLK
+clk => cnt[15].CLK
+clk => cnt[16].CLK
+clk => cnt[17].CLK
+clk => cnt[18].CLK
+clk => cnt[19].CLK
+rst_n => buff.ACLR
+rst_n => cnt[0].ACLR
+rst_n => cnt[1].ACLR
+rst_n => cnt[2].ACLR
+rst_n => cnt[3].ACLR
+rst_n => cnt[4].ACLR
+rst_n => cnt[5].ACLR
+rst_n => cnt[6].ACLR
+rst_n => cnt[7].ACLR
+rst_n => cnt[8].ACLR
+rst_n => cnt[9].ACLR
+rst_n => cnt[10].ACLR
+rst_n => cnt[11].ACLR
+rst_n => cnt[12].ACLR
+rst_n => cnt[13].ACLR
+rst_n => cnt[14].ACLR
+rst_n => cnt[15].ACLR
+rst_n => cnt[16].ACLR
+rst_n => cnt[17].ACLR
+rst_n => cnt[18].ACLR
+rst_n => cnt[19].ACLR
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+div_clk <= buff.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|week11|Piezo_module:inst5|PNU_CLK_DIV:inst7
+clk => buff.CLK
+clk => cnt[0].CLK
+clk => cnt[1].CLK
+clk => cnt[2].CLK
+clk => cnt[3].CLK
+clk => cnt[4].CLK
+clk => cnt[5].CLK
+clk => cnt[6].CLK
+clk => cnt[7].CLK
+clk => cnt[8].CLK
+clk => cnt[9].CLK
+clk => cnt[10].CLK
+clk => cnt[11].CLK
+clk => cnt[12].CLK
+clk => cnt[13].CLK
+clk => cnt[14].CLK
+clk => cnt[15].CLK
+clk => cnt[16].CLK
+clk => cnt[17].CLK
+clk => cnt[18].CLK
+clk => cnt[19].CLK
+rst_n => buff.ACLR
+rst_n => cnt[0].ACLR
+rst_n => cnt[1].ACLR
+rst_n => cnt[2].ACLR
+rst_n => cnt[3].ACLR
+rst_n => cnt[4].ACLR
+rst_n => cnt[5].ACLR
+rst_n => cnt[6].ACLR
+rst_n => cnt[7].ACLR
+rst_n => cnt[8].ACLR
+rst_n => cnt[9].ACLR
+rst_n => cnt[10].ACLR
+rst_n => cnt[11].ACLR
+rst_n => cnt[12].ACLR
+rst_n => cnt[13].ACLR
+rst_n => cnt[14].ACLR
+rst_n => cnt[15].ACLR
+rst_n => cnt[16].ACLR
+rst_n => cnt[17].ACLR
+rst_n => cnt[18].ACLR
+rst_n => cnt[19].ACLR
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+div_clk <= buff.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|week11|Piezo_module:inst5|PNU_CLK_DIV:inst5
+clk => buff.CLK
+clk => cnt[0].CLK
+clk => cnt[1].CLK
+clk => cnt[2].CLK
+clk => cnt[3].CLK
+clk => cnt[4].CLK
+clk => cnt[5].CLK
+clk => cnt[6].CLK
+clk => cnt[7].CLK
+clk => cnt[8].CLK
+clk => cnt[9].CLK
+clk => cnt[10].CLK
+clk => cnt[11].CLK
+clk => cnt[12].CLK
+clk => cnt[13].CLK
+clk => cnt[14].CLK
+clk => cnt[15].CLK
+clk => cnt[16].CLK
+clk => cnt[17].CLK
+clk => cnt[18].CLK
+clk => cnt[19].CLK
+rst_n => buff.ACLR
+rst_n => cnt[0].ACLR
+rst_n => cnt[1].ACLR
+rst_n => cnt[2].ACLR
+rst_n => cnt[3].ACLR
+rst_n => cnt[4].ACLR
+rst_n => cnt[5].ACLR
+rst_n => cnt[6].ACLR
+rst_n => cnt[7].ACLR
+rst_n => cnt[8].ACLR
+rst_n => cnt[9].ACLR
+rst_n => cnt[10].ACLR
+rst_n => cnt[11].ACLR
+rst_n => cnt[12].ACLR
+rst_n => cnt[13].ACLR
+rst_n => cnt[14].ACLR
+rst_n => cnt[15].ACLR
+rst_n => cnt[16].ACLR
+rst_n => cnt[17].ACLR
+rst_n => cnt[18].ACLR
+rst_n => cnt[19].ACLR
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+div_clk <= buff.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|week11|Piezo_module:inst5|PNU_CLK_DIV:inst9
+clk => buff.CLK
+clk => cnt[0].CLK
+clk => cnt[1].CLK
+clk => cnt[2].CLK
+clk => cnt[3].CLK
+clk => cnt[4].CLK
+clk => cnt[5].CLK
+clk => cnt[6].CLK
+clk => cnt[7].CLK
+clk => cnt[8].CLK
+clk => cnt[9].CLK
+clk => cnt[10].CLK
+clk => cnt[11].CLK
+clk => cnt[12].CLK
+clk => cnt[13].CLK
+clk => cnt[14].CLK
+clk => cnt[15].CLK
+clk => cnt[16].CLK
+clk => cnt[17].CLK
+clk => cnt[18].CLK
+clk => cnt[19].CLK
+rst_n => buff.ACLR
+rst_n => cnt[0].ACLR
+rst_n => cnt[1].ACLR
+rst_n => cnt[2].ACLR
+rst_n => cnt[3].ACLR
+rst_n => cnt[4].ACLR
+rst_n => cnt[5].ACLR
+rst_n => cnt[6].ACLR
+rst_n => cnt[7].ACLR
+rst_n => cnt[8].ACLR
+rst_n => cnt[9].ACLR
+rst_n => cnt[10].ACLR
+rst_n => cnt[11].ACLR
+rst_n => cnt[12].ACLR
+rst_n => cnt[13].ACLR
+rst_n => cnt[14].ACLR
+rst_n => cnt[15].ACLR
+rst_n => cnt[16].ACLR
+rst_n => cnt[17].ACLR
+rst_n => cnt[18].ACLR
+rst_n => cnt[19].ACLR
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+div_clk <= buff.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|week11|Piezo_module:inst5|PNU_CLK_DIV:inst10
+clk => buff.CLK
+clk => cnt[0].CLK
+clk => cnt[1].CLK
+clk => cnt[2].CLK
+clk => cnt[3].CLK
+clk => cnt[4].CLK
+clk => cnt[5].CLK
+clk => cnt[6].CLK
+clk => cnt[7].CLK
+clk => cnt[8].CLK
+clk => cnt[9].CLK
+clk => cnt[10].CLK
+clk => cnt[11].CLK
+clk => cnt[12].CLK
+clk => cnt[13].CLK
+clk => cnt[14].CLK
+clk => cnt[15].CLK
+clk => cnt[16].CLK
+clk => cnt[17].CLK
+clk => cnt[18].CLK
+clk => cnt[19].CLK
+rst_n => buff.ACLR
+rst_n => cnt[0].ACLR
+rst_n => cnt[1].ACLR
+rst_n => cnt[2].ACLR
+rst_n => cnt[3].ACLR
+rst_n => cnt[4].ACLR
+rst_n => cnt[5].ACLR
+rst_n => cnt[6].ACLR
+rst_n => cnt[7].ACLR
+rst_n => cnt[8].ACLR
+rst_n => cnt[9].ACLR
+rst_n => cnt[10].ACLR
+rst_n => cnt[11].ACLR
+rst_n => cnt[12].ACLR
+rst_n => cnt[13].ACLR
+rst_n => cnt[14].ACLR
+rst_n => cnt[15].ACLR
+rst_n => cnt[16].ACLR
+rst_n => cnt[17].ACLR
+rst_n => cnt[18].ACLR
+rst_n => cnt[19].ACLR
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+div_clk <= buff.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|week11|Piezo_module:inst5|PNU_CLK_DIV:inst8
+clk => buff.CLK
+clk => cnt[0].CLK
+clk => cnt[1].CLK
+clk => cnt[2].CLK
+clk => cnt[3].CLK
+clk => cnt[4].CLK
+clk => cnt[5].CLK
+clk => cnt[6].CLK
+clk => cnt[7].CLK
+clk => cnt[8].CLK
+clk => cnt[9].CLK
+clk => cnt[10].CLK
+clk => cnt[11].CLK
+clk => cnt[12].CLK
+clk => cnt[13].CLK
+clk => cnt[14].CLK
+clk => cnt[15].CLK
+clk => cnt[16].CLK
+clk => cnt[17].CLK
+clk => cnt[18].CLK
+clk => cnt[19].CLK
+rst_n => buff.ACLR
+rst_n => cnt[0].ACLR
+rst_n => cnt[1].ACLR
+rst_n => cnt[2].ACLR
+rst_n => cnt[3].ACLR
+rst_n => cnt[4].ACLR
+rst_n => cnt[5].ACLR
+rst_n => cnt[6].ACLR
+rst_n => cnt[7].ACLR
+rst_n => cnt[8].ACLR
+rst_n => cnt[9].ACLR
+rst_n => cnt[10].ACLR
+rst_n => cnt[11].ACLR
+rst_n => cnt[12].ACLR
+rst_n => cnt[13].ACLR
+rst_n => cnt[14].ACLR
+rst_n => cnt[15].ACLR
+rst_n => cnt[16].ACLR
+rst_n => cnt[17].ACLR
+rst_n => cnt[18].ACLR
+rst_n => cnt[19].ACLR
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+div_clk <= buff.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|week11|Piezo_module:inst5|PNU_CLK_DIV:inst
+clk => buff.CLK
+clk => cnt[0].CLK
+clk => cnt[1].CLK
+clk => cnt[2].CLK
+clk => cnt[3].CLK
+clk => cnt[4].CLK
+clk => cnt[5].CLK
+clk => cnt[6].CLK
+clk => cnt[7].CLK
+clk => cnt[8].CLK
+clk => cnt[9].CLK
+clk => cnt[10].CLK
+clk => cnt[11].CLK
+clk => cnt[12].CLK
+clk => cnt[13].CLK
+clk => cnt[14].CLK
+clk => cnt[15].CLK
+clk => cnt[16].CLK
+clk => cnt[17].CLK
+clk => cnt[18].CLK
+clk => cnt[19].CLK
+rst_n => buff.ACLR
+rst_n => cnt[0].ACLR
+rst_n => cnt[1].ACLR
+rst_n => cnt[2].ACLR
+rst_n => cnt[3].ACLR
+rst_n => cnt[4].ACLR
+rst_n => cnt[5].ACLR
+rst_n => cnt[6].ACLR
+rst_n => cnt[7].ACLR
+rst_n => cnt[8].ACLR
+rst_n => cnt[9].ACLR
+rst_n => cnt[10].ACLR
+rst_n => cnt[11].ACLR
+rst_n => cnt[12].ACLR
+rst_n => cnt[13].ACLR
+rst_n => cnt[14].ACLR
+rst_n => cnt[15].ACLR
+rst_n => cnt[16].ACLR
+rst_n => cnt[17].ACLR
+rst_n => cnt[18].ACLR
+rst_n => cnt[19].ACLR
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+div_clk <= buff.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|week11|Piezo_module:inst5|PNU_CLK_DIV:inst3
+clk => buff.CLK
+clk => cnt[0].CLK
+clk => cnt[1].CLK
+clk => cnt[2].CLK
+clk => cnt[3].CLK
+clk => cnt[4].CLK
+clk => cnt[5].CLK
+clk => cnt[6].CLK
+clk => cnt[7].CLK
+clk => cnt[8].CLK
+clk => cnt[9].CLK
+clk => cnt[10].CLK
+clk => cnt[11].CLK
+clk => cnt[12].CLK
+clk => cnt[13].CLK
+clk => cnt[14].CLK
+clk => cnt[15].CLK
+clk => cnt[16].CLK
+clk => cnt[17].CLK
+clk => cnt[18].CLK
+clk => cnt[19].CLK
+rst_n => buff.ACLR
+rst_n => cnt[0].ACLR
+rst_n => cnt[1].ACLR
+rst_n => cnt[2].ACLR
+rst_n => cnt[3].ACLR
+rst_n => cnt[4].ACLR
+rst_n => cnt[5].ACLR
+rst_n => cnt[6].ACLR
+rst_n => cnt[7].ACLR
+rst_n => cnt[8].ACLR
+rst_n => cnt[9].ACLR
+rst_n => cnt[10].ACLR
+rst_n => cnt[11].ACLR
+rst_n => cnt[12].ACLR
+rst_n => cnt[13].ACLR
+rst_n => cnt[14].ACLR
+rst_n => cnt[15].ACLR
+rst_n => cnt[16].ACLR
+rst_n => cnt[17].ACLR
+rst_n => cnt[18].ACLR
+rst_n => cnt[19].ACLR
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+div_clk <= buff.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|week11|Piezo_module:inst5|PNU_CLK_DIV:inst4
+clk => buff.CLK
+clk => cnt[0].CLK
+clk => cnt[1].CLK
+clk => cnt[2].CLK
+clk => cnt[3].CLK
+clk => cnt[4].CLK
+clk => cnt[5].CLK
+clk => cnt[6].CLK
+clk => cnt[7].CLK
+clk => cnt[8].CLK
+clk => cnt[9].CLK
+clk => cnt[10].CLK
+clk => cnt[11].CLK
+clk => cnt[12].CLK
+clk => cnt[13].CLK
+clk => cnt[14].CLK
+clk => cnt[15].CLK
+clk => cnt[16].CLK
+clk => cnt[17].CLK
+clk => cnt[18].CLK
+clk => cnt[19].CLK
+rst_n => buff.ACLR
+rst_n => cnt[0].ACLR
+rst_n => cnt[1].ACLR
+rst_n => cnt[2].ACLR
+rst_n => cnt[3].ACLR
+rst_n => cnt[4].ACLR
+rst_n => cnt[5].ACLR
+rst_n => cnt[6].ACLR
+rst_n => cnt[7].ACLR
+rst_n => cnt[8].ACLR
+rst_n => cnt[9].ACLR
+rst_n => cnt[10].ACLR
+rst_n => cnt[11].ACLR
+rst_n => cnt[12].ACLR
+rst_n => cnt[13].ACLR
+rst_n => cnt[14].ACLR
+rst_n => cnt[15].ACLR
+rst_n => cnt[16].ACLR
+rst_n => cnt[17].ACLR
+rst_n => cnt[18].ACLR
+rst_n => cnt[19].ACLR
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+div_clk <= buff.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|week11|Piezo_module:inst5|PNU_CLK_DIV:inst2
+clk => buff.CLK
+clk => cnt[0].CLK
+clk => cnt[1].CLK
+clk => cnt[2].CLK
+clk => cnt[3].CLK
+clk => cnt[4].CLK
+clk => cnt[5].CLK
+clk => cnt[6].CLK
+clk => cnt[7].CLK
+clk => cnt[8].CLK
+clk => cnt[9].CLK
+clk => cnt[10].CLK
+clk => cnt[11].CLK
+clk => cnt[12].CLK
+clk => cnt[13].CLK
+clk => cnt[14].CLK
+clk => cnt[15].CLK
+clk => cnt[16].CLK
+clk => cnt[17].CLK
+clk => cnt[18].CLK
+clk => cnt[19].CLK
+rst_n => buff.ACLR
+rst_n => cnt[0].ACLR
+rst_n => cnt[1].ACLR
+rst_n => cnt[2].ACLR
+rst_n => cnt[3].ACLR
+rst_n => cnt[4].ACLR
+rst_n => cnt[5].ACLR
+rst_n => cnt[6].ACLR
+rst_n => cnt[7].ACLR
+rst_n => cnt[8].ACLR
+rst_n => cnt[9].ACLR
+rst_n => cnt[10].ACLR
+rst_n => cnt[11].ACLR
+rst_n => cnt[12].ACLR
+rst_n => cnt[13].ACLR
+rst_n => cnt[14].ACLR
+rst_n => cnt[15].ACLR
+rst_n => cnt[16].ACLR
+rst_n => cnt[17].ACLR
+rst_n => cnt[18].ACLR
+rst_n => cnt[19].ACLR
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+div_clk <= buff.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|week11|LED:inst2
+Green1 <= Correct.DB_MAX_OUTPUT_PORT_TYPE
+Correct => Green1.DATAIN
+Correct => Green2.DATAIN
+Correct => Green3.DATAIN
+Correct => Green4.DATAIN
+Correct => inst.IN0
+Green2 <= Correct.DB_MAX_OUTPUT_PORT_TYPE
+Green3 <= Correct.DB_MAX_OUTPUT_PORT_TYPE
+Green4 <= Correct.DB_MAX_OUTPUT_PORT_TYPE
+Red1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+Red2 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+Red3 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+Red4 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|week11|Password:inst3
+Correct <= inst21.DB_MAX_OUTPUT_PORT_TYPE
+Reg_1[0] => inst40.IN0
+Reg_1[1] => inst1.IN0
+Reg_1[2] => inst42.IN0
+Reg_1[3] => inst19.IN0
+Reg_2[0] => inst40.IN1
+Reg_2[1] => inst41.IN1
+Reg_2[2] => inst18.IN0
+Reg_2[3] => inst2.IN0
+Reg_3[0] => inst40.IN2
+Reg_3[1] => inst13.IN0
+Reg_3[2] => inst42.IN2
+Reg_3[3] => inst3.IN0
+Reg_4[0] => inst40.IN3
+Reg_4[1] => inst14.IN0
+Reg_4[2] => inst42.IN3
+Reg_4[3] => inst20.IN0
+
+
+|week11|count_4:inst51
+Q0 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+rst_n => inst1.ACLR
+rst_n => inst.ACLR
+clk => inst1.CLK
+clk => inst.CLK
+Q1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|week11|PNU_CLK_DIV:inst1
+clk => buff.CLK
+clk => cnt[0].CLK
+clk => cnt[1].CLK
+clk => cnt[2].CLK
+clk => cnt[3].CLK
+clk => cnt[4].CLK
+clk => cnt[5].CLK
+clk => cnt[6].CLK
+clk => cnt[7].CLK
+clk => cnt[8].CLK
+clk => cnt[9].CLK
+clk => cnt[10].CLK
+clk => cnt[11].CLK
+clk => cnt[12].CLK
+clk => cnt[13].CLK
+clk => cnt[14].CLK
+clk => cnt[15].CLK
+clk => cnt[16].CLK
+clk => cnt[17].CLK
+clk => cnt[18].CLK
+clk => cnt[19].CLK
+rst_n => buff.ACLR
+rst_n => cnt[0].ACLR
+rst_n => cnt[1].ACLR
+rst_n => cnt[2].ACLR
+rst_n => cnt[3].ACLR
+rst_n => cnt[4].ACLR
+rst_n => cnt[5].ACLR
+rst_n => cnt[6].ACLR
+rst_n => cnt[7].ACLR
+rst_n => cnt[8].ACLR
+rst_n => cnt[9].ACLR
+rst_n => cnt[10].ACLR
+rst_n => cnt[11].ACLR
+rst_n => cnt[12].ACLR
+rst_n => cnt[13].ACLR
+rst_n => cnt[14].ACLR
+rst_n => cnt[15].ACLR
+rst_n => cnt[16].ACLR
+rst_n => cnt[17].ACLR
+rst_n => cnt[18].ACLR
+rst_n => cnt[19].ACLR
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+div_clk <= buff.DB_MAX_OUTPUT_PORT_TYPE
+
+
