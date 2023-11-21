@@ -1,0 +1,241 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/intelFPGA_lite/20.1/termproject/simulation/qsim
+valphabet_encoder
+Z1 !s110 1700568559
+!i10b 1
+!s100 hc`^S=YfMDom9eKVW5PQV1
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IXC7m1bNe=f0iKl;Kdllk<2
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1700568558
+Z4 8termproject.vo
+Z5 Ftermproject.vo
+!i122 16
+L0 32 345
+Z6 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z7 !s108 1700568559.000000
+Z8 !s107 termproject.vo|
+Z9 !s90 -work|work|termproject.vo|
+!i113 1
+Z10 o-work work
+Z11 tCvgOpt 0
+valphabet_encoder_vlg_vec_tst
+R1
+!i10b 1
+!s100 j0jU]l1BK75WUI7EdPeTC0
+R2
+IS[JL?Y^M;87HkZczN>C7P0
+R3
+R0
+w1700568557
+8alphabet_encoder.vwf.vt
+Falphabet_encoder.vwf.vt
+!i122 17
+L0 30 68
+R6
+r1
+!s85 0
+31
+R7
+!s107 alphabet_encoder.vwf.vt|
+!s90 -work|work|alphabet_encoder.vwf.vt|
+!i113 1
+R10
+R11
+vcounter2
+Z12 !s110 1700564585
+!i10b 1
+!s100 :=]cI^V?iD0BA>D2;oEd=2
+R2
+IQ;E3_:S[MF^GUE1>b3A;c1
+R3
+R0
+w1700564584
+R4
+R5
+!i122 10
+L0 32 234
+R6
+r1
+!s85 0
+31
+!s108 1700564584.000000
+R8
+R9
+!i113 1
+R10
+R11
+vcounter2_vlg_vec_tst
+R12
+!i10b 1
+!s100 QDzi;zY613iTc8RWhc_5c3
+R2
+IBPb48VbEk^0PFOH@HFR_43
+R3
+R0
+w1700564583
+Z13 8counter2.vwf.vt
+Z14 Fcounter2.vwf.vt
+!i122 11
+L0 30 50
+R6
+r1
+!s85 0
+31
+!s108 1700564585.000000
+!s107 counter2.vwf.vt|
+Z15 !s90 -work|work|counter2.vwf.vt|
+!i113 1
+R10
+R11
+vdecimal_to_binary
+Z16 !s110 1700562100
+!i10b 1
+!s100 z6G8@5kOCFSi6lR4B[<gA0
+R2
+IjK9k7kXbKE@KGgK;jXQfC3
+R3
+R0
+w1700562099
+R4
+R5
+!i122 0
+L0 32 482
+R6
+r1
+!s85 0
+31
+Z17 !s108 1700562100.000000
+R8
+R9
+!i113 1
+R10
+R11
+vdecimal_to_binary_vlg_vec_tst
+R16
+!i10b 1
+!s100 ^I`[b8<YmoHBAA;VWWXna0
+R2
+I;8V[B;GAA62mc?M=33>lP0
+R3
+R0
+w1700562098
+8decimal_to_binary.vwf.vt
+Fdecimal_to_binary.vwf.vt
+!i122 1
+L0 30 108
+R6
+r1
+!s85 0
+31
+R17
+!s107 decimal_to_binary.vwf.vt|
+!s90 -work|work|decimal_to_binary.vwf.vt|
+!i113 1
+R10
+R11
+vis_equal4
+Z18 !s110 1700563908
+!i10b 1
+!s100 d<OQJjKS@UoZ5R20o8TdH0
+R2
+I=GTUZ_3i<^amOz9mLE;1`3
+R3
+R0
+w1700563907
+R4
+R5
+!i122 4
+L0 32 221
+R6
+r1
+!s85 0
+31
+Z19 !s108 1700563908.000000
+R8
+R9
+!i113 1
+R10
+R11
+vis_equal4_vlg_vec_tst
+R18
+!i10b 1
+!s100 5QNn@3l<9k=WO`j24@9Sk3
+R2
+I3e1Kf9U4A0BjkO6bm=m233
+R3
+R0
+w1700563906
+8is_equal4.vwf.vt
+Fis_equal4.vwf.vt
+!i122 5
+L0 30 80
+R6
+r1
+!s85 0
+31
+R19
+!s107 is_equal4.vwf.vt|
+!s90 -work|work|is_equal4.vwf.vt|
+!i113 1
+R10
+R11
+vkeypad_converter
+Z20 !s110 1700569547
+!i10b 1
+!s100 YoF@i6?;_XaDFcGc@AH2_3
+R2
+IfD2kOm>[6z`S[CVFz_WhB1
+R3
+R0
+w1700569547
+R4
+R5
+!i122 26
+L0 32 1009
+R6
+r1
+!s85 0
+31
+Z21 !s108 1700569547.000000
+R8
+R9
+!i113 1
+R10
+R11
+vkeypad_converter_vlg_vec_tst
+R20
+!i10b 1
+!s100 GfKE;V7;@gQolNGZHH=Vd2
+R2
+I@_So60h`H7;Gm8UkX]Ghm3
+R3
+R0
+w1700569546
+R13
+R14
+!i122 27
+L0 30 70
+R6
+r1
+!s85 0
+31
+R21
+Z22 !s107 counter2.vwf.vt|
+R15
+!i113 1
+R10
+R11
