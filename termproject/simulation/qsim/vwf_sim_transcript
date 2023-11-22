@@ -7,7 +7,7 @@ Note: if both ModelSim-Altera and ModelSim executables are available, ModelSim-A
 
 **** Generating the ModelSim Testbench ****
 
-quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off termproject -c termproject --vector_source="C:/intelFPGA_lite/20.1/termproject/counter2.vwf" --testbench_file="C:/intelFPGA_lite/20.1/termproject/simulation/qsim/counter2.vwf.vt"
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off termproject -c termproject --vector_source="C:/intelFPGA_lite/20.1/termproject/keypad_converter.vwf" --testbench_file="C:/intelFPGA_lite/20.1/termproject/simulation/qsim/keypad_converter.vwf.vt"
 
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
@@ -26,8 +26,8 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Tue Nov 21 21:25:45 2023
-Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off termproject -c termproject --vector_source=C:/intelFPGA_lite/20.1/termproject/counter2.vwf --testbench_file=C:/intelFPGA_lite/20.1/termproject/simulation/qsim/counter2.vwf.vt
+    Info: Processing started: Wed Nov 22 19:43:35 2023
+Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off termproject -c termproject --vector_source=C:/intelFPGA_lite/20.1/termproject/keypad_converter.vwf --testbench_file=C:/intelFPGA_lite/20.1/termproject/simulation/qsim/keypad_converter.vwf.vt
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 
 Completed successfully. 
@@ -55,15 +55,15 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Tue Nov 21 21:25:46 2023
+    Info: Processing started: Wed Nov 22 19:43:36 2023
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/intelFPGA_lite/20.1/termproject/simulation/qsim/ termproject -c termproject
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file termproject.vo in folder "C:/intelFPGA_lite/20.1/termproject/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4726 megabytes
-    Info: Processing ended: Tue Nov 21 21:25:47 2023
+    Info: Peak virtual memory: 4725 megabytes
+    Info: Processing ended: Wed Nov 22 19:43:37 2023
     Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
 
 Completed successfully. 
 
@@ -85,60 +85,52 @@ Reading pref.tcl
 # ** Warning: (vlib-34) Library already exists at "work".
 
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:25:47 on Nov 21,2023
+# Start time: 19:43:38 on Nov 22,2023
 # vlog -work work termproject.vo 
 # -- Compiling module keypad_converter
 # 
 # Top level modules:
 # 	keypad_converter
-# End time: 21:25:47 on Nov 21,2023, Elapsed time: 0:00:00
+# End time: 19:43:38 on Nov 22,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:25:47 on Nov 21,2023
-# vlog -work work counter2.vwf.vt 
+# Start time: 19:43:38 on Nov 22,2023
+# vlog -work work keypad_converter.vwf.vt 
 # -- Compiling module keypad_converter_vlg_vec_tst
 # 
 # Top level modules:
 # 	keypad_converter_vlg_vec_tst
-# End time: 21:25:47 on Nov 21,2023, Elapsed time: 0:00:00
+# End time: 19:43:38 on Nov 22,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
-# vsim -c -t 1ps -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.counter2_vlg_vec_tst 
-# Start time: 21:25:48 on Nov 21,2023
-# Loading work.counter2_vlg_vec_tst
-# Loading work.counter2
+# vsim -c -t 1ps -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.keypad_converter_vlg_vec_tst 
+# Start time: 19:43:38 on Nov 22,2023
+# Loading work.keypad_converter_vlg_vec_tst
+# Loading work.keypad_converter
 # Loading cyclonev_ver.cyclonev_io_obuf
 # Loading cyclonev_ver.cyclonev_io_ibuf
 # Loading cyclonev_ver.cyclonev_clkena
-# Loading altera_ver.dffeas
 # Loading cyclonev_ver.cyclonev_lcell_comb
+# Loading altera_ver.dffeas
 # Loading altera_ver.PRIM_GDFF_LOW
 # after#25
-# ** Note: $finish    : counter2.vwf.vt(47)
-#    Time: 1 us  Iteration: 0  Instance: /counter2_vlg_vec_tst
-# End time: 21:25:48 on Nov 21,2023, Elapsed time: 0:00:00
+# ** Note: $finish    : keypad_converter.vwf.vt(75)
+#    Time: 1 us  Iteration: 0  Instance: /keypad_converter_vlg_vec_tst
+# End time: 19:43:38 on Nov 22,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
 Completed successfully. 
 
 **** Converting ModelSim VCD to vector waveform ****
 
-Reading C:/intelFPGA_lite/20.1/termproject/counter2.vwf...
+Reading C:/intelFPGA_lite/20.1/termproject/keypad_converter.vwf...
 
 Reading C:/intelFPGA_lite/20.1/termproject/simulation/qsim/termproject.msim.vcd...
 
 Processing channel transitions... 
 
-Warning: clk - signal not found in VCD.
-
-Warning: dout[1] - signal not found in VCD.
-
-Warning: dout[0] - signal not found in VCD.
-
-Warning: rst_n - signal not found in VCD.
-
-Writing the resulting VWF to C:/intelFPGA_lite/20.1/termproject/simulation/qsim/termproject_20231121212548.sim.vwf
+Writing the resulting VWF to C:/intelFPGA_lite/20.1/termproject/simulation/qsim/termproject_20231122194339.sim.vwf
 
 Finished VCD to VWF conversion.
 

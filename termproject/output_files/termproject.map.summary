@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Tue Nov 21 21:26:04 2023
+Analysis & Synthesis Status : Successful - Wed Nov 22 19:41:50 2023
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : termproject
-Top-level Entity Name : counter2
+Top-level Entity Name : keypad_converter
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 2
-Total pins : 4
+Total registers : 8
+Total pins : 21
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0

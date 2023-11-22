@@ -19,7 +19,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "11/21/2023 21:23:24"
+// Generated on "11/22/2023 19:43:36"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          keypad_converter
 // 
@@ -99,18 +99,36 @@ end
 initial
 begin
 	one = 1'b0;
+	one = #540000 1'b1;
+	one = #80000 1'b0;
 end 
 
 // two
 initial
 begin
 	two = 1'b0;
+	two = #30000 1'b1;
+	two = #50000 1'b0;
+	two = #30000 1'b1;
+	two = #60000 1'b0;
+	two = #20000 1'b1;
+	two = #70000 1'b0;
+	two = #40000 1'b1;
+	two = #90000 1'b0;
+	two = #40000 1'b1;
+	two = #70000 1'b0;
 end 
 
 // three
 initial
 begin
 	three = 1'b0;
+	three = #670000 1'b1;
+	three = #40000 1'b0;
+	three = #60000 1'b1;
+	three = #60000 1'b0;
+	three = #40000 1'b1;
+	three = #70000 1'b0;
 end 
 
 // four
@@ -129,16 +147,6 @@ end
 initial
 begin
 	six = 1'b0;
-	six = #40000 1'b1;
-	six = #30000 1'b0;
-	six = #30000 1'b1;
-	six = #30000 1'b0;
-	six = #40000 1'b1;
-	six = #40000 1'b0;
-	six = #40000 1'b1;
-	six = #50000 1'b0;
-	six = #60000 1'b1;
-	six = #40000 1'b0;
 end 
 
 // seven

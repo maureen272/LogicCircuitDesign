@@ -20,6 +20,8 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
+
+
 </modelsim_script>
 <modelsim_script_timing>onerror {exit -code 1}
 vlib work
@@ -38,6 +40,8 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
+
+
 </modelsim_script_timing>
 <hdl_lang>verilog</hdl_lang>
 </simulation_settings>*/
@@ -126,28 +130,47 @@ SIGNAL("rst_n")
 	PARENT = "";
 }
 
+SIGNAL("is_equal")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("one")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("trigger")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
 TRANSITION_LIST("clk")
 {
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 20.0;
-		LEVEL 1 FOR 30.0;
-		LEVEL 0 FOR 20.0;
-		LEVEL 1 FOR 40.0;
-		LEVEL 0 FOR 20.0;
-		LEVEL 1 FOR 50.0;
-		LEVEL 0 FOR 20.0;
-		LEVEL 1 FOR 40.0;
-		LEVEL 0 FOR 30.0;
-		LEVEL 1 FOR 20.0;
-		LEVEL 0 FOR 20.0;
-		LEVEL 1 FOR 60.0;
-		LEVEL 0 FOR 30.0;
-		LEVEL 1 FOR 40.0;
-		LEVEL 0 FOR 40.0;
-		LEVEL 1 FOR 60.0;
-		LEVEL 0 FOR 460.0;
+		NODE
+		{
+			REPEAT = 100;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+		}
 	}
 }
 
@@ -158,7 +181,9 @@ TRANSITION_LIST("dout[1]")
 		REPEAT = 1;
 		LEVEL X FOR 50.0;
 		LEVEL 0 FOR 20.0;
-		LEVEL X FOR 930.0;
+		LEVEL X FOR 380.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL X FOR 510.0;
 	}
 }
 
@@ -169,7 +194,9 @@ TRANSITION_LIST("dout[0]")
 		REPEAT = 1;
 		LEVEL X FOR 50.0;
 		LEVEL 0 FOR 20.0;
-		LEVEL X FOR 930.0;
+		LEVEL X FOR 380.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL X FOR 510.0;
 	}
 }
 
@@ -178,9 +205,68 @@ TRANSITION_LIST("rst_n")
 	NODE
 	{
 		REPEAT = 1;
+		LEVEL 1 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("is_equal")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 30.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 50.0;
 		LEVEL 1 FOR 50.0;
-		LEVEL 0 FOR 20.0;
-		LEVEL 1 FOR 930.0;
+		LEVEL 0 FOR 30.0;
+		LEVEL 1 FOR 50.0;
+		LEVEL 0 FOR 30.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 30.0;
+		LEVEL 1 FOR 60.0;
+		LEVEL 0 FOR 30.0;
+		LEVEL 1 FOR 50.0;
+		LEVEL 0 FOR 230.0;
+		LEVEL 1 FOR 50.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 60.0;
+		LEVEL 0 FOR 130.0;
+	}
+}
+
+TRANSITION_LIST("one")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 560.0;
+		LEVEL 1 FOR 120.0;
+		LEVEL 0 FOR 320.0;
+	}
+}
+
+TRANSITION_LIST("trigger")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 30.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 80.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 70.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 70.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 60.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 90.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 260.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 80.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 180.0;
 	}
 }
 
@@ -204,12 +290,39 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "dout";
+	CHANNEL = "one";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 2;
 	TREE_LEVEL = 0;
-	CHILDREN = 3, 4;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "trigger";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 3;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "is_equal";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 4;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "dout";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 5;
+	TREE_LEVEL = 0;
+	CHILDREN = 6, 7;
 }
 
 DISPLAY_LINE
@@ -217,9 +330,9 @@ DISPLAY_LINE
 	CHANNEL = "dout[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 3;
+	TREE_INDEX = 6;
 	TREE_LEVEL = 1;
-	PARENT = 2;
+	PARENT = 5;
 }
 
 DISPLAY_LINE
@@ -227,9 +340,9 @@ DISPLAY_LINE
 	CHANNEL = "dout[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 4;
+	TREE_INDEX = 7;
 	TREE_LEVEL = 1;
-	PARENT = 2;
+	PARENT = 5;
 }
 
 TIME_BAR

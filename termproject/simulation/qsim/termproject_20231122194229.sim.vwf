@@ -1,52 +1,3 @@
-/*<simulation_settings>
-<ftestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off termproject -c termproject --vector_source="C:/intelFPGA_lite/20.1/termproject/keypad_converter.vwf" --testbench_file="C:/intelFPGA_lite/20.1/termproject/simulation/qsim/keypad_converter.vwf.vt"</ftestbench_cmd>
-<ttestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off termproject -c termproject --vector_source="C:/intelFPGA_lite/20.1/termproject/Waveform.vwf" --testbench_file="C:/intelFPGA_lite/20.1/termproject/simulation/qsim/Waveform.vwf.vt"</ttestbench_cmd>
-<fnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="C:/intelFPGA_lite/20.1/termproject/simulation/qsim/" termproject -c termproject</fnetlist_cmd>
-<tnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=verilog --output_directory="C:/intelFPGA_lite/20.1/termproject/simulation/qsim/" termproject -c termproject</tnetlist_cmd>
-<modelsim_script>onerror {exit -code 1}
-vlib work
-vlog -work work termproject.vo
-vlog -work work keypad_converter.vwf.vt
-vsim -c -t 1ps -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.keypad_converter_vlg_vec_tst
-vcd file -direction termproject.msim.vcd
-vcd add -internal keypad_converter_vlg_vec_tst/*
-vcd add -internal keypad_converter_vlg_vec_tst/i1/*
-proc simTimestamp {} {
-    echo "Simulation time: $::now ps"
-    if { [string equal running [runStatus]] } {
-        after 2500 simTimestamp
-    }
-}
-after 2500 simTimestamp
-run -all
-quit -f
-
-
-
-</modelsim_script>
-<modelsim_script_timing>onerror {exit -code 1}
-vlib work
-vlog -work work termproject.vo
-vlog -work work Waveform.vwf.vt
-vsim -novopt -c -t 1ps -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.keypad_converter_vlg_vec_tst
-vcd file -direction termproject.msim.vcd
-vcd add -internal keypad_converter_vlg_vec_tst/*
-vcd add -internal keypad_converter_vlg_vec_tst/i1/*
-proc simTimestamp {} {
-    echo "Simulation time: $::now ps"
-    if { [string equal running [runStatus]] } {
-        after 2500 simTimestamp
-    }
-}
-after 2500 simTimestamp
-run -all
-quit -f
-
-
-
-</modelsim_script_timing>
-<hdl_lang>verilog</hdl_lang>
-</simulation_settings>*/
 /*
 WARNING: Do NOT edit the input and output ports in this file in a text
 editor if you plan to continue editing the block that represents it in
@@ -307,7 +258,11 @@ TRANSITION_LIST("alphabet[4]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 1000.0;
+		}
 	}
 }
 
@@ -316,7 +271,11 @@ TRANSITION_LIST("alphabet[3]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 1000.0;
+		}
 	}
 }
 
@@ -325,7 +284,11 @@ TRANSITION_LIST("alphabet[2]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 1000.0;
+		}
 	}
 }
 
@@ -334,7 +297,13 @@ TRANSITION_LIST("alphabet[1]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 125.0;
+			LEVEL 1 FOR 320.0;
+			LEVEL 0 FOR 555.0;
+		}
 	}
 }
 
@@ -343,7 +312,14 @@ TRANSITION_LIST("alphabet[0]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 45.0;
+			LEVEL 1 FOR 80.0;
+			LEVEL 0 FOR 80.0;
+			LEVEL 1 FOR 795.0;
+		}
 	}
 }
 
@@ -354,7 +330,205 @@ TRANSITION_LIST("clk")
 		REPEAT = 1;
 		NODE
 		{
-			REPEAT = 100;
+			REPEAT = 1;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
 			LEVEL 0 FOR 5.0;
 			LEVEL 1 FOR 5.0;
 		}
@@ -366,7 +540,11 @@ TRANSITION_LIST("eight")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 1000.0;
+		}
 	}
 }
 
@@ -375,7 +553,11 @@ TRANSITION_LIST("five")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 1000.0;
+		}
 	}
 }
 
@@ -384,7 +566,11 @@ TRANSITION_LIST("four")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 1000.0;
+		}
 	}
 }
 
@@ -393,7 +579,11 @@ TRANSITION_LIST("nine")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 1000.0;
+		}
 	}
 }
 
@@ -402,9 +592,11 @@ TRANSITION_LIST("one")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 540.0;
-		LEVEL 1 FOR 80.0;
-		LEVEL 0 FOR 380.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 1000.0;
+		}
 	}
 }
 
@@ -413,7 +605,11 @@ TRANSITION_LIST("reset")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 1000.0;
+		}
 	}
 }
 
@@ -422,7 +618,11 @@ TRANSITION_LIST("seven")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 1000.0;
+		}
 	}
 }
 
@@ -431,7 +631,11 @@ TRANSITION_LIST("sharp")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 1000.0;
+		}
 	}
 }
 
@@ -440,7 +644,11 @@ TRANSITION_LIST("sharp_output")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 1000.0;
+		}
 	}
 }
 
@@ -449,7 +657,11 @@ TRANSITION_LIST("six")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 1000.0;
+		}
 	}
 }
 
@@ -458,7 +670,11 @@ TRANSITION_LIST("star")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 1000.0;
+		}
 	}
 }
 
@@ -467,7 +683,11 @@ TRANSITION_LIST("star_output")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 1000.0;
+		}
 	}
 }
 
@@ -476,13 +696,11 @@ TRANSITION_LIST("three")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 670.0;
-		LEVEL 1 FOR 40.0;
-		LEVEL 0 FOR 60.0;
-		LEVEL 1 FOR 60.0;
-		LEVEL 0 FOR 40.0;
-		LEVEL 1 FOR 70.0;
-		LEVEL 0 FOR 60.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 1000.0;
+		}
 	}
 }
 
@@ -491,17 +709,21 @@ TRANSITION_LIST("two")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 30.0;
-		LEVEL 1 FOR 50.0;
-		LEVEL 0 FOR 30.0;
-		LEVEL 1 FOR 60.0;
-		LEVEL 0 FOR 20.0;
-		LEVEL 1 FOR 70.0;
-		LEVEL 0 FOR 40.0;
-		LEVEL 1 FOR 90.0;
-		LEVEL 0 FOR 40.0;
-		LEVEL 1 FOR 70.0;
-		LEVEL 0 FOR 500.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 30.0;
+			LEVEL 1 FOR 50.0;
+			LEVEL 0 FOR 30.0;
+			LEVEL 1 FOR 60.0;
+			LEVEL 0 FOR 20.0;
+			LEVEL 1 FOR 70.0;
+			LEVEL 0 FOR 40.0;
+			LEVEL 1 FOR 90.0;
+			LEVEL 0 FOR 40.0;
+			LEVEL 1 FOR 70.0;
+			LEVEL 0 FOR 500.0;
+		}
 	}
 }
 
@@ -510,7 +732,11 @@ TRANSITION_LIST("zero")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 1000.0;
+		}
 	}
 }
 
