@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "Cyclone V"
 set_global_assignment -name DEVICE 5CGXFC7C7F23C8
-set_global_assignment -name TOP_LEVEL_ENTITY word_register
+set_global_assignment -name TOP_LEVEL_ENTITY hang_man
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "19:11:26  NOVEMBER 21, 2023"
 set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
@@ -61,8 +61,17 @@ set_global_assignment -name VECTOR_WAVEFORM_FILE keypad_converter.vwf
 set_global_assignment -name BDF_FILE register5.bdf
 set_global_assignment -name VECTOR_WAVEFORM_FILE register5.vwf
 set_global_assignment -name BDF_FILE word_register.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE word_register.vwf
+set_global_assignment -name BDF_FILE grader.bdf
+set_global_assignment -name BDF_FILE falling_trigger.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE grader.vwf
+set_global_assignment -name BDF_FILE is_correct.bdf
+set_global_assignment -name BDF_FILE checker.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE checker.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE is_correct.vwf
+set_global_assignment -name BDF_FILE hang_man.bdf
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name VECTOR_WAVEFORM_FILE word_register.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE hang_man.vwf
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

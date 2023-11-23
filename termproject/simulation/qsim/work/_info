@@ -55,8 +55,54 @@ R7
 !i113 1
 R10
 R11
+vchecker
+Z12 !s110 1700741219
+!i10b 1
+!s100 :iV[l<<cKh5b:j8MX5o820
+R2
+IH:WGe=YFDfI=Ho[H]O_Yi2
+R3
+R0
+w1700741218
+R4
+R5
+!i122 86
+L0 32 273
+R6
+r1
+!s85 0
+31
+Z13 !s108 1700741219.000000
+R8
+R9
+!i113 1
+R10
+R11
+vchecker_vlg_vec_tst
+R12
+!i10b 1
+!s100 ;L;zkH6>ORi=_^D6NVHiB3
+R2
+IT7eYUG3h[:7YNZ9M;G;iJ1
+R3
+R0
+w1700741217
+8checker.vwf.vt
+Fchecker.vwf.vt
+!i122 87
+L0 30 90
+R6
+r1
+!s85 0
+31
+R13
+!s107 checker.vwf.vt|
+!s90 -work|work|checker.vwf.vt|
+!i113 1
+R10
+R11
 vcounter2
-Z12 !s110 1700649572
+Z14 !s110 1700649572
 !i10b 1
 !s100 0LNj_R^P=1_An:nP4V1El3
 R2
@@ -72,14 +118,14 @@ R6
 r1
 !s85 0
 31
-Z13 !s108 1700649572.000000
+Z15 !s108 1700649572.000000
 R8
 R9
 !i113 1
 R10
 R11
 vcounter2_vlg_vec_tst
-R12
+R14
 !i10b 1
 !s100 PUbCj3@I4Uf^2T]<E9``H2
 R2
@@ -95,14 +141,14 @@ R6
 r1
 !s85 0
 31
-R13
+R15
 !s107 counter2.vwf.vt|
 !s90 -work|work|counter2.vwf.vt|
 !i113 1
 R10
 R11
 vdecimal_to_binary
-Z14 !s110 1700562100
+Z16 !s110 1700562100
 !i10b 1
 !s100 z6G8@5kOCFSi6lR4B[<gA0
 R2
@@ -118,14 +164,14 @@ R6
 r1
 !s85 0
 31
-Z15 !s108 1700562100.000000
+Z17 !s108 1700562100.000000
 R8
 R9
 !i113 1
 R10
 R11
 vdecimal_to_binary_vlg_vec_tst
-R14
+R16
 !i10b 1
 !s100 ^I`[b8<YmoHBAA;VWWXna0
 R2
@@ -141,14 +187,152 @@ R6
 r1
 !s85 0
 31
-R15
+R17
 !s107 decimal_to_binary.vwf.vt|
 !s90 -work|work|decimal_to_binary.vwf.vt|
 !i113 1
 R10
 R11
+vgrader
+Z18 !s110 1700743110
+!i10b 1
+!s100 OL0LBGjmjX8]62zHz^NbM2
+R2
+I_g;8R]GNHSYLoO@3W;e[91
+R3
+R0
+w1700743110
+R4
+R5
+!i122 94
+L0 32 947
+R6
+r1
+!s85 0
+31
+Z19 !s108 1700743110.000000
+R8
+R9
+!i113 1
+R10
+R11
+vgrader_vlg_vec_tst
+R18
+!i10b 1
+!s100 G5UL=Jbk_Deh1[iY9VBcB1
+R2
+I_QS8n349k[0a2bgV4Xg@B3
+R3
+R0
+w1700743109
+8grader.vwf.vt
+Fgrader.vwf.vt
+!i122 95
+Z20 L0 30 125
+R6
+r1
+!s85 0
+31
+R19
+!s107 grader.vwf.vt|
+!s90 -work|work|grader.vwf.vt|
+!i113 1
+R10
+R11
+vhang_man
+Z21 !s110 1700745455
+!i10b 1
+!s100 <?F@FIl>z^R=_lnl2^8if2
+R2
+Ih;CHNJZXOf87B<<_nC`k>1
+R3
+R0
+w1700745454
+R4
+R5
+!i122 104
+L0 32 3871
+R6
+r1
+!s85 0
+31
+Z22 !s108 1700745455.000000
+R8
+R9
+!i113 1
+R10
+R11
+vhang_man_vlg_vec_tst
+R21
+!i10b 1
+!s100 _E7<F3YcN>FM]23YT:;4k2
+R2
+I;P[Y`B:QInm6X^cjTZLPT3
+R3
+R0
+w1700745453
+8hang_man.vwf.vt
+Fhang_man.vwf.vt
+!i122 105
+L0 30 191
+R6
+r1
+!s85 0
+31
+R22
+!s107 hang_man.vwf.vt|
+!s90 -work|work|hang_man.vwf.vt|
+!i113 1
+R10
+R11
+vis_correct
+Z23 !s110 1700743190
+!i10b 1
+!s100 DF<?2>48AEIEa2^QBCTBg0
+R2
+IP@S6iiP5V?OWlhD2O<jlA0
+R3
+R0
+w1700743189
+R4
+R5
+!i122 96
+L0 32 1679
+R6
+r1
+!s85 0
+31
+Z24 !s108 1700743190.000000
+R8
+R9
+!i113 1
+R10
+R11
+vis_correct_vlg_vec_tst
+R23
+!i10b 1
+!s100 aNlOhoR@UVY1lEWQk9UVb1
+R2
+I898MJG`>zU8^Dk7PUV`RF1
+R3
+R0
+w1700743188
+8is_correct.vwf.vt
+Fis_correct.vwf.vt
+!i122 97
+L0 30 319
+R6
+r1
+!s85 0
+31
+R24
+!s107 is_correct.vwf.vt|
+!s90 -work|work|is_correct.vwf.vt|
+!i113 1
+R10
+R11
 vis_equal4
-Z16 !s110 1700563908
+Z25 !s110 1700563908
 !i10b 1
 !s100 d<OQJjKS@UoZ5R20o8TdH0
 R2
@@ -164,14 +348,14 @@ R6
 r1
 !s85 0
 31
-Z17 !s108 1700563908.000000
+Z26 !s108 1700563908.000000
 R8
 R9
 !i113 1
 R10
 R11
 vis_equal4_vlg_vec_tst
-R16
+R25
 !i10b 1
 !s100 5QNn@3l<9k=WO`j24@9Sk3
 R2
@@ -187,14 +371,14 @@ R6
 r1
 !s85 0
 31
-R17
+R26
 !s107 is_equal4.vwf.vt|
 !s90 -work|work|is_equal4.vwf.vt|
 !i113 1
 R10
 R11
 vkeypad_converter
-Z18 !s110 1700649818
+Z27 !s110 1700649818
 !i10b 1
 !s100 J@L9R0O_1GoEEZ<CE0UDU0
 R2
@@ -210,14 +394,14 @@ R6
 r1
 !s85 0
 31
-Z19 !s108 1700649818.000000
+Z28 !s108 1700649818.000000
 R8
 R9
 !i113 1
 R10
 R11
 vkeypad_converter_vlg_vec_tst
-R18
+R27
 !i10b 1
 !s100 SS]8k1?:NF3P]oJRhOelf2
 R2
@@ -233,60 +417,60 @@ R6
 r1
 !s85 0
 31
-R19
+R28
 !s107 keypad_converter.vwf.vt|
 !s90 -work|work|keypad_converter.vwf.vt|
 !i113 1
 R10
 R11
 vregister5
-Z20 !s110 1700652407
+Z29 !s110 1700736057
 !i10b 1
 !s100 <1X<@_79_H3ha>>SKh@o80
 R2
 IPcG5>8:C]F1MXH1dC;:_S1
 R3
 R0
-w1700652406
+w1700736056
 R4
 R5
-!i122 44
+!i122 56
 L0 32 457
 R6
 r1
 !s85 0
 31
-Z21 !s108 1700652407.000000
+Z30 !s108 1700736057.000000
 R8
 R9
 !i113 1
 R10
 R11
 vregister5_vlg_vec_tst
-R20
+R29
 !i10b 1
-!s100 >5h_`6a1>SXY]VXzkPm1N3
+!s100 dcVRmK7nFQomeHZ0]2gE42
 R2
-IV2Ga@lELaT:2[M:`eE9dn1
+IzllKNNg1z:UnNjnmLOJTo0
 R3
 R0
-w1700652405
+w1700736055
 8register5.vwf.vt
 Fregister5.vwf.vt
-!i122 45
-L0 30 85
+!i122 57
+L0 30 87
 R6
 r1
 !s85 0
 31
-R21
+R30
 !s107 register5.vwf.vt|
 !s90 -work|work|register5.vwf.vt|
 !i113 1
 R10
 R11
 vword_register
-Z22 !s110 1700654173
+Z31 !s110 1700654173
 !i10b 1
 !s100 h<DkX5DeN^3NfEU_GLGDI3
 R2
@@ -302,14 +486,14 @@ R6
 r1
 !s85 0
 31
-Z23 !s108 1700654173.000000
+Z32 !s108 1700654173.000000
 R8
 R9
 !i113 1
 R10
 R11
 vword_register_vlg_vec_tst
-R22
+R31
 !i10b 1
 !s100 z;m@KPR==4=N>ceWP8DNQ1
 R2
@@ -320,12 +504,12 @@ w1700654171
 8word_register.vwf.vt
 Fword_register.vwf.vt
 !i122 51
-L0 30 125
+R20
 R6
 r1
 !s85 0
 31
-R23
+R32
 !s107 word_register.vwf.vt|
 !s90 -work|work|word_register.vwf.vt|
 !i113 1

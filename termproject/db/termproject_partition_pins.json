@@ -4,167 +4,79 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "alphabet_0[4]",
+					"name" : "out_sharp",
 					"strict" : false
 				},
 				{
-					"name" : "alphabet_0[3]",
+					"name" : "out_star",
 					"strict" : false
 				},
 				{
-					"name" : "alphabet_0[2]",
+					"name" : "alphabet_found",
 					"strict" : false
 				},
 				{
-					"name" : "alphabet_0[1]",
+					"name" : "alphabet_not_found",
 					"strict" : false
 				},
 				{
-					"name" : "alphabet_0[0]",
+					"name" : "out_is_correct_0",
 					"strict" : false
 				},
 				{
-					"name" : "alphabet_1[4]",
+					"name" : "out_is_correct_1",
 					"strict" : false
 				},
 				{
-					"name" : "alphabet_1[3]",
+					"name" : "out_is_correct_2",
 					"strict" : false
 				},
 				{
-					"name" : "alphabet_1[2]",
+					"name" : "out_is_correct_3",
 					"strict" : false
 				},
 				{
-					"name" : "alphabet_1[1]",
+					"name" : "out_is_correct_4",
 					"strict" : false
 				},
 				{
-					"name" : "alphabet_1[0]",
+					"name" : "out_is_correct_5",
 					"strict" : false
 				},
 				{
-					"name" : "alphabet_2[4]",
+					"name" : "out_is_correct_6",
 					"strict" : false
 				},
 				{
-					"name" : "alphabet_2[3]",
+					"name" : "out_is_correct_7",
 					"strict" : false
 				},
 				{
-					"name" : "alphabet_2[2]",
+					"name" : "out_alphabet[4]",
 					"strict" : false
 				},
 				{
-					"name" : "alphabet_2[1]",
+					"name" : "out_alphabet[3]",
 					"strict" : false
 				},
 				{
-					"name" : "alphabet_2[0]",
+					"name" : "out_alphabet[2]",
 					"strict" : false
 				},
 				{
-					"name" : "alphabet_3[4]",
+					"name" : "out_alphabet[1]",
 					"strict" : false
 				},
 				{
-					"name" : "alphabet_3[3]",
+					"name" : "out_alphabet[0]",
 					"strict" : false
 				},
 				{
-					"name" : "alphabet_3[2]",
+					"name" : "sharp",
 					"strict" : false
 				},
 				{
-					"name" : "alphabet_3[1]",
-					"strict" : false
-				},
-				{
-					"name" : "alphabet_3[0]",
-					"strict" : false
-				},
-				{
-					"name" : "alphabet_4[4]",
-					"strict" : false
-				},
-				{
-					"name" : "alphabet_4[3]",
-					"strict" : false
-				},
-				{
-					"name" : "alphabet_4[2]",
-					"strict" : false
-				},
-				{
-					"name" : "alphabet_4[1]",
-					"strict" : false
-				},
-				{
-					"name" : "alphabet_4[0]",
-					"strict" : false
-				},
-				{
-					"name" : "alphabet_5[4]",
-					"strict" : false
-				},
-				{
-					"name" : "alphabet_5[3]",
-					"strict" : false
-				},
-				{
-					"name" : "alphabet_5[2]",
-					"strict" : false
-				},
-				{
-					"name" : "alphabet_5[1]",
-					"strict" : false
-				},
-				{
-					"name" : "alphabet_5[0]",
-					"strict" : false
-				},
-				{
-					"name" : "alphabet_6[4]",
-					"strict" : false
-				},
-				{
-					"name" : "alphabet_6[3]",
-					"strict" : false
-				},
-				{
-					"name" : "alphabet_6[2]",
-					"strict" : false
-				},
-				{
-					"name" : "alphabet_6[1]",
-					"strict" : false
-				},
-				{
-					"name" : "alphabet_6[0]",
-					"strict" : false
-				},
-				{
-					"name" : "alphabet_7[4]",
-					"strict" : false
-				},
-				{
-					"name" : "alphabet_7[3]",
-					"strict" : false
-				},
-				{
-					"name" : "alphabet_7[2]",
-					"strict" : false
-				},
-				{
-					"name" : "alphabet_7[1]",
-					"strict" : false
-				},
-				{
-					"name" : "alphabet_7[0]",
-					"strict" : false
-				},
-				{
-					"name" : "input_alphabet[4]",
+					"name" : "star",
 					"strict" : false
 				},
 				{
@@ -176,31 +88,47 @@
 					"strict" : false
 				},
 				{
-					"name" : "sharp",
-					"strict" : false
-				},
-				{
 					"name" : "mode",
 					"strict" : false
 				},
 				{
-					"name" : "input_alphabet[3]",
+					"name" : "zero",
 					"strict" : false
 				},
 				{
-					"name" : "input_alphabet[2]",
+					"name" : "one",
 					"strict" : false
 				},
 				{
-					"name" : "input_alphabet[1]",
+					"name" : "five",
 					"strict" : false
 				},
 				{
-					"name" : "input_alphabet[0]",
+					"name" : "nine",
 					"strict" : false
 				},
 				{
-					"name" : "star",
+					"name" : "three",
+					"strict" : false
+				},
+				{
+					"name" : "seven",
+					"strict" : false
+				},
+				{
+					"name" : "two",
+					"strict" : false
+				},
+				{
+					"name" : "six",
+					"strict" : false
+				},
+				{
+					"name" : "four",
+					"strict" : false
+				},
+				{
+					"name" : "eight",
 					"strict" : false
 				}
 			]

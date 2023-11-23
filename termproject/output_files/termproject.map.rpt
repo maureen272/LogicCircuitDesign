@@ -1,5 +1,5 @@
 Analysis & Synthesis report for termproject
-Wed Nov 22 20:53:19 2023
+Thu Nov 23 22:08:44 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -14,49 +14,64 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Parameter Settings for User Entity Instance: register5:inst|BUSMUX:inst8
- 10. Parameter Settings for User Entity Instance: register5:inst|BUSMUX:inst5
- 11. Parameter Settings for User Entity Instance: register5:inst|BUSMUX:inst6
- 12. Parameter Settings for User Entity Instance: register5:inst|BUSMUX:inst7
- 13. Parameter Settings for User Entity Instance: register5:inst|BUSMUX:inst10
- 14. Parameter Settings for User Entity Instance: register5:inst1|BUSMUX:inst8
- 15. Parameter Settings for User Entity Instance: register5:inst1|BUSMUX:inst5
- 16. Parameter Settings for User Entity Instance: register5:inst1|BUSMUX:inst6
- 17. Parameter Settings for User Entity Instance: register5:inst1|BUSMUX:inst7
- 18. Parameter Settings for User Entity Instance: register5:inst1|BUSMUX:inst10
- 19. Parameter Settings for User Entity Instance: register5:inst2|BUSMUX:inst8
- 20. Parameter Settings for User Entity Instance: register5:inst2|BUSMUX:inst5
- 21. Parameter Settings for User Entity Instance: register5:inst2|BUSMUX:inst6
- 22. Parameter Settings for User Entity Instance: register5:inst2|BUSMUX:inst7
- 23. Parameter Settings for User Entity Instance: register5:inst2|BUSMUX:inst10
- 24. Parameter Settings for User Entity Instance: register5:inst6|BUSMUX:inst8
- 25. Parameter Settings for User Entity Instance: register5:inst6|BUSMUX:inst5
- 26. Parameter Settings for User Entity Instance: register5:inst6|BUSMUX:inst6
- 27. Parameter Settings for User Entity Instance: register5:inst6|BUSMUX:inst7
- 28. Parameter Settings for User Entity Instance: register5:inst6|BUSMUX:inst10
- 29. Parameter Settings for User Entity Instance: register5:inst7|BUSMUX:inst8
- 30. Parameter Settings for User Entity Instance: register5:inst7|BUSMUX:inst5
- 31. Parameter Settings for User Entity Instance: register5:inst7|BUSMUX:inst6
- 32. Parameter Settings for User Entity Instance: register5:inst7|BUSMUX:inst7
- 33. Parameter Settings for User Entity Instance: register5:inst7|BUSMUX:inst10
- 34. Parameter Settings for User Entity Instance: register5:inst8|BUSMUX:inst8
- 35. Parameter Settings for User Entity Instance: register5:inst8|BUSMUX:inst5
- 36. Parameter Settings for User Entity Instance: register5:inst8|BUSMUX:inst6
- 37. Parameter Settings for User Entity Instance: register5:inst8|BUSMUX:inst7
- 38. Parameter Settings for User Entity Instance: register5:inst8|BUSMUX:inst10
- 39. Parameter Settings for User Entity Instance: register5:inst9|BUSMUX:inst8
- 40. Parameter Settings for User Entity Instance: register5:inst9|BUSMUX:inst5
- 41. Parameter Settings for User Entity Instance: register5:inst9|BUSMUX:inst6
- 42. Parameter Settings for User Entity Instance: register5:inst9|BUSMUX:inst7
- 43. Parameter Settings for User Entity Instance: register5:inst9|BUSMUX:inst10
- 44. Parameter Settings for User Entity Instance: register5:inst10|BUSMUX:inst8
- 45. Parameter Settings for User Entity Instance: register5:inst10|BUSMUX:inst5
- 46. Parameter Settings for User Entity Instance: register5:inst10|BUSMUX:inst6
- 47. Parameter Settings for User Entity Instance: register5:inst10|BUSMUX:inst7
- 48. Parameter Settings for User Entity Instance: register5:inst10|BUSMUX:inst10
- 49. Post-Synthesis Netlist Statistics for Top Partition
- 50. Elapsed Time Per Partition
- 51. Analysis & Synthesis Messages
+  9. Parameter Settings for User Entity Instance: keypad_converter:inst|counter2:inst3|BUSMUX:inst6
+ 10. Parameter Settings for User Entity Instance: keypad_converter:inst|counter2:inst3|BUSMUX:inst5
+ 11. Parameter Settings for User Entity Instance: keypad_converter:inst|register4:inst24|BUSMUX:inst7
+ 12. Parameter Settings for User Entity Instance: keypad_converter:inst|register4:inst24|BUSMUX:inst4
+ 13. Parameter Settings for User Entity Instance: keypad_converter:inst|register4:inst24|BUSMUX:inst5
+ 14. Parameter Settings for User Entity Instance: keypad_converter:inst|register4:inst24|BUSMUX:inst6
+ 15. Parameter Settings for User Entity Instance: grader:inst10|BUSMUX:inst5
+ 16. Parameter Settings for User Entity Instance: is_correct:inst9|BUSMUX:inst5
+ 17. Parameter Settings for User Entity Instance: is_correct:inst9|BUSMUX:inst6
+ 18. Parameter Settings for User Entity Instance: is_correct:inst9|BUSMUX:inst9
+ 19. Parameter Settings for User Entity Instance: is_correct:inst9|BUSMUX:inst12
+ 20. Parameter Settings for User Entity Instance: is_correct:inst9|BUSMUX:inst14
+ 21. Parameter Settings for User Entity Instance: is_correct:inst9|BUSMUX:inst18
+ 22. Parameter Settings for User Entity Instance: is_correct:inst9|BUSMUX:inst21
+ 23. Parameter Settings for User Entity Instance: is_correct:inst9|BUSMUX:inst24
+ 24. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst|BUSMUX:inst8
+ 25. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst|BUSMUX:inst5
+ 26. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst|BUSMUX:inst6
+ 27. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst|BUSMUX:inst7
+ 28. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst|BUSMUX:inst10
+ 29. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst1|BUSMUX:inst8
+ 30. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst1|BUSMUX:inst5
+ 31. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst1|BUSMUX:inst6
+ 32. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst1|BUSMUX:inst7
+ 33. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst1|BUSMUX:inst10
+ 34. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst2|BUSMUX:inst8
+ 35. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst2|BUSMUX:inst5
+ 36. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst2|BUSMUX:inst6
+ 37. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst2|BUSMUX:inst7
+ 38. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst2|BUSMUX:inst10
+ 39. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst6|BUSMUX:inst8
+ 40. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst6|BUSMUX:inst5
+ 41. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst6|BUSMUX:inst6
+ 42. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst6|BUSMUX:inst7
+ 43. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst6|BUSMUX:inst10
+ 44. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst7|BUSMUX:inst8
+ 45. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst7|BUSMUX:inst5
+ 46. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst7|BUSMUX:inst6
+ 47. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst7|BUSMUX:inst7
+ 48. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst7|BUSMUX:inst10
+ 49. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst8|BUSMUX:inst8
+ 50. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst8|BUSMUX:inst5
+ 51. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst8|BUSMUX:inst6
+ 52. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst8|BUSMUX:inst7
+ 53. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst8|BUSMUX:inst10
+ 54. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst9|BUSMUX:inst8
+ 55. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst9|BUSMUX:inst5
+ 56. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst9|BUSMUX:inst6
+ 57. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst9|BUSMUX:inst7
+ 58. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst9|BUSMUX:inst10
+ 59. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst10|BUSMUX:inst8
+ 60. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst10|BUSMUX:inst5
+ 61. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst10|BUSMUX:inst6
+ 62. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst10|BUSMUX:inst7
+ 63. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst10|BUSMUX:inst10
+ 64. Post-Synthesis Netlist Statistics for Top Partition
+ 65. Elapsed Time Per Partition
+ 66. Analysis & Synthesis Messages
 
 
 
@@ -83,14 +98,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Nov 22 20:53:19 2023       ;
+; Analysis & Synthesis Status     ; Successful - Thu Nov 23 22:08:44 2023       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; termproject                                 ;
-; Top-level Entity Name           ; word_register                               ;
+; Top-level Entity Name           ; hang_man                                    ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 42                                          ;
-; Total pins                      ; 50                                          ;
+; Total registers                 ; 78                                          ;
+; Total pins                      ; 32                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -109,7 +124,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CGXFC7C7F23C8     ;                    ;
-; Top-level entity name                                                           ; word_register      ; termproject        ;
+; Top-level entity name                                                           ; hang_man           ; termproject        ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -212,9 +227,20 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                          ; Library ;
 +----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------+---------+
+; keypad_converter.bdf             ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/termproject/keypad_converter.bdf               ;         ;
+; decimal_to_binary.bdf            ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/termproject/decimal_to_binary.bdf              ;         ;
+; register4.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/termproject/register4.bdf                      ;         ;
 ; trigger.bdf                      ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/termproject/trigger.bdf                        ;         ;
+; is_equal4.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/termproject/is_equal4.bdf                      ;         ;
+; counter2.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/termproject/counter2.bdf                       ;         ;
+; alphabet_encoder.v               ; yes             ; User Verilog HDL File              ; C:/intelFPGA_lite/20.1/termproject/alphabet_encoder.v                 ;         ;
 ; register5.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/termproject/register5.bdf                      ;         ;
 ; word_register.bdf                ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/termproject/word_register.bdf                  ;         ;
+; grader.bdf                       ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/termproject/grader.bdf                         ;         ;
+; falling_trigger.bdf              ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/termproject/falling_trigger.bdf                ;         ;
+; is_correct.bdf                   ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/termproject/is_correct.bdf                     ;         ;
+; checker.bdf                      ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/termproject/checker.bdf                        ;         ;
+; hang_man.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/termproject/hang_man.bdf                       ;         ;
 ; busmux.tdf                       ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/busmux.tdf     ;         ;
 ; lpm_mux.inc                      ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mux.inc    ;         ;
 ; lpm_mux.tdf                      ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mux.tdf    ;         ;
@@ -231,44 +257,71 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 22        ;
+; Estimate of Logic utilization (ALMs needed) ; 55        ;
 ;                                             ;           ;
-; Combinational ALUT usage for logic          ; 2         ;
+; Combinational ALUT usage for logic          ; 63        ;
 ;     -- 7 input functions                    ; 0         ;
-;     -- 6 input functions                    ; 0         ;
-;     -- 5 input functions                    ; 0         ;
-;     -- 4 input functions                    ; 0         ;
-;     -- <=3 input functions                  ; 2         ;
+;     -- 6 input functions                    ; 27        ;
+;     -- 5 input functions                    ; 17        ;
+;     -- 4 input functions                    ; 5         ;
+;     -- <=3 input functions                  ; 14        ;
 ;                                             ;           ;
-; Dedicated logic registers                   ; 42        ;
+; Dedicated logic registers                   ; 78        ;
 ;                                             ;           ;
-; I/O pins                                    ; 50        ;
+; I/O pins                                    ; 32        ;
 ;                                             ;           ;
 ; Total DSP Blocks                            ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 42        ;
-; Total fan-out                               ; 261       ;
-; Average fan-out                             ; 1.81      ;
+; Maximum fan-out                             ; 78        ;
+; Total fan-out                               ; 626       ;
+; Average fan-out                             ; 3.05      ;
 +---------------------------------------------+-----------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                  ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------+---------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name             ; Entity Name   ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------+---------------+--------------+
-; |word_register             ; 2 (2)               ; 42 (0)                    ; 0                 ; 0          ; 50   ; 0            ; |word_register                  ; word_register ; work         ;
-;    |register5:inst10|      ; 0 (0)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |word_register|register5:inst10 ; register5     ; work         ;
-;    |register5:inst1|       ; 0 (0)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |word_register|register5:inst1  ; register5     ; work         ;
-;    |register5:inst2|       ; 0 (0)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |word_register|register5:inst2  ; register5     ; work         ;
-;    |register5:inst6|       ; 0 (0)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |word_register|register5:inst6  ; register5     ; work         ;
-;    |register5:inst7|       ; 0 (0)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |word_register|register5:inst7  ; register5     ; work         ;
-;    |register5:inst8|       ; 0 (0)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |word_register|register5:inst8  ; register5     ; work         ;
-;    |register5:inst9|       ; 0 (0)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |word_register|register5:inst9  ; register5     ; work         ;
-;    |register5:inst|        ; 0 (0)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |word_register|register5:inst   ; register5     ; work         ;
-;    |trigger:inst13|        ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |word_register|trigger:inst13   ; trigger       ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------+---------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                   ;
++---------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------+-------------------+--------------+
+; Compilation Hierarchy Node      ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                     ; Entity Name       ; Library Name ;
++---------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------+-------------------+--------------+
+; |hang_man                       ; 63 (0)              ; 78 (0)                    ; 0                 ; 0          ; 32   ; 0            ; |hang_man                                               ; hang_man          ; work         ;
+;    |grader:inst10|              ; 8 (7)               ; 20 (2)                    ; 0                 ; 0          ; 0    ; 0            ; |hang_man|grader:inst10                                 ; grader            ; work         ;
+;       |falling_trigger:inst9|   ; 1 (1)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|grader:inst10|falling_trigger:inst9           ; falling_trigger   ; work         ;
+;       |trigger:inst13|          ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|grader:inst10|trigger:inst13                  ; trigger           ; work         ;
+;       |trigger:inst14|          ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|grader:inst10|trigger:inst14                  ; trigger           ; work         ;
+;       |trigger:inst15|          ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|grader:inst10|trigger:inst15                  ; trigger           ; work         ;
+;       |trigger:inst16|          ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|grader:inst10|trigger:inst16                  ; trigger           ; work         ;
+;       |trigger:inst17|          ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|grader:inst10|trigger:inst17                  ; trigger           ; work         ;
+;       |trigger:inst18|          ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|grader:inst10|trigger:inst18                  ; trigger           ; work         ;
+;       |trigger:inst19|          ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|grader:inst10|trigger:inst19                  ; trigger           ; work         ;
+;       |trigger:inst|            ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|grader:inst10|trigger:inst                    ; trigger           ; work         ;
+;    |is_correct:inst9|           ; 32 (16)             ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|is_correct:inst9                              ; is_correct        ; work         ;
+;       |checker:inst10|          ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|is_correct:inst9|checker:inst10               ; checker           ; work         ;
+;       |checker:inst15|          ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|is_correct:inst9|checker:inst15               ; checker           ; work         ;
+;       |checker:inst16|          ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|is_correct:inst9|checker:inst16               ; checker           ; work         ;
+;       |checker:inst19|          ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|is_correct:inst9|checker:inst19               ; checker           ; work         ;
+;       |checker:inst22|          ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|is_correct:inst9|checker:inst22               ; checker           ; work         ;
+;       |checker:inst3|           ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|is_correct:inst9|checker:inst3                ; checker           ; work         ;
+;       |checker:inst7|           ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|is_correct:inst9|checker:inst7                ; checker           ; work         ;
+;       |checker:inst|            ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|is_correct:inst9|checker:inst                 ; checker           ; work         ;
+;    |keypad_converter:inst|      ; 21 (0)              ; 8 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|keypad_converter:inst                         ; keypad_converter  ; work         ;
+;       |alphabet_encoder:inst27| ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|keypad_converter:inst|alphabet_encoder:inst27 ; alphabet_encoder  ; work         ;
+;       |counter2:inst3|          ; 4 (4)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|keypad_converter:inst|counter2:inst3          ; counter2          ; work         ;
+;       |decimal_to_binary:inst1| ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|keypad_converter:inst|decimal_to_binary:inst1 ; decimal_to_binary ; work         ;
+;       |is_equal4:inst25|        ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|keypad_converter:inst|is_equal4:inst25        ; is_equal4         ; work         ;
+;       |register4:inst24|        ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|keypad_converter:inst|register4:inst24        ; register4         ; work         ;
+;       |trigger:inst23|          ; 1 (1)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|keypad_converter:inst|trigger:inst23          ; trigger           ; work         ;
+;    |word_register:inst8|        ; 2 (2)               ; 42 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |hang_man|word_register:inst8                           ; word_register     ; work         ;
+;       |register5:inst10|        ; 0 (0)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|word_register:inst8|register5:inst10          ; register5         ; work         ;
+;       |register5:inst1|         ; 0 (0)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|word_register:inst8|register5:inst1           ; register5         ; work         ;
+;       |register5:inst2|         ; 0 (0)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|word_register:inst8|register5:inst2           ; register5         ; work         ;
+;       |register5:inst6|         ; 0 (0)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|word_register:inst8|register5:inst6           ; register5         ; work         ;
+;       |register5:inst7|         ; 0 (0)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|word_register:inst8|register5:inst7           ; register5         ; work         ;
+;       |register5:inst8|         ; 0 (0)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|word_register:inst8|register5:inst8           ; register5         ; work         ;
+;       |register5:inst9|         ; 0 (0)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|word_register:inst8|register5:inst9           ; register5         ; work         ;
+;       |register5:inst|          ; 0 (0)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|word_register:inst8|register5:inst            ; register5         ; work         ;
+;       |trigger:inst13|          ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|word_register:inst8|trigger:inst13            ; trigger           ; work         ;
++---------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------+-------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -277,358 +330,88 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 42    ;
+; Total registers                              ; 78    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 42    ;
+; Number of registers using Asynchronous Clear ; 78    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 40    ;
+; Number of registers using Clock Enable       ; 44    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: register5:inst|BUSMUX:inst8 ;
-+----------------+-------+-------------------------------------------------+
-; Parameter Name ; Value ; Type                                            ;
-+----------------+-------+-------------------------------------------------+
-; WIDTH          ; 1     ; Untyped                                         ;
-+----------------+-------+-------------------------------------------------+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: keypad_converter:inst|counter2:inst3|BUSMUX:inst6 ;
++----------------+-------+-----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                  ;
++----------------+-------+-----------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                               ;
++----------------+-------+-----------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+--------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: register5:inst|BUSMUX:inst5 ;
-+----------------+-------+-------------------------------------------------+
-; Parameter Name ; Value ; Type                                            ;
-+----------------+-------+-------------------------------------------------+
-; WIDTH          ; 1     ; Untyped                                         ;
-+----------------+-------+-------------------------------------------------+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: keypad_converter:inst|counter2:inst3|BUSMUX:inst5 ;
++----------------+-------+-----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                  ;
++----------------+-------+-----------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                               ;
++----------------+-------+-----------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+--------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: register5:inst|BUSMUX:inst6 ;
-+----------------+-------+-------------------------------------------------+
-; Parameter Name ; Value ; Type                                            ;
-+----------------+-------+-------------------------------------------------+
-; WIDTH          ; 1     ; Untyped                                         ;
-+----------------+-------+-------------------------------------------------+
++--------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: keypad_converter:inst|register4:inst24|BUSMUX:inst7 ;
++----------------+-------+-------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                    ;
++----------------+-------+-------------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                                 ;
++----------------+-------+-------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+--------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: register5:inst|BUSMUX:inst7 ;
-+----------------+-------+-------------------------------------------------+
-; Parameter Name ; Value ; Type                                            ;
-+----------------+-------+-------------------------------------------------+
-; WIDTH          ; 1     ; Untyped                                         ;
-+----------------+-------+-------------------------------------------------+
++--------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: keypad_converter:inst|register4:inst24|BUSMUX:inst4 ;
++----------------+-------+-------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                    ;
++----------------+-------+-------------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                                 ;
++----------------+-------+-------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+---------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: register5:inst|BUSMUX:inst10 ;
-+----------------+-------+--------------------------------------------------+
-; Parameter Name ; Value ; Type                                             ;
-+----------------+-------+--------------------------------------------------+
-; WIDTH          ; 1     ; Untyped                                          ;
-+----------------+-------+--------------------------------------------------+
++--------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: keypad_converter:inst|register4:inst24|BUSMUX:inst5 ;
++----------------+-------+-------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                    ;
++----------------+-------+-------------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                                 ;
++----------------+-------+-------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+---------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: register5:inst1|BUSMUX:inst8 ;
-+----------------+-------+--------------------------------------------------+
-; Parameter Name ; Value ; Type                                             ;
-+----------------+-------+--------------------------------------------------+
-; WIDTH          ; 1     ; Untyped                                          ;
-+----------------+-------+--------------------------------------------------+
++--------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: keypad_converter:inst|register4:inst24|BUSMUX:inst6 ;
++----------------+-------+-------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                    ;
++----------------+-------+-------------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                                 ;
++----------------+-------+-------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+---------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: register5:inst1|BUSMUX:inst5 ;
-+----------------+-------+--------------------------------------------------+
-; Parameter Name ; Value ; Type                                             ;
-+----------------+-------+--------------------------------------------------+
-; WIDTH          ; 1     ; Untyped                                          ;
-+----------------+-------+--------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: register5:inst1|BUSMUX:inst6 ;
-+----------------+-------+--------------------------------------------------+
-; Parameter Name ; Value ; Type                                             ;
-+----------------+-------+--------------------------------------------------+
-; WIDTH          ; 1     ; Untyped                                          ;
-+----------------+-------+--------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: register5:inst1|BUSMUX:inst7 ;
-+----------------+-------+--------------------------------------------------+
-; Parameter Name ; Value ; Type                                             ;
-+----------------+-------+--------------------------------------------------+
-; WIDTH          ; 1     ; Untyped                                          ;
-+----------------+-------+--------------------------------------------------+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: grader:inst10|BUSMUX:inst5 ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                        ;
++----------------+-------+------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +----------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: register5:inst1|BUSMUX:inst10 ;
-+----------------+-------+---------------------------------------------------+
-; Parameter Name ; Value ; Type                                              ;
-+----------------+-------+---------------------------------------------------+
-; WIDTH          ; 1     ; Untyped                                           ;
-+----------------+-------+---------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: register5:inst2|BUSMUX:inst8 ;
-+----------------+-------+--------------------------------------------------+
-; Parameter Name ; Value ; Type                                             ;
-+----------------+-------+--------------------------------------------------+
-; WIDTH          ; 1     ; Untyped                                          ;
-+----------------+-------+--------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: register5:inst2|BUSMUX:inst5 ;
-+----------------+-------+--------------------------------------------------+
-; Parameter Name ; Value ; Type                                             ;
-+----------------+-------+--------------------------------------------------+
-; WIDTH          ; 1     ; Untyped                                          ;
-+----------------+-------+--------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: register5:inst2|BUSMUX:inst6 ;
-+----------------+-------+--------------------------------------------------+
-; Parameter Name ; Value ; Type                                             ;
-+----------------+-------+--------------------------------------------------+
-; WIDTH          ; 1     ; Untyped                                          ;
-+----------------+-------+--------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: register5:inst2|BUSMUX:inst7 ;
-+----------------+-------+--------------------------------------------------+
-; Parameter Name ; Value ; Type                                             ;
-+----------------+-------+--------------------------------------------------+
-; WIDTH          ; 1     ; Untyped                                          ;
-+----------------+-------+--------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: register5:inst2|BUSMUX:inst10 ;
-+----------------+-------+---------------------------------------------------+
-; Parameter Name ; Value ; Type                                              ;
-+----------------+-------+---------------------------------------------------+
-; WIDTH          ; 1     ; Untyped                                           ;
-+----------------+-------+---------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: register5:inst6|BUSMUX:inst8 ;
-+----------------+-------+--------------------------------------------------+
-; Parameter Name ; Value ; Type                                             ;
-+----------------+-------+--------------------------------------------------+
-; WIDTH          ; 1     ; Untyped                                          ;
-+----------------+-------+--------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: register5:inst6|BUSMUX:inst5 ;
-+----------------+-------+--------------------------------------------------+
-; Parameter Name ; Value ; Type                                             ;
-+----------------+-------+--------------------------------------------------+
-; WIDTH          ; 1     ; Untyped                                          ;
-+----------------+-------+--------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: register5:inst6|BUSMUX:inst6 ;
-+----------------+-------+--------------------------------------------------+
-; Parameter Name ; Value ; Type                                             ;
-+----------------+-------+--------------------------------------------------+
-; WIDTH          ; 1     ; Untyped                                          ;
-+----------------+-------+--------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: register5:inst6|BUSMUX:inst7 ;
-+----------------+-------+--------------------------------------------------+
-; Parameter Name ; Value ; Type                                             ;
-+----------------+-------+--------------------------------------------------+
-; WIDTH          ; 1     ; Untyped                                          ;
-+----------------+-------+--------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: register5:inst6|BUSMUX:inst10 ;
-+----------------+-------+---------------------------------------------------+
-; Parameter Name ; Value ; Type                                              ;
-+----------------+-------+---------------------------------------------------+
-; WIDTH          ; 1     ; Untyped                                           ;
-+----------------+-------+---------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: register5:inst7|BUSMUX:inst8 ;
-+----------------+-------+--------------------------------------------------+
-; Parameter Name ; Value ; Type                                             ;
-+----------------+-------+--------------------------------------------------+
-; WIDTH          ; 1     ; Untyped                                          ;
-+----------------+-------+--------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: register5:inst7|BUSMUX:inst5 ;
-+----------------+-------+--------------------------------------------------+
-; Parameter Name ; Value ; Type                                             ;
-+----------------+-------+--------------------------------------------------+
-; WIDTH          ; 1     ; Untyped                                          ;
-+----------------+-------+--------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: register5:inst7|BUSMUX:inst6 ;
-+----------------+-------+--------------------------------------------------+
-; Parameter Name ; Value ; Type                                             ;
-+----------------+-------+--------------------------------------------------+
-; WIDTH          ; 1     ; Untyped                                          ;
-+----------------+-------+--------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: register5:inst7|BUSMUX:inst7 ;
-+----------------+-------+--------------------------------------------------+
-; Parameter Name ; Value ; Type                                             ;
-+----------------+-------+--------------------------------------------------+
-; WIDTH          ; 1     ; Untyped                                          ;
-+----------------+-------+--------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: register5:inst7|BUSMUX:inst10 ;
-+----------------+-------+---------------------------------------------------+
-; Parameter Name ; Value ; Type                                              ;
-+----------------+-------+---------------------------------------------------+
-; WIDTH          ; 1     ; Untyped                                           ;
-+----------------+-------+---------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: register5:inst8|BUSMUX:inst8 ;
-+----------------+-------+--------------------------------------------------+
-; Parameter Name ; Value ; Type                                             ;
-+----------------+-------+--------------------------------------------------+
-; WIDTH          ; 1     ; Untyped                                          ;
-+----------------+-------+--------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: register5:inst8|BUSMUX:inst5 ;
-+----------------+-------+--------------------------------------------------+
-; Parameter Name ; Value ; Type                                             ;
-+----------------+-------+--------------------------------------------------+
-; WIDTH          ; 1     ; Untyped                                          ;
-+----------------+-------+--------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: register5:inst8|BUSMUX:inst6 ;
-+----------------+-------+--------------------------------------------------+
-; Parameter Name ; Value ; Type                                             ;
-+----------------+-------+--------------------------------------------------+
-; WIDTH          ; 1     ; Untyped                                          ;
-+----------------+-------+--------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: register5:inst8|BUSMUX:inst7 ;
-+----------------+-------+--------------------------------------------------+
-; Parameter Name ; Value ; Type                                             ;
-+----------------+-------+--------------------------------------------------+
-; WIDTH          ; 1     ; Untyped                                          ;
-+----------------+-------+--------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: register5:inst8|BUSMUX:inst10 ;
-+----------------+-------+---------------------------------------------------+
-; Parameter Name ; Value ; Type                                              ;
-+----------------+-------+---------------------------------------------------+
-; WIDTH          ; 1     ; Untyped                                           ;
-+----------------+-------+---------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: register5:inst9|BUSMUX:inst8 ;
-+----------------+-------+--------------------------------------------------+
-; Parameter Name ; Value ; Type                                             ;
-+----------------+-------+--------------------------------------------------+
-; WIDTH          ; 1     ; Untyped                                          ;
-+----------------+-------+--------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: register5:inst9|BUSMUX:inst5 ;
-+----------------+-------+--------------------------------------------------+
-; Parameter Name ; Value ; Type                                             ;
-+----------------+-------+--------------------------------------------------+
-; WIDTH          ; 1     ; Untyped                                          ;
-+----------------+-------+--------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: register5:inst9|BUSMUX:inst6 ;
-+----------------+-------+--------------------------------------------------+
-; Parameter Name ; Value ; Type                                             ;
-+----------------+-------+--------------------------------------------------+
-; WIDTH          ; 1     ; Untyped                                          ;
-+----------------+-------+--------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: register5:inst9|BUSMUX:inst7 ;
-+----------------+-------+--------------------------------------------------+
-; Parameter Name ; Value ; Type                                             ;
-+----------------+-------+--------------------------------------------------+
-; WIDTH          ; 1     ; Untyped                                          ;
-+----------------+-------+--------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: register5:inst9|BUSMUX:inst10 ;
+; Parameter Settings for User Entity Instance: is_correct:inst9|BUSMUX:inst5 ;
 +----------------+-------+---------------------------------------------------+
 ; Parameter Name ; Value ; Type                                              ;
 +----------------+-------+---------------------------------------------------+
@@ -638,7 +421,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +----------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: register5:inst10|BUSMUX:inst8 ;
+; Parameter Settings for User Entity Instance: is_correct:inst9|BUSMUX:inst6 ;
 +----------------+-------+---------------------------------------------------+
 ; Parameter Name ; Value ; Type                                              ;
 +----------------+-------+---------------------------------------------------+
@@ -648,27 +431,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +----------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: register5:inst10|BUSMUX:inst5 ;
-+----------------+-------+---------------------------------------------------+
-; Parameter Name ; Value ; Type                                              ;
-+----------------+-------+---------------------------------------------------+
-; WIDTH          ; 1     ; Untyped                                           ;
-+----------------+-------+---------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: register5:inst10|BUSMUX:inst6 ;
-+----------------+-------+---------------------------------------------------+
-; Parameter Name ; Value ; Type                                              ;
-+----------------+-------+---------------------------------------------------+
-; WIDTH          ; 1     ; Untyped                                           ;
-+----------------+-------+---------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: register5:inst10|BUSMUX:inst7 ;
+; Parameter Settings for User Entity Instance: is_correct:inst9|BUSMUX:inst9 ;
 +----------------+-------+---------------------------------------------------+
 ; Parameter Name ; Value ; Type                                              ;
 +----------------+-------+---------------------------------------------------+
@@ -678,7 +441,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +-----------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: register5:inst10|BUSMUX:inst10 ;
+; Parameter Settings for User Entity Instance: is_correct:inst9|BUSMUX:inst12 ;
 +----------------+-------+----------------------------------------------------+
 ; Parameter Name ; Value ; Type                                               ;
 +----------------+-------+----------------------------------------------------+
@@ -687,22 +450,465 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: is_correct:inst9|BUSMUX:inst14 ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                            ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: is_correct:inst9|BUSMUX:inst18 ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                            ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: is_correct:inst9|BUSMUX:inst21 ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                            ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: is_correct:inst9|BUSMUX:inst24 ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                            ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: word_register:inst8|register5:inst|BUSMUX:inst8 ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                             ;
++----------------+-------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: word_register:inst8|register5:inst|BUSMUX:inst5 ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                             ;
++----------------+-------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: word_register:inst8|register5:inst|BUSMUX:inst6 ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                             ;
++----------------+-------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: word_register:inst8|register5:inst|BUSMUX:inst7 ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                             ;
++----------------+-------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: word_register:inst8|register5:inst|BUSMUX:inst10 ;
++----------------+-------+----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                 ;
++----------------+-------+----------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                              ;
++----------------+-------+----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: word_register:inst8|register5:inst1|BUSMUX:inst8 ;
++----------------+-------+----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                 ;
++----------------+-------+----------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                              ;
++----------------+-------+----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: word_register:inst8|register5:inst1|BUSMUX:inst5 ;
++----------------+-------+----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                 ;
++----------------+-------+----------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                              ;
++----------------+-------+----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: word_register:inst8|register5:inst1|BUSMUX:inst6 ;
++----------------+-------+----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                 ;
++----------------+-------+----------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                              ;
++----------------+-------+----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: word_register:inst8|register5:inst1|BUSMUX:inst7 ;
++----------------+-------+----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                 ;
++----------------+-------+----------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                              ;
++----------------+-------+----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: word_register:inst8|register5:inst1|BUSMUX:inst10 ;
++----------------+-------+-----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                  ;
++----------------+-------+-----------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                               ;
++----------------+-------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: word_register:inst8|register5:inst2|BUSMUX:inst8 ;
++----------------+-------+----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                 ;
++----------------+-------+----------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                              ;
++----------------+-------+----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: word_register:inst8|register5:inst2|BUSMUX:inst5 ;
++----------------+-------+----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                 ;
++----------------+-------+----------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                              ;
++----------------+-------+----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: word_register:inst8|register5:inst2|BUSMUX:inst6 ;
++----------------+-------+----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                 ;
++----------------+-------+----------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                              ;
++----------------+-------+----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: word_register:inst8|register5:inst2|BUSMUX:inst7 ;
++----------------+-------+----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                 ;
++----------------+-------+----------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                              ;
++----------------+-------+----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: word_register:inst8|register5:inst2|BUSMUX:inst10 ;
++----------------+-------+-----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                  ;
++----------------+-------+-----------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                               ;
++----------------+-------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: word_register:inst8|register5:inst6|BUSMUX:inst8 ;
++----------------+-------+----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                 ;
++----------------+-------+----------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                              ;
++----------------+-------+----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: word_register:inst8|register5:inst6|BUSMUX:inst5 ;
++----------------+-------+----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                 ;
++----------------+-------+----------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                              ;
++----------------+-------+----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: word_register:inst8|register5:inst6|BUSMUX:inst6 ;
++----------------+-------+----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                 ;
++----------------+-------+----------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                              ;
++----------------+-------+----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: word_register:inst8|register5:inst6|BUSMUX:inst7 ;
++----------------+-------+----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                 ;
++----------------+-------+----------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                              ;
++----------------+-------+----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: word_register:inst8|register5:inst6|BUSMUX:inst10 ;
++----------------+-------+-----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                  ;
++----------------+-------+-----------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                               ;
++----------------+-------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: word_register:inst8|register5:inst7|BUSMUX:inst8 ;
++----------------+-------+----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                 ;
++----------------+-------+----------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                              ;
++----------------+-------+----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: word_register:inst8|register5:inst7|BUSMUX:inst5 ;
++----------------+-------+----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                 ;
++----------------+-------+----------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                              ;
++----------------+-------+----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: word_register:inst8|register5:inst7|BUSMUX:inst6 ;
++----------------+-------+----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                 ;
++----------------+-------+----------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                              ;
++----------------+-------+----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: word_register:inst8|register5:inst7|BUSMUX:inst7 ;
++----------------+-------+----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                 ;
++----------------+-------+----------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                              ;
++----------------+-------+----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: word_register:inst8|register5:inst7|BUSMUX:inst10 ;
++----------------+-------+-----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                  ;
++----------------+-------+-----------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                               ;
++----------------+-------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: word_register:inst8|register5:inst8|BUSMUX:inst8 ;
++----------------+-------+----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                 ;
++----------------+-------+----------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                              ;
++----------------+-------+----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: word_register:inst8|register5:inst8|BUSMUX:inst5 ;
++----------------+-------+----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                 ;
++----------------+-------+----------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                              ;
++----------------+-------+----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: word_register:inst8|register5:inst8|BUSMUX:inst6 ;
++----------------+-------+----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                 ;
++----------------+-------+----------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                              ;
++----------------+-------+----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: word_register:inst8|register5:inst8|BUSMUX:inst7 ;
++----------------+-------+----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                 ;
++----------------+-------+----------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                              ;
++----------------+-------+----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: word_register:inst8|register5:inst8|BUSMUX:inst10 ;
++----------------+-------+-----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                  ;
++----------------+-------+-----------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                               ;
++----------------+-------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: word_register:inst8|register5:inst9|BUSMUX:inst8 ;
++----------------+-------+----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                 ;
++----------------+-------+----------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                              ;
++----------------+-------+----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: word_register:inst8|register5:inst9|BUSMUX:inst5 ;
++----------------+-------+----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                 ;
++----------------+-------+----------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                              ;
++----------------+-------+----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: word_register:inst8|register5:inst9|BUSMUX:inst6 ;
++----------------+-------+----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                 ;
++----------------+-------+----------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                              ;
++----------------+-------+----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: word_register:inst8|register5:inst9|BUSMUX:inst7 ;
++----------------+-------+----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                 ;
++----------------+-------+----------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                              ;
++----------------+-------+----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: word_register:inst8|register5:inst9|BUSMUX:inst10 ;
++----------------+-------+-----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                  ;
++----------------+-------+-----------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                               ;
++----------------+-------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: word_register:inst8|register5:inst10|BUSMUX:inst8 ;
++----------------+-------+-----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                  ;
++----------------+-------+-----------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                               ;
++----------------+-------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: word_register:inst8|register5:inst10|BUSMUX:inst5 ;
++----------------+-------+-----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                  ;
++----------------+-------+-----------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                               ;
++----------------+-------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: word_register:inst8|register5:inst10|BUSMUX:inst6 ;
++----------------+-------+-----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                  ;
++----------------+-------+-----------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                               ;
++----------------+-------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: word_register:inst8|register5:inst10|BUSMUX:inst7 ;
++----------------+-------+-----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                  ;
++----------------+-------+-----------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                               ;
++----------------+-------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: word_register:inst8|register5:inst10|BUSMUX:inst10 ;
++----------------+-------+------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                   ;
++----------------+-------+------------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                                ;
++----------------+-------+------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 42                          ;
-;     CLR               ; 2                           ;
-;     ENA CLR           ; 40                          ;
-; arriav_lcell_comb     ; 2                           ;
-;     normal            ; 2                           ;
-;         2 data inputs ; 1                           ;
-;         3 data inputs ; 1                           ;
-; boundary_port         ; 50                          ;
+; arriav_ff             ; 78                          ;
+;     CLR               ; 34                          ;
+;     ENA CLR           ; 44                          ;
+; arriav_lcell_comb     ; 63                          ;
+;     normal            ; 63                          ;
+;         2 data inputs ; 10                          ;
+;         3 data inputs ; 4                           ;
+;         4 data inputs ; 5                           ;
+;         5 data inputs ; 17                          ;
+;         6 data inputs ; 27                          ;
+; boundary_port         ; 32                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 1.00                        ;
-; Average LUT depth     ; 0.13                        ;
+; Max LUT depth         ; 3.00                        ;
+; Average LUT depth     ; 2.06                        ;
 +-----------------------+-----------------------------+
 
 
@@ -721,7 +927,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed Nov 22 20:53:11 2023
+    Info: Processing started: Thu Nov 23 22:08:37 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off termproject -c termproject
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -745,29 +951,52 @@ Info (12021): Found 1 design units, including 1 entities, in source file registe
     Info (12023): Found entity 1: register5
 Info (12021): Found 1 design units, including 1 entities, in source file word_register.bdf
     Info (12023): Found entity 1: word_register
-Info (12127): Elaborating entity "word_register" for the top level hierarchy
-Info (12128): Elaborating entity "register5" for hierarchy "register5:inst"
-Info (12128): Elaborating entity "BUSMUX" for hierarchy "register5:inst|BUSMUX:inst8"
-Info (12130): Elaborated megafunction instantiation "register5:inst|BUSMUX:inst8"
-Info (12133): Instantiated megafunction "register5:inst|BUSMUX:inst8" with the following parameter:
+Info (12021): Found 1 design units, including 1 entities, in source file grader.bdf
+    Info (12023): Found entity 1: grader
+Info (12021): Found 1 design units, including 1 entities, in source file falling_trigger.bdf
+    Info (12023): Found entity 1: falling_trigger
+Info (12021): Found 1 design units, including 1 entities, in source file is_correct.bdf
+    Info (12023): Found entity 1: is_correct
+Info (12021): Found 1 design units, including 1 entities, in source file checker.bdf
+    Info (12023): Found entity 1: checker
+Info (12021): Found 1 design units, including 1 entities, in source file hang_man.bdf
+    Info (12023): Found entity 1: hang_man
+Info (12127): Elaborating entity "hang_man" for the top level hierarchy
+Warning (275011): Block or symbol "grader" of instance "inst10" overlaps another block or symbol
+Info (12128): Elaborating entity "keypad_converter" for hierarchy "keypad_converter:inst"
+Info (12128): Elaborating entity "decimal_to_binary" for hierarchy "keypad_converter:inst|decimal_to_binary:inst1"
+Info (12128): Elaborating entity "alphabet_encoder" for hierarchy "keypad_converter:inst|alphabet_encoder:inst27"
+Info (12128): Elaborating entity "counter2" for hierarchy "keypad_converter:inst|counter2:inst3"
+Info (12128): Elaborating entity "BUSMUX" for hierarchy "keypad_converter:inst|counter2:inst3|BUSMUX:inst6"
+Info (12130): Elaborated megafunction instantiation "keypad_converter:inst|counter2:inst3|BUSMUX:inst6"
+Info (12133): Instantiated megafunction "keypad_converter:inst|counter2:inst3|BUSMUX:inst6" with the following parameter:
     Info (12134): Parameter "WIDTH" = "1"
-Info (12128): Elaborating entity "lpm_mux" for hierarchy "register5:inst|BUSMUX:inst8|lpm_mux:$00000" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/busmux.tdf Line: 44
-Info (12131): Elaborated megafunction instantiation "register5:inst|BUSMUX:inst8|lpm_mux:$00000", which is child of megafunction instantiation "register5:inst|BUSMUX:inst8" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/busmux.tdf Line: 44
+Info (12128): Elaborating entity "lpm_mux" for hierarchy "keypad_converter:inst|counter2:inst3|BUSMUX:inst6|lpm_mux:$00000" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/busmux.tdf Line: 44
+Info (12131): Elaborated megafunction instantiation "keypad_converter:inst|counter2:inst3|BUSMUX:inst6|lpm_mux:$00000", which is child of megafunction instantiation "keypad_converter:inst|counter2:inst3|BUSMUX:inst6" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/busmux.tdf Line: 44
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_pjc.tdf
     Info (12023): Found entity 1: mux_pjc File: C:/intelFPGA_lite/20.1/termproject/db/mux_pjc.tdf Line: 23
-Info (12128): Elaborating entity "mux_pjc" for hierarchy "register5:inst|BUSMUX:inst8|lpm_mux:$00000|mux_pjc:auto_generated" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mux.tdf Line: 87
-Info (12128): Elaborating entity "trigger" for hierarchy "trigger:inst13"
+Info (12128): Elaborating entity "mux_pjc" for hierarchy "keypad_converter:inst|counter2:inst3|BUSMUX:inst6|lpm_mux:$00000|mux_pjc:auto_generated" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mux.tdf Line: 87
+Info (12128): Elaborating entity "is_equal4" for hierarchy "keypad_converter:inst|is_equal4:inst25"
+Info (12128): Elaborating entity "register4" for hierarchy "keypad_converter:inst|register4:inst24"
+Info (12128): Elaborating entity "trigger" for hierarchy "keypad_converter:inst|trigger:inst23"
+Info (12128): Elaborating entity "grader" for hierarchy "grader:inst10"
+Info (12128): Elaborating entity "falling_trigger" for hierarchy "grader:inst10|falling_trigger:inst9"
+Info (12128): Elaborating entity "is_correct" for hierarchy "is_correct:inst9"
+Info (12128): Elaborating entity "checker" for hierarchy "is_correct:inst9|checker:inst"
+Warning (275011): Block or symbol "XNOR" of instance "inst" overlaps another block or symbol
+Info (12128): Elaborating entity "word_register" for hierarchy "word_register:inst8"
+Info (12128): Elaborating entity "register5" for hierarchy "word_register:inst8|register5:inst"
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 94 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 10 input pins
-    Info (21059): Implemented 40 output pins
-    Info (21061): Implemented 44 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4830 megabytes
-    Info: Processing ended: Wed Nov 22 20:53:19 2023
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:07
+Info (21057): Implemented 157 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 15 input pins
+    Info (21059): Implemented 17 output pins
+    Info (21061): Implemented 125 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 4832 megabytes
+    Info: Processing ended: Thu Nov 23 22:08:44 2023
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:08
 
 
