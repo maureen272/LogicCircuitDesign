@@ -19,7 +19,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "11/23/2023 21:06:57"
+// Generated on "11/28/2023 19:07:19"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          checker
 // 
@@ -89,6 +89,8 @@ begin
 	current_alphabet[4] = #70000 1'b0;
 	current_alphabet[4] = #40000 1'b1;
 	current_alphabet[4] = #110000 1'b0;
+	current_alphabet[4] = #130000 1'b1;
+	current_alphabet[4] = #90000 1'b0;
 end 
 // current_alphabet[ 3 ]
 initial
@@ -103,6 +105,8 @@ begin
 	current_alphabet[2] = 1'b0;
 	current_alphabet[2] = #240000 1'b1;
 	current_alphabet[2] = #110000 1'b0;
+	current_alphabet[2] = #130000 1'b1;
+	current_alphabet[2] = #90000 1'b0;
 end 
 // current_alphabet[ 1 ]
 initial
@@ -115,6 +119,8 @@ begin
 	current_alphabet[0] = 1'b0;
 	current_alphabet[0] = #130000 1'b1;
 	current_alphabet[0] = #70000 1'b0;
+	current_alphabet[0] = #280000 1'b1;
+	current_alphabet[0] = #90000 1'b0;
 end 
 endmodule
 

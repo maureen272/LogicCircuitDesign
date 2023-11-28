@@ -70,8 +70,16 @@ set_global_assignment -name BDF_FILE checker.bdf
 set_global_assignment -name VECTOR_WAVEFORM_FILE checker.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE is_correct.vwf
 set_global_assignment -name BDF_FILE hang_man.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE hang_man.vwf
+set_global_assignment -name BDF_FILE life_register.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE life_register.vwf
+set_global_assignment -name VERILOG_FILE alphabet_to_segment.v
+set_global_assignment -name VERILOG_FILE alphabet_selector.v
+set_global_assignment -name BDF_FILE array_segment_controller.bdf
+set_global_assignment -name BDF_FILE counter3.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE counter3.vwf
+set_global_assignment -name VERILOG_FILE decoder_3to8.v
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name VECTOR_WAVEFORM_FILE hang_man.vwf
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

@@ -19,7 +19,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "11/23/2023 22:17:33"
+// Generated on "11/28/2023 21:52:42"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          hang_man
 // 
@@ -46,9 +46,35 @@ reg three;
 reg two;
 reg zero;
 // wires                                               
+wire a;
 wire alphabet_found;
 wire alphabet_not_found;
-wire [4:0] out_alphabet;
+wire arr_a;
+wire arr_b;
+wire arr_c;
+wire arr_d;
+wire arr_e;
+wire arr_f;
+wire arr_g;
+wire b;
+wire c;
+wire com_1;
+wire com_2;
+wire com_3;
+wire com_4;
+wire com_5;
+wire com_6;
+wire com_7;
+wire com_8;
+wire d;
+wire e;
+wire f;
+wire g;
+wire game_over;
+wire game_win;
+wire life_led1;
+wire life_led2;
+wire life_led3;
 wire out_is_correct_0;
 wire out_is_correct_1;
 wire out_is_correct_2;
@@ -57,22 +83,46 @@ wire out_is_correct_4;
 wire out_is_correct_5;
 wire out_is_correct_6;
 wire out_is_correct_7;
-wire out_sharp;
-wire out_star;
 
 // assign statements (if any)                          
 hang_man i1 (
 // port map - connection between master ports and signals/registers   
+	.a(a),
 	.alphabet_found(alphabet_found),
 	.alphabet_not_found(alphabet_not_found),
+	.arr_a(arr_a),
+	.arr_b(arr_b),
+	.arr_c(arr_c),
+	.arr_d(arr_d),
+	.arr_e(arr_e),
+	.arr_f(arr_f),
+	.arr_g(arr_g),
+	.b(b),
+	.c(c),
 	.clk(clk),
+	.com_1(com_1),
+	.com_2(com_2),
+	.com_3(com_3),
+	.com_4(com_4),
+	.com_5(com_5),
+	.com_6(com_6),
+	.com_7(com_7),
+	.com_8(com_8),
+	.d(d),
+	.e(e),
 	.eight(eight),
+	.f(f),
 	.five(five),
 	.four(four),
+	.g(g),
+	.game_over(game_over),
+	.game_win(game_win),
+	.life_led1(life_led1),
+	.life_led2(life_led2),
+	.life_led3(life_led3),
 	.mode(mode),
 	.nine(nine),
 	.one(one),
-	.out_alphabet(out_alphabet),
 	.out_is_correct_0(out_is_correct_0),
 	.out_is_correct_1(out_is_correct_1),
 	.out_is_correct_2(out_is_correct_2),
@@ -81,8 +131,6 @@ hang_man i1 (
 	.out_is_correct_5(out_is_correct_5),
 	.out_is_correct_6(out_is_correct_6),
 	.out_is_correct_7(out_is_correct_7),
-	.out_sharp(out_sharp),
-	.out_star(out_star),
 	.reset(reset),
 	.seven(seven),
 	.sharp(sharp),
@@ -128,32 +176,14 @@ end
 initial
 begin
 	one = 1'b0;
-	one = #590000 1'b1;
-	one = #30000 1'b0;
+	one = #390000 1'b1;
+	one = #20000 1'b0;
 end 
 
 // two
 initial
 begin
 	two = 1'b0;
-	two = #10000 1'b1;
-	two = #30000 1'b0;
-	two = #20000 1'b1;
-	two = #30000 1'b0;
-	two = #70000 1'b1;
-	two = #30000 1'b0;
-	two = #20000 1'b1;
-	two = #30000 1'b0;
-	two = #20000 1'b1;
-	two = #30000 1'b0;
-	two = #100000 1'b1;
-	two = #30000 1'b0;
-	two = #20000 1'b1;
-	two = #30000 1'b0;
-	two = #20000 1'b1;
-	two = #30000 1'b0;
-	two = #120000 1'b1;
-	two = #30000 1'b0;
 end 
 
 // three
@@ -184,6 +214,18 @@ end
 initial
 begin
 	seven = 1'b0;
+	seven = #10000 1'b1;
+	seven = #30000 1'b0;
+	seven = #20000 1'b1;
+	seven = #30000 1'b0;
+	seven = #80000 1'b1;
+	seven = #30000 1'b0;
+	seven = #20000 1'b1;
+	seven = #30000 1'b0;
+	seven = #230000 1'b1;
+	seven = #30000 1'b0;
+	seven = #20000 1'b1;
+	seven = #30000 1'b0;
 end 
 
 // eight
@@ -202,13 +244,17 @@ end
 initial
 begin
 	star = 1'b0;
-	star = #110000 1'b1;
-	star = #30000 1'b0;
-	star = #170000 1'b1;
-	star = #30000 1'b0;
-	star = #200000 1'b1;
+	star = #120000 1'b1;
 	star = #30000 1'b0;
 	star = #120000 1'b1;
+	star = #30000 1'b0;
+	star = #130000 1'b1;
+	star = #30000 1'b0;
+	star = #120000 1'b1;
+	star = #30000 1'b0;
+	star = #80000 1'b1;
+	star = #30000 1'b0;
+	star = #70000 1'b1;
 	star = #30000 1'b0;
 end 
 

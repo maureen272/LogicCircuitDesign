@@ -19,7 +19,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "11/23/2023 21:38:29"
+// Generated on "11/28/2023 19:28:32"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          grader
 // 
@@ -45,6 +45,7 @@ reg star;
 // wires                                               
 wire alphabet_found;
 wire alphabet_not_found;
+wire game_win;
 
 // assign statements (if any)                          
 grader i1 (
@@ -52,6 +53,7 @@ grader i1 (
 	.alphabet_found(alphabet_found),
 	.alphabet_not_found(alphabet_not_found),
 	.clk(clk),
+	.game_win(game_win),
 	.is_correct_0(is_correct_0),
 	.is_correct_1(is_correct_1),
 	.is_correct_2(is_correct_2),
@@ -100,18 +102,22 @@ begin
 	star = #80000 1'b0;
 	star = #150000 1'b1;
 	star = #80000 1'b0;
+	star = #60000 1'b1;
+	star = #80000 1'b0;
 end 
 
 // is_correct_0
 initial
 begin
 	is_correct_0 = 1'b0;
+	is_correct_0 = #780000 1'b1;
 end 
 
 // is_correct_1
 initial
 begin
 	is_correct_1 = 1'b0;
+	is_correct_1 = #780000 1'b1;
 end 
 
 // is_correct_2
@@ -125,6 +131,7 @@ end
 initial
 begin
 	is_correct_3 = 1'b0;
+	is_correct_3 = #210000 1'b1;
 end 
 
 // is_correct_4
@@ -138,18 +145,21 @@ end
 initial
 begin
 	is_correct_5 = 1'b0;
+	is_correct_5 = #630000 1'b1;
 end 
 
 // is_correct_6
 initial
 begin
 	is_correct_6 = 1'b0;
+	is_correct_6 = #640000 1'b1;
 end 
 
 // is_correct_7
 initial
 begin
 	is_correct_7 = 1'b0;
+	is_correct_7 = #640000 1'b1;
 end 
 endmodule
 

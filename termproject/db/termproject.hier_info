@@ -1,5 +1,9 @@
 |hang_man
-out_sharp <= keypad_converter:inst.sharp_output
+alphabet_found <= grader:inst2.alphabet_found
+mode => is_correct:inst1.mode
+mode => word_register:inst8.mode
+mode => grader:inst2.mode
+mode => array_segment_controller:inst5.mode
 zero => keypad_converter:inst.zero
 one => keypad_converter:inst.one
 two => keypad_converter:inst.two
@@ -13,32 +17,665 @@ nine => keypad_converter:inst.nine
 star => keypad_converter:inst.star
 sharp => keypad_converter:inst.sharp
 clk => keypad_converter:inst.clk
-clk => is_correct:inst9.clk
+clk => is_correct:inst1.clk
 clk => word_register:inst8.clk
-clk => grader:inst10.clk
+clk => grader:inst2.clk
+clk => life_register:inst4.clk
+clk => array_segment_controller:inst5.clk
 reset => keypad_converter:inst.reset
-reset => is_correct:inst9.reset
+reset => is_correct:inst1.reset
 reset => word_register:inst8.reset
-reset => grader:inst10.reset
-out_star <= keypad_converter:inst.star_output
-alphabet_found <= grader:inst10.alphabet_found
-mode => is_correct:inst9.mode
-mode => word_register:inst8.mode
-mode => grader:inst10.mode
-alphabet_not_found <= grader:inst10.alphabet_not_found
-out_is_correct_0 <= is_correct:inst9.is_correct_0
-out_is_correct_1 <= is_correct:inst9.is_correct_1
-out_is_correct_2 <= is_correct:inst9.is_correct_2
-out_is_correct_3 <= is_correct:inst9.is_correct_3
-out_is_correct_4 <= is_correct:inst9.is_correct_4
-out_is_correct_5 <= is_correct:inst9.is_correct_5
-out_is_correct_6 <= is_correct:inst9.is_correct_6
-out_is_correct_7 <= is_correct:inst9.is_correct_7
-out_alphabet[0] <= keypad_converter:inst.alphabet[0]
-out_alphabet[1] <= keypad_converter:inst.alphabet[1]
-out_alphabet[2] <= keypad_converter:inst.alphabet[2]
-out_alphabet[3] <= keypad_converter:inst.alphabet[3]
-out_alphabet[4] <= keypad_converter:inst.alphabet[4]
+reset => grader:inst2.reset
+reset => life_register:inst4.reset
+reset => array_segment_controller:inst5.reset
+alphabet_not_found <= grader:inst2.alphabet_not_found
+out_is_correct_0 <= is_correct:inst1.is_correct_0
+out_is_correct_1 <= is_correct:inst1.is_correct_1
+out_is_correct_2 <= is_correct:inst1.is_correct_2
+out_is_correct_3 <= is_correct:inst1.is_correct_3
+out_is_correct_4 <= is_correct:inst1.is_correct_4
+out_is_correct_5 <= is_correct:inst1.is_correct_5
+out_is_correct_6 <= is_correct:inst1.is_correct_6
+out_is_correct_7 <= is_correct:inst1.is_correct_7
+game_win <= grader:inst2.game_win
+a <= alphabet_to_segment:inst3.a
+b <= alphabet_to_segment:inst3.b
+c <= alphabet_to_segment:inst3.c
+d <= alphabet_to_segment:inst3.d
+e <= alphabet_to_segment:inst3.e
+f <= alphabet_to_segment:inst3.f
+g <= alphabet_to_segment:inst3.g
+life_led1 <= life_register:inst4.life_led1
+life_led2 <= life_register:inst4.life_led2
+life_led3 <= life_register:inst4.life_led3
+game_over <= life_register:inst4.game_over
+arr_a <= array_segment_controller:inst5.a
+arr_b <= array_segment_controller:inst5.b
+arr_c <= array_segment_controller:inst5.c
+arr_d <= array_segment_controller:inst5.d
+arr_e <= array_segment_controller:inst5.e
+arr_f <= array_segment_controller:inst5.f
+arr_g <= array_segment_controller:inst5.g
+com_1 <= array_segment_controller:inst5.com_1
+com_2 <= array_segment_controller:inst5.com_2
+com_3 <= array_segment_controller:inst5.com_3
+com_4 <= array_segment_controller:inst5.com_4
+com_5 <= array_segment_controller:inst5.com_5
+com_6 <= array_segment_controller:inst5.com_6
+com_7 <= array_segment_controller:inst5.com_7
+com_8 <= array_segment_controller:inst5.com_8
+
+
+|hang_man|grader:inst2
+alphabet_found <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+reset => inst12.ACLR
+reset => falling_trigger:inst9.rst_n
+reset => trigger:inst18.rst_n
+reset => trigger:inst.rst_n
+reset => trigger:inst19.rst_n
+reset => trigger:inst13.rst_n
+reset => trigger:inst15.rst_n
+reset => trigger:inst14.rst_n
+reset => trigger:inst16.rst_n
+reset => trigger:inst17.rst_n
+clk => inst12.CLK
+clk => falling_trigger:inst9.CLK
+clk => inst2.CLK
+clk => trigger:inst18.CLK
+clk => trigger:inst.CLK
+clk => trigger:inst19.CLK
+clk => trigger:inst13.CLK
+clk => trigger:inst15.CLK
+clk => trigger:inst14.CLK
+clk => trigger:inst16.CLK
+clk => trigger:inst17.CLK
+star => inst23.IN0
+mode => inst23.IN1
+is_correct_0 => trigger:inst18.Din
+is_correct_0 => inst3.IN0
+is_correct_2 => trigger:inst.Din
+is_correct_2 => inst3.IN2
+is_correct_1 => trigger:inst19.Din
+is_correct_1 => inst3.IN1
+is_correct_3 => trigger:inst13.Din
+is_correct_3 => inst3.IN3
+is_correct_5 => trigger:inst15.Din
+is_correct_5 => inst4.IN1
+is_correct_4 => trigger:inst14.Din
+is_correct_4 => inst4.IN0
+is_correct_6 => trigger:inst16.Din
+is_correct_6 => inst4.IN2
+is_correct_7 => trigger:inst17.Din
+is_correct_7 => inst4.IN3
+alphabet_not_found <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+game_win <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|hang_man|grader:inst2|falling_trigger:inst9
+Dout <= inst.DB_MAX_OUTPUT_PORT_TYPE
+rst_n => inst2.ACLR
+rst_n => inst3.ACLR
+CLK => inst2.CLK
+CLK => inst3.CLK
+Din => inst2.DATAIN
+
+
+|hang_man|grader:inst2|BUSMUX:inst5
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|hang_man|grader:inst2|BUSMUX:inst5|lpm_mux:$00000
+data[0][0] => mux_pjc:auto_generated.data[0]
+data[1][0] => mux_pjc:auto_generated.data[1]
+sel[0] => mux_pjc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_pjc:auto_generated.result[0]
+
+
+|hang_man|grader:inst2|BUSMUX:inst5|lpm_mux:$00000|mux_pjc:auto_generated
+data[0] => l1_w0_n0_mux_dataout.IN1
+data[1] => l1_w0_n0_mux_dataout.IN1
+result[0] <= l1_w0_n0_mux_dataout.DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => l1_w0_n0_mux_dataout.IN0
+sel[0] => _.IN0
+
+
+|hang_man|grader:inst2|trigger:inst18
+Dout <= inst.DB_MAX_OUTPUT_PORT_TYPE
+rst_n => inst2.ACLR
+rst_n => inst3.ACLR
+CLK => inst2.CLK
+CLK => inst3.CLK
+Din => inst2.DATAIN
+
+
+|hang_man|grader:inst2|trigger:inst
+Dout <= inst.DB_MAX_OUTPUT_PORT_TYPE
+rst_n => inst2.ACLR
+rst_n => inst3.ACLR
+CLK => inst2.CLK
+CLK => inst3.CLK
+Din => inst2.DATAIN
+
+
+|hang_man|grader:inst2|trigger:inst19
+Dout <= inst.DB_MAX_OUTPUT_PORT_TYPE
+rst_n => inst2.ACLR
+rst_n => inst3.ACLR
+CLK => inst2.CLK
+CLK => inst3.CLK
+Din => inst2.DATAIN
+
+
+|hang_man|grader:inst2|trigger:inst13
+Dout <= inst.DB_MAX_OUTPUT_PORT_TYPE
+rst_n => inst2.ACLR
+rst_n => inst3.ACLR
+CLK => inst2.CLK
+CLK => inst3.CLK
+Din => inst2.DATAIN
+
+
+|hang_man|grader:inst2|trigger:inst15
+Dout <= inst.DB_MAX_OUTPUT_PORT_TYPE
+rst_n => inst2.ACLR
+rst_n => inst3.ACLR
+CLK => inst2.CLK
+CLK => inst3.CLK
+Din => inst2.DATAIN
+
+
+|hang_man|grader:inst2|trigger:inst14
+Dout <= inst.DB_MAX_OUTPUT_PORT_TYPE
+rst_n => inst2.ACLR
+rst_n => inst3.ACLR
+CLK => inst2.CLK
+CLK => inst3.CLK
+Din => inst2.DATAIN
+
+
+|hang_man|grader:inst2|trigger:inst16
+Dout <= inst.DB_MAX_OUTPUT_PORT_TYPE
+rst_n => inst2.ACLR
+rst_n => inst3.ACLR
+CLK => inst2.CLK
+CLK => inst3.CLK
+Din => inst2.DATAIN
+
+
+|hang_man|grader:inst2|trigger:inst17
+Dout <= inst.DB_MAX_OUTPUT_PORT_TYPE
+rst_n => inst2.ACLR
+rst_n => inst3.ACLR
+CLK => inst2.CLK
+CLK => inst3.CLK
+Din => inst2.DATAIN
+
+
+|hang_man|is_correct:inst1
+is_correct_0 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+reset => inst2.ACLR
+reset => inst4.ACLR
+reset => inst8.ACLR
+reset => inst11.ACLR
+reset => inst13.ACLR
+reset => inst17.ACLR
+reset => inst20.ACLR
+reset => inst23.ACLR
+clk => inst2.CLK
+clk => inst4.CLK
+clk => inst8.CLK
+clk => inst11.CLK
+clk => inst13.CLK
+clk => inst17.CLK
+clk => inst20.CLK
+clk => inst23.CLK
+alphabet_0[0] => checker:inst.alphabet_n[0]
+alphabet_0[1] => checker:inst.alphabet_n[1]
+alphabet_0[2] => checker:inst.alphabet_n[2]
+alphabet_0[3] => checker:inst.alphabet_n[3]
+alphabet_0[4] => checker:inst.alphabet_n[4]
+current_alphabet[0] => checker:inst.current_alphabet[0]
+current_alphabet[0] => checker:inst3.current_alphabet[0]
+current_alphabet[0] => checker:inst7.current_alphabet[0]
+current_alphabet[0] => checker:inst45.current_alphabet[0]
+current_alphabet[0] => checker:inst10.current_alphabet[0]
+current_alphabet[0] => checker:inst19.current_alphabet[0]
+current_alphabet[0] => checker:inst15.current_alphabet[0]
+current_alphabet[0] => checker:inst16.current_alphabet[0]
+current_alphabet[1] => checker:inst.current_alphabet[1]
+current_alphabet[1] => checker:inst3.current_alphabet[1]
+current_alphabet[1] => checker:inst7.current_alphabet[1]
+current_alphabet[1] => checker:inst45.current_alphabet[1]
+current_alphabet[1] => checker:inst10.current_alphabet[1]
+current_alphabet[1] => checker:inst19.current_alphabet[1]
+current_alphabet[1] => checker:inst15.current_alphabet[1]
+current_alphabet[1] => checker:inst16.current_alphabet[1]
+current_alphabet[2] => checker:inst.current_alphabet[2]
+current_alphabet[2] => checker:inst3.current_alphabet[2]
+current_alphabet[2] => checker:inst7.current_alphabet[2]
+current_alphabet[2] => checker:inst45.current_alphabet[2]
+current_alphabet[2] => checker:inst10.current_alphabet[2]
+current_alphabet[2] => checker:inst19.current_alphabet[2]
+current_alphabet[2] => checker:inst15.current_alphabet[2]
+current_alphabet[2] => checker:inst16.current_alphabet[2]
+current_alphabet[3] => checker:inst.current_alphabet[3]
+current_alphabet[3] => checker:inst3.current_alphabet[3]
+current_alphabet[3] => checker:inst7.current_alphabet[3]
+current_alphabet[3] => checker:inst45.current_alphabet[3]
+current_alphabet[3] => checker:inst10.current_alphabet[3]
+current_alphabet[3] => checker:inst19.current_alphabet[3]
+current_alphabet[3] => checker:inst15.current_alphabet[3]
+current_alphabet[3] => checker:inst16.current_alphabet[3]
+current_alphabet[4] => checker:inst.current_alphabet[4]
+current_alphabet[4] => checker:inst3.current_alphabet[4]
+current_alphabet[4] => checker:inst7.current_alphabet[4]
+current_alphabet[4] => checker:inst45.current_alphabet[4]
+current_alphabet[4] => checker:inst10.current_alphabet[4]
+current_alphabet[4] => checker:inst19.current_alphabet[4]
+current_alphabet[4] => checker:inst15.current_alphabet[4]
+current_alphabet[4] => checker:inst16.current_alphabet[4]
+mode => inst26.IN0
+star => inst26.IN1
+is_correct_1 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+alphabet_1[0] => checker:inst3.alphabet_n[0]
+alphabet_1[1] => checker:inst3.alphabet_n[1]
+alphabet_1[2] => checker:inst3.alphabet_n[2]
+alphabet_1[3] => checker:inst3.alphabet_n[3]
+alphabet_1[4] => checker:inst3.alphabet_n[4]
+is_correct_2 <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+alphabet_2[0] => checker:inst7.alphabet_n[0]
+alphabet_2[1] => checker:inst7.alphabet_n[1]
+alphabet_2[2] => checker:inst7.alphabet_n[2]
+alphabet_2[3] => checker:inst7.alphabet_n[3]
+alphabet_2[4] => checker:inst7.alphabet_n[4]
+is_correct_3 <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+alphabet_3[0] => checker:inst45.alphabet_n[0]
+alphabet_3[1] => checker:inst45.alphabet_n[1]
+alphabet_3[2] => checker:inst45.alphabet_n[2]
+alphabet_3[3] => checker:inst45.alphabet_n[3]
+alphabet_3[4] => checker:inst45.alphabet_n[4]
+is_correct_4 <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+alphabet_4[0] => checker:inst10.alphabet_n[0]
+alphabet_4[1] => checker:inst10.alphabet_n[1]
+alphabet_4[2] => checker:inst10.alphabet_n[2]
+alphabet_4[3] => checker:inst10.alphabet_n[3]
+alphabet_4[4] => checker:inst10.alphabet_n[4]
+is_correct_5 <= inst17.DB_MAX_OUTPUT_PORT_TYPE
+alphabet_5[0] => checker:inst19.alphabet_n[0]
+alphabet_5[1] => checker:inst19.alphabet_n[1]
+alphabet_5[2] => checker:inst19.alphabet_n[2]
+alphabet_5[3] => checker:inst19.alphabet_n[3]
+alphabet_5[4] => checker:inst19.alphabet_n[4]
+is_correct_6 <= inst20.DB_MAX_OUTPUT_PORT_TYPE
+alphabet_6[0] => checker:inst15.alphabet_n[0]
+alphabet_6[1] => checker:inst15.alphabet_n[1]
+alphabet_6[2] => checker:inst15.alphabet_n[2]
+alphabet_6[3] => checker:inst15.alphabet_n[3]
+alphabet_6[4] => checker:inst15.alphabet_n[4]
+is_correct_7 <= inst23.DB_MAX_OUTPUT_PORT_TYPE
+alphabet_7[0] => checker:inst16.alphabet_n[0]
+alphabet_7[1] => checker:inst16.alphabet_n[1]
+alphabet_7[2] => checker:inst16.alphabet_n[2]
+alphabet_7[3] => checker:inst16.alphabet_n[3]
+alphabet_7[4] => checker:inst16.alphabet_n[4]
+
+
+|hang_man|is_correct:inst1|BUSMUX:inst5
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|hang_man|is_correct:inst1|BUSMUX:inst5|lpm_mux:$00000
+data[0][0] => mux_pjc:auto_generated.data[0]
+data[1][0] => mux_pjc:auto_generated.data[1]
+sel[0] => mux_pjc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_pjc:auto_generated.result[0]
+
+
+|hang_man|is_correct:inst1|BUSMUX:inst5|lpm_mux:$00000|mux_pjc:auto_generated
+data[0] => l1_w0_n0_mux_dataout.IN1
+data[1] => l1_w0_n0_mux_dataout.IN1
+result[0] <= l1_w0_n0_mux_dataout.DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => l1_w0_n0_mux_dataout.IN0
+sel[0] => _.IN0
+
+
+|hang_man|is_correct:inst1|checker:inst
+is_equal <= inst17.DB_MAX_OUTPUT_PORT_TYPE
+alphabet_n[0] => inst10.IN0
+alphabet_n[0] => inst.IN1
+alphabet_n[1] => inst11.IN0
+alphabet_n[1] => inst2.IN1
+alphabet_n[2] => inst12.IN0
+alphabet_n[2] => inst3.IN1
+alphabet_n[3] => inst13.IN0
+alphabet_n[3] => inst4.IN1
+alphabet_n[4] => inst14.IN0
+alphabet_n[4] => inst6.IN1
+current_alphabet[0] => inst.IN0
+current_alphabet[1] => inst2.IN0
+current_alphabet[2] => inst3.IN0
+current_alphabet[3] => inst4.IN0
+current_alphabet[4] => inst6.IN0
+
+
+|hang_man|is_correct:inst1|BUSMUX:inst6
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|hang_man|is_correct:inst1|BUSMUX:inst6|lpm_mux:$00000
+data[0][0] => mux_pjc:auto_generated.data[0]
+data[1][0] => mux_pjc:auto_generated.data[1]
+sel[0] => mux_pjc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_pjc:auto_generated.result[0]
+
+
+|hang_man|is_correct:inst1|BUSMUX:inst6|lpm_mux:$00000|mux_pjc:auto_generated
+data[0] => l1_w0_n0_mux_dataout.IN1
+data[1] => l1_w0_n0_mux_dataout.IN1
+result[0] <= l1_w0_n0_mux_dataout.DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => l1_w0_n0_mux_dataout.IN0
+sel[0] => _.IN0
+
+
+|hang_man|is_correct:inst1|checker:inst3
+is_equal <= inst17.DB_MAX_OUTPUT_PORT_TYPE
+alphabet_n[0] => inst10.IN0
+alphabet_n[0] => inst.IN1
+alphabet_n[1] => inst11.IN0
+alphabet_n[1] => inst2.IN1
+alphabet_n[2] => inst12.IN0
+alphabet_n[2] => inst3.IN1
+alphabet_n[3] => inst13.IN0
+alphabet_n[3] => inst4.IN1
+alphabet_n[4] => inst14.IN0
+alphabet_n[4] => inst6.IN1
+current_alphabet[0] => inst.IN0
+current_alphabet[1] => inst2.IN0
+current_alphabet[2] => inst3.IN0
+current_alphabet[3] => inst4.IN0
+current_alphabet[4] => inst6.IN0
+
+
+|hang_man|is_correct:inst1|BUSMUX:inst9
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|hang_man|is_correct:inst1|BUSMUX:inst9|lpm_mux:$00000
+data[0][0] => mux_pjc:auto_generated.data[0]
+data[1][0] => mux_pjc:auto_generated.data[1]
+sel[0] => mux_pjc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_pjc:auto_generated.result[0]
+
+
+|hang_man|is_correct:inst1|BUSMUX:inst9|lpm_mux:$00000|mux_pjc:auto_generated
+data[0] => l1_w0_n0_mux_dataout.IN1
+data[1] => l1_w0_n0_mux_dataout.IN1
+result[0] <= l1_w0_n0_mux_dataout.DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => l1_w0_n0_mux_dataout.IN0
+sel[0] => _.IN0
+
+
+|hang_man|is_correct:inst1|checker:inst7
+is_equal <= inst17.DB_MAX_OUTPUT_PORT_TYPE
+alphabet_n[0] => inst10.IN0
+alphabet_n[0] => inst.IN1
+alphabet_n[1] => inst11.IN0
+alphabet_n[1] => inst2.IN1
+alphabet_n[2] => inst12.IN0
+alphabet_n[2] => inst3.IN1
+alphabet_n[3] => inst13.IN0
+alphabet_n[3] => inst4.IN1
+alphabet_n[4] => inst14.IN0
+alphabet_n[4] => inst6.IN1
+current_alphabet[0] => inst.IN0
+current_alphabet[1] => inst2.IN0
+current_alphabet[2] => inst3.IN0
+current_alphabet[3] => inst4.IN0
+current_alphabet[4] => inst6.IN0
+
+
+|hang_man|is_correct:inst1|BUSMUX:inst12
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|hang_man|is_correct:inst1|BUSMUX:inst12|lpm_mux:$00000
+data[0][0] => mux_pjc:auto_generated.data[0]
+data[1][0] => mux_pjc:auto_generated.data[1]
+sel[0] => mux_pjc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_pjc:auto_generated.result[0]
+
+
+|hang_man|is_correct:inst1|BUSMUX:inst12|lpm_mux:$00000|mux_pjc:auto_generated
+data[0] => l1_w0_n0_mux_dataout.IN1
+data[1] => l1_w0_n0_mux_dataout.IN1
+result[0] <= l1_w0_n0_mux_dataout.DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => l1_w0_n0_mux_dataout.IN0
+sel[0] => _.IN0
+
+
+|hang_man|is_correct:inst1|checker:inst45
+is_equal <= inst17.DB_MAX_OUTPUT_PORT_TYPE
+alphabet_n[0] => inst10.IN0
+alphabet_n[0] => inst.IN1
+alphabet_n[1] => inst11.IN0
+alphabet_n[1] => inst2.IN1
+alphabet_n[2] => inst12.IN0
+alphabet_n[2] => inst3.IN1
+alphabet_n[3] => inst13.IN0
+alphabet_n[3] => inst4.IN1
+alphabet_n[4] => inst14.IN0
+alphabet_n[4] => inst6.IN1
+current_alphabet[0] => inst.IN0
+current_alphabet[1] => inst2.IN0
+current_alphabet[2] => inst3.IN0
+current_alphabet[3] => inst4.IN0
+current_alphabet[4] => inst6.IN0
+
+
+|hang_man|is_correct:inst1|BUSMUX:inst14
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|hang_man|is_correct:inst1|BUSMUX:inst14|lpm_mux:$00000
+data[0][0] => mux_pjc:auto_generated.data[0]
+data[1][0] => mux_pjc:auto_generated.data[1]
+sel[0] => mux_pjc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_pjc:auto_generated.result[0]
+
+
+|hang_man|is_correct:inst1|BUSMUX:inst14|lpm_mux:$00000|mux_pjc:auto_generated
+data[0] => l1_w0_n0_mux_dataout.IN1
+data[1] => l1_w0_n0_mux_dataout.IN1
+result[0] <= l1_w0_n0_mux_dataout.DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => l1_w0_n0_mux_dataout.IN0
+sel[0] => _.IN0
+
+
+|hang_man|is_correct:inst1|checker:inst10
+is_equal <= inst17.DB_MAX_OUTPUT_PORT_TYPE
+alphabet_n[0] => inst10.IN0
+alphabet_n[0] => inst.IN1
+alphabet_n[1] => inst11.IN0
+alphabet_n[1] => inst2.IN1
+alphabet_n[2] => inst12.IN0
+alphabet_n[2] => inst3.IN1
+alphabet_n[3] => inst13.IN0
+alphabet_n[3] => inst4.IN1
+alphabet_n[4] => inst14.IN0
+alphabet_n[4] => inst6.IN1
+current_alphabet[0] => inst.IN0
+current_alphabet[1] => inst2.IN0
+current_alphabet[2] => inst3.IN0
+current_alphabet[3] => inst4.IN0
+current_alphabet[4] => inst6.IN0
+
+
+|hang_man|is_correct:inst1|BUSMUX:inst18
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|hang_man|is_correct:inst1|BUSMUX:inst18|lpm_mux:$00000
+data[0][0] => mux_pjc:auto_generated.data[0]
+data[1][0] => mux_pjc:auto_generated.data[1]
+sel[0] => mux_pjc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_pjc:auto_generated.result[0]
+
+
+|hang_man|is_correct:inst1|BUSMUX:inst18|lpm_mux:$00000|mux_pjc:auto_generated
+data[0] => l1_w0_n0_mux_dataout.IN1
+data[1] => l1_w0_n0_mux_dataout.IN1
+result[0] <= l1_w0_n0_mux_dataout.DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => l1_w0_n0_mux_dataout.IN0
+sel[0] => _.IN0
+
+
+|hang_man|is_correct:inst1|checker:inst19
+is_equal <= inst17.DB_MAX_OUTPUT_PORT_TYPE
+alphabet_n[0] => inst10.IN0
+alphabet_n[0] => inst.IN1
+alphabet_n[1] => inst11.IN0
+alphabet_n[1] => inst2.IN1
+alphabet_n[2] => inst12.IN0
+alphabet_n[2] => inst3.IN1
+alphabet_n[3] => inst13.IN0
+alphabet_n[3] => inst4.IN1
+alphabet_n[4] => inst14.IN0
+alphabet_n[4] => inst6.IN1
+current_alphabet[0] => inst.IN0
+current_alphabet[1] => inst2.IN0
+current_alphabet[2] => inst3.IN0
+current_alphabet[3] => inst4.IN0
+current_alphabet[4] => inst6.IN0
+
+
+|hang_man|is_correct:inst1|BUSMUX:inst21
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|hang_man|is_correct:inst1|BUSMUX:inst21|lpm_mux:$00000
+data[0][0] => mux_pjc:auto_generated.data[0]
+data[1][0] => mux_pjc:auto_generated.data[1]
+sel[0] => mux_pjc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_pjc:auto_generated.result[0]
+
+
+|hang_man|is_correct:inst1|BUSMUX:inst21|lpm_mux:$00000|mux_pjc:auto_generated
+data[0] => l1_w0_n0_mux_dataout.IN1
+data[1] => l1_w0_n0_mux_dataout.IN1
+result[0] <= l1_w0_n0_mux_dataout.DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => l1_w0_n0_mux_dataout.IN0
+sel[0] => _.IN0
+
+
+|hang_man|is_correct:inst1|checker:inst15
+is_equal <= inst17.DB_MAX_OUTPUT_PORT_TYPE
+alphabet_n[0] => inst10.IN0
+alphabet_n[0] => inst.IN1
+alphabet_n[1] => inst11.IN0
+alphabet_n[1] => inst2.IN1
+alphabet_n[2] => inst12.IN0
+alphabet_n[2] => inst3.IN1
+alphabet_n[3] => inst13.IN0
+alphabet_n[3] => inst4.IN1
+alphabet_n[4] => inst14.IN0
+alphabet_n[4] => inst6.IN1
+current_alphabet[0] => inst.IN0
+current_alphabet[1] => inst2.IN0
+current_alphabet[2] => inst3.IN0
+current_alphabet[3] => inst4.IN0
+current_alphabet[4] => inst6.IN0
+
+
+|hang_man|is_correct:inst1|BUSMUX:inst24
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|hang_man|is_correct:inst1|BUSMUX:inst24|lpm_mux:$00000
+data[0][0] => mux_pjc:auto_generated.data[0]
+data[1][0] => mux_pjc:auto_generated.data[1]
+sel[0] => mux_pjc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_pjc:auto_generated.result[0]
+
+
+|hang_man|is_correct:inst1|BUSMUX:inst24|lpm_mux:$00000|mux_pjc:auto_generated
+data[0] => l1_w0_n0_mux_dataout.IN1
+data[1] => l1_w0_n0_mux_dataout.IN1
+result[0] <= l1_w0_n0_mux_dataout.DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => l1_w0_n0_mux_dataout.IN0
+sel[0] => _.IN0
+
+
+|hang_man|is_correct:inst1|checker:inst16
+is_equal <= inst17.DB_MAX_OUTPUT_PORT_TYPE
+alphabet_n[0] => inst10.IN0
+alphabet_n[0] => inst.IN1
+alphabet_n[1] => inst11.IN0
+alphabet_n[1] => inst2.IN1
+alphabet_n[2] => inst12.IN0
+alphabet_n[2] => inst3.IN1
+alphabet_n[3] => inst13.IN0
+alphabet_n[3] => inst4.IN1
+alphabet_n[4] => inst14.IN0
+alphabet_n[4] => inst6.IN1
+current_alphabet[0] => inst.IN0
+current_alphabet[1] => inst2.IN0
+current_alphabet[2] => inst3.IN0
+current_alphabet[3] => inst4.IN0
+current_alphabet[4] => inst6.IN0
 
 
 |hang_man|keypad_converter:inst
@@ -329,569 +966,6 @@ rst_n => inst3.ACLR
 CLK => inst2.CLK
 CLK => inst3.CLK
 Din => inst2.DATAIN
-
-
-|hang_man|grader:inst10
-alphabet_found <= inst11.DB_MAX_OUTPUT_PORT_TYPE
-reset => inst12.ACLR
-reset => falling_trigger:inst9.rst_n
-reset => trigger:inst18.rst_n
-reset => trigger:inst.rst_n
-reset => trigger:inst19.rst_n
-reset => trigger:inst13.rst_n
-reset => trigger:inst15.rst_n
-reset => trigger:inst14.rst_n
-reset => trigger:inst16.rst_n
-reset => trigger:inst17.rst_n
-clk => inst12.CLK
-clk => falling_trigger:inst9.CLK
-clk => inst2.CLK
-clk => trigger:inst18.CLK
-clk => trigger:inst.CLK
-clk => trigger:inst19.CLK
-clk => trigger:inst13.CLK
-clk => trigger:inst15.CLK
-clk => trigger:inst14.CLK
-clk => trigger:inst16.CLK
-clk => trigger:inst17.CLK
-star => inst23.IN0
-mode => inst23.IN1
-is_correct_0 => trigger:inst18.Din
-is_correct_2 => trigger:inst.Din
-is_correct_1 => trigger:inst19.Din
-is_correct_3 => trigger:inst13.Din
-is_correct_5 => trigger:inst15.Din
-is_correct_4 => trigger:inst14.Din
-is_correct_6 => trigger:inst16.Din
-is_correct_7 => trigger:inst17.Din
-alphabet_not_found <= inst1.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|hang_man|grader:inst10|falling_trigger:inst9
-Dout <= inst.DB_MAX_OUTPUT_PORT_TYPE
-rst_n => inst2.ACLR
-rst_n => inst3.ACLR
-CLK => inst2.CLK
-CLK => inst3.CLK
-Din => inst2.DATAIN
-
-
-|hang_man|grader:inst10|BUSMUX:inst5
-dataa[0] => lpm_mux:$00000.data[0][0]
-datab[0] => lpm_mux:$00000.data[1][0]
-sel => lpm_mux:$00000.sel[0]
-result[0] <= lpm_mux:$00000.result[0]
-
-
-|hang_man|grader:inst10|BUSMUX:inst5|lpm_mux:$00000
-data[0][0] => mux_pjc:auto_generated.data[0]
-data[1][0] => mux_pjc:auto_generated.data[1]
-sel[0] => mux_pjc:auto_generated.sel[0]
-clock => ~NO_FANOUT~
-aclr => ~NO_FANOUT~
-clken => ~NO_FANOUT~
-result[0] <= mux_pjc:auto_generated.result[0]
-
-
-|hang_man|grader:inst10|BUSMUX:inst5|lpm_mux:$00000|mux_pjc:auto_generated
-data[0] => l1_w0_n0_mux_dataout.IN1
-data[1] => l1_w0_n0_mux_dataout.IN1
-result[0] <= l1_w0_n0_mux_dataout.DB_MAX_OUTPUT_PORT_TYPE
-sel[0] => l1_w0_n0_mux_dataout.IN0
-sel[0] => _.IN0
-
-
-|hang_man|grader:inst10|trigger:inst18
-Dout <= inst.DB_MAX_OUTPUT_PORT_TYPE
-rst_n => inst2.ACLR
-rst_n => inst3.ACLR
-CLK => inst2.CLK
-CLK => inst3.CLK
-Din => inst2.DATAIN
-
-
-|hang_man|grader:inst10|trigger:inst
-Dout <= inst.DB_MAX_OUTPUT_PORT_TYPE
-rst_n => inst2.ACLR
-rst_n => inst3.ACLR
-CLK => inst2.CLK
-CLK => inst3.CLK
-Din => inst2.DATAIN
-
-
-|hang_man|grader:inst10|trigger:inst19
-Dout <= inst.DB_MAX_OUTPUT_PORT_TYPE
-rst_n => inst2.ACLR
-rst_n => inst3.ACLR
-CLK => inst2.CLK
-CLK => inst3.CLK
-Din => inst2.DATAIN
-
-
-|hang_man|grader:inst10|trigger:inst13
-Dout <= inst.DB_MAX_OUTPUT_PORT_TYPE
-rst_n => inst2.ACLR
-rst_n => inst3.ACLR
-CLK => inst2.CLK
-CLK => inst3.CLK
-Din => inst2.DATAIN
-
-
-|hang_man|grader:inst10|trigger:inst15
-Dout <= inst.DB_MAX_OUTPUT_PORT_TYPE
-rst_n => inst2.ACLR
-rst_n => inst3.ACLR
-CLK => inst2.CLK
-CLK => inst3.CLK
-Din => inst2.DATAIN
-
-
-|hang_man|grader:inst10|trigger:inst14
-Dout <= inst.DB_MAX_OUTPUT_PORT_TYPE
-rst_n => inst2.ACLR
-rst_n => inst3.ACLR
-CLK => inst2.CLK
-CLK => inst3.CLK
-Din => inst2.DATAIN
-
-
-|hang_man|grader:inst10|trigger:inst16
-Dout <= inst.DB_MAX_OUTPUT_PORT_TYPE
-rst_n => inst2.ACLR
-rst_n => inst3.ACLR
-CLK => inst2.CLK
-CLK => inst3.CLK
-Din => inst2.DATAIN
-
-
-|hang_man|grader:inst10|trigger:inst17
-Dout <= inst.DB_MAX_OUTPUT_PORT_TYPE
-rst_n => inst2.ACLR
-rst_n => inst3.ACLR
-CLK => inst2.CLK
-CLK => inst3.CLK
-Din => inst2.DATAIN
-
-
-|hang_man|is_correct:inst9
-is_correct_0 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
-reset => inst2.ACLR
-reset => inst4.ACLR
-reset => inst8.ACLR
-reset => inst11.ACLR
-reset => inst13.ACLR
-reset => inst17.ACLR
-reset => inst20.ACLR
-reset => inst23.ACLR
-clk => inst2.CLK
-clk => inst4.CLK
-clk => inst8.CLK
-clk => inst11.CLK
-clk => inst13.CLK
-clk => inst17.CLK
-clk => inst20.CLK
-clk => inst23.CLK
-alphabet_0[0] => checker:inst.alphabet_n[0]
-alphabet_0[1] => checker:inst.alphabet_n[1]
-alphabet_0[2] => checker:inst.alphabet_n[2]
-alphabet_0[3] => checker:inst.alphabet_n[3]
-alphabet_0[4] => checker:inst.alphabet_n[4]
-current_alphabet[0] => checker:inst.current_alphabet[0]
-current_alphabet[0] => checker:inst3.current_alphabet[0]
-current_alphabet[0] => checker:inst7.current_alphabet[0]
-current_alphabet[0] => checker:inst10.current_alphabet[0]
-current_alphabet[0] => checker:inst16.current_alphabet[0]
-current_alphabet[0] => checker:inst15.current_alphabet[0]
-current_alphabet[0] => checker:inst19.current_alphabet[0]
-current_alphabet[0] => checker:inst22.current_alphabet[0]
-current_alphabet[1] => checker:inst.current_alphabet[1]
-current_alphabet[1] => checker:inst3.current_alphabet[1]
-current_alphabet[1] => checker:inst7.current_alphabet[1]
-current_alphabet[1] => checker:inst10.current_alphabet[1]
-current_alphabet[1] => checker:inst16.current_alphabet[1]
-current_alphabet[1] => checker:inst15.current_alphabet[1]
-current_alphabet[1] => checker:inst19.current_alphabet[1]
-current_alphabet[1] => checker:inst22.current_alphabet[1]
-current_alphabet[2] => checker:inst.current_alphabet[2]
-current_alphabet[2] => checker:inst3.current_alphabet[2]
-current_alphabet[2] => checker:inst7.current_alphabet[2]
-current_alphabet[2] => checker:inst10.current_alphabet[2]
-current_alphabet[2] => checker:inst16.current_alphabet[2]
-current_alphabet[2] => checker:inst15.current_alphabet[2]
-current_alphabet[2] => checker:inst19.current_alphabet[2]
-current_alphabet[2] => checker:inst22.current_alphabet[2]
-current_alphabet[3] => checker:inst.current_alphabet[3]
-current_alphabet[3] => checker:inst3.current_alphabet[3]
-current_alphabet[3] => checker:inst7.current_alphabet[3]
-current_alphabet[3] => checker:inst10.current_alphabet[3]
-current_alphabet[3] => checker:inst16.current_alphabet[3]
-current_alphabet[3] => checker:inst15.current_alphabet[3]
-current_alphabet[3] => checker:inst19.current_alphabet[3]
-current_alphabet[3] => checker:inst22.current_alphabet[3]
-current_alphabet[4] => checker:inst.current_alphabet[4]
-current_alphabet[4] => checker:inst3.current_alphabet[4]
-current_alphabet[4] => checker:inst7.current_alphabet[4]
-current_alphabet[4] => checker:inst10.current_alphabet[4]
-current_alphabet[4] => checker:inst16.current_alphabet[4]
-current_alphabet[4] => checker:inst15.current_alphabet[4]
-current_alphabet[4] => checker:inst19.current_alphabet[4]
-current_alphabet[4] => checker:inst22.current_alphabet[4]
-mode => inst26.IN0
-star => inst26.IN1
-is_correct_1 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
-alphabet_1[0] => checker:inst3.alphabet_n[0]
-alphabet_1[1] => checker:inst3.alphabet_n[1]
-alphabet_1[2] => checker:inst3.alphabet_n[2]
-alphabet_1[3] => checker:inst3.alphabet_n[3]
-alphabet_1[4] => checker:inst3.alphabet_n[4]
-is_correct_2 <= inst8.DB_MAX_OUTPUT_PORT_TYPE
-alphabet_2[0] => checker:inst7.alphabet_n[0]
-alphabet_2[1] => checker:inst7.alphabet_n[1]
-alphabet_2[2] => checker:inst7.alphabet_n[2]
-alphabet_2[3] => checker:inst7.alphabet_n[3]
-alphabet_2[4] => checker:inst7.alphabet_n[4]
-is_correct_3 <= inst11.DB_MAX_OUTPUT_PORT_TYPE
-alphabet_3[0] => checker:inst10.alphabet_n[0]
-alphabet_3[1] => checker:inst10.alphabet_n[1]
-alphabet_3[2] => checker:inst10.alphabet_n[2]
-alphabet_3[3] => checker:inst10.alphabet_n[3]
-alphabet_3[4] => checker:inst10.alphabet_n[4]
-is_correct_4 <= inst13.DB_MAX_OUTPUT_PORT_TYPE
-alphabet_4[0] => checker:inst16.alphabet_n[0]
-alphabet_4[1] => checker:inst16.alphabet_n[1]
-alphabet_4[2] => checker:inst16.alphabet_n[2]
-alphabet_4[3] => checker:inst16.alphabet_n[3]
-alphabet_4[4] => checker:inst16.alphabet_n[4]
-is_correct_5 <= inst17.DB_MAX_OUTPUT_PORT_TYPE
-alphabet_5[0] => checker:inst15.alphabet_n[0]
-alphabet_5[1] => checker:inst15.alphabet_n[1]
-alphabet_5[2] => checker:inst15.alphabet_n[2]
-alphabet_5[3] => checker:inst15.alphabet_n[3]
-alphabet_5[4] => checker:inst15.alphabet_n[4]
-is_correct_6 <= inst20.DB_MAX_OUTPUT_PORT_TYPE
-alphabet_6[0] => checker:inst19.alphabet_n[0]
-alphabet_6[1] => checker:inst19.alphabet_n[1]
-alphabet_6[2] => checker:inst19.alphabet_n[2]
-alphabet_6[3] => checker:inst19.alphabet_n[3]
-alphabet_6[4] => checker:inst19.alphabet_n[4]
-is_correct_7 <= inst23.DB_MAX_OUTPUT_PORT_TYPE
-alphabet_7[0] => checker:inst22.alphabet_n[0]
-alphabet_7[1] => checker:inst22.alphabet_n[1]
-alphabet_7[2] => checker:inst22.alphabet_n[2]
-alphabet_7[3] => checker:inst22.alphabet_n[3]
-alphabet_7[4] => checker:inst22.alphabet_n[4]
-
-
-|hang_man|is_correct:inst9|BUSMUX:inst5
-dataa[0] => lpm_mux:$00000.data[0][0]
-datab[0] => lpm_mux:$00000.data[1][0]
-sel => lpm_mux:$00000.sel[0]
-result[0] <= lpm_mux:$00000.result[0]
-
-
-|hang_man|is_correct:inst9|BUSMUX:inst5|lpm_mux:$00000
-data[0][0] => mux_pjc:auto_generated.data[0]
-data[1][0] => mux_pjc:auto_generated.data[1]
-sel[0] => mux_pjc:auto_generated.sel[0]
-clock => ~NO_FANOUT~
-aclr => ~NO_FANOUT~
-clken => ~NO_FANOUT~
-result[0] <= mux_pjc:auto_generated.result[0]
-
-
-|hang_man|is_correct:inst9|BUSMUX:inst5|lpm_mux:$00000|mux_pjc:auto_generated
-data[0] => l1_w0_n0_mux_dataout.IN1
-data[1] => l1_w0_n0_mux_dataout.IN1
-result[0] <= l1_w0_n0_mux_dataout.DB_MAX_OUTPUT_PORT_TYPE
-sel[0] => l1_w0_n0_mux_dataout.IN0
-sel[0] => _.IN0
-
-
-|hang_man|is_correct:inst9|checker:inst
-is_equal <= inst9.DB_MAX_OUTPUT_PORT_TYPE
-current_alphabet[0] => inst.IN0
-current_alphabet[1] => inst2.IN0
-current_alphabet[2] => inst3.IN0
-current_alphabet[3] => inst4.IN0
-current_alphabet[4] => inst6.IN0
-alphabet_n[0] => inst.IN1
-alphabet_n[1] => inst2.IN1
-alphabet_n[2] => inst3.IN1
-alphabet_n[3] => inst4.IN1
-alphabet_n[4] => inst6.IN1
-
-
-|hang_man|is_correct:inst9|BUSMUX:inst6
-dataa[0] => lpm_mux:$00000.data[0][0]
-datab[0] => lpm_mux:$00000.data[1][0]
-sel => lpm_mux:$00000.sel[0]
-result[0] <= lpm_mux:$00000.result[0]
-
-
-|hang_man|is_correct:inst9|BUSMUX:inst6|lpm_mux:$00000
-data[0][0] => mux_pjc:auto_generated.data[0]
-data[1][0] => mux_pjc:auto_generated.data[1]
-sel[0] => mux_pjc:auto_generated.sel[0]
-clock => ~NO_FANOUT~
-aclr => ~NO_FANOUT~
-clken => ~NO_FANOUT~
-result[0] <= mux_pjc:auto_generated.result[0]
-
-
-|hang_man|is_correct:inst9|BUSMUX:inst6|lpm_mux:$00000|mux_pjc:auto_generated
-data[0] => l1_w0_n0_mux_dataout.IN1
-data[1] => l1_w0_n0_mux_dataout.IN1
-result[0] <= l1_w0_n0_mux_dataout.DB_MAX_OUTPUT_PORT_TYPE
-sel[0] => l1_w0_n0_mux_dataout.IN0
-sel[0] => _.IN0
-
-
-|hang_man|is_correct:inst9|checker:inst3
-is_equal <= inst9.DB_MAX_OUTPUT_PORT_TYPE
-current_alphabet[0] => inst.IN0
-current_alphabet[1] => inst2.IN0
-current_alphabet[2] => inst3.IN0
-current_alphabet[3] => inst4.IN0
-current_alphabet[4] => inst6.IN0
-alphabet_n[0] => inst.IN1
-alphabet_n[1] => inst2.IN1
-alphabet_n[2] => inst3.IN1
-alphabet_n[3] => inst4.IN1
-alphabet_n[4] => inst6.IN1
-
-
-|hang_man|is_correct:inst9|BUSMUX:inst9
-dataa[0] => lpm_mux:$00000.data[0][0]
-datab[0] => lpm_mux:$00000.data[1][0]
-sel => lpm_mux:$00000.sel[0]
-result[0] <= lpm_mux:$00000.result[0]
-
-
-|hang_man|is_correct:inst9|BUSMUX:inst9|lpm_mux:$00000
-data[0][0] => mux_pjc:auto_generated.data[0]
-data[1][0] => mux_pjc:auto_generated.data[1]
-sel[0] => mux_pjc:auto_generated.sel[0]
-clock => ~NO_FANOUT~
-aclr => ~NO_FANOUT~
-clken => ~NO_FANOUT~
-result[0] <= mux_pjc:auto_generated.result[0]
-
-
-|hang_man|is_correct:inst9|BUSMUX:inst9|lpm_mux:$00000|mux_pjc:auto_generated
-data[0] => l1_w0_n0_mux_dataout.IN1
-data[1] => l1_w0_n0_mux_dataout.IN1
-result[0] <= l1_w0_n0_mux_dataout.DB_MAX_OUTPUT_PORT_TYPE
-sel[0] => l1_w0_n0_mux_dataout.IN0
-sel[0] => _.IN0
-
-
-|hang_man|is_correct:inst9|checker:inst7
-is_equal <= inst9.DB_MAX_OUTPUT_PORT_TYPE
-current_alphabet[0] => inst.IN0
-current_alphabet[1] => inst2.IN0
-current_alphabet[2] => inst3.IN0
-current_alphabet[3] => inst4.IN0
-current_alphabet[4] => inst6.IN0
-alphabet_n[0] => inst.IN1
-alphabet_n[1] => inst2.IN1
-alphabet_n[2] => inst3.IN1
-alphabet_n[3] => inst4.IN1
-alphabet_n[4] => inst6.IN1
-
-
-|hang_man|is_correct:inst9|BUSMUX:inst12
-dataa[0] => lpm_mux:$00000.data[0][0]
-datab[0] => lpm_mux:$00000.data[1][0]
-sel => lpm_mux:$00000.sel[0]
-result[0] <= lpm_mux:$00000.result[0]
-
-
-|hang_man|is_correct:inst9|BUSMUX:inst12|lpm_mux:$00000
-data[0][0] => mux_pjc:auto_generated.data[0]
-data[1][0] => mux_pjc:auto_generated.data[1]
-sel[0] => mux_pjc:auto_generated.sel[0]
-clock => ~NO_FANOUT~
-aclr => ~NO_FANOUT~
-clken => ~NO_FANOUT~
-result[0] <= mux_pjc:auto_generated.result[0]
-
-
-|hang_man|is_correct:inst9|BUSMUX:inst12|lpm_mux:$00000|mux_pjc:auto_generated
-data[0] => l1_w0_n0_mux_dataout.IN1
-data[1] => l1_w0_n0_mux_dataout.IN1
-result[0] <= l1_w0_n0_mux_dataout.DB_MAX_OUTPUT_PORT_TYPE
-sel[0] => l1_w0_n0_mux_dataout.IN0
-sel[0] => _.IN0
-
-
-|hang_man|is_correct:inst9|checker:inst10
-is_equal <= inst9.DB_MAX_OUTPUT_PORT_TYPE
-current_alphabet[0] => inst.IN0
-current_alphabet[1] => inst2.IN0
-current_alphabet[2] => inst3.IN0
-current_alphabet[3] => inst4.IN0
-current_alphabet[4] => inst6.IN0
-alphabet_n[0] => inst.IN1
-alphabet_n[1] => inst2.IN1
-alphabet_n[2] => inst3.IN1
-alphabet_n[3] => inst4.IN1
-alphabet_n[4] => inst6.IN1
-
-
-|hang_man|is_correct:inst9|BUSMUX:inst14
-dataa[0] => lpm_mux:$00000.data[0][0]
-datab[0] => lpm_mux:$00000.data[1][0]
-sel => lpm_mux:$00000.sel[0]
-result[0] <= lpm_mux:$00000.result[0]
-
-
-|hang_man|is_correct:inst9|BUSMUX:inst14|lpm_mux:$00000
-data[0][0] => mux_pjc:auto_generated.data[0]
-data[1][0] => mux_pjc:auto_generated.data[1]
-sel[0] => mux_pjc:auto_generated.sel[0]
-clock => ~NO_FANOUT~
-aclr => ~NO_FANOUT~
-clken => ~NO_FANOUT~
-result[0] <= mux_pjc:auto_generated.result[0]
-
-
-|hang_man|is_correct:inst9|BUSMUX:inst14|lpm_mux:$00000|mux_pjc:auto_generated
-data[0] => l1_w0_n0_mux_dataout.IN1
-data[1] => l1_w0_n0_mux_dataout.IN1
-result[0] <= l1_w0_n0_mux_dataout.DB_MAX_OUTPUT_PORT_TYPE
-sel[0] => l1_w0_n0_mux_dataout.IN0
-sel[0] => _.IN0
-
-
-|hang_man|is_correct:inst9|checker:inst16
-is_equal <= inst9.DB_MAX_OUTPUT_PORT_TYPE
-current_alphabet[0] => inst.IN0
-current_alphabet[1] => inst2.IN0
-current_alphabet[2] => inst3.IN0
-current_alphabet[3] => inst4.IN0
-current_alphabet[4] => inst6.IN0
-alphabet_n[0] => inst.IN1
-alphabet_n[1] => inst2.IN1
-alphabet_n[2] => inst3.IN1
-alphabet_n[3] => inst4.IN1
-alphabet_n[4] => inst6.IN1
-
-
-|hang_man|is_correct:inst9|BUSMUX:inst18
-dataa[0] => lpm_mux:$00000.data[0][0]
-datab[0] => lpm_mux:$00000.data[1][0]
-sel => lpm_mux:$00000.sel[0]
-result[0] <= lpm_mux:$00000.result[0]
-
-
-|hang_man|is_correct:inst9|BUSMUX:inst18|lpm_mux:$00000
-data[0][0] => mux_pjc:auto_generated.data[0]
-data[1][0] => mux_pjc:auto_generated.data[1]
-sel[0] => mux_pjc:auto_generated.sel[0]
-clock => ~NO_FANOUT~
-aclr => ~NO_FANOUT~
-clken => ~NO_FANOUT~
-result[0] <= mux_pjc:auto_generated.result[0]
-
-
-|hang_man|is_correct:inst9|BUSMUX:inst18|lpm_mux:$00000|mux_pjc:auto_generated
-data[0] => l1_w0_n0_mux_dataout.IN1
-data[1] => l1_w0_n0_mux_dataout.IN1
-result[0] <= l1_w0_n0_mux_dataout.DB_MAX_OUTPUT_PORT_TYPE
-sel[0] => l1_w0_n0_mux_dataout.IN0
-sel[0] => _.IN0
-
-
-|hang_man|is_correct:inst9|checker:inst15
-is_equal <= inst9.DB_MAX_OUTPUT_PORT_TYPE
-current_alphabet[0] => inst.IN0
-current_alphabet[1] => inst2.IN0
-current_alphabet[2] => inst3.IN0
-current_alphabet[3] => inst4.IN0
-current_alphabet[4] => inst6.IN0
-alphabet_n[0] => inst.IN1
-alphabet_n[1] => inst2.IN1
-alphabet_n[2] => inst3.IN1
-alphabet_n[3] => inst4.IN1
-alphabet_n[4] => inst6.IN1
-
-
-|hang_man|is_correct:inst9|BUSMUX:inst21
-dataa[0] => lpm_mux:$00000.data[0][0]
-datab[0] => lpm_mux:$00000.data[1][0]
-sel => lpm_mux:$00000.sel[0]
-result[0] <= lpm_mux:$00000.result[0]
-
-
-|hang_man|is_correct:inst9|BUSMUX:inst21|lpm_mux:$00000
-data[0][0] => mux_pjc:auto_generated.data[0]
-data[1][0] => mux_pjc:auto_generated.data[1]
-sel[0] => mux_pjc:auto_generated.sel[0]
-clock => ~NO_FANOUT~
-aclr => ~NO_FANOUT~
-clken => ~NO_FANOUT~
-result[0] <= mux_pjc:auto_generated.result[0]
-
-
-|hang_man|is_correct:inst9|BUSMUX:inst21|lpm_mux:$00000|mux_pjc:auto_generated
-data[0] => l1_w0_n0_mux_dataout.IN1
-data[1] => l1_w0_n0_mux_dataout.IN1
-result[0] <= l1_w0_n0_mux_dataout.DB_MAX_OUTPUT_PORT_TYPE
-sel[0] => l1_w0_n0_mux_dataout.IN0
-sel[0] => _.IN0
-
-
-|hang_man|is_correct:inst9|checker:inst19
-is_equal <= inst9.DB_MAX_OUTPUT_PORT_TYPE
-current_alphabet[0] => inst.IN0
-current_alphabet[1] => inst2.IN0
-current_alphabet[2] => inst3.IN0
-current_alphabet[3] => inst4.IN0
-current_alphabet[4] => inst6.IN0
-alphabet_n[0] => inst.IN1
-alphabet_n[1] => inst2.IN1
-alphabet_n[2] => inst3.IN1
-alphabet_n[3] => inst4.IN1
-alphabet_n[4] => inst6.IN1
-
-
-|hang_man|is_correct:inst9|BUSMUX:inst24
-dataa[0] => lpm_mux:$00000.data[0][0]
-datab[0] => lpm_mux:$00000.data[1][0]
-sel => lpm_mux:$00000.sel[0]
-result[0] <= lpm_mux:$00000.result[0]
-
-
-|hang_man|is_correct:inst9|BUSMUX:inst24|lpm_mux:$00000
-data[0][0] => mux_pjc:auto_generated.data[0]
-data[1][0] => mux_pjc:auto_generated.data[1]
-sel[0] => mux_pjc:auto_generated.sel[0]
-clock => ~NO_FANOUT~
-aclr => ~NO_FANOUT~
-clken => ~NO_FANOUT~
-result[0] <= mux_pjc:auto_generated.result[0]
-
-
-|hang_man|is_correct:inst9|BUSMUX:inst24|lpm_mux:$00000|mux_pjc:auto_generated
-data[0] => l1_w0_n0_mux_dataout.IN1
-data[1] => l1_w0_n0_mux_dataout.IN1
-result[0] <= l1_w0_n0_mux_dataout.DB_MAX_OUTPUT_PORT_TYPE
-sel[0] => l1_w0_n0_mux_dataout.IN0
-sel[0] => _.IN0
-
-
-|hang_man|is_correct:inst9|checker:inst22
-is_equal <= inst9.DB_MAX_OUTPUT_PORT_TYPE
-current_alphabet[0] => inst.IN0
-current_alphabet[1] => inst2.IN0
-current_alphabet[2] => inst3.IN0
-current_alphabet[3] => inst4.IN0
-current_alphabet[4] => inst6.IN0
-alphabet_n[0] => inst.IN1
-alphabet_n[1] => inst2.IN1
-alphabet_n[2] => inst3.IN1
-alphabet_n[3] => inst4.IN1
-alphabet_n[4] => inst6.IN1
 
 
 |hang_man|word_register:inst8
@@ -2187,5 +2261,272 @@ data[1] => l1_w0_n0_mux_dataout.IN1
 result[0] <= l1_w0_n0_mux_dataout.DB_MAX_OUTPUT_PORT_TYPE
 sel[0] => l1_w0_n0_mux_dataout.IN0
 sel[0] => _.IN0
+
+
+|hang_man|alphabet_to_segment:inst3
+alphabet[0] => Decoder0.IN4
+alphabet[1] => Decoder0.IN3
+alphabet[2] => Decoder0.IN2
+alphabet[3] => Decoder0.IN1
+alphabet[4] => Decoder0.IN0
+a <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+b <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+c <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+d <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+e <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+f <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+g <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|hang_man|life_register:inst4
+game_over <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+reset => inst.ACLR
+reset => inst1.ACLR
+clk => inst.CLK
+clk => inst1.CLK
+alphabet_not_found => BUSMUX:inst5.sel
+alphabet_not_found => BUSMUX:inst6.sel
+life_led1 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+life_led2 <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+life_led3 <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|hang_man|life_register:inst4|BUSMUX:inst5
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|hang_man|life_register:inst4|BUSMUX:inst5|lpm_mux:$00000
+data[0][0] => mux_pjc:auto_generated.data[0]
+data[1][0] => mux_pjc:auto_generated.data[1]
+sel[0] => mux_pjc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_pjc:auto_generated.result[0]
+
+
+|hang_man|life_register:inst4|BUSMUX:inst5|lpm_mux:$00000|mux_pjc:auto_generated
+data[0] => l1_w0_n0_mux_dataout.IN1
+data[1] => l1_w0_n0_mux_dataout.IN1
+result[0] <= l1_w0_n0_mux_dataout.DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => l1_w0_n0_mux_dataout.IN0
+sel[0] => _.IN0
+
+
+|hang_man|life_register:inst4|BUSMUX:inst6
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|hang_man|life_register:inst4|BUSMUX:inst6|lpm_mux:$00000
+data[0][0] => mux_pjc:auto_generated.data[0]
+data[1][0] => mux_pjc:auto_generated.data[1]
+sel[0] => mux_pjc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_pjc:auto_generated.result[0]
+
+
+|hang_man|life_register:inst4|BUSMUX:inst6|lpm_mux:$00000|mux_pjc:auto_generated
+data[0] => l1_w0_n0_mux_dataout.IN1
+data[1] => l1_w0_n0_mux_dataout.IN1
+result[0] <= l1_w0_n0_mux_dataout.DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => l1_w0_n0_mux_dataout.IN0
+sel[0] => _.IN0
+
+
+|hang_man|array_segment_controller:inst5
+com_1 <= decoder_3to8:inst3.COM1
+clk => counter3:inst2.clk
+reset => counter3:inst2.reset
+com_2 <= decoder_3to8:inst3.COM2
+com_3 <= decoder_3to8:inst3.COM3
+com_4 <= decoder_3to8:inst3.COM4
+com_5 <= decoder_3to8:inst3.COM5
+com_6 <= decoder_3to8:inst3.COM6
+com_7 <= decoder_3to8:inst3.COM7
+com_8 <= decoder_3to8:inst3.COM8
+a <= alphabet_to_segment:inst.a
+is_correct_0 => alphabet_selector:inst1.is_correct_0
+is_correct_1 => alphabet_selector:inst1.is_correct_1
+is_correct_2 => alphabet_selector:inst1.is_correct_2
+is_correct_3 => alphabet_selector:inst1.is_correct_3
+is_correct_4 => alphabet_selector:inst1.is_correct_4
+is_correct_5 => alphabet_selector:inst1.is_correct_5
+is_correct_6 => alphabet_selector:inst1.is_correct_6
+is_correct_7 => alphabet_selector:inst1.is_correct_7
+mode => alphabet_selector:inst1.mode
+alphabet_0[0] => alphabet_selector:inst1.alphabet_0[0]
+alphabet_0[1] => alphabet_selector:inst1.alphabet_0[1]
+alphabet_0[2] => alphabet_selector:inst1.alphabet_0[2]
+alphabet_0[3] => alphabet_selector:inst1.alphabet_0[3]
+alphabet_0[4] => alphabet_selector:inst1.alphabet_0[4]
+alphabet_1[0] => alphabet_selector:inst1.alphabet_1[0]
+alphabet_1[1] => alphabet_selector:inst1.alphabet_1[1]
+alphabet_1[2] => alphabet_selector:inst1.alphabet_1[2]
+alphabet_1[3] => alphabet_selector:inst1.alphabet_1[3]
+alphabet_1[4] => alphabet_selector:inst1.alphabet_1[4]
+alphabet_2[0] => alphabet_selector:inst1.alphabet_2[0]
+alphabet_2[1] => alphabet_selector:inst1.alphabet_2[1]
+alphabet_2[2] => alphabet_selector:inst1.alphabet_2[2]
+alphabet_2[3] => alphabet_selector:inst1.alphabet_2[3]
+alphabet_2[4] => alphabet_selector:inst1.alphabet_2[4]
+alphabet_3[0] => alphabet_selector:inst1.alphabet_3[0]
+alphabet_3[1] => alphabet_selector:inst1.alphabet_3[1]
+alphabet_3[2] => alphabet_selector:inst1.alphabet_3[2]
+alphabet_3[3] => alphabet_selector:inst1.alphabet_3[3]
+alphabet_3[4] => alphabet_selector:inst1.alphabet_3[4]
+alphabet_4[0] => alphabet_selector:inst1.alphabet_4[0]
+alphabet_4[1] => alphabet_selector:inst1.alphabet_4[1]
+alphabet_4[2] => alphabet_selector:inst1.alphabet_4[2]
+alphabet_4[3] => alphabet_selector:inst1.alphabet_4[3]
+alphabet_4[4] => alphabet_selector:inst1.alphabet_4[4]
+alphabet_5[0] => alphabet_selector:inst1.alphabet_5[0]
+alphabet_5[1] => alphabet_selector:inst1.alphabet_5[1]
+alphabet_5[2] => alphabet_selector:inst1.alphabet_5[2]
+alphabet_5[3] => alphabet_selector:inst1.alphabet_5[3]
+alphabet_5[4] => alphabet_selector:inst1.alphabet_5[4]
+alphabet_6[0] => alphabet_selector:inst1.alphabet_6[0]
+alphabet_6[1] => alphabet_selector:inst1.alphabet_6[1]
+alphabet_6[2] => alphabet_selector:inst1.alphabet_6[2]
+alphabet_6[3] => alphabet_selector:inst1.alphabet_6[3]
+alphabet_6[4] => alphabet_selector:inst1.alphabet_6[4]
+alphabet_7[0] => alphabet_selector:inst1.alphabet_7[0]
+alphabet_7[1] => alphabet_selector:inst1.alphabet_7[1]
+alphabet_7[2] => alphabet_selector:inst1.alphabet_7[2]
+alphabet_7[3] => alphabet_selector:inst1.alphabet_7[3]
+alphabet_7[4] => alphabet_selector:inst1.alphabet_7[4]
+b <= alphabet_to_segment:inst.b
+c <= alphabet_to_segment:inst.c
+d <= alphabet_to_segment:inst.d
+e <= alphabet_to_segment:inst.e
+f <= alphabet_to_segment:inst.f
+g <= alphabet_to_segment:inst.g
+
+
+|hang_man|array_segment_controller:inst5|decoder_3to8:inst3
+counter[0] => Decoder0.IN2
+counter[1] => Decoder0.IN1
+counter[2] => Decoder0.IN0
+COM1 <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+COM2 <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+COM3 <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+COM4 <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+COM5 <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+COM6 <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+COM7 <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+COM8 <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|hang_man|array_segment_controller:inst5|counter3:inst2
+counter[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+counter[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+counter[2] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+reset => inst4.ACLR
+reset => inst1.ACLR
+reset => inst.ACLR
+clk => inst4.CLK
+clk => inst1.CLK
+clk => inst.CLK
+
+
+|hang_man|array_segment_controller:inst5|alphabet_to_segment:inst
+alphabet[0] => Decoder0.IN4
+alphabet[1] => Decoder0.IN3
+alphabet[2] => Decoder0.IN2
+alphabet[3] => Decoder0.IN1
+alphabet[4] => Decoder0.IN0
+a <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+b <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+c <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+d <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+e <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+f <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+g <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|hang_man|array_segment_controller:inst5|alphabet_selector:inst1
+alphabet_0[0] => Mux5.IN10
+alphabet_0[1] => Mux4.IN10
+alphabet_0[2] => Mux3.IN10
+alphabet_0[3] => Mux2.IN10
+alphabet_0[4] => Mux1.IN10
+alphabet_1[0] => Mux5.IN9
+alphabet_1[1] => Mux4.IN9
+alphabet_1[2] => Mux3.IN9
+alphabet_1[3] => Mux2.IN9
+alphabet_1[4] => Mux1.IN9
+alphabet_2[0] => Mux5.IN8
+alphabet_2[1] => Mux4.IN8
+alphabet_2[2] => Mux3.IN8
+alphabet_2[3] => Mux2.IN8
+alphabet_2[4] => Mux1.IN8
+alphabet_3[0] => Mux5.IN7
+alphabet_3[1] => Mux4.IN7
+alphabet_3[2] => Mux3.IN7
+alphabet_3[3] => Mux2.IN7
+alphabet_3[4] => Mux1.IN7
+alphabet_4[0] => Mux5.IN6
+alphabet_4[1] => Mux4.IN6
+alphabet_4[2] => Mux3.IN6
+alphabet_4[3] => Mux2.IN6
+alphabet_4[4] => Mux1.IN6
+alphabet_5[0] => Mux5.IN5
+alphabet_5[1] => Mux4.IN5
+alphabet_5[2] => Mux3.IN5
+alphabet_5[3] => Mux2.IN5
+alphabet_5[4] => Mux1.IN5
+alphabet_6[0] => Mux5.IN4
+alphabet_6[1] => Mux4.IN4
+alphabet_6[2] => Mux3.IN4
+alphabet_6[3] => Mux2.IN4
+alphabet_6[4] => Mux1.IN4
+alphabet_7[0] => Mux5.IN3
+alphabet_7[1] => Mux4.IN3
+alphabet_7[2] => Mux3.IN3
+alphabet_7[3] => Mux2.IN3
+alphabet_7[4] => Mux1.IN3
+is_correct_0 => Mux0.IN10
+is_correct_1 => Mux0.IN9
+is_correct_2 => Mux0.IN8
+is_correct_3 => Mux0.IN7
+is_correct_4 => Mux0.IN6
+is_correct_5 => Mux0.IN5
+is_correct_6 => Mux0.IN4
+is_correct_7 => Mux0.IN3
+mode => output_alphabet[0].OUTPUTSELECT
+mode => output_alphabet[1].OUTPUTSELECT
+mode => output_alphabet[2].OUTPUTSELECT
+mode => output_alphabet[3].OUTPUTSELECT
+mode => output_alphabet[4].OUTPUTSELECT
+counter[0] => Mux0.IN2
+counter[0] => Mux1.IN2
+counter[0] => Mux2.IN2
+counter[0] => Mux3.IN2
+counter[0] => Mux4.IN2
+counter[0] => Mux5.IN2
+counter[1] => Mux0.IN1
+counter[1] => Mux1.IN1
+counter[1] => Mux2.IN1
+counter[1] => Mux3.IN1
+counter[1] => Mux4.IN1
+counter[1] => Mux5.IN1
+counter[2] => Mux0.IN0
+counter[2] => Mux1.IN0
+counter[2] => Mux2.IN0
+counter[2] => Mux3.IN0
+counter[2] => Mux4.IN0
+counter[2] => Mux5.IN0
+output_alphabet[0] <= output_alphabet[0].DB_MAX_OUTPUT_PORT_TYPE
+output_alphabet[1] <= output_alphabet[1].DB_MAX_OUTPUT_PORT_TYPE
+output_alphabet[2] <= output_alphabet[2].DB_MAX_OUTPUT_PORT_TYPE
+output_alphabet[3] <= output_alphabet[3].DB_MAX_OUTPUT_PORT_TYPE
+output_alphabet[4] <= output_alphabet[4].DB_MAX_OUTPUT_PORT_TYPE
 
 
