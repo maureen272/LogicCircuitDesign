@@ -1,9 +1,5 @@
 |hang_man
-alphabet_found <= grader:inst2.alphabet_found
-mode => is_correct:inst1.mode
-mode => word_register:inst8.mode
-mode => grader:inst2.mode
-mode => array_segment_controller:inst5.mode
+a <= alphabet_to_segment:inst3.a
 zero => keypad_converter:inst.zero
 one => keypad_converter:inst.one
 two => keypad_converter:inst.two
@@ -22,23 +18,14 @@ clk => word_register:inst8.clk
 clk => grader:inst2.clk
 clk => life_register:inst4.clk
 clk => array_segment_controller:inst5.clk
+clk => sound_controller:inst7.clk
 reset => keypad_converter:inst.reset
 reset => is_correct:inst1.reset
 reset => word_register:inst8.reset
 reset => grader:inst2.reset
 reset => life_register:inst4.reset
 reset => array_segment_controller:inst5.reset
-alphabet_not_found <= grader:inst2.alphabet_not_found
-out_is_correct_0 <= is_correct:inst1.is_correct_0
-out_is_correct_1 <= is_correct:inst1.is_correct_1
-out_is_correct_2 <= is_correct:inst1.is_correct_2
-out_is_correct_3 <= is_correct:inst1.is_correct_3
-out_is_correct_4 <= is_correct:inst1.is_correct_4
-out_is_correct_5 <= is_correct:inst1.is_correct_5
-out_is_correct_6 <= is_correct:inst1.is_correct_6
-out_is_correct_7 <= is_correct:inst1.is_correct_7
-game_win <= grader:inst2.game_win
-a <= alphabet_to_segment:inst3.a
+reset => sound_controller:inst7.reset
 b <= alphabet_to_segment:inst3.b
 c <= alphabet_to_segment:inst3.c
 d <= alphabet_to_segment:inst3.d
@@ -46,9 +33,12 @@ e <= alphabet_to_segment:inst3.e
 f <= alphabet_to_segment:inst3.f
 g <= alphabet_to_segment:inst3.g
 life_led1 <= life_register:inst4.life_led1
+mode => is_correct:inst1.mode
+mode => word_register:inst8.mode
+mode => grader:inst2.mode
+mode => array_segment_controller:inst5.mode
 life_led2 <= life_register:inst4.life_led2
 life_led3 <= life_register:inst4.life_led3
-game_over <= life_register:inst4.game_over
 arr_a <= array_segment_controller:inst5.a
 arr_b <= array_segment_controller:inst5.b
 arr_c <= array_segment_controller:inst5.c
@@ -64,6 +54,383 @@ com_5 <= array_segment_controller:inst5.com_5
 com_6 <= array_segment_controller:inst5.com_6
 com_7 <= array_segment_controller:inst5.com_7
 com_8 <= array_segment_controller:inst5.com_8
+piezo <= sound_controller:inst7.piezo
+green[0] <= color_controller:inst6.green[0]
+green[1] <= color_controller:inst6.green[1]
+green[2] <= color_controller:inst6.green[2]
+green[3] <= color_controller:inst6.green[3]
+red[0] <= color_controller:inst6.red[0]
+red[1] <= color_controller:inst6.red[1]
+red[2] <= color_controller:inst6.red[2]
+red[3] <= color_controller:inst6.red[3]
+
+
+|hang_man|alphabet_to_segment:inst3
+alphabet[0] => Decoder0.IN4
+alphabet[1] => Decoder0.IN3
+alphabet[2] => Decoder0.IN2
+alphabet[3] => Decoder0.IN1
+alphabet[4] => Decoder0.IN0
+a <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+b <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+c <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+d <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+e <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+f <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+g <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|hang_man|keypad_converter:inst
+star_output <= decimal_to_binary:inst1.star
+zero => decimal_to_binary:inst1.Keypad[0]
+two => decimal_to_binary:inst1.Keypad[2]
+three => decimal_to_binary:inst1.Keypad[3]
+four => decimal_to_binary:inst1.Keypad[4]
+five => decimal_to_binary:inst1.Keypad[5]
+six => decimal_to_binary:inst1.Keypad[6]
+seven => decimal_to_binary:inst1.Keypad[7]
+eight => decimal_to_binary:inst1.Keypad[8]
+nine => decimal_to_binary:inst1.Keypad[9]
+star => decimal_to_binary:inst1.Keypad[10]
+sharp => decimal_to_binary:inst1.Keypad[11]
+one => decimal_to_binary:inst1.Keypad[1]
+one => counter2:inst3.one
+sharp_output <= decimal_to_binary:inst1.sharp
+alphabet[0] <= alphabet_encoder:inst27.alphabet[0]
+alphabet[1] <= alphabet_encoder:inst27.alphabet[1]
+alphabet[2] <= alphabet_encoder:inst27.alphabet[2]
+alphabet[3] <= alphabet_encoder:inst27.alphabet[3]
+alphabet[4] <= alphabet_encoder:inst27.alphabet[4]
+clk => trigger:inst23.CLK
+clk => register4:inst24.CLK
+clk => counter2:inst3.clk
+reset => trigger:inst23.rst_n
+reset => register4:inst24.RST_N
+reset => counter2:inst3.rst_n
+
+
+|hang_man|keypad_converter:inst|decimal_to_binary:inst1
+chk <= inst12121.DB_MAX_OUTPUT_PORT_TYPE
+Keypad[0] => inst111.IN0
+Keypad[0] => inst3.IN0
+Keypad[1] => inst111.IN2
+Keypad[1] => inst12.IN0
+Keypad[2] => inst111.IN1
+Keypad[2] => inst10.IN0
+Keypad[3] => inst111.IN3
+Keypad[3] => inst12.IN3
+Keypad[3] => inst10.IN3
+Keypad[4] => inst111.IN5
+Keypad[4] => inst1.IN0
+Keypad[5] => inst111.IN4
+Keypad[5] => inst1.IN3
+Keypad[5] => inst12.IN1
+Keypad[6] => inst111.IN6
+Keypad[6] => inst1.IN1
+Keypad[6] => inst10.IN1
+Keypad[7] => inst111.IN7
+Keypad[7] => inst1.IN2
+Keypad[7] => inst12.IN2
+Keypad[7] => inst10.IN2
+Keypad[8] => inst13.IN1
+Keypad[8] => inst22.IN1
+Keypad[9] => inst13.IN0
+Keypad[9] => inst22.IN0
+Keypad[9] => inst9.IN0
+Keypad[10] => star.DATAIN
+Keypad[11] => sharp.DATAIN
+star <= Keypad[10].DB_MAX_OUTPUT_PORT_TYPE
+sharp <= Keypad[11].DB_MAX_OUTPUT_PORT_TYPE
+bin[0] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+bin[1] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+bin[2] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+bin[3] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|hang_man|keypad_converter:inst|alphabet_encoder:inst27
+register[0] => Decoder0.IN3
+register[0] => Decoder1.IN3
+register[1] => Decoder0.IN2
+register[1] => Decoder1.IN2
+register[2] => Decoder0.IN1
+register[2] => Decoder1.IN1
+register[3] => Decoder0.IN0
+register[3] => Decoder1.IN0
+counter[0] => Decoder1.IN5
+counter[1] => Decoder1.IN4
+alphabet[0] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+alphabet[1] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+alphabet[2] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+alphabet[3] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+alphabet[4] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|hang_man|keypad_converter:inst|counter2:inst3
+dout[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+dout[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+rst_n => inst10.IN0
+one => inst8.IN0
+clk => inst1.CLK
+clk => inst.CLK
+is_equal => inst7.IN0
+trigger => inst7.IN1
+
+
+|hang_man|keypad_converter:inst|counter2:inst3|BUSMUX:inst6
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|hang_man|keypad_converter:inst|counter2:inst3|BUSMUX:inst6|lpm_mux:$00000
+data[0][0] => mux_pjc:auto_generated.data[0]
+data[1][0] => mux_pjc:auto_generated.data[1]
+sel[0] => mux_pjc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_pjc:auto_generated.result[0]
+
+
+|hang_man|keypad_converter:inst|counter2:inst3|BUSMUX:inst6|lpm_mux:$00000|mux_pjc:auto_generated
+data[0] => l1_w0_n0_mux_dataout.IN1
+data[1] => l1_w0_n0_mux_dataout.IN1
+result[0] <= l1_w0_n0_mux_dataout.DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => l1_w0_n0_mux_dataout.IN0
+sel[0] => _.IN0
+
+
+|hang_man|keypad_converter:inst|counter2:inst3|BUSMUX:inst5
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|hang_man|keypad_converter:inst|counter2:inst3|BUSMUX:inst5|lpm_mux:$00000
+data[0][0] => mux_pjc:auto_generated.data[0]
+data[1][0] => mux_pjc:auto_generated.data[1]
+sel[0] => mux_pjc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_pjc:auto_generated.result[0]
+
+
+|hang_man|keypad_converter:inst|counter2:inst3|BUSMUX:inst5|lpm_mux:$00000|mux_pjc:auto_generated
+data[0] => l1_w0_n0_mux_dataout.IN1
+data[1] => l1_w0_n0_mux_dataout.IN1
+result[0] <= l1_w0_n0_mux_dataout.DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => l1_w0_n0_mux_dataout.IN0
+sel[0] => _.IN0
+
+
+|hang_man|keypad_converter:inst|is_equal4:inst25
+is_equal <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+register[0] => inst.IN0
+register[1] => inst1.IN0
+register[2] => inst2.IN0
+register[3] => inst3.IN0
+dtb[0] => inst.IN1
+dtb[1] => inst1.IN1
+dtb[2] => inst2.IN1
+dtb[3] => inst3.IN1
+
+
+|hang_man|keypad_converter:inst|register4:inst24
+Dout[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+Dout[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Dout[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Dout[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+RST_N => inst3.ACLR
+RST_N => inst.ACLR
+RST_N => inst1.ACLR
+RST_N => inst2.ACLR
+CLK => inst3.CLK
+CLK => inst.CLK
+CLK => inst1.CLK
+CLK => inst2.CLK
+Ce => BUSMUX:inst7.sel
+Ce => BUSMUX:inst4.sel
+Ce => BUSMUX:inst5.sel
+Ce => BUSMUX:inst6.sel
+Din[0] => BUSMUX:inst4.datab[0]
+Din[1] => BUSMUX:inst5.datab[0]
+Din[2] => BUSMUX:inst6.datab[0]
+Din[3] => BUSMUX:inst7.datab[0]
+
+
+|hang_man|keypad_converter:inst|register4:inst24|BUSMUX:inst7
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|hang_man|keypad_converter:inst|register4:inst24|BUSMUX:inst7|lpm_mux:$00000
+data[0][0] => mux_pjc:auto_generated.data[0]
+data[1][0] => mux_pjc:auto_generated.data[1]
+sel[0] => mux_pjc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_pjc:auto_generated.result[0]
+
+
+|hang_man|keypad_converter:inst|register4:inst24|BUSMUX:inst7|lpm_mux:$00000|mux_pjc:auto_generated
+data[0] => l1_w0_n0_mux_dataout.IN1
+data[1] => l1_w0_n0_mux_dataout.IN1
+result[0] <= l1_w0_n0_mux_dataout.DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => l1_w0_n0_mux_dataout.IN0
+sel[0] => _.IN0
+
+
+|hang_man|keypad_converter:inst|register4:inst24|BUSMUX:inst4
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|hang_man|keypad_converter:inst|register4:inst24|BUSMUX:inst4|lpm_mux:$00000
+data[0][0] => mux_pjc:auto_generated.data[0]
+data[1][0] => mux_pjc:auto_generated.data[1]
+sel[0] => mux_pjc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_pjc:auto_generated.result[0]
+
+
+|hang_man|keypad_converter:inst|register4:inst24|BUSMUX:inst4|lpm_mux:$00000|mux_pjc:auto_generated
+data[0] => l1_w0_n0_mux_dataout.IN1
+data[1] => l1_w0_n0_mux_dataout.IN1
+result[0] <= l1_w0_n0_mux_dataout.DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => l1_w0_n0_mux_dataout.IN0
+sel[0] => _.IN0
+
+
+|hang_man|keypad_converter:inst|register4:inst24|BUSMUX:inst5
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|hang_man|keypad_converter:inst|register4:inst24|BUSMUX:inst5|lpm_mux:$00000
+data[0][0] => mux_pjc:auto_generated.data[0]
+data[1][0] => mux_pjc:auto_generated.data[1]
+sel[0] => mux_pjc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_pjc:auto_generated.result[0]
+
+
+|hang_man|keypad_converter:inst|register4:inst24|BUSMUX:inst5|lpm_mux:$00000|mux_pjc:auto_generated
+data[0] => l1_w0_n0_mux_dataout.IN1
+data[1] => l1_w0_n0_mux_dataout.IN1
+result[0] <= l1_w0_n0_mux_dataout.DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => l1_w0_n0_mux_dataout.IN0
+sel[0] => _.IN0
+
+
+|hang_man|keypad_converter:inst|register4:inst24|BUSMUX:inst6
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|hang_man|keypad_converter:inst|register4:inst24|BUSMUX:inst6|lpm_mux:$00000
+data[0][0] => mux_pjc:auto_generated.data[0]
+data[1][0] => mux_pjc:auto_generated.data[1]
+sel[0] => mux_pjc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_pjc:auto_generated.result[0]
+
+
+|hang_man|keypad_converter:inst|register4:inst24|BUSMUX:inst6|lpm_mux:$00000|mux_pjc:auto_generated
+data[0] => l1_w0_n0_mux_dataout.IN1
+data[1] => l1_w0_n0_mux_dataout.IN1
+result[0] <= l1_w0_n0_mux_dataout.DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => l1_w0_n0_mux_dataout.IN0
+sel[0] => _.IN0
+
+
+|hang_man|keypad_converter:inst|trigger:inst23
+Dout <= inst.DB_MAX_OUTPUT_PORT_TYPE
+rst_n => inst2.ACLR
+rst_n => inst3.ACLR
+CLK => inst2.CLK
+CLK => inst3.CLK
+Din => inst2.DATAIN
+
+
+|hang_man|life_register:inst4
+game_over <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+reset => inst.ACLR
+reset => inst1.ACLR
+clk => inst.CLK
+clk => inst1.CLK
+alphabet_not_found => BUSMUX:inst5.sel
+alphabet_not_found => BUSMUX:inst6.sel
+life_led1 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+life_led2 <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+life_led3 <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|hang_man|life_register:inst4|BUSMUX:inst5
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|hang_man|life_register:inst4|BUSMUX:inst5|lpm_mux:$00000
+data[0][0] => mux_pjc:auto_generated.data[0]
+data[1][0] => mux_pjc:auto_generated.data[1]
+sel[0] => mux_pjc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_pjc:auto_generated.result[0]
+
+
+|hang_man|life_register:inst4|BUSMUX:inst5|lpm_mux:$00000|mux_pjc:auto_generated
+data[0] => l1_w0_n0_mux_dataout.IN1
+data[1] => l1_w0_n0_mux_dataout.IN1
+result[0] <= l1_w0_n0_mux_dataout.DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => l1_w0_n0_mux_dataout.IN0
+sel[0] => _.IN0
+
+
+|hang_man|life_register:inst4|BUSMUX:inst6
+dataa[0] => lpm_mux:$00000.data[0][0]
+datab[0] => lpm_mux:$00000.data[1][0]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+
+
+|hang_man|life_register:inst4|BUSMUX:inst6|lpm_mux:$00000
+data[0][0] => mux_pjc:auto_generated.data[0]
+data[1][0] => mux_pjc:auto_generated.data[1]
+sel[0] => mux_pjc:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_pjc:auto_generated.result[0]
+
+
+|hang_man|life_register:inst4|BUSMUX:inst6|lpm_mux:$00000|mux_pjc:auto_generated
+data[0] => l1_w0_n0_mux_dataout.IN1
+data[1] => l1_w0_n0_mux_dataout.IN1
+result[0] <= l1_w0_n0_mux_dataout.DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => l1_w0_n0_mux_dataout.IN0
+sel[0] => _.IN0
 
 
 |hang_man|grader:inst2
@@ -676,296 +1043,6 @@ current_alphabet[1] => inst2.IN0
 current_alphabet[2] => inst3.IN0
 current_alphabet[3] => inst4.IN0
 current_alphabet[4] => inst6.IN0
-
-
-|hang_man|keypad_converter:inst
-star_output <= decimal_to_binary:inst1.star
-zero => decimal_to_binary:inst1.Keypad[0]
-two => decimal_to_binary:inst1.Keypad[2]
-three => decimal_to_binary:inst1.Keypad[3]
-four => decimal_to_binary:inst1.Keypad[4]
-five => decimal_to_binary:inst1.Keypad[5]
-six => decimal_to_binary:inst1.Keypad[6]
-seven => decimal_to_binary:inst1.Keypad[7]
-eight => decimal_to_binary:inst1.Keypad[8]
-nine => decimal_to_binary:inst1.Keypad[9]
-star => decimal_to_binary:inst1.Keypad[10]
-sharp => decimal_to_binary:inst1.Keypad[11]
-one => decimal_to_binary:inst1.Keypad[1]
-one => counter2:inst3.one
-sharp_output <= decimal_to_binary:inst1.sharp
-alphabet[0] <= alphabet_encoder:inst27.alphabet[0]
-alphabet[1] <= alphabet_encoder:inst27.alphabet[1]
-alphabet[2] <= alphabet_encoder:inst27.alphabet[2]
-alphabet[3] <= alphabet_encoder:inst27.alphabet[3]
-alphabet[4] <= alphabet_encoder:inst27.alphabet[4]
-clk => trigger:inst23.CLK
-clk => register4:inst24.CLK
-clk => counter2:inst3.clk
-reset => trigger:inst23.rst_n
-reset => register4:inst24.RST_N
-reset => counter2:inst3.rst_n
-
-
-|hang_man|keypad_converter:inst|decimal_to_binary:inst1
-chk <= inst12121.DB_MAX_OUTPUT_PORT_TYPE
-Keypad[0] => inst111.IN0
-Keypad[0] => inst3.IN0
-Keypad[1] => inst111.IN2
-Keypad[1] => inst12.IN0
-Keypad[2] => inst111.IN1
-Keypad[2] => inst10.IN0
-Keypad[3] => inst111.IN3
-Keypad[3] => inst12.IN3
-Keypad[3] => inst10.IN3
-Keypad[4] => inst111.IN5
-Keypad[4] => inst1.IN0
-Keypad[5] => inst111.IN4
-Keypad[5] => inst1.IN3
-Keypad[5] => inst12.IN1
-Keypad[6] => inst111.IN6
-Keypad[6] => inst1.IN1
-Keypad[6] => inst10.IN1
-Keypad[7] => inst111.IN7
-Keypad[7] => inst1.IN2
-Keypad[7] => inst12.IN2
-Keypad[7] => inst10.IN2
-Keypad[8] => inst13.IN1
-Keypad[8] => inst22.IN1
-Keypad[9] => inst13.IN0
-Keypad[9] => inst22.IN0
-Keypad[9] => inst9.IN0
-Keypad[10] => star.DATAIN
-Keypad[11] => sharp.DATAIN
-star <= Keypad[10].DB_MAX_OUTPUT_PORT_TYPE
-sharp <= Keypad[11].DB_MAX_OUTPUT_PORT_TYPE
-bin[0] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
-bin[1] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
-bin[2] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
-bin[3] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|hang_man|keypad_converter:inst|alphabet_encoder:inst27
-register[0] => Decoder0.IN3
-register[0] => Decoder1.IN3
-register[1] => Decoder0.IN2
-register[1] => Decoder1.IN2
-register[2] => Decoder0.IN1
-register[2] => Decoder1.IN1
-register[3] => Decoder0.IN0
-register[3] => Decoder1.IN0
-counter[0] => Decoder1.IN5
-counter[1] => Decoder1.IN4
-alphabet[0] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
-alphabet[1] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
-alphabet[2] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
-alphabet[3] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
-alphabet[4] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|hang_man|keypad_converter:inst|counter2:inst3
-dout[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
-dout[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
-rst_n => inst10.IN0
-one => inst8.IN0
-clk => inst1.CLK
-clk => inst.CLK
-is_equal => inst7.IN0
-trigger => inst7.IN1
-
-
-|hang_man|keypad_converter:inst|counter2:inst3|BUSMUX:inst6
-dataa[0] => lpm_mux:$00000.data[0][0]
-datab[0] => lpm_mux:$00000.data[1][0]
-sel => lpm_mux:$00000.sel[0]
-result[0] <= lpm_mux:$00000.result[0]
-
-
-|hang_man|keypad_converter:inst|counter2:inst3|BUSMUX:inst6|lpm_mux:$00000
-data[0][0] => mux_pjc:auto_generated.data[0]
-data[1][0] => mux_pjc:auto_generated.data[1]
-sel[0] => mux_pjc:auto_generated.sel[0]
-clock => ~NO_FANOUT~
-aclr => ~NO_FANOUT~
-clken => ~NO_FANOUT~
-result[0] <= mux_pjc:auto_generated.result[0]
-
-
-|hang_man|keypad_converter:inst|counter2:inst3|BUSMUX:inst6|lpm_mux:$00000|mux_pjc:auto_generated
-data[0] => l1_w0_n0_mux_dataout.IN1
-data[1] => l1_w0_n0_mux_dataout.IN1
-result[0] <= l1_w0_n0_mux_dataout.DB_MAX_OUTPUT_PORT_TYPE
-sel[0] => l1_w0_n0_mux_dataout.IN0
-sel[0] => _.IN0
-
-
-|hang_man|keypad_converter:inst|counter2:inst3|BUSMUX:inst5
-dataa[0] => lpm_mux:$00000.data[0][0]
-datab[0] => lpm_mux:$00000.data[1][0]
-sel => lpm_mux:$00000.sel[0]
-result[0] <= lpm_mux:$00000.result[0]
-
-
-|hang_man|keypad_converter:inst|counter2:inst3|BUSMUX:inst5|lpm_mux:$00000
-data[0][0] => mux_pjc:auto_generated.data[0]
-data[1][0] => mux_pjc:auto_generated.data[1]
-sel[0] => mux_pjc:auto_generated.sel[0]
-clock => ~NO_FANOUT~
-aclr => ~NO_FANOUT~
-clken => ~NO_FANOUT~
-result[0] <= mux_pjc:auto_generated.result[0]
-
-
-|hang_man|keypad_converter:inst|counter2:inst3|BUSMUX:inst5|lpm_mux:$00000|mux_pjc:auto_generated
-data[0] => l1_w0_n0_mux_dataout.IN1
-data[1] => l1_w0_n0_mux_dataout.IN1
-result[0] <= l1_w0_n0_mux_dataout.DB_MAX_OUTPUT_PORT_TYPE
-sel[0] => l1_w0_n0_mux_dataout.IN0
-sel[0] => _.IN0
-
-
-|hang_man|keypad_converter:inst|is_equal4:inst25
-is_equal <= inst4.DB_MAX_OUTPUT_PORT_TYPE
-register[0] => inst.IN0
-register[1] => inst1.IN0
-register[2] => inst2.IN0
-register[3] => inst3.IN0
-dtb[0] => inst.IN1
-dtb[1] => inst1.IN1
-dtb[2] => inst2.IN1
-dtb[3] => inst3.IN1
-
-
-|hang_man|keypad_converter:inst|register4:inst24
-Dout[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
-Dout[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
-Dout[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
-Dout[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
-RST_N => inst3.ACLR
-RST_N => inst.ACLR
-RST_N => inst1.ACLR
-RST_N => inst2.ACLR
-CLK => inst3.CLK
-CLK => inst.CLK
-CLK => inst1.CLK
-CLK => inst2.CLK
-Ce => BUSMUX:inst7.sel
-Ce => BUSMUX:inst4.sel
-Ce => BUSMUX:inst5.sel
-Ce => BUSMUX:inst6.sel
-Din[0] => BUSMUX:inst4.datab[0]
-Din[1] => BUSMUX:inst5.datab[0]
-Din[2] => BUSMUX:inst6.datab[0]
-Din[3] => BUSMUX:inst7.datab[0]
-
-
-|hang_man|keypad_converter:inst|register4:inst24|BUSMUX:inst7
-dataa[0] => lpm_mux:$00000.data[0][0]
-datab[0] => lpm_mux:$00000.data[1][0]
-sel => lpm_mux:$00000.sel[0]
-result[0] <= lpm_mux:$00000.result[0]
-
-
-|hang_man|keypad_converter:inst|register4:inst24|BUSMUX:inst7|lpm_mux:$00000
-data[0][0] => mux_pjc:auto_generated.data[0]
-data[1][0] => mux_pjc:auto_generated.data[1]
-sel[0] => mux_pjc:auto_generated.sel[0]
-clock => ~NO_FANOUT~
-aclr => ~NO_FANOUT~
-clken => ~NO_FANOUT~
-result[0] <= mux_pjc:auto_generated.result[0]
-
-
-|hang_man|keypad_converter:inst|register4:inst24|BUSMUX:inst7|lpm_mux:$00000|mux_pjc:auto_generated
-data[0] => l1_w0_n0_mux_dataout.IN1
-data[1] => l1_w0_n0_mux_dataout.IN1
-result[0] <= l1_w0_n0_mux_dataout.DB_MAX_OUTPUT_PORT_TYPE
-sel[0] => l1_w0_n0_mux_dataout.IN0
-sel[0] => _.IN0
-
-
-|hang_man|keypad_converter:inst|register4:inst24|BUSMUX:inst4
-dataa[0] => lpm_mux:$00000.data[0][0]
-datab[0] => lpm_mux:$00000.data[1][0]
-sel => lpm_mux:$00000.sel[0]
-result[0] <= lpm_mux:$00000.result[0]
-
-
-|hang_man|keypad_converter:inst|register4:inst24|BUSMUX:inst4|lpm_mux:$00000
-data[0][0] => mux_pjc:auto_generated.data[0]
-data[1][0] => mux_pjc:auto_generated.data[1]
-sel[0] => mux_pjc:auto_generated.sel[0]
-clock => ~NO_FANOUT~
-aclr => ~NO_FANOUT~
-clken => ~NO_FANOUT~
-result[0] <= mux_pjc:auto_generated.result[0]
-
-
-|hang_man|keypad_converter:inst|register4:inst24|BUSMUX:inst4|lpm_mux:$00000|mux_pjc:auto_generated
-data[0] => l1_w0_n0_mux_dataout.IN1
-data[1] => l1_w0_n0_mux_dataout.IN1
-result[0] <= l1_w0_n0_mux_dataout.DB_MAX_OUTPUT_PORT_TYPE
-sel[0] => l1_w0_n0_mux_dataout.IN0
-sel[0] => _.IN0
-
-
-|hang_man|keypad_converter:inst|register4:inst24|BUSMUX:inst5
-dataa[0] => lpm_mux:$00000.data[0][0]
-datab[0] => lpm_mux:$00000.data[1][0]
-sel => lpm_mux:$00000.sel[0]
-result[0] <= lpm_mux:$00000.result[0]
-
-
-|hang_man|keypad_converter:inst|register4:inst24|BUSMUX:inst5|lpm_mux:$00000
-data[0][0] => mux_pjc:auto_generated.data[0]
-data[1][0] => mux_pjc:auto_generated.data[1]
-sel[0] => mux_pjc:auto_generated.sel[0]
-clock => ~NO_FANOUT~
-aclr => ~NO_FANOUT~
-clken => ~NO_FANOUT~
-result[0] <= mux_pjc:auto_generated.result[0]
-
-
-|hang_man|keypad_converter:inst|register4:inst24|BUSMUX:inst5|lpm_mux:$00000|mux_pjc:auto_generated
-data[0] => l1_w0_n0_mux_dataout.IN1
-data[1] => l1_w0_n0_mux_dataout.IN1
-result[0] <= l1_w0_n0_mux_dataout.DB_MAX_OUTPUT_PORT_TYPE
-sel[0] => l1_w0_n0_mux_dataout.IN0
-sel[0] => _.IN0
-
-
-|hang_man|keypad_converter:inst|register4:inst24|BUSMUX:inst6
-dataa[0] => lpm_mux:$00000.data[0][0]
-datab[0] => lpm_mux:$00000.data[1][0]
-sel => lpm_mux:$00000.sel[0]
-result[0] <= lpm_mux:$00000.result[0]
-
-
-|hang_man|keypad_converter:inst|register4:inst24|BUSMUX:inst6|lpm_mux:$00000
-data[0][0] => mux_pjc:auto_generated.data[0]
-data[1][0] => mux_pjc:auto_generated.data[1]
-sel[0] => mux_pjc:auto_generated.sel[0]
-clock => ~NO_FANOUT~
-aclr => ~NO_FANOUT~
-clken => ~NO_FANOUT~
-result[0] <= mux_pjc:auto_generated.result[0]
-
-
-|hang_man|keypad_converter:inst|register4:inst24|BUSMUX:inst6|lpm_mux:$00000|mux_pjc:auto_generated
-data[0] => l1_w0_n0_mux_dataout.IN1
-data[1] => l1_w0_n0_mux_dataout.IN1
-result[0] <= l1_w0_n0_mux_dataout.DB_MAX_OUTPUT_PORT_TYPE
-sel[0] => l1_w0_n0_mux_dataout.IN0
-sel[0] => _.IN0
-
-
-|hang_man|keypad_converter:inst|trigger:inst23
-Dout <= inst.DB_MAX_OUTPUT_PORT_TYPE
-rst_n => inst2.ACLR
-rst_n => inst3.ACLR
-CLK => inst2.CLK
-CLK => inst3.CLK
-Din => inst2.DATAIN
 
 
 |hang_man|word_register:inst8
@@ -2263,84 +2340,6 @@ sel[0] => l1_w0_n0_mux_dataout.IN0
 sel[0] => _.IN0
 
 
-|hang_man|alphabet_to_segment:inst3
-alphabet[0] => Decoder0.IN4
-alphabet[1] => Decoder0.IN3
-alphabet[2] => Decoder0.IN2
-alphabet[3] => Decoder0.IN1
-alphabet[4] => Decoder0.IN0
-a <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
-b <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
-c <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
-d <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
-e <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
-f <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
-g <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|hang_man|life_register:inst4
-game_over <= inst9.DB_MAX_OUTPUT_PORT_TYPE
-reset => inst.ACLR
-reset => inst1.ACLR
-clk => inst.CLK
-clk => inst1.CLK
-alphabet_not_found => BUSMUX:inst5.sel
-alphabet_not_found => BUSMUX:inst6.sel
-life_led1 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
-life_led2 <= inst7.DB_MAX_OUTPUT_PORT_TYPE
-life_led3 <= inst8.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|hang_man|life_register:inst4|BUSMUX:inst5
-dataa[0] => lpm_mux:$00000.data[0][0]
-datab[0] => lpm_mux:$00000.data[1][0]
-sel => lpm_mux:$00000.sel[0]
-result[0] <= lpm_mux:$00000.result[0]
-
-
-|hang_man|life_register:inst4|BUSMUX:inst5|lpm_mux:$00000
-data[0][0] => mux_pjc:auto_generated.data[0]
-data[1][0] => mux_pjc:auto_generated.data[1]
-sel[0] => mux_pjc:auto_generated.sel[0]
-clock => ~NO_FANOUT~
-aclr => ~NO_FANOUT~
-clken => ~NO_FANOUT~
-result[0] <= mux_pjc:auto_generated.result[0]
-
-
-|hang_man|life_register:inst4|BUSMUX:inst5|lpm_mux:$00000|mux_pjc:auto_generated
-data[0] => l1_w0_n0_mux_dataout.IN1
-data[1] => l1_w0_n0_mux_dataout.IN1
-result[0] <= l1_w0_n0_mux_dataout.DB_MAX_OUTPUT_PORT_TYPE
-sel[0] => l1_w0_n0_mux_dataout.IN0
-sel[0] => _.IN0
-
-
-|hang_man|life_register:inst4|BUSMUX:inst6
-dataa[0] => lpm_mux:$00000.data[0][0]
-datab[0] => lpm_mux:$00000.data[1][0]
-sel => lpm_mux:$00000.sel[0]
-result[0] <= lpm_mux:$00000.result[0]
-
-
-|hang_man|life_register:inst4|BUSMUX:inst6|lpm_mux:$00000
-data[0][0] => mux_pjc:auto_generated.data[0]
-data[1][0] => mux_pjc:auto_generated.data[1]
-sel[0] => mux_pjc:auto_generated.sel[0]
-clock => ~NO_FANOUT~
-aclr => ~NO_FANOUT~
-clken => ~NO_FANOUT~
-result[0] <= mux_pjc:auto_generated.result[0]
-
-
-|hang_man|life_register:inst4|BUSMUX:inst6|lpm_mux:$00000|mux_pjc:auto_generated
-data[0] => l1_w0_n0_mux_dataout.IN1
-data[1] => l1_w0_n0_mux_dataout.IN1
-result[0] <= l1_w0_n0_mux_dataout.DB_MAX_OUTPUT_PORT_TYPE
-sel[0] => l1_w0_n0_mux_dataout.IN0
-sel[0] => _.IN0
-
-
 |hang_man|array_segment_controller:inst5
 com_1 <= decoder_3to8:inst3.COM1
 clk => counter3:inst2.clk
@@ -2528,5 +2527,474 @@ output_alphabet[1] <= output_alphabet[1].DB_MAX_OUTPUT_PORT_TYPE
 output_alphabet[2] <= output_alphabet[2].DB_MAX_OUTPUT_PORT_TYPE
 output_alphabet[3] <= output_alphabet[3].DB_MAX_OUTPUT_PORT_TYPE
 output_alphabet[4] <= output_alphabet[4].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|hang_man|sound_controller:inst7
+piezo <= inst19.DB_MAX_OUTPUT_PORT_TYPE
+clk => pnu_clk_div:inst4.clk
+clk => address_generator:inst5.clk
+clk => pnu_clk_div:inst14.clk
+clk => pnu_clk_div:inst.clk
+clk => pnu_clk_div:inst3.clk
+clk => pnu_clk_div:inst2.clk
+clk => pnu_clk_div:inst1.clk
+reset => pnu_clk_div:inst4.rst_n
+reset => pnu_clk_div:inst14.rst_n
+reset => pnu_clk_div:inst.rst_n
+reset => pnu_clk_div:inst3.rst_n
+reset => pnu_clk_div:inst2.rst_n
+reset => pnu_clk_div:inst1.rst_n
+alphabet_found => address_generator:inst5.alphabet_found
+alphabet_not_found => address_generator:inst5.alphabet_not_found
+game_win => address_generator:inst5.game_win
+game_over => address_generator:inst5.game_over
+
+
+|hang_man|sound_controller:inst7|pnu_clk_div:inst4
+clk => buff.CLK
+clk => cnt[0].CLK
+clk => cnt[1].CLK
+clk => cnt[2].CLK
+clk => cnt[3].CLK
+clk => cnt[4].CLK
+clk => cnt[5].CLK
+clk => cnt[6].CLK
+clk => cnt[7].CLK
+clk => cnt[8].CLK
+clk => cnt[9].CLK
+clk => cnt[10].CLK
+clk => cnt[11].CLK
+clk => cnt[12].CLK
+clk => cnt[13].CLK
+clk => cnt[14].CLK
+clk => cnt[15].CLK
+clk => cnt[16].CLK
+clk => cnt[17].CLK
+clk => cnt[18].CLK
+clk => cnt[19].CLK
+rst_n => buff.ACLR
+rst_n => cnt[0].ACLR
+rst_n => cnt[1].ACLR
+rst_n => cnt[2].ACLR
+rst_n => cnt[3].ACLR
+rst_n => cnt[4].ACLR
+rst_n => cnt[5].ACLR
+rst_n => cnt[6].ACLR
+rst_n => cnt[7].ACLR
+rst_n => cnt[8].ACLR
+rst_n => cnt[9].ACLR
+rst_n => cnt[10].ACLR
+rst_n => cnt[11].ACLR
+rst_n => cnt[12].ACLR
+rst_n => cnt[13].ACLR
+rst_n => cnt[14].ACLR
+rst_n => cnt[15].ACLR
+rst_n => cnt[16].ACLR
+rst_n => cnt[17].ACLR
+rst_n => cnt[18].ACLR
+rst_n => cnt[19].ACLR
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+div_clk <= buff.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|hang_man|sound_controller:inst7|address_generator:inst5
+alphabet_found => triggered.OUTPUTSELECT
+alphabet_found => triggered1.OUTPUTSELECT
+alphabet_found => triggered2.OUTPUTSELECT
+alphabet_found => triggered3.OUTPUTSELECT
+alphabet_not_found => triggered.OUTPUTSELECT
+alphabet_not_found => triggered2.OUTPUTSELECT
+alphabet_not_found => triggered3.OUTPUTSELECT
+game_win => triggered.OUTPUTSELECT
+game_win => triggered0.OUTPUTSELECT
+game_win => triggered1.OUTPUTSELECT
+game_win => triggered2.OUTPUTSELECT
+game_win => triggered3.OUTPUTSELECT
+game_over => triggered.OUTPUTSELECT
+game_over => triggered3.OUTPUTSELECT
+clk => address[0]~reg0.CLK
+clk => address[1]~reg0.CLK
+clk => address[2]~reg0.CLK
+clk => triggered3.CLK
+clk => triggered2.CLK
+clk => triggered1.CLK
+clk => triggered0.CLK
+clk => triggered.CLK
+slow_clk => index_generator:index_gen.slow_clk
+address[0] <= address[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+address[1] <= address[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+address[2] <= address[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|hang_man|sound_controller:inst7|address_generator:inst5|index_generator:index_gen
+triggered => always0.IN1
+slow_clk => index[0]~reg0.CLK
+slow_clk => index[1]~reg0.CLK
+slow_clk => index[2]~reg0.CLK
+index[0] <= index[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+index[1] <= index[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+index[2] <= index[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|hang_man|sound_controller:inst7|pnu_clk_div:inst14
+clk => buff.CLK
+clk => cnt[0].CLK
+clk => cnt[1].CLK
+clk => cnt[2].CLK
+clk => cnt[3].CLK
+clk => cnt[4].CLK
+clk => cnt[5].CLK
+clk => cnt[6].CLK
+clk => cnt[7].CLK
+clk => cnt[8].CLK
+clk => cnt[9].CLK
+clk => cnt[10].CLK
+clk => cnt[11].CLK
+clk => cnt[12].CLK
+clk => cnt[13].CLK
+clk => cnt[14].CLK
+clk => cnt[15].CLK
+clk => cnt[16].CLK
+clk => cnt[17].CLK
+clk => cnt[18].CLK
+clk => cnt[19].CLK
+rst_n => buff.ACLR
+rst_n => cnt[0].ACLR
+rst_n => cnt[1].ACLR
+rst_n => cnt[2].ACLR
+rst_n => cnt[3].ACLR
+rst_n => cnt[4].ACLR
+rst_n => cnt[5].ACLR
+rst_n => cnt[6].ACLR
+rst_n => cnt[7].ACLR
+rst_n => cnt[8].ACLR
+rst_n => cnt[9].ACLR
+rst_n => cnt[10].ACLR
+rst_n => cnt[11].ACLR
+rst_n => cnt[12].ACLR
+rst_n => cnt[13].ACLR
+rst_n => cnt[14].ACLR
+rst_n => cnt[15].ACLR
+rst_n => cnt[16].ACLR
+rst_n => cnt[17].ACLR
+rst_n => cnt[18].ACLR
+rst_n => cnt[19].ACLR
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+div_clk <= buff.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|hang_man|sound_controller:inst7|pnu_clk_div:inst
+clk => buff.CLK
+clk => cnt[0].CLK
+clk => cnt[1].CLK
+clk => cnt[2].CLK
+clk => cnt[3].CLK
+clk => cnt[4].CLK
+clk => cnt[5].CLK
+clk => cnt[6].CLK
+clk => cnt[7].CLK
+clk => cnt[8].CLK
+clk => cnt[9].CLK
+clk => cnt[10].CLK
+clk => cnt[11].CLK
+clk => cnt[12].CLK
+clk => cnt[13].CLK
+clk => cnt[14].CLK
+clk => cnt[15].CLK
+clk => cnt[16].CLK
+clk => cnt[17].CLK
+clk => cnt[18].CLK
+clk => cnt[19].CLK
+rst_n => buff.ACLR
+rst_n => cnt[0].ACLR
+rst_n => cnt[1].ACLR
+rst_n => cnt[2].ACLR
+rst_n => cnt[3].ACLR
+rst_n => cnt[4].ACLR
+rst_n => cnt[5].ACLR
+rst_n => cnt[6].ACLR
+rst_n => cnt[7].ACLR
+rst_n => cnt[8].ACLR
+rst_n => cnt[9].ACLR
+rst_n => cnt[10].ACLR
+rst_n => cnt[11].ACLR
+rst_n => cnt[12].ACLR
+rst_n => cnt[13].ACLR
+rst_n => cnt[14].ACLR
+rst_n => cnt[15].ACLR
+rst_n => cnt[16].ACLR
+rst_n => cnt[17].ACLR
+rst_n => cnt[18].ACLR
+rst_n => cnt[19].ACLR
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+div_clk <= buff.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|hang_man|sound_controller:inst7|pnu_clk_div:inst3
+clk => buff.CLK
+clk => cnt[0].CLK
+clk => cnt[1].CLK
+clk => cnt[2].CLK
+clk => cnt[3].CLK
+clk => cnt[4].CLK
+clk => cnt[5].CLK
+clk => cnt[6].CLK
+clk => cnt[7].CLK
+clk => cnt[8].CLK
+clk => cnt[9].CLK
+clk => cnt[10].CLK
+clk => cnt[11].CLK
+clk => cnt[12].CLK
+clk => cnt[13].CLK
+clk => cnt[14].CLK
+clk => cnt[15].CLK
+clk => cnt[16].CLK
+clk => cnt[17].CLK
+clk => cnt[18].CLK
+clk => cnt[19].CLK
+rst_n => buff.ACLR
+rst_n => cnt[0].ACLR
+rst_n => cnt[1].ACLR
+rst_n => cnt[2].ACLR
+rst_n => cnt[3].ACLR
+rst_n => cnt[4].ACLR
+rst_n => cnt[5].ACLR
+rst_n => cnt[6].ACLR
+rst_n => cnt[7].ACLR
+rst_n => cnt[8].ACLR
+rst_n => cnt[9].ACLR
+rst_n => cnt[10].ACLR
+rst_n => cnt[11].ACLR
+rst_n => cnt[12].ACLR
+rst_n => cnt[13].ACLR
+rst_n => cnt[14].ACLR
+rst_n => cnt[15].ACLR
+rst_n => cnt[16].ACLR
+rst_n => cnt[17].ACLR
+rst_n => cnt[18].ACLR
+rst_n => cnt[19].ACLR
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+div_clk <= buff.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|hang_man|sound_controller:inst7|pnu_clk_div:inst2
+clk => buff.CLK
+clk => cnt[0].CLK
+clk => cnt[1].CLK
+clk => cnt[2].CLK
+clk => cnt[3].CLK
+clk => cnt[4].CLK
+clk => cnt[5].CLK
+clk => cnt[6].CLK
+clk => cnt[7].CLK
+clk => cnt[8].CLK
+clk => cnt[9].CLK
+clk => cnt[10].CLK
+clk => cnt[11].CLK
+clk => cnt[12].CLK
+clk => cnt[13].CLK
+clk => cnt[14].CLK
+clk => cnt[15].CLK
+clk => cnt[16].CLK
+clk => cnt[17].CLK
+clk => cnt[18].CLK
+clk => cnt[19].CLK
+rst_n => buff.ACLR
+rst_n => cnt[0].ACLR
+rst_n => cnt[1].ACLR
+rst_n => cnt[2].ACLR
+rst_n => cnt[3].ACLR
+rst_n => cnt[4].ACLR
+rst_n => cnt[5].ACLR
+rst_n => cnt[6].ACLR
+rst_n => cnt[7].ACLR
+rst_n => cnt[8].ACLR
+rst_n => cnt[9].ACLR
+rst_n => cnt[10].ACLR
+rst_n => cnt[11].ACLR
+rst_n => cnt[12].ACLR
+rst_n => cnt[13].ACLR
+rst_n => cnt[14].ACLR
+rst_n => cnt[15].ACLR
+rst_n => cnt[16].ACLR
+rst_n => cnt[17].ACLR
+rst_n => cnt[18].ACLR
+rst_n => cnt[19].ACLR
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+div_clk <= buff.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|hang_man|sound_controller:inst7|pnu_clk_div:inst1
+clk => buff.CLK
+clk => cnt[0].CLK
+clk => cnt[1].CLK
+clk => cnt[2].CLK
+clk => cnt[3].CLK
+clk => cnt[4].CLK
+clk => cnt[5].CLK
+clk => cnt[6].CLK
+clk => cnt[7].CLK
+clk => cnt[8].CLK
+clk => cnt[9].CLK
+clk => cnt[10].CLK
+clk => cnt[11].CLK
+clk => cnt[12].CLK
+clk => cnt[13].CLK
+clk => cnt[14].CLK
+clk => cnt[15].CLK
+clk => cnt[16].CLK
+clk => cnt[17].CLK
+clk => cnt[18].CLK
+clk => cnt[19].CLK
+rst_n => buff.ACLR
+rst_n => cnt[0].ACLR
+rst_n => cnt[1].ACLR
+rst_n => cnt[2].ACLR
+rst_n => cnt[3].ACLR
+rst_n => cnt[4].ACLR
+rst_n => cnt[5].ACLR
+rst_n => cnt[6].ACLR
+rst_n => cnt[7].ACLR
+rst_n => cnt[8].ACLR
+rst_n => cnt[9].ACLR
+rst_n => cnt[10].ACLR
+rst_n => cnt[11].ACLR
+rst_n => cnt[12].ACLR
+rst_n => cnt[13].ACLR
+rst_n => cnt[14].ACLR
+rst_n => cnt[15].ACLR
+rst_n => cnt[16].ACLR
+rst_n => cnt[17].ACLR
+rst_n => cnt[18].ACLR
+rst_n => cnt[19].ACLR
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+en => cnt.OUTPUTSELECT
+div_clk <= buff.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|hang_man|color_controller:inst6
+green[0] <= inst1[0].DB_MAX_OUTPUT_PORT_TYPE
+green[1] <= inst1[1].DB_MAX_OUTPUT_PORT_TYPE
+green[2] <= inst1[2].DB_MAX_OUTPUT_PORT_TYPE
+green[3] <= inst1[3].DB_MAX_OUTPUT_PORT_TYPE
+game_win => inst.IN0
+red[0] <= inst3[0].DB_MAX_OUTPUT_PORT_TYPE
+red[1] <= inst3[1].DB_MAX_OUTPUT_PORT_TYPE
+red[2] <= inst3[2].DB_MAX_OUTPUT_PORT_TYPE
+red[3] <= inst3[3].DB_MAX_OUTPUT_PORT_TYPE
+game_over => inst2.IN0
 
 

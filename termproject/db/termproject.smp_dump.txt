@@ -1,0 +1,7 @@
+
+State Machine - |sound_controller|address_generator:inst20|address_sequence
+Name address_sequence.1000 address_sequence.0100 address_sequence.0010 address_sequence.0001 
+address_sequence.0001 0 0 0 0 
+address_sequence.0010 0 0 1 1 
+address_sequence.0100 0 1 0 1 
+address_sequence.1000 1 0 0 1 

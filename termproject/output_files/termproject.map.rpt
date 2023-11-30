@@ -1,5 +1,5 @@
 Analysis & Synthesis report for termproject
-Tue Nov 28 21:44:32 2023
+Thu Nov 30 23:42:50 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -15,66 +15,72 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
   9. Multiplexer Restructuring Statistics (Restructuring Performed)
- 10. Parameter Settings for User Entity Instance: grader:inst2|BUSMUX:inst5
- 11. Parameter Settings for User Entity Instance: is_correct:inst1|BUSMUX:inst5
- 12. Parameter Settings for User Entity Instance: is_correct:inst1|BUSMUX:inst6
- 13. Parameter Settings for User Entity Instance: is_correct:inst1|BUSMUX:inst9
- 14. Parameter Settings for User Entity Instance: is_correct:inst1|BUSMUX:inst12
- 15. Parameter Settings for User Entity Instance: is_correct:inst1|BUSMUX:inst14
- 16. Parameter Settings for User Entity Instance: is_correct:inst1|BUSMUX:inst18
- 17. Parameter Settings for User Entity Instance: is_correct:inst1|BUSMUX:inst21
- 18. Parameter Settings for User Entity Instance: is_correct:inst1|BUSMUX:inst24
- 19. Parameter Settings for User Entity Instance: keypad_converter:inst|counter2:inst3|BUSMUX:inst6
- 20. Parameter Settings for User Entity Instance: keypad_converter:inst|counter2:inst3|BUSMUX:inst5
- 21. Parameter Settings for User Entity Instance: keypad_converter:inst|register4:inst24|BUSMUX:inst7
- 22. Parameter Settings for User Entity Instance: keypad_converter:inst|register4:inst24|BUSMUX:inst4
- 23. Parameter Settings for User Entity Instance: keypad_converter:inst|register4:inst24|BUSMUX:inst5
- 24. Parameter Settings for User Entity Instance: keypad_converter:inst|register4:inst24|BUSMUX:inst6
- 25. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst|BUSMUX:inst8
- 26. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst|BUSMUX:inst5
- 27. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst|BUSMUX:inst6
- 28. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst|BUSMUX:inst7
- 29. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst|BUSMUX:inst10
- 30. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst1|BUSMUX:inst8
- 31. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst1|BUSMUX:inst5
- 32. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst1|BUSMUX:inst6
- 33. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst1|BUSMUX:inst7
- 34. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst1|BUSMUX:inst10
- 35. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst2|BUSMUX:inst8
- 36. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst2|BUSMUX:inst5
- 37. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst2|BUSMUX:inst6
- 38. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst2|BUSMUX:inst7
- 39. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst2|BUSMUX:inst10
- 40. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst6|BUSMUX:inst8
- 41. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst6|BUSMUX:inst5
- 42. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst6|BUSMUX:inst6
- 43. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst6|BUSMUX:inst7
- 44. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst6|BUSMUX:inst10
- 45. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst7|BUSMUX:inst8
- 46. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst7|BUSMUX:inst5
- 47. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst7|BUSMUX:inst6
- 48. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst7|BUSMUX:inst7
- 49. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst7|BUSMUX:inst10
- 50. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst8|BUSMUX:inst8
- 51. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst8|BUSMUX:inst5
- 52. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst8|BUSMUX:inst6
- 53. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst8|BUSMUX:inst7
- 54. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst8|BUSMUX:inst10
- 55. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst9|BUSMUX:inst8
- 56. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst9|BUSMUX:inst5
- 57. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst9|BUSMUX:inst6
- 58. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst9|BUSMUX:inst7
- 59. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst9|BUSMUX:inst10
- 60. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst10|BUSMUX:inst8
- 61. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst10|BUSMUX:inst5
- 62. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst10|BUSMUX:inst6
- 63. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst10|BUSMUX:inst7
- 64. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst10|BUSMUX:inst10
- 65. Parameter Settings for User Entity Instance: life_register:inst4|BUSMUX:inst5
- 66. Parameter Settings for User Entity Instance: life_register:inst4|BUSMUX:inst6
- 67. Post-Synthesis Netlist Statistics for Top Partition
- 68. Elapsed Time Per Partition
- 69. Analysis & Synthesis Messages
+ 10. Parameter Settings for User Entity Instance: keypad_converter:inst|counter2:inst3|BUSMUX:inst6
+ 11. Parameter Settings for User Entity Instance: keypad_converter:inst|counter2:inst3|BUSMUX:inst5
+ 12. Parameter Settings for User Entity Instance: keypad_converter:inst|register4:inst24|BUSMUX:inst7
+ 13. Parameter Settings for User Entity Instance: keypad_converter:inst|register4:inst24|BUSMUX:inst4
+ 14. Parameter Settings for User Entity Instance: keypad_converter:inst|register4:inst24|BUSMUX:inst5
+ 15. Parameter Settings for User Entity Instance: keypad_converter:inst|register4:inst24|BUSMUX:inst6
+ 16. Parameter Settings for User Entity Instance: life_register:inst4|BUSMUX:inst5
+ 17. Parameter Settings for User Entity Instance: life_register:inst4|BUSMUX:inst6
+ 18. Parameter Settings for User Entity Instance: grader:inst2|BUSMUX:inst5
+ 19. Parameter Settings for User Entity Instance: is_correct:inst1|BUSMUX:inst5
+ 20. Parameter Settings for User Entity Instance: is_correct:inst1|BUSMUX:inst6
+ 21. Parameter Settings for User Entity Instance: is_correct:inst1|BUSMUX:inst9
+ 22. Parameter Settings for User Entity Instance: is_correct:inst1|BUSMUX:inst12
+ 23. Parameter Settings for User Entity Instance: is_correct:inst1|BUSMUX:inst14
+ 24. Parameter Settings for User Entity Instance: is_correct:inst1|BUSMUX:inst18
+ 25. Parameter Settings for User Entity Instance: is_correct:inst1|BUSMUX:inst21
+ 26. Parameter Settings for User Entity Instance: is_correct:inst1|BUSMUX:inst24
+ 27. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst|BUSMUX:inst8
+ 28. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst|BUSMUX:inst5
+ 29. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst|BUSMUX:inst6
+ 30. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst|BUSMUX:inst7
+ 31. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst|BUSMUX:inst10
+ 32. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst1|BUSMUX:inst8
+ 33. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst1|BUSMUX:inst5
+ 34. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst1|BUSMUX:inst6
+ 35. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst1|BUSMUX:inst7
+ 36. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst1|BUSMUX:inst10
+ 37. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst2|BUSMUX:inst8
+ 38. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst2|BUSMUX:inst5
+ 39. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst2|BUSMUX:inst6
+ 40. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst2|BUSMUX:inst7
+ 41. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst2|BUSMUX:inst10
+ 42. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst6|BUSMUX:inst8
+ 43. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst6|BUSMUX:inst5
+ 44. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst6|BUSMUX:inst6
+ 45. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst6|BUSMUX:inst7
+ 46. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst6|BUSMUX:inst10
+ 47. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst7|BUSMUX:inst8
+ 48. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst7|BUSMUX:inst5
+ 49. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst7|BUSMUX:inst6
+ 50. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst7|BUSMUX:inst7
+ 51. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst7|BUSMUX:inst10
+ 52. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst8|BUSMUX:inst8
+ 53. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst8|BUSMUX:inst5
+ 54. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst8|BUSMUX:inst6
+ 55. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst8|BUSMUX:inst7
+ 56. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst8|BUSMUX:inst10
+ 57. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst9|BUSMUX:inst8
+ 58. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst9|BUSMUX:inst5
+ 59. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst9|BUSMUX:inst6
+ 60. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst9|BUSMUX:inst7
+ 61. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst9|BUSMUX:inst10
+ 62. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst10|BUSMUX:inst8
+ 63. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst10|BUSMUX:inst5
+ 64. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst10|BUSMUX:inst6
+ 65. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst10|BUSMUX:inst7
+ 66. Parameter Settings for User Entity Instance: word_register:inst8|register5:inst10|BUSMUX:inst10
+ 67. Parameter Settings for User Entity Instance: sound_controller:inst7|pnu_clk_div:inst4
+ 68. Parameter Settings for User Entity Instance: sound_controller:inst7|pnu_clk_div:inst14
+ 69. Parameter Settings for User Entity Instance: sound_controller:inst7|pnu_clk_div:inst
+ 70. Parameter Settings for User Entity Instance: sound_controller:inst7|pnu_clk_div:inst3
+ 71. Parameter Settings for User Entity Instance: sound_controller:inst7|pnu_clk_div:inst2
+ 72. Parameter Settings for User Entity Instance: sound_controller:inst7|pnu_clk_div:inst1
+ 73. Post-Synthesis Netlist Statistics for Top Partition
+ 74. Elapsed Time Per Partition
+ 75. Analysis & Synthesis Messages
 
 
 
@@ -101,14 +107,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Nov 28 21:44:32 2023       ;
+; Analysis & Synthesis Status     ; Successful - Thu Nov 30 23:42:50 2023       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; termproject                                 ;
 ; Top-level Entity Name           ; hang_man                                    ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 83                                          ;
-; Total pins                      ; 52                                          ;
+; Total registers                 ; 220                                         ;
+; Total pins                      ; 49                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -250,6 +256,11 @@ https://fpgasoftware.intel.com/eula.
 ; array_segment_controller.bdf     ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/termproject/array_segment_controller.bdf       ;         ;
 ; counter3.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/termproject/counter3.bdf                       ;         ;
 ; decoder_3to8.v                   ; yes             ; User Verilog HDL File              ; C:/intelFPGA_lite/20.1/termproject/decoder_3to8.v                     ;         ;
+; color_controller.bdf             ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/termproject/color_controller.bdf               ;         ;
+; pnu_clk_div.v                    ; yes             ; User Verilog HDL File              ; C:/intelFPGA_lite/20.1/termproject/pnu_clk_div.v                      ;         ;
+; sound_controller.bdf             ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/20.1/termproject/sound_controller.bdf               ;         ;
+; index_generator.v                ; yes             ; User Verilog HDL File              ; C:/intelFPGA_lite/20.1/termproject/index_generator.v                  ;         ;
+; address_generator.v              ; yes             ; User Verilog HDL File              ; C:/intelFPGA_lite/20.1/termproject/address_generator.v                ;         ;
 ; busmux.tdf                       ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/busmux.tdf     ;         ;
 ; lpm_mux.inc                      ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mux.inc    ;         ;
 ; lpm_mux.tdf                      ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mux.tdf    ;         ;
@@ -266,78 +277,87 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 90        ;
+; Estimate of Logic utilization (ALMs needed) ; 195       ;
 ;                                             ;           ;
-; Combinational ALUT usage for logic          ; 122       ;
+; Combinational ALUT usage for logic          ; 307       ;
 ;     -- 7 input functions                    ; 2         ;
-;     -- 6 input functions                    ; 49        ;
-;     -- 5 input functions                    ; 38        ;
-;     -- 4 input functions                    ; 9         ;
-;     -- <=3 input functions                  ; 24        ;
+;     -- 6 input functions                    ; 73        ;
+;     -- 5 input functions                    ; 55        ;
+;     -- 4 input functions                    ; 26        ;
+;     -- <=3 input functions                  ; 151       ;
 ;                                             ;           ;
-; Dedicated logic registers                   ; 83        ;
+; Dedicated logic registers                   ; 220       ;
 ;                                             ;           ;
-; I/O pins                                    ; 52        ;
+; I/O pins                                    ; 49        ;
 ;                                             ;           ;
 ; Total DSP Blocks                            ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 83        ;
-; Total fan-out                               ; 975       ;
-; Average fan-out                             ; 3.16      ;
+; Maximum fan-out                             ; 217       ;
+; Total fan-out                               ; 2041      ;
+; Average fan-out                             ; 3.27      ;
 +---------------------------------------------+-----------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                        ;
-+-------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------+--------------------------+--------------+
-; Compilation Hierarchy Node          ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                               ; Entity Name              ; Library Name ;
-+-------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------+--------------------------+--------------+
-; |hang_man                           ; 122 (0)             ; 83 (0)                    ; 0                 ; 0          ; 52   ; 0            ; |hang_man                                                         ; hang_man                 ; work         ;
-;    |alphabet_to_segment:inst3|      ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|alphabet_to_segment:inst3                               ; alphabet_to_segment      ; work         ;
-;    |array_segment_controller:inst5| ; 35 (0)              ; 3 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|array_segment_controller:inst5                          ; array_segment_controller ; work         ;
-;       |alphabet_selector:inst1|     ; 17 (17)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|array_segment_controller:inst5|alphabet_selector:inst1  ; alphabet_selector        ; work         ;
-;       |alphabet_to_segment:inst|    ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|array_segment_controller:inst5|alphabet_to_segment:inst ; alphabet_to_segment      ; work         ;
-;       |counter3:inst2|              ; 3 (3)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|array_segment_controller:inst5|counter3:inst2           ; counter3                 ; work         ;
-;       |decoder_3to8:inst3|          ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|array_segment_controller:inst5|decoder_3to8:inst3       ; decoder_3to8             ; work         ;
-;    |grader:inst2|                   ; 10 (9)              ; 20 (2)                    ; 0                 ; 0          ; 0    ; 0            ; |hang_man|grader:inst2                                            ; grader                   ; work         ;
-;       |falling_trigger:inst9|       ; 1 (1)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|grader:inst2|falling_trigger:inst9                      ; falling_trigger          ; work         ;
-;       |trigger:inst13|              ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|grader:inst2|trigger:inst13                             ; trigger                  ; work         ;
-;       |trigger:inst14|              ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|grader:inst2|trigger:inst14                             ; trigger                  ; work         ;
-;       |trigger:inst15|              ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|grader:inst2|trigger:inst15                             ; trigger                  ; work         ;
-;       |trigger:inst16|              ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|grader:inst2|trigger:inst16                             ; trigger                  ; work         ;
-;       |trigger:inst17|              ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|grader:inst2|trigger:inst17                             ; trigger                  ; work         ;
-;       |trigger:inst18|              ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|grader:inst2|trigger:inst18                             ; trigger                  ; work         ;
-;       |trigger:inst19|              ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|grader:inst2|trigger:inst19                             ; trigger                  ; work         ;
-;       |trigger:inst|                ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|grader:inst2|trigger:inst                               ; trigger                  ; work         ;
-;    |is_correct:inst1|               ; 40 (24)             ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|is_correct:inst1                                        ; is_correct               ; work         ;
-;       |checker:inst10|              ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|is_correct:inst1|checker:inst10                         ; checker                  ; work         ;
-;       |checker:inst15|              ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|is_correct:inst1|checker:inst15                         ; checker                  ; work         ;
-;       |checker:inst16|              ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|is_correct:inst1|checker:inst16                         ; checker                  ; work         ;
-;       |checker:inst19|              ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|is_correct:inst1|checker:inst19                         ; checker                  ; work         ;
-;       |checker:inst3|               ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|is_correct:inst1|checker:inst3                          ; checker                  ; work         ;
-;       |checker:inst45|              ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|is_correct:inst1|checker:inst45                         ; checker                  ; work         ;
-;       |checker:inst7|               ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|is_correct:inst1|checker:inst7                          ; checker                  ; work         ;
-;       |checker:inst|                ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|is_correct:inst1|checker:inst                           ; checker                  ; work         ;
-;    |keypad_converter:inst|          ; 24 (0)              ; 8 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|keypad_converter:inst                                   ; keypad_converter         ; work         ;
-;       |alphabet_encoder:inst27|     ; 10 (10)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|keypad_converter:inst|alphabet_encoder:inst27           ; alphabet_encoder         ; work         ;
-;       |counter2:inst3|              ; 4 (4)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|keypad_converter:inst|counter2:inst3                    ; counter2                 ; work         ;
-;       |decimal_to_binary:inst1|     ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|keypad_converter:inst|decimal_to_binary:inst1           ; decimal_to_binary        ; work         ;
-;       |is_equal4:inst25|            ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|keypad_converter:inst|is_equal4:inst25                  ; is_equal4                ; work         ;
-;       |register4:inst24|            ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|keypad_converter:inst|register4:inst24                  ; register4                ; work         ;
-;       |trigger:inst23|              ; 1 (1)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|keypad_converter:inst|trigger:inst23                    ; trigger                  ; work         ;
-;    |life_register:inst4|            ; 4 (4)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|life_register:inst4                                     ; life_register            ; work         ;
-;    |word_register:inst8|            ; 2 (2)               ; 42 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |hang_man|word_register:inst8                                     ; word_register            ; work         ;
-;       |register5:inst10|            ; 0 (0)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|word_register:inst8|register5:inst10                    ; register5                ; work         ;
-;       |register5:inst1|             ; 0 (0)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|word_register:inst8|register5:inst1                     ; register5                ; work         ;
-;       |register5:inst2|             ; 0 (0)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|word_register:inst8|register5:inst2                     ; register5                ; work         ;
-;       |register5:inst6|             ; 0 (0)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|word_register:inst8|register5:inst6                     ; register5                ; work         ;
-;       |register5:inst7|             ; 0 (0)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|word_register:inst8|register5:inst7                     ; register5                ; work         ;
-;       |register5:inst8|             ; 0 (0)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|word_register:inst8|register5:inst8                     ; register5                ; work         ;
-;       |register5:inst9|             ; 0 (0)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|word_register:inst8|register5:inst9                     ; register5                ; work         ;
-;       |register5:inst|              ; 0 (0)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|word_register:inst8|register5:inst                      ; register5                ; work         ;
-;       |trigger:inst13|              ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|word_register:inst8|trigger:inst13                      ; trigger                  ; work         ;
-+-------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------+--------------------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                          ;
++--------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------+--------------------------+--------------+
+; Compilation Hierarchy Node           ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                ; Entity Name              ; Library Name ;
++--------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------+--------------------------+--------------+
+; |hang_man                            ; 307 (0)             ; 220 (0)                   ; 0                 ; 0          ; 49   ; 0            ; |hang_man                                                                          ; hang_man                 ; work         ;
+;    |alphabet_to_segment:inst3|       ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|alphabet_to_segment:inst3                                                ; alphabet_to_segment      ; work         ;
+;    |array_segment_controller:inst5|  ; 35 (0)              ; 3 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|array_segment_controller:inst5                                           ; array_segment_controller ; work         ;
+;       |alphabet_selector:inst1|      ; 17 (17)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|array_segment_controller:inst5|alphabet_selector:inst1                   ; alphabet_selector        ; work         ;
+;       |alphabet_to_segment:inst|     ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|array_segment_controller:inst5|alphabet_to_segment:inst                  ; alphabet_to_segment      ; work         ;
+;       |counter3:inst2|               ; 3 (3)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|array_segment_controller:inst5|counter3:inst2                            ; counter3                 ; work         ;
+;       |decoder_3to8:inst3|           ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|array_segment_controller:inst5|decoder_3to8:inst3                        ; decoder_3to8             ; work         ;
+;    |grader:inst2|                    ; 8 (7)               ; 20 (2)                    ; 0                 ; 0          ; 0    ; 0            ; |hang_man|grader:inst2                                                             ; grader                   ; work         ;
+;       |falling_trigger:inst9|        ; 1 (1)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|grader:inst2|falling_trigger:inst9                                       ; falling_trigger          ; work         ;
+;       |trigger:inst13|               ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|grader:inst2|trigger:inst13                                              ; trigger                  ; work         ;
+;       |trigger:inst14|               ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|grader:inst2|trigger:inst14                                              ; trigger                  ; work         ;
+;       |trigger:inst15|               ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|grader:inst2|trigger:inst15                                              ; trigger                  ; work         ;
+;       |trigger:inst16|               ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|grader:inst2|trigger:inst16                                              ; trigger                  ; work         ;
+;       |trigger:inst17|               ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|grader:inst2|trigger:inst17                                              ; trigger                  ; work         ;
+;       |trigger:inst18|               ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|grader:inst2|trigger:inst18                                              ; trigger                  ; work         ;
+;       |trigger:inst19|               ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|grader:inst2|trigger:inst19                                              ; trigger                  ; work         ;
+;       |trigger:inst|                 ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|grader:inst2|trigger:inst                                                ; trigger                  ; work         ;
+;    |is_correct:inst1|                ; 41 (25)             ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|is_correct:inst1                                                         ; is_correct               ; work         ;
+;       |checker:inst10|               ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|is_correct:inst1|checker:inst10                                          ; checker                  ; work         ;
+;       |checker:inst15|               ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|is_correct:inst1|checker:inst15                                          ; checker                  ; work         ;
+;       |checker:inst16|               ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|is_correct:inst1|checker:inst16                                          ; checker                  ; work         ;
+;       |checker:inst19|               ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|is_correct:inst1|checker:inst19                                          ; checker                  ; work         ;
+;       |checker:inst3|                ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|is_correct:inst1|checker:inst3                                           ; checker                  ; work         ;
+;       |checker:inst45|               ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|is_correct:inst1|checker:inst45                                          ; checker                  ; work         ;
+;       |checker:inst7|                ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|is_correct:inst1|checker:inst7                                           ; checker                  ; work         ;
+;       |checker:inst|                 ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|is_correct:inst1|checker:inst                                            ; checker                  ; work         ;
+;    |keypad_converter:inst|           ; 24 (0)              ; 8 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|keypad_converter:inst                                                    ; keypad_converter         ; work         ;
+;       |alphabet_encoder:inst27|      ; 10 (10)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|keypad_converter:inst|alphabet_encoder:inst27                            ; alphabet_encoder         ; work         ;
+;       |counter2:inst3|               ; 4 (4)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|keypad_converter:inst|counter2:inst3                                     ; counter2                 ; work         ;
+;       |decimal_to_binary:inst1|      ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|keypad_converter:inst|decimal_to_binary:inst1                            ; decimal_to_binary        ; work         ;
+;       |is_equal4:inst25|             ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|keypad_converter:inst|is_equal4:inst25                                   ; is_equal4                ; work         ;
+;       |register4:inst24|             ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|keypad_converter:inst|register4:inst24                                   ; register4                ; work         ;
+;       |trigger:inst23|               ; 1 (1)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|keypad_converter:inst|trigger:inst23                                     ; trigger                  ; work         ;
+;    |life_register:inst4|             ; 4 (4)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|life_register:inst4                                                      ; life_register            ; work         ;
+;    |sound_controller:inst7|          ; 186 (1)             ; 137 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |hang_man|sound_controller:inst7                                                   ; sound_controller         ; work         ;
+;       |address_generator:inst5|      ; 15 (12)             ; 11 (8)                    ; 0                 ; 0          ; 0    ; 0            ; |hang_man|sound_controller:inst7|address_generator:inst5                           ; address_generator        ; work         ;
+;          |index_generator:index_gen| ; 3 (3)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|sound_controller:inst7|address_generator:inst5|index_generator:index_gen ; index_generator          ; work         ;
+;       |pnu_clk_div:inst14|           ; 29 (29)             ; 21 (21)                   ; 0                 ; 0          ; 0    ; 0            ; |hang_man|sound_controller:inst7|pnu_clk_div:inst14                                ; pnu_clk_div              ; work         ;
+;       |pnu_clk_div:inst1|            ; 29 (29)             ; 21 (21)                   ; 0                 ; 0          ; 0    ; 0            ; |hang_man|sound_controller:inst7|pnu_clk_div:inst1                                 ; pnu_clk_div              ; work         ;
+;       |pnu_clk_div:inst2|            ; 26 (26)             ; 21 (21)                   ; 0                 ; 0          ; 0    ; 0            ; |hang_man|sound_controller:inst7|pnu_clk_div:inst2                                 ; pnu_clk_div              ; work         ;
+;       |pnu_clk_div:inst3|            ; 29 (29)             ; 21 (21)                   ; 0                 ; 0          ; 0    ; 0            ; |hang_man|sound_controller:inst7|pnu_clk_div:inst3                                 ; pnu_clk_div              ; work         ;
+;       |pnu_clk_div:inst4|            ; 28 (28)             ; 21 (21)                   ; 0                 ; 0          ; 0    ; 0            ; |hang_man|sound_controller:inst7|pnu_clk_div:inst4                                 ; pnu_clk_div              ; work         ;
+;       |pnu_clk_div:inst|             ; 29 (29)             ; 21 (21)                   ; 0                 ; 0          ; 0    ; 0            ; |hang_man|sound_controller:inst7|pnu_clk_div:inst                                  ; pnu_clk_div              ; work         ;
+;    |word_register:inst8|             ; 2 (2)               ; 42 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |hang_man|word_register:inst8                                                      ; word_register            ; work         ;
+;       |register5:inst10|             ; 0 (0)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|word_register:inst8|register5:inst10                                     ; register5                ; work         ;
+;       |register5:inst1|              ; 0 (0)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|word_register:inst8|register5:inst1                                      ; register5                ; work         ;
+;       |register5:inst2|              ; 0 (0)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|word_register:inst8|register5:inst2                                      ; register5                ; work         ;
+;       |register5:inst6|              ; 0 (0)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|word_register:inst8|register5:inst6                                      ; register5                ; work         ;
+;       |register5:inst7|              ; 0 (0)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|word_register:inst8|register5:inst7                                      ; register5                ; work         ;
+;       |register5:inst8|              ; 0 (0)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|word_register:inst8|register5:inst8                                      ; register5                ; work         ;
+;       |register5:inst9|              ; 0 (0)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|word_register:inst8|register5:inst9                                      ; register5                ; work         ;
+;       |register5:inst|               ; 0 (0)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|word_register:inst8|register5:inst                                       ; register5                ; work         ;
+;       |trigger:inst13|               ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |hang_man|word_register:inst8|trigger:inst13                                       ; trigger                  ; work         ;
++--------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------+--------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -346,10 +366,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 83    ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 220   ;
+; Number of registers using Synchronous Clear  ; 120   ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 83    ;
+; Number of registers using Asynchronous Clear ; 209   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 44    ;
 ; Number of registers using Preset             ; 0     ;
@@ -361,8 +381,93 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                          ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------+
-; 9:1                ; 5 bits    ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |hang_man|array_segment_controller:inst5|alphabet_selector:inst1|output_alphabet[0] ;
+; 3:1                ; 20 bits   ; 40 LEs        ; 0 LEs                ; 40 LEs                 ; Yes        ; |hang_man|sound_controller:inst7|pnu_clk_div:inst4|cnt[19]                          ;
+; 3:1                ; 20 bits   ; 40 LEs        ; 0 LEs                ; 40 LEs                 ; Yes        ; |hang_man|sound_controller:inst7|pnu_clk_div:inst|cnt[2]                            ;
+; 3:1                ; 20 bits   ; 40 LEs        ; 0 LEs                ; 40 LEs                 ; Yes        ; |hang_man|sound_controller:inst7|pnu_clk_div:inst3|cnt[2]                           ;
+; 3:1                ; 20 bits   ; 40 LEs        ; 0 LEs                ; 40 LEs                 ; Yes        ; |hang_man|sound_controller:inst7|pnu_clk_div:inst2|cnt[11]                          ;
+; 3:1                ; 20 bits   ; 40 LEs        ; 0 LEs                ; 40 LEs                 ; Yes        ; |hang_man|sound_controller:inst7|pnu_clk_div:inst1|cnt[1]                           ;
+; 9:1                ; 5 bits    ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |hang_man|array_segment_controller:inst5|alphabet_selector:inst1|output_alphabet[1] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: keypad_converter:inst|counter2:inst3|BUSMUX:inst6 ;
++----------------+-------+-----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                  ;
++----------------+-------+-----------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                               ;
++----------------+-------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: keypad_converter:inst|counter2:inst3|BUSMUX:inst5 ;
++----------------+-------+-----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                  ;
++----------------+-------+-----------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                               ;
++----------------+-------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: keypad_converter:inst|register4:inst24|BUSMUX:inst7 ;
++----------------+-------+-------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                    ;
++----------------+-------+-------------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                                 ;
++----------------+-------+-------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: keypad_converter:inst|register4:inst24|BUSMUX:inst4 ;
++----------------+-------+-------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                    ;
++----------------+-------+-------------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                                 ;
++----------------+-------+-------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: keypad_converter:inst|register4:inst24|BUSMUX:inst5 ;
++----------------+-------+-------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                    ;
++----------------+-------+-------------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                                 ;
++----------------+-------+-------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: keypad_converter:inst|register4:inst24|BUSMUX:inst6 ;
++----------------+-------+-------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                    ;
++----------------+-------+-------------------------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                                                 ;
++----------------+-------+-------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: life_register:inst4|BUSMUX:inst5 ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                              ;
++----------------+-------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: life_register:inst4|BUSMUX:inst6 ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; WIDTH          ; 1     ; Untyped                                              ;
++----------------+-------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +------------------------------------------------------------------------+
@@ -452,66 +557,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+----------------------------------------------------+
 ; WIDTH          ; 1     ; Untyped                                            ;
 +----------------+-------+----------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: keypad_converter:inst|counter2:inst3|BUSMUX:inst6 ;
-+----------------+-------+-----------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                  ;
-+----------------+-------+-----------------------------------------------------------------------+
-; WIDTH          ; 1     ; Untyped                                                               ;
-+----------------+-------+-----------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: keypad_converter:inst|counter2:inst3|BUSMUX:inst5 ;
-+----------------+-------+-----------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                  ;
-+----------------+-------+-----------------------------------------------------------------------+
-; WIDTH          ; 1     ; Untyped                                                               ;
-+----------------+-------+-----------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: keypad_converter:inst|register4:inst24|BUSMUX:inst7 ;
-+----------------+-------+-------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                    ;
-+----------------+-------+-------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Untyped                                                                 ;
-+----------------+-------+-------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: keypad_converter:inst|register4:inst24|BUSMUX:inst4 ;
-+----------------+-------+-------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                    ;
-+----------------+-------+-------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Untyped                                                                 ;
-+----------------+-------+-------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: keypad_converter:inst|register4:inst24|BUSMUX:inst5 ;
-+----------------+-------+-------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                    ;
-+----------------+-------+-------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Untyped                                                                 ;
-+----------------+-------+-------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: keypad_converter:inst|register4:inst24|BUSMUX:inst6 ;
-+----------------+-------+-------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                    ;
-+----------------+-------+-------------------------------------------------------------------------+
-; WIDTH          ; 1     ; Untyped                                                                 ;
-+----------------+-------+-------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -915,23 +960,63 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: life_register:inst4|BUSMUX:inst5 ;
-+----------------+-------+------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                 ;
-+----------------+-------+------------------------------------------------------+
-; WIDTH          ; 1     ; Untyped                                              ;
-+----------------+-------+------------------------------------------------------+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sound_controller:inst7|pnu_clk_div:inst4 ;
++----------------+-------+--------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                         ;
++----------------+-------+--------------------------------------------------------------+
+; cnt_num        ; 1911  ; Signed Integer                                               ;
++----------------+-------+--------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: life_register:inst4|BUSMUX:inst6 ;
-+----------------+-------+------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                 ;
-+----------------+-------+------------------------------------------------------+
-; WIDTH          ; 1     ; Untyped                                              ;
-+----------------+-------+------------------------------------------------------+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sound_controller:inst7|pnu_clk_div:inst14 ;
++----------------+---------+-------------------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                        ;
++----------------+---------+-------------------------------------------------------------+
+; cnt_num        ; 1000000 ; Signed Integer                                              ;
++----------------+---------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sound_controller:inst7|pnu_clk_div:inst ;
++----------------+-------+-------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                        ;
++----------------+-------+-------------------------------------------------------------+
+; cnt_num        ; 3822  ; Signed Integer                                              ;
++----------------+-------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sound_controller:inst7|pnu_clk_div:inst3 ;
++----------------+-------+--------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                         ;
++----------------+-------+--------------------------------------------------------------+
+; cnt_num        ; 2551  ; Signed Integer                                               ;
++----------------+-------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sound_controller:inst7|pnu_clk_div:inst2 ;
++----------------+-------+--------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                         ;
++----------------+-------+--------------------------------------------------------------+
+; cnt_num        ; 2273  ; Signed Integer                                               ;
++----------------+-------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sound_controller:inst7|pnu_clk_div:inst1 ;
++----------------+-------+--------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                         ;
++----------------+-------+--------------------------------------------------------------+
+; cnt_num        ; 3033  ; Signed Integer                                               ;
++----------------+-------+--------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -940,23 +1025,27 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 83                          ;
-;     CLR               ; 39                          ;
+; arriav_ff             ; 220                         ;
+;     CLR               ; 45                          ;
+;     CLR SCLR          ; 120                         ;
 ;     ENA CLR           ; 44                          ;
-; arriav_lcell_comb     ; 133                         ;
+;     plain             ; 11                          ;
+; arriav_lcell_comb     ; 318                         ;
+;     arith             ; 120                         ;
+;         1 data inputs ; 120                         ;
 ;     extend            ; 2                           ;
 ;         7 data inputs ; 2                           ;
-;     normal            ; 131                         ;
+;     normal            ; 196                         ;
 ;         1 data inputs ; 12                          ;
 ;         2 data inputs ; 11                          ;
-;         3 data inputs ; 12                          ;
-;         4 data inputs ; 9                           ;
-;         5 data inputs ; 38                          ;
-;         6 data inputs ; 49                          ;
-; boundary_port         ; 52                          ;
+;         3 data inputs ; 19                          ;
+;         4 data inputs ; 26                          ;
+;         5 data inputs ; 55                          ;
+;         6 data inputs ; 73                          ;
+; boundary_port         ; 49                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 5.00                        ;
-; Average LUT depth     ; 2.95                        ;
+; Average LUT depth     ; 2.59                        ;
 +-----------------------+-----------------------------+
 
 
@@ -975,7 +1064,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue Nov 28 21:44:23 2023
+    Info: Processing started: Thu Nov 30 23:42:42 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off termproject -c termproject
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -1021,33 +1110,42 @@ Info (12021): Found 1 design units, including 1 entities, in source file counter
     Info (12023): Found entity 1: counter3
 Info (12021): Found 1 design units, including 1 entities, in source file decoder_3to8.v
     Info (12023): Found entity 1: decoder_3to8 File: C:/intelFPGA_lite/20.1/termproject/decoder_3to8.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file color_controller.bdf
+    Info (12023): Found entity 1: color_controller
+Info (12021): Found 1 design units, including 1 entities, in source file pnu_clk_div.v
+    Info (12023): Found entity 1: pnu_clk_div File: C:/intelFPGA_lite/20.1/termproject/pnu_clk_div.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file sound_controller.bdf
+    Info (12023): Found entity 1: sound_controller
+Info (12021): Found 1 design units, including 1 entities, in source file index_generator.v
+    Info (12023): Found entity 1: index_generator File: C:/intelFPGA_lite/20.1/termproject/index_generator.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file address_generator.v
+    Info (12023): Found entity 1: address_generator File: C:/intelFPGA_lite/20.1/termproject/address_generator.v Line: 1
 Info (12127): Elaborating entity "hang_man" for the top level hierarchy
-Warning (275011): Block or symbol "grader" of instance "inst2" overlaps another block or symbol
-Info (12128): Elaborating entity "grader" for hierarchy "grader:inst2"
-Info (12128): Elaborating entity "falling_trigger" for hierarchy "grader:inst2|falling_trigger:inst9"
-Info (12128): Elaborating entity "BUSMUX" for hierarchy "grader:inst2|BUSMUX:inst5"
-Info (12130): Elaborated megafunction instantiation "grader:inst2|BUSMUX:inst5"
-Info (12133): Instantiated megafunction "grader:inst2|BUSMUX:inst5" with the following parameter:
-    Info (12134): Parameter "WIDTH" = "1"
-Info (12128): Elaborating entity "lpm_mux" for hierarchy "grader:inst2|BUSMUX:inst5|lpm_mux:$00000" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/busmux.tdf Line: 44
-Info (12131): Elaborated megafunction instantiation "grader:inst2|BUSMUX:inst5|lpm_mux:$00000", which is child of megafunction instantiation "grader:inst2|BUSMUX:inst5" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/busmux.tdf Line: 44
-Info (12021): Found 1 design units, including 1 entities, in source file db/mux_pjc.tdf
-    Info (12023): Found entity 1: mux_pjc File: C:/intelFPGA_lite/20.1/termproject/db/mux_pjc.tdf Line: 23
-Info (12128): Elaborating entity "mux_pjc" for hierarchy "grader:inst2|BUSMUX:inst5|lpm_mux:$00000|mux_pjc:auto_generated" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mux.tdf Line: 87
-Info (12128): Elaborating entity "trigger" for hierarchy "grader:inst2|trigger:inst18"
-Info (12128): Elaborating entity "is_correct" for hierarchy "is_correct:inst1"
-Info (12128): Elaborating entity "checker" for hierarchy "is_correct:inst1|checker:inst"
-Warning (275011): Block or symbol "XNOR" of instance "inst" overlaps another block or symbol
+Info (12128): Elaborating entity "alphabet_to_segment" for hierarchy "alphabet_to_segment:inst3"
 Info (12128): Elaborating entity "keypad_converter" for hierarchy "keypad_converter:inst"
 Info (12128): Elaborating entity "decimal_to_binary" for hierarchy "keypad_converter:inst|decimal_to_binary:inst1"
 Info (12128): Elaborating entity "alphabet_encoder" for hierarchy "keypad_converter:inst|alphabet_encoder:inst27"
 Info (12128): Elaborating entity "counter2" for hierarchy "keypad_converter:inst|counter2:inst3"
+Info (12128): Elaborating entity "BUSMUX" for hierarchy "keypad_converter:inst|counter2:inst3|BUSMUX:inst6"
+Info (12130): Elaborated megafunction instantiation "keypad_converter:inst|counter2:inst3|BUSMUX:inst6"
+Info (12133): Instantiated megafunction "keypad_converter:inst|counter2:inst3|BUSMUX:inst6" with the following parameter:
+    Info (12134): Parameter "WIDTH" = "1"
+Info (12128): Elaborating entity "lpm_mux" for hierarchy "keypad_converter:inst|counter2:inst3|BUSMUX:inst6|lpm_mux:$00000" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/busmux.tdf Line: 44
+Info (12131): Elaborated megafunction instantiation "keypad_converter:inst|counter2:inst3|BUSMUX:inst6|lpm_mux:$00000", which is child of megafunction instantiation "keypad_converter:inst|counter2:inst3|BUSMUX:inst6" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/busmux.tdf Line: 44
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_pjc.tdf
+    Info (12023): Found entity 1: mux_pjc File: C:/intelFPGA_lite/20.1/termproject/db/mux_pjc.tdf Line: 23
+Info (12128): Elaborating entity "mux_pjc" for hierarchy "keypad_converter:inst|counter2:inst3|BUSMUX:inst6|lpm_mux:$00000|mux_pjc:auto_generated" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mux.tdf Line: 87
 Info (12128): Elaborating entity "is_equal4" for hierarchy "keypad_converter:inst|is_equal4:inst25"
 Info (12128): Elaborating entity "register4" for hierarchy "keypad_converter:inst|register4:inst24"
+Info (12128): Elaborating entity "trigger" for hierarchy "keypad_converter:inst|trigger:inst23"
+Info (12128): Elaborating entity "life_register" for hierarchy "life_register:inst4"
+Info (12128): Elaborating entity "grader" for hierarchy "grader:inst2"
+Info (12128): Elaborating entity "falling_trigger" for hierarchy "grader:inst2|falling_trigger:inst9"
+Info (12128): Elaborating entity "is_correct" for hierarchy "is_correct:inst1"
+Info (12128): Elaborating entity "checker" for hierarchy "is_correct:inst1|checker:inst"
+Warning (275011): Block or symbol "XNOR" of instance "inst" overlaps another block or symbol
 Info (12128): Elaborating entity "word_register" for hierarchy "word_register:inst8"
 Info (12128): Elaborating entity "register5" for hierarchy "word_register:inst8|register5:inst"
-Info (12128): Elaborating entity "alphabet_to_segment" for hierarchy "alphabet_to_segment:inst3"
-Info (12128): Elaborating entity "life_register" for hierarchy "life_register:inst4"
 Info (12128): Elaborating entity "array_segment_controller" for hierarchy "array_segment_controller:inst5"
 Info (12128): Elaborating entity "decoder_3to8" for hierarchy "array_segment_controller:inst5|decoder_3to8:inst3"
 Info (12128): Elaborating entity "counter3" for hierarchy "array_segment_controller:inst5|counter3:inst2"
@@ -1058,17 +1156,57 @@ Info (10041): Inferred latch for "output_alphabet[1]" at alphabet_selector.v(32)
 Info (10041): Inferred latch for "output_alphabet[2]" at alphabet_selector.v(32) File: C:/intelFPGA_lite/20.1/termproject/alphabet_selector.v Line: 32
 Info (10041): Inferred latch for "output_alphabet[3]" at alphabet_selector.v(32) File: C:/intelFPGA_lite/20.1/termproject/alphabet_selector.v Line: 32
 Info (10041): Inferred latch for "output_alphabet[4]" at alphabet_selector.v(32) File: C:/intelFPGA_lite/20.1/termproject/alphabet_selector.v Line: 32
+Info (12128): Elaborating entity "sound_controller" for hierarchy "sound_controller:inst7"
+Warning (275011): Block or symbol "pnu_clk_div" of instance "inst" overlaps another block or symbol
+Warning (275011): Block or symbol "pnu_clk_div" of instance "inst3" overlaps another block or symbol
+Warning (275011): Block or symbol "pnu_clk_div" of instance "inst2" overlaps another block or symbol
+Info (12128): Elaborating entity "pnu_clk_div" for hierarchy "sound_controller:inst7|pnu_clk_div:inst4"
+Warning (10230): Verilog HDL assignment warning at pnu_clk_div.v(26): truncated value with size 32 to match size of target (20) File: C:/intelFPGA_lite/20.1/termproject/pnu_clk_div.v Line: 26
+Info (12128): Elaborating entity "address_generator" for hierarchy "sound_controller:inst7|address_generator:inst5"
+Warning (10030): Net "register0.data_a" at address_generator.v(12) has no driver or initial value, using a default initial value '0' File: C:/intelFPGA_lite/20.1/termproject/address_generator.v Line: 12
+Warning (10030): Net "register0.waddr_a" at address_generator.v(12) has no driver or initial value, using a default initial value '0' File: C:/intelFPGA_lite/20.1/termproject/address_generator.v Line: 12
+Warning (10030): Net "register1.data_a" at address_generator.v(13) has no driver or initial value, using a default initial value '0' File: C:/intelFPGA_lite/20.1/termproject/address_generator.v Line: 13
+Warning (10030): Net "register1.waddr_a" at address_generator.v(13) has no driver or initial value, using a default initial value '0' File: C:/intelFPGA_lite/20.1/termproject/address_generator.v Line: 13
+Warning (10030): Net "register2.data_a" at address_generator.v(14) has no driver or initial value, using a default initial value '0' File: C:/intelFPGA_lite/20.1/termproject/address_generator.v Line: 14
+Warning (10030): Net "register2.waddr_a" at address_generator.v(14) has no driver or initial value, using a default initial value '0' File: C:/intelFPGA_lite/20.1/termproject/address_generator.v Line: 14
+Warning (10030): Net "register3.data_a" at address_generator.v(15) has no driver or initial value, using a default initial value '0' File: C:/intelFPGA_lite/20.1/termproject/address_generator.v Line: 15
+Warning (10030): Net "register3.waddr_a" at address_generator.v(15) has no driver or initial value, using a default initial value '0' File: C:/intelFPGA_lite/20.1/termproject/address_generator.v Line: 15
+Warning (10030): Net "register0.we_a" at address_generator.v(12) has no driver or initial value, using a default initial value '0' File: C:/intelFPGA_lite/20.1/termproject/address_generator.v Line: 12
+Warning (10030): Net "register1.we_a" at address_generator.v(13) has no driver or initial value, using a default initial value '0' File: C:/intelFPGA_lite/20.1/termproject/address_generator.v Line: 13
+Warning (10030): Net "register2.we_a" at address_generator.v(14) has no driver or initial value, using a default initial value '0' File: C:/intelFPGA_lite/20.1/termproject/address_generator.v Line: 14
+Warning (10030): Net "register3.we_a" at address_generator.v(15) has no driver or initial value, using a default initial value '0' File: C:/intelFPGA_lite/20.1/termproject/address_generator.v Line: 15
+Info (12128): Elaborating entity "index_generator" for hierarchy "sound_controller:inst7|address_generator:inst5|index_generator:index_gen" File: C:/intelFPGA_lite/20.1/termproject/address_generator.v Line: 28
+Info (12128): Elaborating entity "pnu_clk_div" for hierarchy "sound_controller:inst7|pnu_clk_div:inst14"
+Warning (10230): Verilog HDL assignment warning at pnu_clk_div.v(26): truncated value with size 32 to match size of target (20) File: C:/intelFPGA_lite/20.1/termproject/pnu_clk_div.v Line: 26
+Info (12128): Elaborating entity "pnu_clk_div" for hierarchy "sound_controller:inst7|pnu_clk_div:inst"
+Warning (10230): Verilog HDL assignment warning at pnu_clk_div.v(26): truncated value with size 32 to match size of target (20) File: C:/intelFPGA_lite/20.1/termproject/pnu_clk_div.v Line: 26
+Info (12128): Elaborating entity "pnu_clk_div" for hierarchy "sound_controller:inst7|pnu_clk_div:inst3"
+Warning (10230): Verilog HDL assignment warning at pnu_clk_div.v(26): truncated value with size 32 to match size of target (20) File: C:/intelFPGA_lite/20.1/termproject/pnu_clk_div.v Line: 26
+Info (12128): Elaborating entity "pnu_clk_div" for hierarchy "sound_controller:inst7|pnu_clk_div:inst2"
+Warning (10230): Verilog HDL assignment warning at pnu_clk_div.v(26): truncated value with size 32 to match size of target (20) File: C:/intelFPGA_lite/20.1/termproject/pnu_clk_div.v Line: 26
+Info (12128): Elaborating entity "pnu_clk_div" for hierarchy "sound_controller:inst7|pnu_clk_div:inst1"
+Warning (10230): Verilog HDL assignment warning at pnu_clk_div.v(26): truncated value with size 32 to match size of target (20) File: C:/intelFPGA_lite/20.1/termproject/pnu_clk_div.v Line: 26
+Info (12128): Elaborating entity "color_controller" for hierarchy "color_controller:inst6"
+Info (276014): Found 4 instances of uninferred RAM logic
+    Info (276004): RAM logic "sound_controller:inst7|address_generator:inst5|register0" is uninferred due to inappropriate RAM size File: C:/intelFPGA_lite/20.1/termproject/address_generator.v Line: 12
+    Info (276004): RAM logic "sound_controller:inst7|address_generator:inst5|register1" is uninferred due to inappropriate RAM size File: C:/intelFPGA_lite/20.1/termproject/address_generator.v Line: 13
+    Info (276004): RAM logic "sound_controller:inst7|address_generator:inst5|register2" is uninferred due to inappropriate RAM size File: C:/intelFPGA_lite/20.1/termproject/address_generator.v Line: 14
+    Info (276004): RAM logic "sound_controller:inst7|address_generator:inst5|register3" is uninferred due to inappropriate RAM size File: C:/intelFPGA_lite/20.1/termproject/address_generator.v Line: 15
+Critical Warning (127005): Memory depth (8) in the design file differs from memory depth (5) in the Memory Initialization File "C:/intelFPGA_lite/20.1/termproject/db/termproject.ram0_address_generator_1e65b5f3.hdl.mif" -- setting initial value for remaining addresses to 0
+Critical Warning (127005): Memory depth (8) in the design file differs from memory depth (5) in the Memory Initialization File "C:/intelFPGA_lite/20.1/termproject/db/termproject.ram1_address_generator_1e65b5f3.hdl.mif" -- setting initial value for remaining addresses to 0
+Critical Warning (127005): Memory depth (8) in the design file differs from memory depth (5) in the Memory Initialization File "C:/intelFPGA_lite/20.1/termproject/db/termproject.ram2_address_generator_1e65b5f3.hdl.mif" -- setting initial value for remaining addresses to 0
+Critical Warning (127005): Memory depth (8) in the design file differs from memory depth (5) in the Memory Initialization File "C:/intelFPGA_lite/20.1/termproject/db/termproject.ram3_address_generator_1e65b5f3.hdl.mif" -- setting initial value for remaining addresses to 0
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 237 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 419 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 15 input pins
-    Info (21059): Implemented 37 output pins
-    Info (21061): Implemented 185 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 4831 megabytes
-    Info: Processing ended: Tue Nov 28 21:44:32 2023
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:07
+    Info (21059): Implemented 34 output pins
+    Info (21061): Implemented 370 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 28 warnings
+    Info: Peak virtual memory: 4836 megabytes
+    Info: Processing ended: Thu Nov 30 23:42:50 2023
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:08
 
 

@@ -1,0 +1,48 @@
+module address_generator (
+    input wire alphabet_found,
+    input wire alphabet_not_found,
+    input wire game_win,
+    input wire game_over,
+    output reg [2:0] address
+);
+
+    reg [3:0] address_sequence;
+    reg [1:0] sequence_index;
+
+    always @(posedge alphabet_found or posedge alphabet_not_found or posedge game_win or posedge game_over) begin
+        if(alphabet_found) 
+            address_sequence = 4'b0001; // 000, 001, 010
+        else if(alphabet_not_found)
+            address_sequence = 4'b0010; // 011
+        else if(game_win)
+            address_sequence = 4'b0100; // 000, 001, 010, 100
+        else if(game_over)
+            address_sequence = 4'b1000; // 011, 011, 011
+        sequence_index = 2'b00;
+    end
+
+    always @(*) begin
+        case(address_sequence)
+            4'b0001: begin // 000, 001, 010
+                case(sequence_index)
+                    2'b00: address = 3'b000;
+                    2'b01: address = 3'b001;
+                    2'b10: address = 3'b010;
+                    default: address = 3'b000;
+                endcase
+            end
+            4'b0010: address = 3'b011; // 011
+            4'b0100: begin // 000, 001, 010, 100
+                case(sequence_index)
+                    2'b00: address = 3'b000;
+                    2'b01: address = 3'b001;
+                    2'b10: address = 3'b010;
+                    2'b11: address = 3'b100;
+                    default: address = 3'b000;
+                endcase
+            end
+            4'b1000: address = 3'b011; // 011, 011, 011
+            default: address = 3'b000;
+        endcase
+    end
+endmodule

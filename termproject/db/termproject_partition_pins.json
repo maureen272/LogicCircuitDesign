@@ -4,50 +4,6 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "alphabet_found",
-					"strict" : false
-				},
-				{
-					"name" : "alphabet_not_found",
-					"strict" : false
-				},
-				{
-					"name" : "out_is_correct_0",
-					"strict" : false
-				},
-				{
-					"name" : "out_is_correct_1",
-					"strict" : false
-				},
-				{
-					"name" : "out_is_correct_2",
-					"strict" : false
-				},
-				{
-					"name" : "out_is_correct_3",
-					"strict" : false
-				},
-				{
-					"name" : "out_is_correct_4",
-					"strict" : false
-				},
-				{
-					"name" : "out_is_correct_5",
-					"strict" : false
-				},
-				{
-					"name" : "out_is_correct_6",
-					"strict" : false
-				},
-				{
-					"name" : "out_is_correct_7",
-					"strict" : false
-				},
-				{
-					"name" : "game_win",
-					"strict" : false
-				},
-				{
 					"name" : "a",
 					"strict" : false
 				},
@@ -85,10 +41,6 @@
 				},
 				{
 					"name" : "life_led3",
-					"strict" : false
-				},
-				{
-					"name" : "game_over",
 					"strict" : false
 				},
 				{
@@ -152,19 +104,43 @@
 					"strict" : false
 				},
 				{
+					"name" : "piezo",
+					"strict" : false
+				},
+				{
+					"name" : "green[3]",
+					"strict" : false
+				},
+				{
+					"name" : "green[2]",
+					"strict" : false
+				},
+				{
+					"name" : "green[1]",
+					"strict" : false
+				},
+				{
+					"name" : "green[0]",
+					"strict" : false
+				},
+				{
+					"name" : "red[3]",
+					"strict" : false
+				},
+				{
+					"name" : "red[2]",
+					"strict" : false
+				},
+				{
+					"name" : "red[1]",
+					"strict" : false
+				},
+				{
+					"name" : "red[0]",
+					"strict" : false
+				},
+				{
 					"name" : "mode",
-					"strict" : false
-				},
-				{
-					"name" : "clk",
-					"strict" : false
-				},
-				{
-					"name" : "reset",
-					"strict" : false
-				},
-				{
-					"name" : "star",
 					"strict" : false
 				},
 				{
@@ -192,6 +168,14 @@
 					"strict" : false
 				},
 				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
 					"name" : "eight",
 					"strict" : false
 				},
@@ -209,6 +193,10 @@
 				},
 				{
 					"name" : "sharp",
+					"strict" : false
+				},
+				{
+					"name" : "star",
 					"strict" : false
 				}
 			]

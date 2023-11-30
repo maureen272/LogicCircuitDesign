@@ -7,7 +7,7 @@ Note: if both ModelSim-Altera and ModelSim executables are available, ModelSim-A
 
 **** Generating the ModelSim Testbench ****
 
-quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off termproject -c termproject --vector_source="C:/intelFPGA_lite/20.1/termproject/hang_man.vwf" --testbench_file="C:/intelFPGA_lite/20.1/termproject/simulation/qsim/hang_man.vwf.vt"
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off termproject -c termproject --vector_source="C:/intelFPGA_lite/20.1/termproject/sound_controller.vwf" --testbench_file="C:/intelFPGA_lite/20.1/termproject/simulation/qsim/sound_controller.vwf.vt"
 
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
@@ -26,11 +26,9 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Tue Nov 28 21:52:42 2023
-Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off termproject -c termproject --vector_source=C:/intelFPGA_lite/20.1/termproject/hang_man.vwf --testbench_file=C:/intelFPGA_lite/20.1/termproject/simulation/qsim/hang_man.vwf.vt
+    Info: Processing started: Thu Nov 30 23:37:18 2023
+Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off termproject -c termproject --vector_source=C:/intelFPGA_lite/20.1/termproject/sound_controller.vwf --testbench_file=C:/intelFPGA_lite/20.1/termproject/simulation/qsim/sound_controller.vwf.vt
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-
-ife_led3" in vector source file when writing test bench files
 
 Completed successfully. 
 
@@ -57,13 +55,13 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Tue Nov 28 21:52:43 2023
+    Info: Processing started: Thu Nov 30 23:37:19 2023
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/intelFPGA_lite/20.1/termproject/simulation/qsim/ termproject -c termproject
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file termproject.vo in folder "C:/intelFPGA_lite/20.1/termproject/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4727 megabytes
-    Info: Processing ended: Tue Nov 28 21:52:44 2023
+    Info: Peak virtual memory: 4725 megabytes
+    Info: Processing ended: Thu Nov 30 23:37:20 2023
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
@@ -83,34 +81,34 @@ Reading pref.tcl
 
 # 2020.1
 
+
 # do termproject.do
-
 # ** Warning: (vlib-34) Library already exists at "work".
+
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:52:44 on Nov 28,2023
+# Start time: 23:37:21 on Nov 30,2023
 # vlog -work work termproject.vo 
-# -- Compiling module hang_man
-
+# -- Compiling module sound_controller
 # 
 # Top level modules:
-# 	hang_man
-# End time: 21:52:45 on Nov 28,2023, Elapsed time: 0:00:01
+# 	sound_controller
+# End time: 23:37:21 on Nov 30,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
+
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:52:45 on Nov 28,2023
-# vlog -work work hang_man.vwf.vt 
-
-# -- Compiling module hang_man_vlg_vec_tst
+# Start time: 23:37:21 on Nov 30,2023
+# vlog -work work sound_controller.vwf.vt 
+# -- Compiling module sound_controller_vlg_vec_tst
 # 
 # Top level modules:
-# 	hang_man_vlg_vec_tst
-# End time: 21:52:45 on Nov 28,2023, Elapsed time: 0:00:00
+# 	sound_controller_vlg_vec_tst
+# End time: 23:37:21 on Nov 30,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
-# vsim -c -t 1ps -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.hang_man_vlg_vec_tst 
-# Start time: 21:52:45 on Nov 28,2023
-# Loading work.hang_man_vlg_vec_tst
-# Loading work.hang_man
+# vsim -c -t 1ps -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.sound_controller_vlg_vec_tst 
+# Start time: 23:37:21 on Nov 30,2023
+# Loading work.sound_controller_vlg_vec_tst
+# Loading work.sound_controller
 # Loading cyclonev_ver.cyclonev_io_obuf
 # Loading cyclonev_ver.cyclonev_io_ibuf
 # Loading cyclonev_ver.cyclonev_clkena
@@ -118,36 +116,22 @@ Reading pref.tcl
 # Loading altera_ver.dffeas
 # Loading altera_ver.PRIM_GDFF_LOW
 # after#25
-# ** Note: $finish    : hang_man.vwf.vt(145)
-#    Time: 1 us  Iteration: 0  Instance: /hang_man_vlg_vec_tst
-# End time: 21:52:45 on Nov 28,2023, Elapsed time: 0:00:00
+# ** Note: $finish    : sound_controller.vwf.vt(57)
+#    Time: 1 us  Iteration: 0  Instance: /sound_controller_vlg_vec_tst
+# End time: 23:37:21 on Nov 30,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
 Completed successfully. 
 
 **** Converting ModelSim VCD to vector waveform ****
 
-Reading C:/intelFPGA_lite/20.1/termproject/hang_man.vwf...
+Reading C:/intelFPGA_lite/20.1/termproject/sound_controller.vwf...
 
 Reading C:/intelFPGA_lite/20.1/termproject/simulation/qsim/termproject.msim.vcd...
 
 Processing channel transitions... 
 
-Warning: out_alphabet[4] - signal not found in VCD.
-
-Warning: out_alphabet[3] - signal not found in VCD.
-
-Warning: out_alphabet[2] - signal not found in VCD.
-
-Warning: out_alphabet[1] - signal not found in VCD.
-
-Warning: out_alphabet[0] - signal not found in VCD.
-
-Warning: out_sharp - signal not found in VCD.
-
-Warning: out_star - signal not found in VCD.
-
-Writing the resulting VWF to C:/intelFPGA_lite/20.1/termproject/simulation/qsim/termproject_20231128215245.sim.vwf
+Writing the resulting VWF to C:/intelFPGA_lite/20.1/termproject/simulation/qsim/termproject_20231130233721.sim.vwf
 
 Finished VCD to VWF conversion.
 

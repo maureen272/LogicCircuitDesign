@@ -1,5 +1,5 @@
 Flow report for termproject
-Tue Nov 28 21:52:44 2023
+Thu Nov 30 23:43:24 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,16 +41,16 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Tue Nov 28 21:52:44 2023       ;
+; Flow Status                     ; Successful - Thu Nov 30 23:43:24 2023       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; termproject                                 ;
 ; Top-level Entity Name           ; hang_man                                    ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CGXFC7C7F23C8                              ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 84 / 56,480 ( < 1 % )                       ;
-; Total registers                 ; 87                                          ;
-; Total pins                      ; 52 / 268 ( 19 % )                           ;
+; Logic utilization (in ALMs)     ; 191 / 56,480 ( < 1 % )                      ;
+; Total registers                 ; 275                                         ;
+; Total pins                      ; 49 / 268 ( 18 % )                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0 / 7,024,640 ( 0 % )                       ;
 ; Total DSP Blocks                ; 0 / 156 ( 0 % )                             ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/28/2023 21:44:23 ;
+; Start date & time ; 11/30/2023 23:42:42 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; termproject         ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 10995770589194.170117546316344         ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 10995770589194.170135536210712         ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; hang_man    ; Top        ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; hang_man    ; Top        ;
 ; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; hang_man    ; Top        ;
@@ -93,17 +93,9 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:08     ; 1.0                     ; 4831 MB             ; 00:00:07                           ;
-; Fitter               ; 00:00:34     ; 1.0                     ; 6747 MB             ; 00:00:33                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4718 MB             ; 00:00:00                           ;
-; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4727 MB             ; 00:00:00                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4718 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4727 MB             ; 00:00:00                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4718 MB             ; 00:00:00                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4727 MB             ; 00:00:00                           ;
-; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4718 MB             ; 00:00:00                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4727 MB             ; 00:00:01                           ;
-; Total                ; 00:00:48     ; --                      ; --                  ; 00:00:42                           ;
+; Analysis & Synthesis ; 00:00:08     ; 1.0                     ; 4836 MB             ; 00:00:08                           ;
+; Fitter               ; 00:00:29     ; 1.0                     ; 6723 MB             ; 00:00:41                           ;
+; Total                ; 00:00:37     ; --                      ; --                  ; 00:00:49                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -114,14 +106,6 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+------------------+------------+------------+----------------+
 ; Analysis & Synthesis ; ±èÁø¿ì           ; Windows 10 ; 10.0       ; x86_64         ;
 ; Fitter               ; ±èÁø¿ì           ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; ±èÁø¿ì           ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; ±èÁø¿ì           ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; ±èÁø¿ì           ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; ±èÁø¿ì           ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; ±èÁø¿ì           ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; ±èÁø¿ì           ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; ±èÁø¿ì           ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; ±èÁø¿ì           ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -131,14 +115,6 @@ https://fpgasoftware.intel.com/eula.
 quartus_map --read_settings_files=on --write_settings_files=off termproject -c termproject
 quartus_fit --read_settings_files=on --write_settings_files=off termproject -c termproject
 quartus_eda --read_settings_files=off --write_settings_files=off termproject -c termproject
-quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off termproject -c termproject --vector_source=C:/intelFPGA_lite/20.1/termproject/hang_man.vwf --testbench_file=C:/intelFPGA_lite/20.1/termproject/simulation/qsim/hang_man.vwf.vt
-quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/intelFPGA_lite/20.1/termproject/simulation/qsim/ termproject -c termproject
-quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off termproject -c termproject --vector_source=C:/intelFPGA_lite/20.1/termproject/hang_man.vwf --testbench_file=C:/intelFPGA_lite/20.1/termproject/simulation/qsim/hang_man.vwf.vt
-quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/intelFPGA_lite/20.1/termproject/simulation/qsim/ termproject -c termproject
-quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off termproject -c termproject --vector_source=C:/intelFPGA_lite/20.1/termproject/hang_man.vwf --testbench_file=C:/intelFPGA_lite/20.1/termproject/simulation/qsim/hang_man.vwf.vt
-quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/intelFPGA_lite/20.1/termproject/simulation/qsim/ termproject -c termproject
-quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off termproject -c termproject --vector_source=C:/intelFPGA_lite/20.1/termproject/hang_man.vwf --testbench_file=C:/intelFPGA_lite/20.1/termproject/simulation/qsim/hang_man.vwf.vt
-quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/intelFPGA_lite/20.1/termproject/simulation/qsim/ termproject -c termproject
 
 
 

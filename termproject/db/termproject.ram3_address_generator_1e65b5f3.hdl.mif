@@ -1,0 +1,16 @@
+-- begin_signature
+-- address_generator
+-- end_signature
+WIDTH=3;
+DEPTH=5;
+
+ADDRESS_RADIX=UNS;
+DATA_RADIX=BIN;
+
+CONTENT BEGIN
+	4 :	000;
+	3 :	100;
+	2 :	100;
+	1 :	100;
+	0 :	100;
+END;

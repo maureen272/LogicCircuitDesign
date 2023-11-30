@@ -79,6 +79,14 @@ set_global_assignment -name BDF_FILE array_segment_controller.bdf
 set_global_assignment -name BDF_FILE counter3.bdf
 set_global_assignment -name VECTOR_WAVEFORM_FILE counter3.vwf
 set_global_assignment -name VERILOG_FILE decoder_3to8.v
+set_global_assignment -name BDF_FILE color_controller.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE color_controller.vwf
+set_global_assignment -name VERILOG_FILE pnu_clk_div.v
+set_global_assignment -name BDF_FILE sound_controller.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE sound_controller.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE address_generator.vwf
+set_global_assignment -name VERILOG_FILE index_generator.v
+set_global_assignment -name VERILOG_FILE address_generator.v
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
